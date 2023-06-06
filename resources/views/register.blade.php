@@ -20,7 +20,7 @@
                                     </div>
                                 @endif
                                 <a href="#" class="text-nowrap logo-img text-center d-block py-3 w-100">
-                                    <img src="{{ asset('admin') }}/images/logos/dark-logo.svg" width="180"
+                                    <img src="{{ asset('auth') }}/images/logos/dark-logo.svg" width="180"
                                         alt="">
                                 </a>
                                 <p class="text-center">Register</p>
