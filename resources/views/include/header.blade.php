@@ -11,9 +11,6 @@
             <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i>
                     <span>Montessory</span></a>
             </li>
-            <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i>
-                    <span>Logout</span></a>
-            </li>
         </ul>
     </nav><!-- .nav-menu -->
 
