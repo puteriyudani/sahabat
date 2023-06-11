@@ -16,15 +16,23 @@ class AuthController extends Controller
 
     public function registerPost(Request $request)
     {
-        $user = new User();
- 
-        $user->name = $request->name;
-        $user->nohp = $request->nohp;
-        $user->password = Hash::make($request->password);
- 
+        $request->validate([
+            'name' => 'required',
+            'nohp' => 'required|unique:users',
+            'password' => 'required',
+            'confirmpassword' => 'required|same:password',
+            'level' => 'required',
+        ]);
+
+        $user = new User([
+            'name' => $request->name,
+            'nohp' => $request->nohp,
+            'password' => Hash::make($request->password),
+            'level' => $request->level,
+        ]);
         $user->save();
- 
-        return back()->with('success', 'Register successfully');
+
+        return redirect()->route('login')->with('success', 'Registration success. Please login!');
     }
 
     public function login()
@@ -34,22 +42,33 @@ class AuthController extends Controller
 
     public function loginPost(Request $request)
     {
-        $credetials = [
-            'nohp' => $request->nohp,
-            'password' => $request->password,
-        ];
- 
-        if (Auth::attempt($credetials)) {
-            return redirect('/admin')->with('success', 'Login Success');
+        $request->validate([
+            'nohp' => 'required',
+            'password' => 'required',
+        ]);
+
+        if(Auth::attempt(['nohp' => $request->nohp, 'password' => $request->password])) {
+            if(Auth::user()->level == 'admin') {
+                return redirect()->route('admin');
+            } else if(Auth::user()->level == 'guru') {
+                return redirect()->route('guru');
+            } else if(Auth::user()->level == 'ortu') {
+                return redirect()->route('ortu');
+            } else {
+                return redirect()->route('register');
+            }
+        } else{
+            return back()->withErrors([
+                'password' => 'Wrong nohp or password',
+            ]);
         }
- 
-        return back()->with('error', 'Error Email or Password');
     }
 
-    public function logout()
+    public function logout(Request $request)
     {
         Auth::logout();
- 
-        return redirect()->route('login');
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect('/login');
     }
 }

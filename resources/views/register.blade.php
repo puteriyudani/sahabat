@@ -36,11 +36,27 @@
                                         <input type="text" name="nohp" id="nohp" class="form-control"
                                             placeholder="Nomor Handphone">
                                     </div>
-                                    <div class="mb-4">
+                                    <div class="mb-3">
                                         <label for="password" class="form-label">Password</label>
                                         <input type="password" name="password" id="password" class="form-control"
                                             placeholder="***********">
                                     </div>
+                                    <div class="mb-3">
+                                        <label for="confirmpassword" class="form-label">Confirm Password</label>
+                                        <input type="password" name="confirmpassword" id="confirmpassword" class="form-control"
+                                            placeholder="***********">
+                                    </div>
+                                    
+                                    <div class="form-group mb-4">
+                                        <select class="form-select" name="level" id="level"
+                                            aria-label="Floating label select example">
+                                            <option selected>Level</option>
+                                            <option value="0">Admin</option>
+                                            <option value="1">Guru</option>
+                                            <option value="2">Ortu</option>
+                                        </select>
+                                    </div>
+
                                     <input name="register" id="register"
                                         class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2" type="submit"
                                         value="Register">

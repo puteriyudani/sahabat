@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('nohp')->unique();
             $table->timestamp('nohp_verified_at')->nullable();
             $table->string('password');
+            $table->boolean('level')->default(false);
             $table->rememberToken();
             $table->timestamps();
         });
