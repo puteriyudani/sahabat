@@ -23,22 +23,30 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 Route::get('/', [HomeController::class, 'index']);
 
-Route::group(['middleware' => 'guest'], function () {
-    // register
-    Route::get('/register', [AuthController::class, 'register'])->name('register');
-    Route::post('/register', [AuthController::class, 'registerPost'])->name('register');
+// login
+Route::get('/login', [AuthController::class, 'login'])->name('login');
+Route::post('/login', [AuthController::class, 'loginPost'])->name('login');
 
-    // login
-    Route::get('/login', [AuthController::class, 'login'])->name('login');
-    Route::post('/login', [AuthController::class, 'loginPost'])->name('login');
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
-    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
-});
+// Route::group(['middleware' => 'guest'], function () {
+    
+// });
 
 //admin
 Route::middleware(['auth', 'user-access:admin'])->group(function () {
     // home admin
     Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+
+    // akun
+    Route::get('/list-akun', [AdminController::class, 'showAkun'])->name('showAkun');
+    Route::get('akun/{user}', [AdminController::class, 'editAkun'])->name('editAkun');
+    Route::put('akun/{user}', [AdminController::class, 'updateAkun'])->name('updateAkun');
+    Route::delete('akun/{user}', [AdminController::class, 'destroyAkun'])->name('destroyAkun');
+
+    // register
+    Route::get('/register', [AuthController::class, 'register'])->name('register');
+    Route::post('/register', [AuthController::class, 'registerPost'])->name('register');
 
 });
 
