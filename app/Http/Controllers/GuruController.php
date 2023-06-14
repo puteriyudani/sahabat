@@ -10,4 +10,19 @@ class GuruController extends Controller
     {
         return view('guru');
     }
+
+    public function kindergarten()
+    {
+        return view('guru.kindergarten');
+    }
+
+    public function playgroup()
+    {
+        return view('guru.playgroup');
+    }
+
+    public function babycamp()
+    {
+        return view('guru.babycamp');
+    }
 }

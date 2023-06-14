@@ -30,4 +30,9 @@ class User extends Authenticatable
         );
 
     }
+
+    public function siswa()
+    {
+        return $this->hasMany(Siswa::class, 'orangtua_id');
+    }
 }

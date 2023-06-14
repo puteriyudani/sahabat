@@ -16,7 +16,7 @@ return new class extends Migration
             $table->integer('orangtua_id');
             $table->string('nama');
             $table->string('panggilan');
-            $table->bigInteger('noinduk');
+            $table->string('noinduk')->unique();
             $table->string('kelompok');
             $table->string('tempat_lahir');
             $table->date('tanggal_lahir');

@@ -1,7 +1,7 @@
 @extends('layouts.auth')
 
 @section('judul')
-    <title>Admin</title>
+    <title>Akun</title>
 @endsection
 
 @section('content')
@@ -19,7 +19,7 @@
 
                 <h5>Admin</h5>
                 <div class="table-responsive">
-                    <table class="table table-striped table-sm">
+                    <table class="table table-striped">
                         <thead>
                             <tr>
                                 <th scope="col">No</th>
@@ -43,7 +43,7 @@
                                             @csrf
                                             @method('DELETE')
             
-                                            <button class="btn mb-1" type="submit">
+                                            <button class="btn mb-1" type="submit" style="color: red">
                                                 hapus
                                             </button>
                                         </form>
@@ -56,7 +56,7 @@
 
                 <h5>Guru</h5>
                 <div class="table-responsive">
-                    <table class="table table-striped table-sm">
+                    <table class="table table-striped">
                         <thead>
                             <tr>
                                 <th scope="col">No</th>
@@ -80,7 +80,7 @@
                                             @csrf
                                             @method('DELETE')
             
-                                            <button class="btn mb-1" type="submit">
+                                            <button class="btn mb-1" type="submit" style="color: red">
                                                 hapus
                                             </button>
                                         </form>
@@ -93,7 +93,7 @@
 
                 <h5>Orangtua</h5>
                 <div class="table-responsive">
-                    <table class="table table-striped table-sm">
+                    <table class="table table-striped">
                         <thead>
                             <tr>
                                 <th scope="col">No</th>
@@ -117,7 +117,7 @@
                                             @csrf
                                             @method('DELETE')
             
-                                            <button class="btn mb-1" type="submit">
+                                            <button class="btn mb-1" type="submit" style="color: red">
                                                 hapus
                                             </button>
                                         </form>
