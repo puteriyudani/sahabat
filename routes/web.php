@@ -63,6 +63,7 @@ Route::middleware(['auth', 'user-access:guru'])->group(function () {
     Route::get('/kindergarten', [GuruController::class, 'kindergarten'])->name('kindergarten');
     Route::get('/playgroup', [GuruController::class, 'playgroup'])->name('playgroup');
     Route::get('/babycamp', [GuruController::class, 'babycamp'])->name('babycamp');
+    Route::get('/kelola', [GuruController::class, 'kelola'])->name('kelola');
 
 });
 

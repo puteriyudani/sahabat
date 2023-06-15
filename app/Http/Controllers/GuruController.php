@@ -25,4 +25,9 @@ class GuruController extends Controller
     {
         return view('guru.babycamp');
     }
+
+    public function kelola()
+    {
+        return view('guru.kelola');
+    }
 }

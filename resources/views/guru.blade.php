@@ -4,6 +4,8 @@
     <title>Guru</title>
 @endsection
 
+@include('include.guru.header')
+
 @section('main')
     <!-- Services-->
     <section class="page-section" id="services">

@@ -18,7 +18,6 @@
     </head>
     <body id="page-top">
         @include('include.guru.navbar')
-        @include('include.guru.header')
         
         @yield('main')
         
