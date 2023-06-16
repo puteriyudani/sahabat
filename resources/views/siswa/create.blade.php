@@ -1,7 +1,7 @@
 @extends('layouts.auth')
 
 @section('judul')
-    <title>Admin</title>
+    <title>Tambah Siswa</title>
 @endsection
 
 @section('content')

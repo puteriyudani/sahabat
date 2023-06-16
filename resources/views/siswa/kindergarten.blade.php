@@ -1,7 +1,7 @@
 @extends('layouts.auth')
 
 @section('judul')
-    <title>Siswa</title>
+    <title>Siswa - Kindergarten</title>
 @endsection
 
 @section('content')

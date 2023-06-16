@@ -1,7 +1,7 @@
 @extends('layouts.auth')
 
 @section('judul')
-    <title>Siswa</title>
+    <title>Siswa - Baby Camp</title>
 @endsection
 
 @section('content')
@@ -35,6 +35,7 @@
                                 <th scope="col">Nama Ibu</th>
                                 <th scope="col">Alamat</th>
                                 <th scope="col">No Hp</th>
+                                <th scope="col">Akun Orangtua</th>
                                 <th scope="col">Aksi</th>
                             </tr>
                         </thead>
@@ -57,11 +58,12 @@
                                     @foreach ($ortus as $ortu)
                                         @if ($ortu->id == $siswa->orangtua_id)
                                             <td>{{ $ortu->nohp }}</td>
+                                            <td>{{ $ortu->name }}</td>
                                         @endif
                                     @endforeach
                                     <td>
-                                        <form action="{{ route('destroyAkun', $siswa->id) }}" method="POST">
-                                            <a href="{{ route('editAkun', $siswa->id) }}" style="text-decoration: none;">
+                                        <form action="{{ route('siswa.destroy', $siswa->id) }}" method="POST">
+                                            <a href="{{ route('siswa.edit', $siswa->id) }}" style="text-decoration: none;">
                                                 edit
                                             </a>
 
