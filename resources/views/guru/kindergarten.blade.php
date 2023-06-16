@@ -20,7 +20,7 @@
                 <div class="col-md-1">
                 </div>
                 <div class="col-md-2">
-                    <a href="" style="text-decoration: none">
+                    <a href="{{ route('kindergarten.arrival') }}" style="text-decoration: none">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-sun fa-stack-1x fa-inverse"></i>
@@ -29,7 +29,7 @@
                     </a>
                 </div>
                 <div class="col-md-2">
-                    <a href="" style="text-decoration: none">
+                    <a href="{{ route('kindergarten.learning1') }}" style="text-decoration: none">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-book fa-stack-1x fa-inverse"></i>
@@ -38,7 +38,7 @@
                     </a>
                 </div>
                 <div class="col-md-2">
-                    <a href="" style="text-decoration: none">
+                    <a href="{{ route('kindergarten.learning2') }}" style="text-decoration: none">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-bookmark fa-stack-1x fa-inverse"></i>
@@ -47,7 +47,7 @@
                     </a>
                 </div>
                 <div class="col-md-2">
-                    <a href="" style="text-decoration: none">
+                    <a href="{{ route('kindergarten.breakfast') }}" style="text-decoration: none">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-utensils fa-stack-1x fa-inverse"></i>
@@ -56,7 +56,7 @@
                     </a>
                 </div>
                 <div class="col-md-2">
-                    <a href="" style="text-decoration: none">
+                    <a href="{{ route('kindergarten.playingtime') }}" style="text-decoration: none">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-gamepad fa-stack-1x fa-inverse"></i>

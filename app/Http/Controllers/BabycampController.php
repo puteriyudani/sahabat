@@ -2,16 +2,47 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Siswa;
 use Illuminate\Http\Request;
 
-class ArrivalController extends Controller
+class BabycampController extends Controller
 {
+    public function arrival()
+    {
+        $siswas = Siswa::where('kelompok', 'babycamp')->get();
+        return view('babycamp.arrival', compact('siswas'));
+    }
+
+    public function learning1()
+    {
+        $siswas = Siswa::where('kelompok', 'babycamp')->get();
+        return view('babycamp.learning1', compact('siswas'));
+    }
+
+    public function learning2()
+    {
+        $siswas = Siswa::where('kelompok', 'babycamp')->get();
+        return view('babycamp.learning2', compact('siswas'));
+    }
+
+    public function breakfast()
+    {
+        $siswas = Siswa::where('kelompok', 'babycamp')->get();
+        return view('babycamp.breakfast', compact('siswas'));
+    }
+
+    public function playingtime()
+    {
+        $siswas = Siswa::where('kelompok', 'babycamp')->get();
+        return view('babycamp.playingtime', compact('siswas'));
+    }
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('kelas.arrival');
+        //
     }
 
     /**
