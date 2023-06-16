@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Montesory;
 use Illuminate\Http\Request;
 
 class MontesoryController extends Controller
@@ -11,7 +12,8 @@ class MontesoryController extends Controller
      */
     public function index()
     {
-        //
+        $montesorys = Montesory::get();
+        return view('montesory.index', compact('montesorys'));
     }
 
     /**
@@ -19,7 +21,7 @@ class MontesoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('montesory.create');
     }
 
     /**
@@ -41,9 +43,9 @@ class MontesoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Montesory $montesory)
     {
-        //
+        return view('montesory.edit', compact('montesory'));
     }
 
     /**

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Bahanajar;
 use Illuminate\Http\Request;
 
 class BahanajarController extends Controller
@@ -11,7 +12,8 @@ class BahanajarController extends Controller
      */
     public function index()
     {
-        //
+        $bahanajars = Bahanajar::get();
+        return view('bahanajar.index', compact('bahanajars'));
     }
 
     /**
@@ -19,7 +21,7 @@ class BahanajarController extends Controller
      */
     public function create()
     {
-        //
+        return view('bahanajar.create');
     }
 
     /**
@@ -43,7 +45,7 @@ class BahanajarController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view('bahanajar.edit', compact('bahanajar'));
     }
 
     /**

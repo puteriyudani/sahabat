@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Topik;
 use Illuminate\Http\Request;
 
 class TopikController extends Controller
@@ -11,7 +12,8 @@ class TopikController extends Controller
      */
     public function index()
     {
-        //
+        $topiks = Topik::get();
+        return view('topik.index', compact('topiks'));
     }
 
     /**
@@ -19,7 +21,7 @@ class TopikController extends Controller
      */
     public function create()
     {
-        //
+        return view('topik.create');
     }
 
     /**
@@ -41,9 +43,9 @@ class TopikController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Topik $topik)
     {
-        //
+        return view('topik.edit', compact('topik'));
     }
 
     /**
