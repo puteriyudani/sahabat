@@ -7,9 +7,11 @@ use App\Http\Controllers\GuruController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KindergartenController;
 use App\Http\Controllers\OrtuController;
+use App\Http\Controllers\PdfController;
 use App\Http\Controllers\PlaygroupController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\TahunController;
+use App\Http\Controllers\YoutubeController;
 use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -61,6 +63,10 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::get('/siswa-kindergarten', [SiswaController::class, 'showKindergarten'])->name('showKindergarten');
     Route::get('/siswa-playgroup', [SiswaController::class, 'showPlaygroup'])->name('showPlaygroup');
     Route::get('/siswa-babycamp', [SiswaController::class, 'showBabycamp'])->name('showBabycamp');
+
+    // montessory
+    Route::resource('youtube', YoutubeController::class);
+    Route::resource('pdf', PdfController::class);
 });
 
 //guru

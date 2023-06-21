@@ -86,19 +86,19 @@
                     <span class="hide-menu">Montessory</span>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="#" aria-expanded="false">
+                    <a class="sidebar-link" href="{{ route('pdf.index') }}" aria-expanded="false">
                         <span>
                             <i class="ti ti-book"></i>
                         </span>
-                        <span class="hide-menu">Bahan Ajar</span>
+                        <span class="hide-menu">Pdf</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="#" aria-expanded="false">
+                    <a class="sidebar-link" href="{{ route('youtube.index') }}" aria-expanded="false">
                         <span>
                             <i class="ti ti-video"></i>
                         </span>
-                        <span class="hide-menu">Montessory Bank</span>
+                        <span class="hide-menu">Youtube</span>
                     </a>
                 </li>
             </ul>
