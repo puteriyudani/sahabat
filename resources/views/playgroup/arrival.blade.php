@@ -43,7 +43,7 @@
             </div>
 
             <div class="row text-center mt-5 mb-5">
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <input type="radio" class="btn-check" name="breakfast" id="happy" autocomplete="off">
                     <label class="btn" for="happy">
                         <span class="fa-stack fa-4x">
@@ -54,18 +54,7 @@
                     </label>
                 </div>
 
-                <div class="col-md-4">
-                    <input type="radio" class="btn-check" name="breakfast" id="bored" autocomplete="off">
-                    <label class="btn" for="bored">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-face-meh fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3" style="color: var(--bs-link-color);">Bored</h4>
-                    </label>
-                </div>
-
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <input type="radio" class="btn-check" name="breakfast" id="sad" autocomplete="off">
                     <label class="btn" for="sad">
                         <span class="fa-stack fa-4x">
