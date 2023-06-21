@@ -22,6 +22,7 @@
                         <thead>
                             <tr>
                                 <th scope="col">No</th>
+                                <th scope="col">Tahun Angkatan</th>
                                 <th scope="col">Nama</th>
                                 <th scope="col">Nama Panggilan</th>
                                 <th scope="col">No Induk</th>
@@ -43,6 +44,11 @@
                             @foreach ($siswas as $siswa)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
+                                    @foreach ($tahuns as $tahun)
+                                        @if ($tahun->id == $siswa->tahun_id)
+                                            <td>{{ $tahun->tahun }}</td>
+                                        @endif
+                                    @endforeach
                                     <td>{{ $siswa->nama }}</td>
                                     <td>{{ $siswa->panggilan }}</td>
                                     <td>{{ $siswa->noinduk }}</td>

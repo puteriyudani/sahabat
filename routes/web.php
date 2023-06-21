@@ -9,6 +9,7 @@ use App\Http\Controllers\KindergartenController;
 use App\Http\Controllers\OrtuController;
 use App\Http\Controllers\PlaygroupController;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\TahunController;
 use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -51,6 +52,9 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     // register
     Route::get('/register', [AuthController::class, 'register'])->name('register');
     Route::post('/register', [AuthController::class, 'registerPost'])->name('register');
+
+    // tahun
+    Route::resource('tahun', TahunController::class);
 
     // siswa
     Route::resource('siswa', SiswaController::class);

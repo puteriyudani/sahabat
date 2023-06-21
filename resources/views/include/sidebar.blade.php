@@ -40,9 +40,17 @@
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="{{ route('siswa.index') }}" aria-expanded="false">
                         <span>
-                            <i class="ti ti-user-plus"></i>
+                            <i class="ti ti-user"></i>
                         </span>
                         <span class="hide-menu">Siswa</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{{ route('tahun.index') }}" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-calendar"></i>
+                        </span>
+                        <span class="hide-menu">Tahun</span>
                     </a>
                 </li>
                 <li class="nav-small-cap">
@@ -52,7 +60,7 @@
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="#" aria-expanded="false">
                         <span>
-                            <i class="ti ti-article"></i>
+                            <i class="ti ti-trophy"></i>
                         </span>
                         <span class="hide-menu">Kindergarten</span>
                     </a>
@@ -60,7 +68,7 @@
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="#" aria-expanded="false">
                         <span>
-                            <i class="ti ti-alert-circle"></i>
+                            <i class="ti ti-puzzle"></i>
                         </span>
                         <span class="hide-menu">Playgroup</span>
                     </a>
@@ -68,7 +76,7 @@
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="#" aria-expanded="false">
                         <span>
-                            <i class="ti ti-cards"></i>
+                            <i class="ti ti-baby-carriage"></i>
                         </span>
                         <span class="hide-menu">Baby Camp</span>
                     </a>
@@ -80,7 +88,7 @@
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="#" aria-expanded="false">
                         <span>
-                            <i class="ti ti-login"></i>
+                            <i class="ti ti-book"></i>
                         </span>
                         <span class="hide-menu">Bahan Ajar</span>
                     </a>
@@ -88,7 +96,7 @@
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="#" aria-expanded="false">
                         <span>
-                            <i class="ti ti-user-plus"></i>
+                            <i class="ti ti-video"></i>
                         </span>
                         <span class="hide-menu">Montessory Bank</span>
                     </a>

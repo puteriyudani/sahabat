@@ -45,6 +45,16 @@
                                             </select>
                                         </div>
                                         <div class="mb-3">
+                                            <label for="tahun_id" class="form-label">Tahun</label>
+                                            <select id="tahun_id" name="tahun_id" class="form-select"
+                                                aria-label="Default select example">
+                                                <option selected>- Pilih -</option>
+                                                @foreach ($tahuns as $tahun)
+                                                    <option value="{{ $tahun->id }}">{{ $tahun->tahun }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
                                             <label for="nama" class="form-label">Nama</label>
                                             <input type="text" class="form-control" id="nama" name="nama"
                                                 aria-describedby="namaHelp">

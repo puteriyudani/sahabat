@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Siswa;
+use App\Models\Tahun;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -22,7 +23,8 @@ class SiswaController extends Controller
     public function create()
     {
         $ortus = User::where('level', '2')->get();
-        return view('siswa.create', compact('ortus'));
+        $tahuns = Tahun::get();
+        return view('siswa.create', compact('ortus', 'tahuns'));
     }
 
     /**
@@ -32,6 +34,7 @@ class SiswaController extends Controller
     {
         $request->validate([
             'orangtua_id' => 'required',
+            'tahun_id' => 'required',
             'nama' => 'required',
             'panggilan' => 'required',
             'noinduk' => 'required',
@@ -66,7 +69,8 @@ class SiswaController extends Controller
     public function edit(Siswa $siswa)
     {
         $ortus = User::where('level', '2')->get();
-        return view('siswa.edit',compact('siswa', 'ortus'));
+        $tahuns = Tahun::get();
+        return view('siswa.edit',compact('siswa', 'ortus', 'tahuns'));
     }
 
     /**
@@ -76,6 +80,7 @@ class SiswaController extends Controller
     {
         $request->validate([
             'orangtua_id' => 'required',
+            'tahun_id' => 'required',
             'nama' => 'required',
             'panggilan' => 'required',
             'noinduk' => 'required',
@@ -110,20 +115,23 @@ class SiswaController extends Controller
     {
         $ortus = User::where('level', '2')->get();
         $siswas = Siswa::where('kelompok', 'kindergarten')->get();
-        return view('siswa.kindergarten', compact('siswas', 'ortus'));
+        $tahuns = Tahun::get();
+        return view('siswa.kindergarten', compact('siswas', 'ortus', 'tahuns'));
     }
 
     public function showPlaygroup()
     {
         $ortus = User::where('level', '2')->get();
         $siswas = Siswa::where('kelompok', 'playgroup')->get();
-        return view('siswa.playgroup', compact('siswas', 'ortus'));
+        $tahuns = Tahun::get();
+        return view('siswa.playgroup', compact('siswas', 'ortus', 'tahuns'));
     }
 
     public function showBabycamp()
     {
         $ortus = User::where('level', '2')->get();
         $siswas = Siswa::where('kelompok', 'babycamp')->get();
-        return view('siswa.babycamp', compact('siswas', 'ortus'));
+        $tahuns = Tahun::get();
+        return view('siswa.babycamp', compact('siswas', 'ortus', 'tahuns'));
     }
 }
