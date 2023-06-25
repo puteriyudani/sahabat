@@ -31,7 +31,7 @@
                             <h5 class="card-title fw-semibold mb-4">Forms</h5>
                             <div class="card">
                                 <div class="card-body">
-                                    <form action="{{ route('siswa.update', $siswa->id) }}" method="POST">
+                                    <form action="{{ route('siswa.update', $siswa->id) }}" method="POST" enctype="multipart/form-data">
                                         @csrf
                                         @method('PUT')
                                         <div class="mb-3">
@@ -130,6 +130,13 @@
                                             <label for="alamat" class="form-label">Alamat</label>
                                             <input type="text" class="form-control" id="alamat" name="alamat"
                                                 aria-describedby="alamatHelp" value="{{ $siswa->alamat }}">
+                                        </div>
+                                        <div class="row mb-3">
+                                            <label for="image" class="col-sm-2 col-form-label">Gambar</label>
+                                            <div class="col-sm-10">
+                                                <input class="form-control" name="image" id="image" type="file"
+                                                    placeholder="image">
+                                            </div>
                                         </div>
                                         <button type="submit" class="btn btn-primary">Submit</button>
                                     </form>

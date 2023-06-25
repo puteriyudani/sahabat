@@ -22,6 +22,7 @@
                         <thead>
                             <tr>
                                 <th scope="col">No</th>
+                                <th scope="col">Foto</th>
                                 <th scope="col">Tahun Angkatan</th>
                                 <th scope="col">Nama</th>
                                 <th scope="col">Nama Panggilan</th>
@@ -43,6 +44,8 @@
                             @foreach ($siswas as $siswa)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
+                                    <td><img src="{{ asset('/storage/images/' . $siswa->image) }}"
+                                        class="img-thumbnail" style="width:200px" /></td>
                                     @foreach ($tahuns as $tahun)
                                         @if ($tahun->id == $siswa->tahun_id)
                                             <td>{{ $tahun->tahun }}</td>

@@ -27,6 +27,7 @@ return new class extends Migration
             $table->string('nama_ayah');
             $table->string('nama_ibu');
             $table->string('alamat');
+            $table->string('image');
             $table->timestamps();
         });
     }

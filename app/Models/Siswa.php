@@ -11,7 +11,7 @@ class Siswa extends Model
 
     protected $table = 'siswas';
     protected $guarded = [];
-    protected $fillable = ['orangtua_id', 'tahun_id', 'nama', 'panggilan', 'noinduk', 'kelompok', 'tempat_lahir', 'tanggal_lahir', 'jenis_kelamin', 'agama', 'anakke', 'nama_ayah', 'nama_ibu', 'alamat'];
+    protected $fillable = ['orangtua_id', 'tahun_id', 'nama', 'panggilan', 'noinduk', 'kelompok', 'tempat_lahir', 'tanggal_lahir', 'jenis_kelamin', 'agama', 'anakke', 'nama_ayah', 'nama_ibu', 'alamat', 'image'];
 
     public function ortu()
     {

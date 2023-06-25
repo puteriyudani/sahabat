@@ -47,9 +47,21 @@ class SiswaController extends Controller
             'nama_ayah' => 'required',
             'nama_ibu' => 'required',
             'alamat' => 'required',
+            'image' => 'required',
         ]);
+
+        $input = $request->all();
+
+        if ($request->hasFile('image')) {
+            $destinationPath = 'public/images';
+            $image = $request->file('image');
+            $image_name = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $path = $request->file('image')->storeAs($destinationPath,$image_name);
+
+            $input['image'] = $image_name;
+        }
     
-        Siswa::create($request->all());
+        Siswa::create($input);
     
         return redirect()->route('siswa.index')
                         ->with('success','Siswa created successfully.');
@@ -93,9 +105,23 @@ class SiswaController extends Controller
             'nama_ayah' => 'required',
             'nama_ibu' => 'required',
             'alamat' => 'required',
+            'image' => 'required',
         ]);
+
+        $input = $request->all();
+
+        if ($request->hasFile('image')) {
+            $destinationPath = 'public/images';
+            $image = $request->file('image');
+            $image_name = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $path = $request->file('image')->storeAs($destinationPath,$image_name);
+
+            $input['image'] = $image_name;
+        } else{
+            unset($input['image']);
+        }
     
-        $siswa->update($request->all());
+        $siswa->update($input);
     
         return redirect()->route('siswa.index')
                         ->with('success','Siswa updated successfully');
