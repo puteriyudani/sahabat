@@ -17,7 +17,7 @@
         <form action="" method="POST">
             <div class="row">
                 <div class="col-md-2 mt-1">
-                    <label for="nama" class="form-label">Nama Siswa</label>
+                    <label for="nama" class="form-label">Siswa</label>
                 </div>
                 <div class="col-md-3">
                     <select id="nama" name="nama" class="form-select" aria-label="Default select example">

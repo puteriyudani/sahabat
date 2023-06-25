@@ -29,6 +29,8 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/montessory-youtube', [HomeController::class, 'youtube'])->name('montessory.youtube');
+Route::get('/montessory-pdf', [HomeController::class, 'pdf'])->name('montessory.pdf');
 
 // login
 Route::get('/login', [AuthController::class, 'login'])->name('login');
