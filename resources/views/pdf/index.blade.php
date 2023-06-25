@@ -59,6 +59,8 @@
                         </tbody>
                     </table>
                 </div>
+
+                {{ $pdfs->links() }}
             </div>
         </div>
     </div>

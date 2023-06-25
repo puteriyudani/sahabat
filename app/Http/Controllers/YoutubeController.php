@@ -12,7 +12,7 @@ class YoutubeController extends Controller
      */
     public function index()
     {
-        $youtubes = Youtube::get();
+        $youtubes = Youtube::paginate(5);
         return view('youtube.index', compact('youtubes'));
     }
 

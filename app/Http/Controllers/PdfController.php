@@ -12,7 +12,7 @@ class PdfController extends Controller
      */
     public function index()
     {
-        $pdfs = Pdf::get();
+        $pdfs = Pdf::paginate(5);
         return view('pdf.index', compact('pdfs'));
     }
 

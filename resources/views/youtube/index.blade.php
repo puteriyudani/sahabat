@@ -58,6 +58,8 @@
                         </tbody>
                     </table>
                 </div>
+
+                {{ $youtubes->links() }}
             </div>
         </div>
     </div>
