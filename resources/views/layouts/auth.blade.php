@@ -5,7 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   @yield('judul')
-  <link rel="shortcut icon" type="image/png" href="{{ asset('auth') }}/images/logos/favicon.png" />
+
+  <!-- Favicons -->
+  <link href="{{ asset('assets') }}/img/favicon.ico" rel="icon">
+  <link href="{{ asset('assets') }}/img/apple-touch-icon.png" rel="apple-touch-icon">
+  
   <link rel="stylesheet" href="{{ asset('auth/css/styles.min.css') }}" />
 </head>
 
