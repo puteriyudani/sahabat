@@ -102,7 +102,7 @@
                     </a>
                 </li>
             </ul>
-            <br>
+            <br><br>
         </nav>
         <!-- End Sidebar navigation -->
     </div>
