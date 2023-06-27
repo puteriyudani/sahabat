@@ -12,6 +12,30 @@ class KindergartenController extends Controller
         $siswas = Siswa::where('kelompok', 'kindergarten')->get();
         return view('kindergarten.arrival', compact('siswas'));
     }
+
+    public function breakfast()
+    {
+        $siswas = Siswa::where('kelompok', 'kindergarten')->get();
+        return view('kindergarten.breakfast', compact('siswas'));
+    }
+
+    public function pembuka()
+    {
+        $siswas = Siswa::where('kelompok', 'kindergarten')->get();
+        return view('kindergarten.pembuka', compact('siswas'));
+    }
+
+    public function inti()
+    {
+        $siswas = Siswa::where('kelompok', 'kindergarten')->get();
+        return view('kindergarten.inti', compact('siswas'));
+    }
+
+    public function penutup()
+    {
+        $siswas = Siswa::where('kelompok', 'kindergarten')->get();
+        return view('kindergarten.penutup', compact('siswas'));
+    }
     
     /**
      * Display a listing of the resource.

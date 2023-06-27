@@ -1,36 +1,49 @@
 @extends('layouts.guru')
 
 @section('judul')
-    <title>Kindergarten - Arrival</title>
+    <title>Kindergarten - Kegiatan Inti</title>
 @endsection
 
 <!-- Masthead2-->
 <header class="masthead2">
     <div class="container">
         <div class="masthead2-subheading">Kindergarten</div>
-        <div class="masthead2-heading text-uppercase">Arrival</div>
+        <div class="masthead2-heading text-uppercase">Kegiatan Inti</div>
     </div>
 </header>
 
 @section('main')
+    <div class="container">
+        <div class="row text-center mt-5 mb-5">
+            @foreach ($siswas as $siswa)
+                <div class="col-md-6">
+                    <input type="radio" class="btn-check" name="image" id="image" value="{{ $siswa->image }}"
+                        autocomplete="off">
+                    <label class="btn" for="image">
+                        <img class="img-fluid" src="{{ asset('/storage/images/' . $siswa->image) }}" alt="..."
+                            width="150px" />
+                    </label>
+                </div>
+            @endforeach
+        </div>
+    </div>
+
+    <div class="container mt-3">
+        <form action="" method="POST">
+
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="inti" name="inti"></textarea>
+                <label for="inti">Kegiatan Inti</label>
+            </div>
+
+        </form>
+    </div>
+
     <section class="page-section bg-light" id="portfolio">
         <div class="container">
-            <div class="row">
-                @foreach ($siswas as $siswa)
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Portfolio item 1-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="{{ asset('/storage/images/' . $siswa->image) }}"
-                                    alt="..." />
-                            </a>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
+            <a class="indikator" data-bs-toggle="modal" href="#portfolioModal1">
+                <button class="btn btn-primary" type="submit">Indikator</button>
+            </a>
         </div>
     </section>
 
@@ -45,10 +58,11 @@
                         <div class="col-lg-8">
                             <div class="modal-body">
                                 <!-- Project details-->
-                                <h2 class="text-uppercase">How are you this morning?</h2>
+                                <h2 class="text-uppercase">Bagaimana Kegiatan Inti Hari Ini?</h2>
                                 <div class="row text-center mt-5 mb-5">
                                     <div class="col-md-6">
-                                        <input type="radio" class="btn-check" name="happy" id="happy" autocomplete="off">
+                                        <input type="radio" class="btn-check" name="breakfast" id="happy"
+                                            autocomplete="off">
                                         <label class="btn" for="happy">
                                             <span class="fa-stack fa-4x">
                                                 <i class="fas fa-circle fa-stack-2x text-primary"></i>
@@ -57,9 +71,10 @@
                                             <h4 class="my-3" style="color: var(--bs-link-color);">Happy</h4>
                                         </label>
                                     </div>
-                    
+
                                     <div class="col-md-6">
-                                        <input type="radio" class="btn-check" name="sad" id="sad" autocomplete="off">
+                                        <input type="radio" class="btn-check" name="breakfast" id="sad"
+                                            autocomplete="off">
                                         <label class="btn" for="sad">
                                             <span class="fa-stack fa-4x">
                                                 <i class="fas fa-circle fa-stack-2x text-primary"></i>

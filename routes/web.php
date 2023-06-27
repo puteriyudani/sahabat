@@ -82,24 +82,16 @@ Route::middleware(['auth', 'user-access:guru'])->group(function () {
 
     // kindergarten
     Route::get('/kindergarten-arrival', [KindergartenController::class, 'arrival'])->name('kindergarten.arrival');
-    Route::get('/kindergarten-learning1', [KindergartenController::class, 'learning1'])->name('kindergarten.learning1');
-    Route::get('/kindergarten-learning2', [KindergartenController::class, 'learning2'])->name('kindergarten.learning2');
     Route::get('/kindergarten-breakfast', [KindergartenController::class, 'breakfast'])->name('kindergarten.breakfast');
-    Route::get('/kindergarten-playingtime', [KindergartenController::class, 'playingtime'])->name('kindergarten.playingtime');
+    Route::get('/kindergarten-pembuka', [KindergartenController::class, 'pembuka'])->name('kindergarten.pembuka');
+    Route::get('/kindergarten-inti', [KindergartenController::class, 'inti'])->name('kindergarten.inti');
+    Route::get('/kindergarten-penutup', [KindergartenController::class, 'penutup'])->name('kindergarten.penutup');
 
     // playgroup
     Route::get('/playgroup-arrival', [PlaygroupController::class, 'arrival'])->name('playgroup.arrival');
-    Route::get('/playgroup-learning1', [PlaygroupController::class, 'learning1'])->name('playgroup.learning1');
-    Route::get('/playgroup-learning2', [PlaygroupController::class, 'learning2'])->name('playgroup.learning2');
-    Route::get('/playgroup-breakfast', [PlaygroupController::class, 'breakfast'])->name('playgroup.breakfast');
-    Route::get('/playgroup-playingtime', [PlaygroupController::class, 'playingtime'])->name('playgroup.playingtime');
 
     // babycamp
     Route::get('/babycamp-arrival', [BabycampController::class, 'arrival'])->name('babycamp.arrival');
-    Route::get('/babycamp-learning1', [BabycampController::class, 'learning1'])->name('babycamp.learning1');
-    Route::get('/babycamp-learning2', [BabycampController::class, 'learning2'])->name('babycamp.learning2');
-    Route::get('/babycamp-breakfast', [BabycampController::class, 'breakfast'])->name('babycamp.breakfast');
-    Route::get('/babycamp-playingtime', [BabycampController::class, 'playingtime'])->name('babycamp.playingtime');
 });
 
 //ortu
