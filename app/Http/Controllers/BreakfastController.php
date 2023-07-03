@@ -2,41 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Siswa;
+use App\Models\Breakfast;
 use Illuminate\Http\Request;
 
-class PlaygroupController extends Controller
+class BreakfastController extends Controller
 {
-    public function arrival()
-    {
-        $siswas = Siswa::where('kelompok', 'playgroup')->get();
-        return view('playgroup.arrival', compact('siswas'));
-    }
-
-    public function breakfast()
-    {
-        $siswas = Siswa::where('kelompok', 'playgroup')->get();
-        return view('playgroup.breakfast', compact('siswas'));
-    }
-
-    public function pembuka()
-    {
-        $siswas = Siswa::where('kelompok', 'playgroup')->get();
-        return view('playgroup.pembuka', compact('siswas'));
-    }
-
-    public function inti()
-    {
-        $siswas = Siswa::where('kelompok', 'playgroup')->get();
-        return view('playgroup.inti', compact('siswas'));
-    }
-
-    public function penutup()
-    {
-        $siswas = Siswa::where('kelompok', 'playgroup')->get();
-        return view('playgroup.penutup', compact('siswas'));
-    }
-
     /**
      * Display a listing of the resource.
      */
@@ -58,7 +28,17 @@ class PlaygroupController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'kelas' => 'required',
+            'tanggal' => 'required',
+            'siswa_id' => 'required',
+            'kudapanpagi' => 'required',
+            'keterangan' => 'required',
+        ]);
+    
+        Breakfast::create($request->all());
+    
+        return redirect()->back()->with('success', 'Breakfast created successfully.');
     }
 
     /**

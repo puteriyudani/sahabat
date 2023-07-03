@@ -22,4 +22,14 @@ class Siswa extends Model
     {
         return $this->belongsTo(Tahun::class);
     }
+
+    public function breakfast()
+    {
+        return $this->belongsTo(Breakfast::class);
+    }
+
+    public function penutup()
+    {
+        return $this->belongsTo(Penutup::class);
+    }
 }
