@@ -1,14 +1,14 @@
 @extends('layouts.guru')
 
 @section('judul')
-    <title>Play Group - Breakfast</title>
+    <title>Kindergarten - Kegiatan Inti</title>
 @endsection
 
 <!-- Masthead2-->
 <header class="masthead2">
     <div class="container">
-        <div class="masthead2-subheading">Play Group</div>
-        <div class="masthead2-heading text-uppercase">Breakfast</div>
+        <div class="masthead2-subheading">Kindergarten</div>
+        <div class="masthead2-heading text-uppercase">Kegiatan Inti</div>
     </div>
 </header>
 
@@ -44,22 +44,28 @@
         </div>
 
         <div class="container mt-3">
-            <h6>Kudapan Pagi</h6>
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="inti" name="inti"></textarea>
+                <label for="inti">Kegiatan Inti</label>
+            </div>
+        </div>
+        <div class="container mt-3">
+            <h6>Kudapan Siang</h6>
 
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="kudapanpagi" id="nasi" value="nasi">
+                <input class="form-check-input" type="radio" name="kudapansiang" id="nasi" value="nasi">
                 <label class="form-check-label" for="nasi">
                     Variasi Nasi
                 </label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="kudapanpagi" id="mie" value="mie">
+                <input class="form-check-input" type="radio" name="kudapansiang" id="mie" value="mie">
                 <label class="form-check-label" for="mie">
                     Variasi Mie
                 </label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="kudapanpagi" id="kue" value="kue">
+                <input class="form-check-input" type="radio" name="kudapansiang" id="kue" value="kue">
                 <label class="form-check-label" for="kue">
                     Variasi Kue / Lainnya
                 </label>

@@ -63,6 +63,17 @@
                 <label class="form-check-label" for="selamat">Selamat</label>
             </div>
 
+            <h6>Snack</h6>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="snack" id="buahbuahan" value="buahbuahan">
+                <label class="form-check-label" for="buahbuahan">Buah-buahan</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="snack" id="biskuit" value="biskuit">
+                <label class="form-check-label" for="biskuit">Biskuit</label>
+            </div>
+
             <h6>Buang Air Besar</h6>
 
             <div class="form-check form-check-inline">
@@ -72,6 +83,30 @@
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="bab" id="tidak" value="tidak">
                 <label class="form-check-label" for="tidak">Tidak</label>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-2">
+                    <label for="tidur" class="form-label">Tidur</label>                  
+                </div>
+                <div class="col-3">
+                    <input type="number" class="form-control" id="tidur" name="tidur">                  
+                </div>
+                <div class="col-1">
+                    <p>kali</p>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-2">
+                    <label for="minumsusu" class="form-label">Minum Susu</label>                  
+                </div>
+                <div class="col-3">
+                    <input type="number" class="form-control" id="minumsusu" name="minumsusu">                  
+                </div>
+                <div class="col-1">
+                    <p>kali</p>
+                </div>
             </div>
         </div>
 

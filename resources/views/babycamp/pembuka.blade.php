@@ -1,14 +1,14 @@
 @extends('layouts.guru')
 
 @section('judul')
-    <title>Play Group - Breakfast</title>
+    <title>Kindergarten - Kegiatan Pembuka</title>
 @endsection
 
 <!-- Masthead2-->
 <header class="masthead2">
     <div class="container">
-        <div class="masthead2-subheading">Play Group</div>
-        <div class="masthead2-heading text-uppercase">Breakfast</div>
+        <div class="masthead2-subheading">Kindergarten</div>
+        <div class="masthead2-heading text-uppercase">Kegiatan Pembuka</div>
     </div>
 </header>
 
@@ -44,44 +44,35 @@
         </div>
 
         <div class="container mt-3">
-            <h6>Kudapan Pagi</h6>
+            <h6>Circle Time</h6>
 
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="kudapanpagi" id="nasi" value="nasi">
-                <label class="form-check-label" for="nasi">
-                    Variasi Nasi
-                </label>
+                <input class="form-check-input" type="radio" name="circletime" id="dongeng" value="dongeng">
+                <label class="form-check-label" for="dongeng">Dongeng</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="kudapanpagi" id="mie" value="mie">
-                <label class="form-check-label" for="mie">
-                    Variasi Mie
-                </label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="kudapanpagi" id="kue" value="kue">
-                <label class="form-check-label" for="kue">
-                    Variasi Kue / Lainnya
-                </label>
+                <input class="form-check-input" type="radio" name="circletime" id="berdiskusidanbernyanyi"
+                    value="berdiskusidanbernyanyi">
+                <label class="form-check-label" for="berdiskusidanbernyanyi">Berdiskusi & Bernyanyi</label>
             </div>
 
-            <h6>Keterangan</h6>
+            <h6>Surah Pendek</h6>
 
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="keterangan" id="habis" value="habis">
-                <label class="form-check-label" for="habis">Habis</label>
+                <input class="form-check-input" type="radio" name="surahpendek" id="alfatihah" value="alfatihah">
+                <label class="form-check-label" for="alfatihah">Al-Fatihah</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="keterangan" id="bersisa" value="bersisa">
-                <label class="form-check-label" for="bersisa">Bersisa</label>
+                <input class="form-check-input" type="radio" name="surahpendek" id="alikhlas" value="alikhlas">
+                <label class="form-check-label" for="alikhlas">Al-Ikhlas</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="keterangan" id="tambah" value="tambah">
-                <label class="form-check-label" for="tambah">Tambah</label>
+                <input class="form-check-input" type="radio" name="surahpendek" id="alfalaq" value="alfalaq">
+                <label class="form-check-label" for="alfalaq">Al-Falaq</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="keterangan" id="tidakdimakan" value="tidakdimakan">
-                <label class="form-check-label" for="tidakdimakan">Tidak Dimakan</label>
+                <input class="form-check-input" type="radio" name="surahpendek" id="annas" value="annas">
+                <label class="form-check-label" for="annas">An-Nas</label>
             </div>
         </div>
 

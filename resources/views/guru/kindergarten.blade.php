@@ -17,6 +17,8 @@
     <section class="page-section" id="services">
         <div class="container">
             <div class="row text-center">
+                <div class="col-md-1"></div>
+
                 <div class="col-md-2">
                     <a href="{{ route('kindergarten.arrival') }}" style="text-decoration: none">
                         <span class="fa-stack fa-4x">
@@ -66,6 +68,8 @@
                         <h4 class="my-3">Kegiatan Penutup</h4>
                     </a>
                 </div>
+
+                <div class="col-md-1"></div>
             </div>
     </section>
 @endsection

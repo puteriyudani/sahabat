@@ -89,9 +89,16 @@ Route::middleware(['auth', 'user-access:guru'])->group(function () {
 
     // playgroup
     Route::get('/playgroup-arrival', [PlaygroupController::class, 'arrival'])->name('playgroup.arrival');
+    Route::get('/playgroup-breakfast', [PlaygroupController::class, 'breakfast'])->name('playgroup.breakfast');
+    Route::get('/playgroup-pembuka', [PlaygroupController::class, 'pembuka'])->name('playgroup.pembuka');
+    Route::get('/playgroup-inti', [PlaygroupController::class, 'inti'])->name('playgroup.inti');
+    Route::get('/playgroup-penutup', [PlaygroupController::class, 'penutup'])->name('playgroup.penutup');
 
     // babycamp
-    Route::get('/babycamp-arrival', [BabycampController::class, 'arrival'])->name('babycamp.arrival');
+    Route::get('/babycamp-breakfast', [BabycampController::class, 'breakfast'])->name('babycamp.breakfast');
+    Route::get('/babycamp-pembuka', [BabycampController::class, 'pembuka'])->name('babycamp.pembuka');
+    Route::get('/babycamp-inti', [BabycampController::class, 'inti'])->name('babycamp.inti');
+    Route::get('/babycamp-penutup', [BabycampController::class, 'penutup'])->name('babycamp.penutup');
 });
 
 //ortu

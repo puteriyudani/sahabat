@@ -67,8 +67,8 @@
                                         <td>{{ $ortu->nohp }}</td>
                                     @endforeach
                                     <td>
-                                        <form action="{{ route('destroyAkun', $siswa->id) }}" method="POST">
-                                            <a href="{{ route('editAkun', $siswa->id) }}" style="text-decoration: none;">
+                                        <form action="{{ route('siswa.destroy', $siswa->id) }}" method="POST">
+                                            <a href="{{ route('siswa.edit', $siswa->id) }}" style="text-decoration: none;">
                                                 edit
                                             </a>
 

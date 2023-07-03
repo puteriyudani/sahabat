@@ -7,10 +7,28 @@ use Illuminate\Http\Request;
 
 class BabycampController extends Controller
 {
-    public function arrival()
+    public function breakfast()
     {
         $siswas = Siswa::where('kelompok', 'babycamp')->get();
-        return view('babycamp.arrival', compact('siswas'));
+        return view('babycamp.breakfast', compact('siswas'));
+    }
+
+    public function pembuka()
+    {
+        $siswas = Siswa::where('kelompok', 'babycamp')->get();
+        return view('babycamp.pembuka', compact('siswas'));
+    }
+
+    public function inti()
+    {
+        $siswas = Siswa::where('kelompok', 'babycamp')->get();
+        return view('babycamp.inti', compact('siswas'));
+    }
+
+    public function penutup()
+    {
+        $siswas = Siswa::where('kelompok', 'babycamp')->get();
+        return view('babycamp.penutup', compact('siswas'));
     }
 
     /**

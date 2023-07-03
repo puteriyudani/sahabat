@@ -1,14 +1,14 @@
 @extends('layouts.guru')
 
 @section('judul')
-    <title>Kindergarten - Kegiatan Inti</title>
+    <title>Play Group - Kegiatan Pembuka</title>
 @endsection
 
 <!-- Masthead2-->
 <header class="masthead2">
     <div class="container">
-        <div class="masthead2-subheading">Kindergarten</div>
-        <div class="masthead2-heading text-uppercase">Kegiatan Inti</div>
+        <div class="masthead2-subheading">Play Group</div>
+        <div class="masthead2-heading text-uppercase">Kegiatan Pembuka</div>
     </div>
 </header>
 
@@ -28,9 +28,55 @@
         </div>
 
         <div class="container mt-3">
-            <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="inti" name="inti"></textarea>
-                <label for="inti">Kegiatan Inti</label>
+            <h6>Outdoor</h6>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="outdoor" id="senampagi" value="senampagi">
+                <label class="form-check-label" for="senampagi">Senam Pagi</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="outdoor" id="apelbendera" value="apelbendera">
+                <label class="form-check-label" for="apelbendera">Apel Bendera</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="outdoor" id="lainlain"
+                    value="lainlain">
+                <label class="form-check-label" for="lainlain">Lain-lain</label>
+            </div>
+
+            <h6>Circle Time</h6>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="circletime" id="dongeng" value="dongeng">
+                <label class="form-check-label" for="dongeng">Dongeng</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="circletime" id="sentra" value="sentra">
+                <label class="form-check-label" for="sentra">Sentra</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="circletime" id="berdiskusidanbernyanyi"
+                    value="berdiskusidanbernyanyi">
+                <label class="form-check-label" for="berdiskusidanbernyanyi">Berdiskusi & Bernyanyi</label>
+            </div>
+
+            <h6>Doa</h6>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="doapembuka" id="kendaraan" value="kendaraan">
+                <label class="form-check-label" for="kendaraan">Naik Kendaraan</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="doapembuka" id="orangtua" value="orangtua">
+                <label class="form-check-label" for="orangtua">Orang Tua</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="doapembuka" id="selamat" value="selamat">
+                <label class="form-check-label" for="selamat">Selamat</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="doapembuka" id="anaksoleh" value="anaksoleh">
+                <label class="form-check-label" for="anaksoleh">Anak Sholeh</label>
             </div>
         </div>
 
@@ -56,7 +102,7 @@
                 </div>
             </div>
         </section>
-    
+
         <!-- Portfolio Modals-->
         <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">

@@ -1,19 +1,19 @@
 @extends('layouts.guru')
 
 @section('judul')
-    <title>Play Group - Breakfast</title>
+    <title>Play Group - Kegiatan Penutup</title>
 @endsection
 
 <!-- Masthead2-->
 <header class="masthead2">
     <div class="container">
         <div class="masthead2-subheading">Play Group</div>
-        <div class="masthead2-heading text-uppercase">Breakfast</div>
+        <div class="masthead2-heading text-uppercase">Kegiatan Penutup</div>
     </div>
 </header>
 
 @section('main')
-    <form action="" method="POST">
+    <form action="">
         @csrf
 
         <div class="container mt-3">
@@ -44,44 +44,34 @@
         </div>
 
         <div class="container mt-3">
-            <h6>Kudapan Pagi</h6>
+            <h6>Doa</h6>
 
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="kudapanpagi" id="nasi" value="nasi">
-                <label class="form-check-label" for="nasi">
-                    Variasi Nasi
-                </label>
+                <input class="form-check-input" type="radio" name="doa" id="keluarrumah" value="keluarrumah">
+                <label class="form-check-label" for="keluarrumah">Keluar Rumah</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="kudapanpagi" id="mie" value="mie">
-                <label class="form-check-label" for="mie">
-                    Variasi Mie
-                </label>
+                <input class="form-check-input" type="radio" name="doa" id="naikkendaraan" value="naikkendaraan">
+                <label class="form-check-label" for="naikkendaraan">Naik Kendaraan</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="kudapanpagi" id="kue" value="kue">
-                <label class="form-check-label" for="kue">
-                    Variasi Kue / Lainnya
-                </label>
+                <input class="form-check-input" type="radio" name="doa" id="orangtua" value="orangtua">
+                <label class="form-check-label" for="orangtua">Orang Tua</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="doa" id="selamat" value="selamat">
+                <label class="form-check-label" for="selamat">Selamat</label>
             </div>
 
-            <h6>Keterangan</h6>
+            <h6>Buang Air Besar</h6>
 
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="keterangan" id="habis" value="habis">
-                <label class="form-check-label" for="habis">Habis</label>
+                <input class="form-check-input" type="radio" name="bab" id="ya" value="ya">
+                <label class="form-check-label" for="ya">Ya</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="keterangan" id="bersisa" value="bersisa">
-                <label class="form-check-label" for="bersisa">Bersisa</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="keterangan" id="tambah" value="tambah">
-                <label class="form-check-label" for="tambah">Tambah</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="keterangan" id="tidakdimakan" value="tidakdimakan">
-                <label class="form-check-label" for="tidakdimakan">Tidak Dimakan</label>
+                <input class="form-check-input" type="radio" name="bab" id="tidak" value="tidak">
+                <label class="form-check-label" for="tidak">Tidak</label>
             </div>
         </div>
 

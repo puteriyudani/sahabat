@@ -1,13 +1,13 @@
 @extends('layouts.guru')
 
 @section('judul')
-    <title>Kindergarten - Kegiatan Inti</title>
+    <title>Play Group - Kegiatan Inti</title>
 @endsection
 
 <!-- Masthead2-->
 <header class="masthead2">
     <div class="container">
-        <div class="masthead2-subheading">Kindergarten</div>
+        <div class="masthead2-subheading">Play Group</div>
         <div class="masthead2-heading text-uppercase">Kegiatan Inti</div>
     </div>
 </header>
