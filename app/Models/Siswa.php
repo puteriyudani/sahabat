@@ -48,8 +48,18 @@ class Siswa extends Model
         return $this->belongsTo(Inti::class);
     }
 
+    public function intibaby()
+    {
+        return $this->belongsTo(Intibaby::class);
+    }
+
     public function pembuka()
     {
         return $this->belongsTo(Pembuka::class);
+    }
+
+    public function pembukababy()
+    {
+        return $this->belongsTo(Pembukababy::class);
     }
 }

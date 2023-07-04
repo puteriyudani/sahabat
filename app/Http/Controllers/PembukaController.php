@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pembuka;
+use App\Models\Pembukababy;
 use Illuminate\Http\Request;
 
 class PembukaController extends Controller
@@ -38,6 +39,21 @@ class PembukaController extends Controller
         ]);
     
         Pembuka::create($request->all());
+    
+        return redirect()->back()->with('success', 'Pembuka created successfully.');
+    }
+
+    public function storebaby(Request $request)
+    {
+        $request->validate([
+            'kelas' => 'required',
+            'tanggal' => 'required',
+            'siswa_id' => 'required',
+            'circletime' => 'required',
+            'surahpendek' => 'required',
+        ]);
+    
+        Pembukababy::create($request->all());
     
         return redirect()->back()->with('success', 'Pembuka created successfully.');
     }

@@ -7,9 +7,11 @@ use App\Http\Controllers\BreakfastController;
 use App\Http\Controllers\GuruController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IndikatorController;
+use App\Http\Controllers\IntiController;
 use App\Http\Controllers\KindergartenController;
 use App\Http\Controllers\OrtuController;
 use App\Http\Controllers\PdfController;
+use App\Http\Controllers\PembukaController;
 use App\Http\Controllers\PenutupController;
 use App\Http\Controllers\PlaygroupController;
 use App\Http\Controllers\SiswaController;
@@ -103,10 +105,13 @@ Route::middleware(['auth', 'user-access:guru'])->group(function () {
     Route::get('/babycamp-inti', [BabycampController::class, 'inti'])->name('babycamp.inti');
     Route::get('/babycamp-penutup', [BabycampController::class, 'penutup'])->name('babycamp.penutup');
 
+    Route::post('/penutup', [PenutupController::class, 'storebaby'])->name('penutup.storebaby');
+    Route::post('/inti', [IntiController::class, 'storebaby'])->name('inti.storebaby');
+    Route::post('/pembuka', [PembukaController::class, 'storebaby'])->name('pembuka.storebaby');
+
     // isi
     Route::post('/breakfast', [BreakfastController::class, 'store'])->name('breakfast.store');
     Route::post('/penutup', [PenutupController::class, 'store'])->name('penutup.store');
-    Route::post('/penutup', [PenutupController::class, 'storebaby'])->name('penutup.storebaby');
 
     // indikator
     Route::post('/indikator', [IndikatorController::class, 'store'])->name('indikator.store');

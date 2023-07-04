@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Inti;
+use App\Models\Intibaby;
 use Illuminate\Http\Request;
 
 class IntiController extends Controller
@@ -36,6 +37,22 @@ class IntiController extends Controller
         ]);
     
         Inti::create($request->all());
+    
+        return redirect()->back()->with('success', 'Inti created successfully.');
+    }
+
+    public function storebaby(Request $request)
+    {
+        $request->validate([
+            'kelas' => 'required',
+            'tanggal' => 'required',
+            'siswa_id' => 'required',
+            'inti' => 'required',
+            'kudapansiang' => 'required',
+            'keterangan' => 'required',
+        ]);
+    
+        Intibaby::create($request->all());
     
         return redirect()->back()->with('success', 'Inti created successfully.');
     }
