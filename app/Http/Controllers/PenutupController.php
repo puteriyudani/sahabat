@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Penutup;
+use App\Models\Penutupbaby;
 use Illuminate\Http\Request;
 
 class PenutupController extends Controller
@@ -37,6 +38,24 @@ class PenutupController extends Controller
         ]);
     
         Penutup::create($request->all());
+    
+        return redirect()->back()->with('success', 'Penutup created successfully.');
+    }
+
+    public function storebaby(Request $request)
+    {
+        $request->validate([
+            'kelas' => 'required',
+            'tanggal' => 'required',
+            'siswa_id' => 'required',
+            'doa' => 'required',
+            'snack' => 'required',
+            'bab' => 'required',
+            'tidur' => 'required',
+            'minumsusu' => 'required',
+        ]);
+    
+        Penutupbaby::create($request->all());
     
         return redirect()->back()->with('success', 'Penutup created successfully.');
     }

@@ -105,6 +105,7 @@ Route::middleware(['auth', 'user-access:guru'])->group(function () {
     // isi
     Route::post('/breakfast', [BreakfastController::class, 'store'])->name('breakfast.store');
     Route::post('/penutup', [PenutupController::class, 'store'])->name('penutup.store');
+    Route::post('/penutup', [PenutupController::class, 'storebaby'])->name('penutup.storebaby');
 });
 
 //ortu

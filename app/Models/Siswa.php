@@ -32,4 +32,9 @@ class Siswa extends Model
     {
         return $this->belongsTo(Penutup::class);
     }
+
+    public function penutupbaby()
+    {
+        return $this->belongsTo(Penutupbaby::class);
+    }
 }

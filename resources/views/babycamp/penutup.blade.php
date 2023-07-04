@@ -13,8 +13,27 @@
 </header>
 
 @section('main')
-    <form action="">
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <strong>Whoops!</strong> There were some problems with your input.<br><br>
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+    <form action="{{ route('penutup.storebaby') }}" method="POST">
         @csrf
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <input type="hidden" class="form-control" id="kelas" name="kelas" aria-describedby="kelasHelp"
+                        value="babycamp" readonly>
+                </div>
+            </div>
+        </div>
 
         <div class="container mt-3">
             <div class="row">
@@ -31,9 +50,9 @@
                 @foreach ($siswas as $siswa)
                     <div class="col-md-2">
                         <div class="form-check">
-                            <input type="radio" class="btn-check" name="image" id="{{ $siswa->image }}"
-                                value="{{ $siswa->image }}" autocomplete="off">
-                            <label class="btn" for="{{ $siswa->image }}">
+                            <input type="radio" class="btn-check" name="siswa_id" id="{{ $siswa->id }}"
+                                value="{{ $siswa->id }}" autocomplete="off">
+                            <label class="btn" for="{{ $siswa->id }}">
                                 <img class="w-100 h-100" src="{{ asset('/storage/images/' . $siswa->image) }}"
                                     alt="..." width="150px" />
                             </label>
@@ -87,10 +106,10 @@
 
             <div class="row mt-4">
                 <div class="col-2">
-                    <label for="tidur" class="form-label">Tidur</label>                  
+                    <label for="tidur" class="form-label">Tidur</label>
                 </div>
                 <div class="col-3">
-                    <input type="number" class="form-control" id="tidur" name="tidur">                  
+                    <input type="number" class="form-control" id="tidur" name="tidur">
                 </div>
                 <div class="col-1">
                     <p>kali</p>
@@ -99,10 +118,10 @@
 
             <div class="row mt-4">
                 <div class="col-2">
-                    <label for="minumsusu" class="form-label">Minum Susu</label>                  
+                    <label for="minumsusu" class="form-label">Minum Susu</label>
                 </div>
                 <div class="col-3">
-                    <input type="number" class="form-control" id="minumsusu" name="minumsusu">                  
+                    <input type="number" class="form-control" id="minumsusu" name="minumsusu">
                 </div>
                 <div class="col-1">
                     <p>kali</p>
