@@ -6,6 +6,7 @@ use App\Http\Controllers\BabycampController;
 use App\Http\Controllers\BreakfastController;
 use App\Http\Controllers\GuruController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\IndikatorController;
 use App\Http\Controllers\KindergartenController;
 use App\Http\Controllers\OrtuController;
 use App\Http\Controllers\PdfController;
@@ -106,6 +107,9 @@ Route::middleware(['auth', 'user-access:guru'])->group(function () {
     Route::post('/breakfast', [BreakfastController::class, 'store'])->name('breakfast.store');
     Route::post('/penutup', [PenutupController::class, 'store'])->name('penutup.store');
     Route::post('/penutup', [PenutupController::class, 'storebaby'])->name('penutup.storebaby');
+
+    // indikator
+    Route::post('/indikator', [IndikatorController::class, 'store'])->name('indikator.store');
 });
 
 //ortu

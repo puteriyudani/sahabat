@@ -13,8 +13,25 @@
 </header>
 
 @section('main')
-    <form action="" method="POST">
+    <form action="{{ route('indikator.store') }}" method="POST">
         @csrf
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <input type="hidden" class="form-control" id="kelas" name="kelas" aria-describedby="kelasHelp"
+                        value="kindergarten" readonly>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <input type="hidden" class="form-control" id="kategori" name="kategori" aria-describedby="kategoriHelp"
+                        value="arrival" readonly>
+                </div>
+            </div>
+        </div>
 
         <div class="container mt-3">
             <div class="row">
@@ -64,7 +81,7 @@
                                     <div class="row text-center mt-5 mb-5">
                                         <div class="col-md-6">
                                             <input type="radio" class="btn-check" name="indikator" id="happy"
-                                                autocomplete="off">
+                                                value="happy" autocomplete="off">
                                             <label class="btn" for="happy">
                                                 <span class="fa-stack fa-4x">
                                                     <i class="fas fa-circle fa-stack-2x text-primary"></i>
@@ -76,7 +93,7 @@
 
                                         <div class="col-md-6">
                                             <input type="radio" class="btn-check" name="indikator" id="sad"
-                                                autocomplete="off">
+                                                value="sad" autocomplete="off">
                                             <label class="btn" for="sad">
                                                 <span class="fa-stack fa-4x">
                                                     <i class="fas fa-circle fa-stack-2x text-primary"></i>

@@ -16,6 +16,23 @@
     <form action="" method="POST">
         @csrf
 
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <input type="hidden" class="form-control" id="kelas" name="kelas" aria-describedby="kelasHelp"
+                        value="playgroup" readonly>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <input type="hidden" class="form-control" id="kategori" name="kategori" aria-describedby="kategoriHelp"
+                        value="pembuka" readonly>
+                </div>
+            </div>
+        </div>
+
         <div class="container mt-3">
             <div class="row">
                 <div class="col-md-1 mt-1">
@@ -114,11 +131,11 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Bagaimana Kegiatan Inti Hari Ini?</h2>
+                                    <h2 class="text-uppercase">How are you this morning?</h2>
                                     <div class="row text-center mt-5 mb-5">
                                         <div class="col-md-6">
                                             <input type="radio" class="btn-check" name="indikator" id="happy"
-                                                autocomplete="off">
+                                                value="happy" autocomplete="off">
                                             <label class="btn" for="happy">
                                                 <span class="fa-stack fa-4x">
                                                     <i class="fas fa-circle fa-stack-2x text-primary"></i>
@@ -130,7 +147,7 @@
 
                                         <div class="col-md-6">
                                             <input type="radio" class="btn-check" name="indikator" id="sad"
-                                                autocomplete="off">
+                                                value="sad" autocomplete="off">
                                             <label class="btn" for="sad">
                                                 <span class="fa-stack fa-4x">
                                                     <i class="fas fa-circle fa-stack-2x text-primary"></i>
