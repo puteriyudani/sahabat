@@ -2,6 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Breakfast;
+use App\Models\Intibaby;
+use App\Models\Pembuka;
+use App\Models\Pembukababy;
+use App\Models\Penutupbaby;
 use App\Models\Siswa;
 use Illuminate\Http\Request;
 
@@ -58,9 +63,25 @@ class BabycampController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Siswa $siswa)
     {
-        //
+        $breakfasts = Breakfast::where('kelas', 'babycamp')
+                            ->where('siswa_id', $siswa->id)
+                            ->get();
+        
+        $pembukababys = Pembukababy::where('kelas', 'babycamp')
+                            ->where('siswa_id', $siswa->id)
+                            ->get();
+        
+        $intibabys = Intibaby::where('kelas', 'babycamp')
+                            ->where('siswa_id', $siswa->id)
+                            ->get();
+
+        $penutupbabys = Penutupbaby::where('kelas', 'babycamp')
+                            ->where('siswa_id', $siswa->id)
+                            ->get();
+        
+        return view('kelola.babycampshow',compact('siswa', 'breakfasts', 'pembukababys', 'intibabys', 'penutupbabys'));
     }
 
     /**

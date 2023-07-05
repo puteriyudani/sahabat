@@ -8,6 +8,7 @@ use App\Http\Controllers\GuruController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IndikatorController;
 use App\Http\Controllers\IntiController;
+use App\Http\Controllers\KelolaController;
 use App\Http\Controllers\KindergartenController;
 use App\Http\Controllers\OrtuController;
 use App\Http\Controllers\PdfController;
@@ -123,6 +124,13 @@ Route::middleware(['auth', 'user-access:guru'])->group(function () {
     Route::get('/playgroup-indikator-inti', [IndikatorController::class, 'playgroupinti'])->name('playgroup.indikatorinti');
 
     Route::post('/indikator', [IndikatorController::class, 'store'])->name('indikator.store');
+
+    // kelola
+    Route::resource('kelola', KelolaController::class);
+    Route::get('kelolakindergarten/{siswa}', [KindergartenController::class, 'show'])->name('kelolakindergarten.show');
+    Route::get('/kelola-kindergarten', [KelolaController::class, 'kindergarten'])->name('kelola.kindergarten');
+    Route::get('/kelola-playgroup', [KelolaController::class, 'playgroup'])->name('kelola.playgroup');
+    Route::get('/kelola-babycamp', [KelolaController::class, 'babycamp'])->name('kelola.babycamp');
 });
 
 //ortu

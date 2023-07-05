@@ -11,7 +11,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                 <li class="nav-item"><a class="nav-link" href="{{ route('guru') }}#services">Kelas</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ route('kelola') }}">Kelola</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('kelola.index') }}">Kelola</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('logout') }}">Logout</a></li>
             </ul>
         </div>

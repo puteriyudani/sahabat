@@ -2,6 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Breakfast;
+use App\Models\Indikator;
+use App\Models\Inti;
+use App\Models\Pembuka;
+use App\Models\Penutup;
 use App\Models\Siswa;
 use Illuminate\Http\Request;
 
@@ -64,9 +69,40 @@ class PlaygroupController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Siswa $siswa)
     {
-        //
+        $arrivals = Indikator::where('kelas', 'playgroup')
+                            ->where('kategori', 'arrival')
+                            ->where('siswa_id', $siswa->id)
+                            ->get();
+
+        $breakfasts = Breakfast::where('kelas', 'playgroup')
+                            ->where('siswa_id', $siswa->id)
+                            ->get();
+
+        $pembukas = Pembuka::where('kelas', 'playgroup')
+                            ->where('siswa_id', $siswa->id)
+                            ->get();
+
+        $pembukaindikators = Indikator::where('kelas', 'playgroup')
+                            ->where('kategori', 'pembuka')
+                            ->where('siswa_id', $siswa->id)
+                            ->get();
+
+        $intis = Inti::where('kelas', 'playgroup')
+                            ->where('siswa_id', $siswa->id)
+                            ->get();
+        
+        $intiindikators = Indikator::where('kelas', 'playgroup')
+                            ->where('kategori', 'inti')
+                            ->where('siswa_id', $siswa->id)
+                            ->get();
+
+        $penutups = Penutup::where('kelas', 'playgroup')
+                            ->where('siswa_id', $siswa->id)                    
+                            ->get();
+        
+        return view('kelola.playgroupshow',compact('siswa', 'arrivals', 'breakfasts', 'pembukas', 'pembukaindikators', 'intis', 'intiindikators', 'penutups'));
     }
 
     /**
