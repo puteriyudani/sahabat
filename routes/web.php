@@ -105,15 +105,23 @@ Route::middleware(['auth', 'user-access:guru'])->group(function () {
     Route::get('/babycamp-inti', [BabycampController::class, 'inti'])->name('babycamp.inti');
     Route::get('/babycamp-penutup', [BabycampController::class, 'penutup'])->name('babycamp.penutup');
 
-    Route::post('/penutup', [PenutupController::class, 'storebaby'])->name('penutup.storebaby');
-    Route::post('/inti', [IntiController::class, 'storebaby'])->name('inti.storebaby');
     Route::post('/pembuka', [PembukaController::class, 'storebaby'])->name('pembuka.storebaby');
+    Route::post('/inti', [IntiController::class, 'storebaby'])->name('inti.storebaby');
+    Route::post('/penutup', [PenutupController::class, 'storebaby'])->name('penutup.storebaby');
 
     // isi
     Route::post('/breakfast', [BreakfastController::class, 'store'])->name('breakfast.store');
+    Route::post('/pembuka', [PembukaController::class, 'store'])->name('pembuka.store');
+    Route::post('/inti', [IntiController::class, 'store'])->name('inti.store');
     Route::post('/penutup', [PenutupController::class, 'store'])->name('penutup.store');
 
     // indikator
+    Route::get('/kindergarten-indikator-pembuka', [IndikatorController::class, 'kindergartenpembuka'])->name('kindergarten.indikatorpembuka');
+    Route::get('/kindergarten-indikator-inti', [IndikatorController::class, 'kindergarteninti'])->name('kindergarten.indikatorinti');
+
+    Route::get('/playgroup-indikator-pembuka', [IndikatorController::class, 'playgrouppembuka'])->name('playgroup.indikatorpembuka');
+    Route::get('/playgroup-indikator-inti', [IndikatorController::class, 'playgroupinti'])->name('playgroup.indikatorinti');
+
     Route::post('/indikator', [IndikatorController::class, 'store'])->name('indikator.store');
 });
 

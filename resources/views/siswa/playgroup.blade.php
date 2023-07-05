@@ -75,7 +75,7 @@
                                             @csrf
                                             @method('DELETE')
 
-                                            <button class="btn mb-1" type="submit">
+                                            <button class="btn mb-1" type="submit" style="color: red">
                                                 hapus
                                             </button>
                                         </form>

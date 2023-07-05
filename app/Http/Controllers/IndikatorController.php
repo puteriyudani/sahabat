@@ -3,10 +3,34 @@
 namespace App\Http\Controllers;
 
 use App\Models\Indikator;
+use App\Models\Siswa;
 use Illuminate\Http\Request;
 
 class IndikatorController extends Controller
 {
+    public function kindergartenpembuka()
+    {
+        $siswas = Siswa::where('kelompok', 'kindergarten')->get();
+        return view('kindergarten.indikatorpembuka', compact('siswas'));
+    }
+
+    public function kindergarteninti()
+    {
+        $siswas = Siswa::where('kelompok', 'kindergarten')->get();
+        return view('kindergarten.indikatorinti', compact('siswas'));
+    }
+
+    public function playgrouppembuka()
+    {
+        $siswas = Siswa::where('kelompok', 'playgroup')->get();
+        return view('playgroup.indikatorpembuka', compact('siswas'));
+    }
+
+    public function playgroupinti()
+    {
+        $siswas = Siswa::where('kelompok', 'playgroup')->get();
+        return view('playgroup.indikatorinti', compact('siswas'));
+    }
     /**
      * Display a listing of the resource.
      */
