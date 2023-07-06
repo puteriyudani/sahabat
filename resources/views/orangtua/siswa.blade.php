@@ -32,7 +32,7 @@
                                     <td>{{ $loop->iteration }}</td>
                                     <td><img src="{{ asset('/storage/images/' . $siswa->image) }}"
                                         class="img-thumbnail" style="width:200px" /></td>
-                                    <td><a href="">{{ $siswa->nama }}</a></td>
+                                    <td><a href="{{ route('ortu.kindergarten', $siswa->id) }}">{{ $siswa->nama }}</a></td>
                                 </tr>
                             @endforeach
                         </tbody>

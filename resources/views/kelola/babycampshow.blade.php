@@ -59,12 +59,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($pembukas as $pembuka)
+                    @foreach ($pembukababys as $pembukababy)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
-                            <td>{{ $pembuka->tanggal }}</td>
-                            <td>{{ $pembuka->circletime }}</td>
-                            <td>{{ $pembuka->surahpendek }}</td>
+                            <td>{{ $pembukababy->tanggal }}</td>
+                            <td>{{ $pembukababy->circletime }}</td>
+                            <td>{{ $pembukababy->surahpendek }}</td>
                             <td>
                                 <form action="" method="POST">
                                     @csrf
@@ -97,13 +97,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($intis as $inti)
+                    @foreach ($intibabys as $intibaby)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
-                            <td>{{ $inti->tanggal }}</td>
-                            <td>{{ $inti->inti }}</td>
-                            <td>{{ $inti->kudapansiang }}</td>
-                            <td>{{ $inti->keterangan }}</td>
+                            <td>{{ $intibaby->tanggal }}</td>
+                            <td>{{ $intibaby->inti }}</td>
+                            <td>{{ $intibaby->kudapansiang }}</td>
+                            <td>{{ $intibaby->keterangan }}</td>
                             <td>
                                 <form action="" method="POST">
                                     @csrf
@@ -138,15 +138,15 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($penutups as $penutup)
+                    @foreach ($penutupbabys as $penutupbaby)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
-                            <td>{{ $penutup->tanggal }}</td>
-                            <td>{{ $penutup->doa }}</td>
-                            <td>{{ $penutup->snack }}</td>
-                            <td>{{ $penutup->bab }}</td>
-                            <td>{{ $penutup->tidur }}</td>
-                            <td>{{ $penutup->minumsusu }}</td>
+                            <td>{{ $penutupbaby->tanggal }}</td>
+                            <td>{{ $penutupbaby->doa }}</td>
+                            <td>{{ $penutupbaby->snack }}</td>
+                            <td>{{ $penutupbaby->bab }}</td>
+                            <td>{{ $penutupbaby->tidur }}</td>
+                            <td>{{ $penutupbaby->minumsusu }}</td>
                             <td>
                                 <form action="" method="POST">
                                     @csrf

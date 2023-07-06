@@ -149,4 +149,6 @@ Route::middleware(['auth', 'user-access:ortu'])->group(function () {
     Route::get('/halaman-orangtua', [OrtuController::class, 'index'])->name('ortu');
     Route::get('/halaman-orangtua-siswa', [OrtuController::class, 'siswa'])->name('ortu.siswa');
 
+    Route::get('halaman-orangtua-siswa/{siswa}', [OrtuController::class, 'kindergarten'])->name('ortu.kindergarten');
+
 });
