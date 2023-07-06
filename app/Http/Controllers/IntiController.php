@@ -76,16 +76,50 @@ class IntiController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Inti $inti)
     {
-        //
+        $request->validate([
+            'kelas' => 'required',
+            'tanggal' => 'required',
+            'siswa_id' => 'required',
+            'inti' => 'required',
+        ]);
+    
+        $inti->update($request->all());
+    
+        return redirect()->with('success','Inti updated successfully');
+    }
+
+    public function updatebaby(Request $request, Intibaby $intibaby)
+    {
+        $request->validate([
+            'kelas' => 'required',
+            'tanggal' => 'required',
+            'siswa_id' => 'required',
+            'inti' => 'required',
+            'kudapansiang' => 'required',
+            'keterangan' => 'required',
+        ]);
+    
+        $intibaby->update($request->all());
+    
+        return redirect()->with('success','Inti updated successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Inti $inti)
     {
-        //
+        $inti->delete();
+    
+        return back()->with('success','Inti deleted successfully');
+    }
+
+    public function destroybaby(Intibaby $intibaby)
+    {
+        $intibaby->delete();
+    
+        return back()->with('success','Inti deleted successfully');
     }
 }

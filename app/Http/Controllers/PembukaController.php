@@ -77,16 +77,51 @@ class PembukaController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Pembuka $pembuka)
     {
-        //
+        $request->validate([
+            'kelas' => 'required',
+            'tanggal' => 'required',
+            'siswa_id' => 'required',
+            'outdoor' => 'required',
+            'circletime' => 'required',
+            'doapembuka' => 'required',
+        ]);
+    
+        $pembuka->update($request->all());
+    
+        return redirect()->with('success','Pembuka updated successfully');
+    }
+
+    public function updatebaby(Request $request, Pembukababy $pembukababy)
+    {
+        $request->validate([
+            'kelas' => 'required',
+            'tanggal' => 'required',
+            'siswa_id' => 'required',
+            'circletime' => 'required',
+            'surahpendek' => 'required',
+        ]);
+    
+        $pembukababy->update($request->all());
+    
+        return redirect()->with('success','Pembuka updated successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Pembuka $pembuka)
     {
-        //
+        $pembuka->delete();
+    
+        return back()->with('success','Pembuka deleted successfully');
+    }
+
+    public function destroybaby(Pembukababy $pembukababy)
+    {
+        $pembukababy->delete();
+    
+        return back()->with('success','Pembuka deleted successfully');
     }
 }

@@ -30,10 +30,6 @@
                             <td>{{ $breakfast->keterangan }}</td>
                             <td>
                                 <form action="" method="POST">
-                                    <a href="" style="text-decoration: none;">
-                                        edit
-                                    </a>
-
                                     @csrf
                                     @method('DELETE')
 
@@ -71,10 +67,6 @@
                             <td>{{ $pembuka->surahpendek }}</td>
                             <td>
                                 <form action="" method="POST">
-                                    <a href="" style="text-decoration: none;">
-                                        edit
-                                    </a>
-
                                     @csrf
                                     @method('DELETE')
 
@@ -114,10 +106,6 @@
                             <td>{{ $inti->keterangan }}</td>
                             <td>
                                 <form action="" method="POST">
-                                    <a href="" style="text-decoration: none;">
-                                        edit
-                                    </a>
-
                                     @csrf
                                     @method('DELETE')
 
@@ -161,10 +149,6 @@
                             <td>{{ $penutup->minumsusu }}</td>
                             <td>
                                 <form action="" method="POST">
-                                    <a href="" style="text-decoration: none;">
-                                        edit
-                                    </a>
-
                                     @csrf
                                     @method('DELETE')
 

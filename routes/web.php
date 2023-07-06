@@ -110,11 +110,20 @@ Route::middleware(['auth', 'user-access:guru'])->group(function () {
     Route::post('/inti', [IntiController::class, 'storebaby'])->name('inti.storebaby');
     Route::post('/penutup', [PenutupController::class, 'storebaby'])->name('penutup.storebaby');
 
+    Route::delete('/pembuka', [PembukaController::class, 'destroybaby'])->name('pembuka.destroybaby');
+    Route::delete('/inti', [IntiController::class, 'destroybaby'])->name('inti.destroybaby');
+    Route::delete('/penutup', [PenutupController::class, 'destroybaby'])->name('penutup.destroybaby');
+
     // isi
     Route::post('/breakfast', [BreakfastController::class, 'store'])->name('breakfast.store');
     Route::post('/pembuka', [PembukaController::class, 'store'])->name('pembuka.store');
     Route::post('/inti', [IntiController::class, 'store'])->name('inti.store');
     Route::post('/penutup', [PenutupController::class, 'store'])->name('penutup.store');
+
+    Route::delete('/breakfast', [BreakfastController::class, 'destroy'])->name('breakfast.destroy');
+    Route::delete('/pembuka', [PembukaController::class, 'destroy'])->name('pembuka.destroy');
+    Route::delete('/inti', [IntiController::class, 'destroy'])->name('inti.destroy');
+    Route::delete('/penutup', [PenutupController::class, 'destroy'])->name('penutup.destroy');
 
     // indikator
     Route::get('/kindergarten-indikator-pembuka', [IndikatorController::class, 'kindergartenpembuka'])->name('kindergarten.indikatorpembuka');
@@ -128,6 +137,7 @@ Route::middleware(['auth', 'user-access:guru'])->group(function () {
     // kelola
     Route::resource('kelola', KelolaController::class);
     Route::get('kelolakindergarten/{siswa}', [KindergartenController::class, 'show'])->name('kelolakindergarten.show');
+
     Route::get('/kelola-kindergarten', [KelolaController::class, 'kindergarten'])->name('kelola.kindergarten');
     Route::get('/kelola-playgroup', [KelolaController::class, 'playgroup'])->name('kelola.playgroup');
     Route::get('/kelola-babycamp', [KelolaController::class, 'babycamp'])->name('kelola.babycamp');
@@ -137,5 +147,6 @@ Route::middleware(['auth', 'user-access:guru'])->group(function () {
 Route::middleware(['auth', 'user-access:ortu'])->group(function () {
     // home ortu
     Route::get('/halaman-orangtua', [OrtuController::class, 'index'])->name('ortu');
+    Route::get('/halaman-orangtua-siswa', [OrtuController::class, 'siswa'])->name('ortu.siswa');
 
 });

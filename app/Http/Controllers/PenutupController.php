@@ -79,16 +79,53 @@ class PenutupController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Penutup $penutup)
     {
-        //
+        $request->validate([
+            'kelas' => 'required',
+            'tanggal' => 'required',
+            'siswa_id' => 'required',
+            'doa' => 'required',
+            'bab' => 'required',
+        ]);
+    
+        $penutup->update($request->all());
+    
+        return redirect()->with('success','Penutup updated successfully');
+    }
+
+    public function updatebaby(Request $request, Penutupbaby $penutupbaby)
+    {
+        $request->validate([
+            'kelas' => 'required',
+            'tanggal' => 'required',
+            'siswa_id' => 'required',
+            'doa' => 'required',
+            'snack' => 'required',
+            'bab' => 'required',
+            'tidur' => 'required',
+            'minumsusu' => 'required',
+        ]);
+    
+        $penutupbaby->update($request->all());
+    
+        return redirect()->with('success','Penutup updated successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Penutup $penutup)
     {
-        //
+        $penutup->delete();
+    
+        return back()->with('success','Penutup deleted successfully');
+    }
+
+    public function destroybaby(Penutupbaby $penutupbaby)
+    {
+        $penutupbaby->delete();
+    
+        return back()->with('success','Penutup deleted successfully');
     }
 }

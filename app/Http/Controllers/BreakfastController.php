@@ -60,16 +60,28 @@ class BreakfastController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Breakfast $breakfast)
     {
-        //
+        $request->validate([
+            'kelas' => 'required',
+            'tanggal' => 'required',
+            'siswa_id' => 'required',
+            'kudapanpagi' => 'required',
+            'keterangan' => 'required',
+        ]);
+    
+        $breakfast->update($request->all());
+    
+        return redirect()->with('success','Breakfast updated successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Breakfast $breakfast)
     {
-        //
+        $breakfast->delete();
+    
+        return back()->with('success','Breakfast deleted successfully');
     }
 }

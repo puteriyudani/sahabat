@@ -28,10 +28,6 @@
                             <td>{{ $arrival->indikator }}</td>
                             <td>
                                 <form action="" method="POST">
-                                    <a href="" style="text-decoration: none;">
-                                        edit
-                                    </a>
-
                                     @csrf
                                     @method('DELETE')
 
@@ -69,10 +65,6 @@
                             <td>{{ $breakfast->keterangan }}</td>
                             <td>
                                 <form action="" method="POST">
-                                    <a href="" style="text-decoration: none;">
-                                        edit
-                                    </a>
-
                                     @csrf
                                     @method('DELETE')
 
@@ -112,10 +104,6 @@
                             <td>{{ $pembuka->doapembuka }}</td>
                             <td>
                                 <form action="" method="POST">
-                                    <a href="" style="text-decoration: none;">
-                                        edit
-                                    </a>
-
                                     @csrf
                                     @method('DELETE')
 
@@ -151,10 +139,6 @@
                             <td>{{ $inti->inti }}</td>
                             <td>
                                 <form action="" method="POST">
-                                    <a href="" style="text-decoration: none;">
-                                        edit
-                                    </a>
-
                                     @csrf
                                     @method('DELETE')
 
@@ -192,10 +176,6 @@
                             <td>{{ $penutup->bab }}</td>
                             <td>
                                 <form action="" method="POST">
-                                    <a href="" style="text-decoration: none;">
-                                        edit
-                                    </a>
-
                                     @csrf
                                     @method('DELETE')
 

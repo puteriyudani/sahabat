@@ -15,7 +15,7 @@ class Siswa extends Model
 
     public function ortu()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'orangtua_id');
     }
 
     public function tahun()
