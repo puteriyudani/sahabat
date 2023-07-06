@@ -27,8 +27,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <input type="hidden" class="form-control" id="kategori" name="kategori" aria-describedby="kategoriHelp"
-                        value="arrival" readonly>
+                    <input type="hidden" class="form-control" id="kategori" name="kategori"
+                        aria-describedby="kategoriHelp" value="arrival" readonly>
                 </div>
             </div>
         </div>
@@ -43,7 +43,38 @@
                 </div>
             </div>
         </div>
-        <section class="page-section bg-light" id="portfolio">
+        
+        <div class="container">
+            <div class="row text-center mt-5 mb-5">
+                @foreach ($siswas as $siswa)
+                    <div class="col-md-2">
+                        <div class="form-check">
+                            <input type="radio" class="btn-check" name="siswa_id" id="{{ $siswa->id }}"
+                                value="{{ $siswa->id }}" autocomplete="off">
+                            <label class="btn" for="{{ $siswa->id }}">
+                                <img class="w-100 h-100" src="{{ asset('/storage/images/' . $siswa->image) }}"
+                                    alt="..." width="150px" />
+                            </label>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1" onclick="showModal()">
+                        <button type="button" class="btn btn-success mt-3">Indikator</button>
+                    </a>
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                </div>
+            </div>
+        </div>
+
+        {{-- <section class="page-section bg-light" id="portfolio">
             <div class="container">
                 <div class="row">
                     @foreach ($siswas as $siswa)
@@ -64,7 +95,7 @@
                     @endforeach
                 </div>
             </div>
-        </section>
+        </section> --}}
 
         <!-- Portfolio Modals-->
         <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
@@ -103,12 +134,6 @@
                                             </label>
                                         </div>
                                     </div>
-
-                                    {{-- <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
-                                        type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
-                                    </button> --}}
                                 </div>
                             </div>
                         </div>
@@ -119,16 +144,8 @@
     </form>
 
     <script>
-        function setSelectedImage(siswaId) {
-            document.getElementById('siswa_id').value = siswaId;
-        }
-
-        var radioButtons = document.querySelectorAll('#portfolioModal1 input[type="radio"]');
-
-        for (var i = 0; i < radioButtons.length; i++) {
-            radioButtons[i].addEventListener('click', function() {
-                this.closest('form').submit();
-            });
+        function showModal() {
+            $('#portfolioModal1').modal('show');
         }
     </script>
 @endsection
