@@ -27,7 +27,7 @@
                             <td>{{ $arrival->tanggal }}</td>
                             <td>{{ $arrival->indikator }}</td>
                             <td>
-                                <form action="" method="POST">
+                                <form action="{{ route('indikator.destroy', $arrival->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
 
@@ -64,7 +64,7 @@
                             <td>{{ $breakfast->kudapanpagi }}</td>
                             <td>{{ $breakfast->keterangan }}</td>
                             <td>
-                                <form action="" method="POST">
+                                <form action="{{ route('breakfast.destroy', $breakfast->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
 
@@ -103,7 +103,7 @@
                             <td>{{ $pembuka->circletime }}</td>
                             <td>{{ $pembuka->doapembuka }}</td>
                             <td>
-                                <form action="" method="POST">
+                                <form action="{{ route('pembuka.destroy', $pembuka->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
 
@@ -136,7 +136,7 @@
                             <td>{{ $pembukaindikator->tanggal }}</td>
                             <td>{{ $pembukaindikator->indikator }}</td>
                             <td>
-                                <form action="" method="POST">
+                                <form action="{{ route('indikator.destroy', $pembukaindikator->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
 
@@ -171,7 +171,7 @@
                             <td>{{ $inti->tanggal }}</td>
                             <td>{{ $inti->inti }}</td>
                             <td>
-                                <form action="" method="POST">
+                                <form action="{{ route('inti.destroy', $inti->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
 
@@ -204,7 +204,7 @@
                             <td>{{ $intiindikator->tanggal }}</td>
                             <td>{{ $intiindikator->indikator }}</td>
                             <td>
-                                <form action="" method="POST">
+                                <form action="{{ route('pembuka.destroy', $intiindikator->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
 
@@ -241,7 +241,42 @@
                             <td>{{ $penutup->doa }}</td>
                             <td>{{ $penutup->bab }}</td>
                             <td>
-                                <form action="" method="POST">
+                                <form action="{{ route('penutup.destroy', $penutup->id) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+
+                                    <button class="btn mb-1" type="submit" style="color: red">
+                                        hapus
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+
+        <br>
+
+        <h5>Catatan</h5>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Tanggal</th>
+                        <th scope="col">Catatan</th>
+                        <th scope="col">Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($catatans as $catatan)
+                        <tr>
+                            <td>{{ $loop->iteration }}</td>
+                            <td>{{ $catatan->tanggal }}</td>
+                            <td>{{ $catatan->catatan }}</td>
+                            <td>
+                                <form action="{{ route('catatanguru.destroy', $catatan->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
 

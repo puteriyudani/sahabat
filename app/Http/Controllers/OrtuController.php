@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Breakfast;
+use App\Models\Catatanguru;
+use App\Models\Catatanorangtua;
 use App\Models\Indikator;
 use App\Models\Inti;
 use App\Models\Intibaby;
@@ -73,8 +75,16 @@ class OrtuController extends Controller
                             ->where('siswa_id', $siswa->id)
                             ->whereDate('tanggal', $tanggal)                   
                             ->get();
+
+        $catatangurus = Catatanguru::where('siswa_id', $siswa->id)
+                            ->whereDate('tanggal', $tanggal)
+                            ->get();
+
+        $catatanorangtuas = Catatanorangtua::where('siswa_id', $siswa->id)
+                            ->whereDate('tanggal', $tanggal)
+                            ->get();
         
-        return view('orangtua.kindergarten',compact('siswa', 'arrivals', 'breakfasts', 'pembukas', 'pembukaindikators', 'intis', 'intiindikators', 'penutups', 'tanggal'));
+        return view('orangtua.kindergarten',compact('siswa', 'arrivals', 'breakfasts', 'pembukas', 'pembukaindikators', 'intis', 'intiindikators', 'penutups', 'tanggal', 'catatangurus', 'catatanorangtuas'));
     }
 
     public function playgroup(Request $request, Siswa $siswa)
@@ -118,8 +128,16 @@ class OrtuController extends Controller
                             ->where('siswa_id', $siswa->id)
                             ->whereDate('tanggal', $tanggal)
                             ->get();
+
+        $catatangurus = Catatanguru::where('siswa_id', $siswa->id)
+                            ->whereDate('tanggal', $tanggal)
+                            ->get();
+
+        $catatanorangtuas = Catatanorangtua::where('siswa_id', $siswa->id)
+                            ->whereDate('tanggal', $tanggal)
+                            ->get();
         
-        return view('orangtua.playgroup',compact('siswa', 'arrivals', 'breakfasts', 'pembukas', 'pembukaindikators', 'intis', 'intiindikators', 'penutups'));
+        return view('orangtua.playgroup',compact('siswa', 'arrivals', 'breakfasts', 'pembukas', 'pembukaindikators', 'intis', 'intiindikators', 'penutups', 'catatangurus', 'catatanorangtuas'));
     }
 
     public function babycamp(Request $request, Siswa $siswa)
@@ -145,7 +163,15 @@ class OrtuController extends Controller
                             ->where('siswa_id', $siswa->id)
                             ->whereDate('tanggal', $tanggal)
                             ->get();
+
+        $catatangurus = Catatanguru::where('siswa_id', $siswa->id)
+                            ->whereDate('tanggal', $tanggal)
+                            ->get();
+
+        $catatanorangtuas = Catatanorangtua::where('siswa_id', $siswa->id)
+                            ->whereDate('tanggal', $tanggal)
+                            ->get();
         
-        return view('orangtua.babycamp',compact('siswa', 'breakfasts', 'pembukababys', 'intibabys', 'penutupbabys'));
+        return view('orangtua.babycamp',compact('siswa', 'breakfasts', 'pembukababys', 'intibabys', 'penutupbabys', 'catatangurus', 'catatanorangtuas'));
     }
 }

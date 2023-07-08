@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Breakfast;
+use App\Models\Catatanguru;
 use App\Models\Indikator;
 use App\Models\Inti;
 use App\Models\Pembuka;
@@ -40,6 +41,12 @@ class PlaygroupController extends Controller
     {
         $siswas = Siswa::where('kelompok', 'playgroup')->get();
         return view('playgroup.penutup', compact('siswas'));
+    }
+
+    public function catatan()
+    {
+        $siswas = Siswa::where('kelompok', 'playgroup')->get();
+        return view('playgroup.catatan', compact('siswas'));
     }
 
     /**
@@ -102,7 +109,10 @@ class PlaygroupController extends Controller
                             ->where('siswa_id', $siswa->id)                    
                             ->get();
         
-        return view('kelola.playgroupshow',compact('siswa', 'arrivals', 'breakfasts', 'pembukas', 'pembukaindikators', 'intis', 'intiindikators', 'penutups'));
+        $catatans = Catatanguru::where('siswa_id', $siswa->id)                    
+                            ->get();
+        
+        return view('kelola.playgroupshow',compact('siswa', 'arrivals', 'breakfasts', 'pembukas', 'pembukaindikators', 'intis', 'intiindikators', 'penutups', 'catatans'));
     }
 
     /**

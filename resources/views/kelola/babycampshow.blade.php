@@ -29,7 +29,7 @@
                             <td>{{ $breakfast->kudapanpagi }}</td>
                             <td>{{ $breakfast->keterangan }}</td>
                             <td>
-                                <form action="" method="POST">
+                                <form action="{{ route('breakfast.destroy', $breakfast->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
 
@@ -66,7 +66,7 @@
                             <td>{{ $pembukababy->circletime }}</td>
                             <td>{{ $pembukababy->surahpendek }}</td>
                             <td>
-                                <form action="" method="POST">
+                                <form action="{{ route('pembuka.destroybaby', $pembukababy->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
 
@@ -105,7 +105,7 @@
                             <td>{{ $intibaby->kudapansiang }}</td>
                             <td>{{ $intibaby->keterangan }}</td>
                             <td>
-                                <form action="" method="POST">
+                                <form action="{{ route('inti.destroybaby', $intibaby->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
 
@@ -148,7 +148,42 @@
                             <td>{{ $penutupbaby->tidur }}</td>
                             <td>{{ $penutupbaby->minumsusu }}</td>
                             <td>
-                                <form action="" method="POST">
+                                <form action="{{ route('penutup.destroybaby', $penutupbaby->id) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+
+                                    <button class="btn mb-1" type="submit" style="color: red">
+                                        hapus
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+
+        <br>
+
+        <h5>Catatan</h5>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Tanggal</th>
+                        <th scope="col">Catatan</th>
+                        <th scope="col">Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($catatans as $catatan)
+                        <tr>
+                            <td>{{ $loop->iteration }}</td>
+                            <td>{{ $catatan->tanggal }}</td>
+                            <td>{{ $catatan->catatan }}</td>
+                            <td>
+                                <form action="{{ route('catatanguru.destroy', $catatan->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
 

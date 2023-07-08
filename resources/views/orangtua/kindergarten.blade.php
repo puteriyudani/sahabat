@@ -14,23 +14,24 @@
         <!--  Main wrapper -->
         <div class="body-wrapper">
             @include('include.header-admin')
-            <div class="container-fluid">
+            <div class="container-fluid" style="margin-bottom: -4rem;">
                 <form action="{{ route('ortu.kindergarten', ['siswa' => $siswa]) }}" method="GET">
                     @csrf
-        
+
                     <div class="container mt-3">
                         <div class="row">
                             <div class="col-md-1 mt-1">
                                 <label for="tanggal" class="form-label">Tanggal</label>
                             </div>
                             <div class="col-md-3">
-                                <input type="date" class="form-control" id="tanggal" name="tanggal" aria-describedby="tanggalHelp">
+                                <input type="date" class="form-control" id="tanggal" name="tanggal"
+                                    aria-describedby="tanggalHelp">
                             </div>
                         </div>
                     </div>
-        
+
                     <button type="submit" class="btn btn-primary">Filter</button>
-        
+
                 </form>
             </div>
 
@@ -204,6 +205,63 @@
                         </tbody>
                     </table>
                 </div>
+
+                <br>
+
+                <h5>Catatan Guru</h5>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">Tanggal</th>
+                                <th scope="col">Catatan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($catatangurus as $catatanguru)
+                                <tr>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $catatanguru->tanggal }}</td>
+                                    <td>{{ $catatanguru->catatan }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+
+                <br>
+
+                <h5>Catatan Orang Tua</h5>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">Tanggal</th>
+                                <th scope="col">Catatan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($catatanorangtuas as $catatanorangtua)
+                                <tr>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $catatanorangtua->tanggal }}</td>
+                                    <td>{{ $catatanorangtua->catatan }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+
+                <br>
+
+                @if (Request::has('tanggal'))
+                    <a href="{{ route('catatanorangtua.create', ['siswa' => $siswa->id, 'tanggal' => Request::get('tanggal')]) }}">Catatan
+                        Orangtua</a>
+                @endif
+
+                <br><br>
             </div>
         </div>
     </div>

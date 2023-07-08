@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Breakfast;
+use App\Models\Catatanguru;
 use App\Models\Indikator;
 use App\Models\Inti;
 use App\Models\Pembuka;
@@ -40,6 +41,12 @@ class KindergartenController extends Controller
     {
         $siswas = Siswa::where('kelompok', 'kindergarten')->get();
         return view('kindergarten.penutup', compact('siswas'));
+    }
+
+    public function catatan()
+    {
+        $siswas = Siswa::where('kelompok', 'kindergarten')->get();
+        return view('kindergarten.catatan', compact('siswas'));
     }
     
     /**
@@ -101,8 +108,11 @@ class KindergartenController extends Controller
         $penutups = Penutup::where('kelas', 'kindergarten')
                             ->where('siswa_id', $siswa->id)                    
                             ->get();
+
+        $catatans = Catatanguru::where('siswa_id', $siswa->id)                    
+                            ->get();
         
-        return view('kelola.kindergartenshow',compact('siswa', 'arrivals', 'breakfasts', 'pembukas', 'pembukaindikators', 'intis', 'intiindikators', 'penutups'));
+        return view('kelola.kindergartenshow',compact('siswa', 'arrivals', 'breakfasts', 'pembukas', 'pembukaindikators', 'intis', 'intiindikators', 'penutups', 'catatans'));
     }
 
     /**

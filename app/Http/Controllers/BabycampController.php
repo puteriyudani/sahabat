@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Breakfast;
+use App\Models\Catatanguru;
 use App\Models\Intibaby;
 use App\Models\Pembuka;
 use App\Models\Pembukababy;
@@ -34,6 +35,12 @@ class BabycampController extends Controller
     {
         $siswas = Siswa::where('kelompok', 'babycamp')->get();
         return view('babycamp.penutup', compact('siswas'));
+    }
+
+    public function catatan()
+    {
+        $siswas = Siswa::where('kelompok', 'babycamp')->get();
+        return view('babycamp.catatan', compact('siswas'));
     }
 
     /**
@@ -80,8 +87,11 @@ class BabycampController extends Controller
         $penutupbabys = Penutupbaby::where('kelas', 'babycamp')
                             ->where('siswa_id', $siswa->id)
                             ->get();
+
+        $catatans = Catatanguru::where('siswa_id', $siswa->id)                    
+                            ->get();
         
-        return view('kelola.babycampshow',compact('siswa', 'breakfasts', 'pembukababys', 'intibabys', 'penutupbabys'));
+        return view('kelola.babycampshow',compact('siswa', 'breakfasts', 'pembukababys', 'intibabys', 'penutupbabys', 'catatans'));
     }
 
     /**

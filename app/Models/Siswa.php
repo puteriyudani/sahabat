@@ -62,4 +62,14 @@ class Siswa extends Model
     {
         return $this->belongsTo(Pembukababy::class);
     }
+
+    public function catatanguru()
+    {
+        return $this->belongsTo(Catatanguru::class);
+    }
+
+    public function catatanorangtua()
+    {
+        return $this->belongsTo(Catatanorangtua::class);
+    }
 }
