@@ -15,6 +15,26 @@
         <div class="body-wrapper">
             @include('include.header-admin')
             <div class="container-fluid">
+                <form action="{{ route('ortu.babycamp', ['siswa' => $siswa]) }}" method="GET">
+                    @csrf
+        
+                    <div class="container mt-3">
+                        <div class="row">
+                            <div class="col-md-1 mt-1">
+                                <label for="tanggal" class="form-label">Tanggal</label>
+                            </div>
+                            <div class="col-md-3">
+                                <input type="date" class="form-control" id="tanggal" name="tanggal" aria-describedby="tanggalHelp">
+                            </div>
+                        </div>
+                    </div>
+        
+                    <button type="submit" class="btn btn-primary">Filter</button>
+        
+                </form>
+            </div>
+
+            <div class="container-fluid">
                 <h5>Breakfast</h5>
                 <div class="table-responsive">
                     <table class="table table-striped">

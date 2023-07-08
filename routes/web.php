@@ -145,10 +145,11 @@ Route::middleware(['auth', 'user-access:guru'])->group(function () {
 
 //ortu
 Route::middleware(['auth', 'user-access:ortu'])->group(function () {
-    // home ortu
     Route::get('/halaman-orangtua', [OrtuController::class, 'index'])->name('ortu');
     Route::get('/halaman-orangtua-siswa', [OrtuController::class, 'siswa'])->name('ortu.siswa');
 
-    Route::get('halaman-orangtua-siswa/{siswa}', [OrtuController::class, 'kindergarten'])->name('ortu.kindergarten');
+    Route::get('halaman-orangtua-siswa/{siswa}/kindergarten', [OrtuController::class, 'kindergarten'])->name('ortu.kindergarten');
+    Route::get('halaman-orangtua-siswa/{siswa}/playgroup', [OrtuController::class, 'playgroup'])->name('ortu.playgroup');
+    Route::get('halaman-orangtua-siswa/{siswa}/babycamp', [OrtuController::class, 'babycamp'])->name('ortu.babycamp');
 
 });
