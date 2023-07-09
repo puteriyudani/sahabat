@@ -17,217 +17,148 @@
             <div class="container-fluid" style="margin-bottom: -4rem;">
                 <form action="{{ route('ortu.playgroup', ['siswa' => $siswa]) }}" method="GET">
                     @csrf
-        
+
                     <div class="container mt-3">
                         <div class="row">
                             <div class="col-md-1 mt-1">
                                 <label for="tanggal" class="form-label">Tanggal</label>
                             </div>
                             <div class="col-md-3">
-                                <input type="date" class="form-control" id="tanggal" name="tanggal" aria-describedby="tanggalHelp">
+                                <input type="date" class="form-control" id="tanggal" name="tanggal"
+                                    aria-describedby="tanggalHelp">
+                            </div>
+                            <div class="col-md-3">
+                                <button type="submit" class="btn btn-primary">Filter</button>
                             </div>
                         </div>
                     </div>
-        
-                    <button type="submit" class="btn btn-primary">Filter</button>
-        
+
                 </form>
+            </div>
+
+            <div class="container-fluid" style="margin-bottom: -5rem;">
+                @if (Request::has('tanggal'))
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <p>Tanggal</p>
+                        </div>
+                        <div class="col-sm-2">
+                            <p>: {{ $tanggal }}</p>
+                        </div>
+                    </div>
+                @endif
             </div>
 
             <div class="container-fluid">
                 <h5 style="color: blue">Arrival</h5>
-                <div class="table-responsive">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th scope="col">No</th>
-                                <th scope="col">Tanggal</th>
-                                <th scope="col">Indikator</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($arrivals as $arrival)
-                                <tr>
-                                    <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $arrival->tanggal }}</td>
-                                    <td>{{ $arrival->indikator }}</td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                </div>
+                @foreach ($arrivals as $arrival)
+                    <p>{{ $arrival->indikator }}</p>
+                @endforeach
 
                 <br>
 
                 <h5>Breakfast</h5>
-                <div class="table-responsive">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th scope="col">No</th>
-                                <th scope="col">Tanggal</th>
-                                <th scope="col">Kudapan Pagi</th>
-                                <th scope="col">Keterangan</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($breakfasts as $breakfast)
-                                <tr>
-                                    <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $breakfast->tanggal }}</td>
-                                    <td>{{ $breakfast->kudapanpagi }}</td>
-                                    <td>{{ $breakfast->keterangan }}</td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                </div>
+                @foreach ($breakfasts as $breakfast)
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <p>Kudapan Pagi</p>
+                        </div>
+                        <div class="col-sm-2">
+                            <p>: {{ $breakfast->kudapanpagi }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <p>Keterangan</p>
+                        </div>
+                        <div class="col-sm-2">
+                            <p>: {{ $breakfast->keterangan }}</p>
+                        </div>
+                    </div>
+                @endforeach
 
                 <br>
 
                 <h5>Kegiatan Pembuka</h5>
-                <div class="table-responsive">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th scope="col">No</th>
-                                <th scope="col">Tanggal</th>
-                                <th scope="col">Outdoor</th>
-                                <th scope="col">Circle Time</th>
-                                <th scope="col">Doa Pembuka</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($pembukas as $pembuka)
-                                <tr>
-                                    <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $pembuka->tanggal }}</td>
-                                    <td>{{ $pembuka->outdoor }}</td>
-                                    <td>{{ $pembuka->circletime }}</td>
-                                    <td>{{ $pembuka->doapembuka }}</td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                </div>
+                @foreach ($pembukas as $pembuka)
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <p>Outdoor</p>
+                        </div>
+                        <div class="col-sm-2">
+                            <p>: {{ $pembuka->outdoor }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <p>Circle Time</p>
+                        </div>
+                        <div class="col-sm-2">
+                            <p>: {{ $pembuka->circletime }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <p>Doa</p>
+                        </div>
+                        <div class="col-sm-2">
+                            <p>: {{ $pembuka->doapembuka }}</p>
+                        </div>
+                    </div>
+                @endforeach
 
                 <p style="color: blue">Indikator</p>
-                <div class="table-responsive">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th scope="col">No</th>
-                                <th scope="col">Tanggal</th>
-                                <th scope="col">Indikator</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($pembukaindikators as $pembukaindikator)
-                                <tr>
-                                    <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $pembukaindikator->tanggal }}</td>
-                                    <td>{{ $pembukaindikator->indikator }}</td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                </div>
+                @foreach ($pembukaindikators as $pembukaindikator)
+                    <p>{{ $pembukaindikator->indikator }}</p>
+                @endforeach
 
                 <br>
 
                 <h5>Kegiatan Inti</h5>
-                <div class="table-responsive">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th scope="col">No</th>
-                                <th scope="col">Tanggal</th>
-                                <th scope="col">Kegiatan Inti</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($intis as $inti)
-                                <tr>
-                                    <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $inti->tanggal }}</td>
-                                    <td>{{ $inti->inti }}</td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                </div>
+                @foreach ($intis as $inti)
+                    <p>{{ $inti->inti }}</p>
+                @endforeach
 
                 <p style="color: blue">Indikator</p>
-                <div class="table-responsive">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th scope="col">No</th>
-                                <th scope="col">Tanggal</th>
-                                <th scope="col">Indikator</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($intiindikators as $intiindikator)
-                                <tr>
-                                    <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $intiindikator->tanggal }}</td>
-                                    <td>{{ $intiindikator->indikator }}</td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                </div>
+                @foreach ($intiindikators as $intiindikator)
+                    <p>{{ $intiindikator->indikator }}</p>
+                @endforeach
 
                 <br>
 
                 <h5>Kegiatan Penutup</h5>
-                <div class="table-responsive">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th scope="col">No</th>
-                                <th scope="col">Tanggal</th>
-                                <th scope="col">Doa</th>
-                                <th scope="col">Buang Air Besar</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($penutups as $penutup)
-                                <tr>
-                                    <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $penutup->tanggal }}</td>
-                                    <td>{{ $penutup->doa }}</td>
-                                    <td>{{ $penutup->bab }}</td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                </div>
+                @foreach ($penutups as $penutup)
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <p>Doa</p>
+                        </div>
+                        <div class="col-sm-2">
+                            <p>: {{ $penutup->doa }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <p>Buang Air Besar</p>
+                        </div>
+                        <div class="col-sm-2">
+                            <p>: {{ $penutup->bab }}</p>
+                        </div>
+                    </div>
+                @endforeach
 
                 <br>
 
                 <h5>Catatan Guru</h5>
-                <div class="table-responsive">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th scope="col">No</th>
-                                <th scope="col">Tanggal</th>
-                                <th scope="col">Catatan</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($catatangurus as $catatanguru)
-                                <tr>
-                                    <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $catatanguru->tanggal }}</td>
-                                    <td>{{ $catatanguru->catatan }}</td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                </div>
+                @foreach ($catatangurus as $catatanguru)
+                    <p>{{ $catatanguru->catatan }}</p>
+                @endforeach
+
+                <br>
+                
+                <h5>Catatan Orang Tua</h5>
+                @foreach ($catatanorangtuas as $catatanorangtua)
+                    <p>{{ $catatanorangtua->catatan }}</p>
+                @endforeach
 
                 <br>
 

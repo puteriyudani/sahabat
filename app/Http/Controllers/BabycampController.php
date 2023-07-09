@@ -70,8 +70,10 @@ class BabycampController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Siswa $siswa)
+    public function show(Request $request, Siswa $siswa)
     {
+        $tanggal = $request->input('tanggal');
+
         $breakfasts = Breakfast::where('kelas', 'babycamp')
                             ->where('siswa_id', $siswa->id)
                             ->get();
@@ -91,7 +93,7 @@ class BabycampController extends Controller
         $catatans = Catatanguru::where('siswa_id', $siswa->id)                    
                             ->get();
         
-        return view('kelola.babycampshow',compact('siswa', 'breakfasts', 'pembukababys', 'intibabys', 'penutupbabys', 'catatans'));
+        return view('kelola.babycampshow',compact('tanggal', 'siswa', 'breakfasts', 'pembukababys', 'intibabys', 'penutupbabys', 'catatans'));
     }
 
     /**

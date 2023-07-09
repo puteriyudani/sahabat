@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Catatanguru;
+use App\Models\Catatanorangtua;
 use Illuminate\Http\Request;
 
 class CatatanGuruController extends Controller
@@ -77,6 +78,13 @@ class CatatanGuruController extends Controller
     public function destroy(Catatanguru $catatanguru)
     {
         $catatanguru->delete();
+    
+        return back()->with('success','Catatan deleted successfully');
+    }
+
+    public function destroyorangtua(Catatanorangtua $catatanorangtua)
+    {
+        $catatanorangtua->delete();
     
         return back()->with('success','Catatan deleted successfully');
     }

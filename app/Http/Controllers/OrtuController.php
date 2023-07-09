@@ -84,7 +84,7 @@ class OrtuController extends Controller
                             ->whereDate('tanggal', $tanggal)
                             ->get();
         
-        return view('orangtua.kindergarten',compact('siswa', 'arrivals', 'breakfasts', 'pembukas', 'pembukaindikators', 'intis', 'intiindikators', 'penutups', 'tanggal', 'catatangurus', 'catatanorangtuas'));
+        return view('orangtua.kindergarten', compact('tanggal', 'siswa', 'arrivals', 'breakfasts', 'pembukas', 'pembukaindikators', 'intis', 'intiindikators', 'penutups', 'tanggal', 'catatangurus', 'catatanorangtuas'));
     }
 
     public function playgroup(Request $request, Siswa $siswa)
@@ -137,7 +137,7 @@ class OrtuController extends Controller
                             ->whereDate('tanggal', $tanggal)
                             ->get();
         
-        return view('orangtua.playgroup',compact('siswa', 'arrivals', 'breakfasts', 'pembukas', 'pembukaindikators', 'intis', 'intiindikators', 'penutups', 'catatangurus', 'catatanorangtuas'));
+        return view('orangtua.playgroup',compact('tanggal', 'siswa', 'arrivals', 'breakfasts', 'pembukas', 'pembukaindikators', 'intis', 'intiindikators', 'penutups', 'catatangurus', 'catatanorangtuas'));
     }
 
     public function babycamp(Request $request, Siswa $siswa)
@@ -172,6 +172,6 @@ class OrtuController extends Controller
                             ->whereDate('tanggal', $tanggal)
                             ->get();
         
-        return view('orangtua.babycamp',compact('siswa', 'breakfasts', 'pembukababys', 'intibabys', 'penutupbabys', 'catatangurus', 'catatanorangtuas'));
+        return view('orangtua.babycamp',compact('tanggal', 'siswa', 'breakfasts', 'pembukababys', 'intibabys', 'penutupbabys', 'catatangurus', 'catatanorangtuas'));
     }
 }

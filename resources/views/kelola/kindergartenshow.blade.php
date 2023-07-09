@@ -9,13 +9,45 @@
 
 @section('main')
     <div class="container mt-3">
+        <form action="{{ route('kelolakindergarten.show', ['siswa' => $siswa]) }}" method="GET">
+            @csrf
+
+            <div class="container mt-3">
+                <div class="row">
+                    <div class="col-md-1 mt-1">
+                        <label for="tanggal" class="form-label">Tanggal</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="date" class="form-control" id="tanggal" name="tanggal"
+                            aria-describedby="tanggalHelp">
+                    </div>
+                    <div class="col-md-3"><button type="submit" class="btn btn-primary">Filter</button></div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <div class="container">
+        @if (Request::has('tanggal'))
+            <div class="row">
+                <div class="col-sm-1">
+                    <p>Tanggal</p>
+                </div>
+                <div class="col-sm-2">
+                    <p>: {{ $tanggal }}</p>
+                </div>
+            </div>
+        @endif
+    </div>
+
+    <div class="container mt-3">
         <h5 style="color: blue">Arrival</h5>
         <div class="table-responsive">
             <table class="table table-striped">
                 <thead>
                     <tr>
                         <th scope="col">No</th>
-                        <th scope="col">Tanggal</th>
                         <th scope="col">Indikator</th>
                         <th scope="col">Aksi</th>
                     </tr>
@@ -24,7 +56,6 @@
                     @foreach ($arrivals as $arrival)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
-                            <td>{{ $arrival->tanggal }}</td>
                             <td>{{ $arrival->indikator }}</td>
                             <td>
                                 <form action="{{ route('indikator.destroy', $arrival->id) }}" method="POST">
@@ -50,7 +81,6 @@
                 <thead>
                     <tr>
                         <th scope="col">No</th>
-                        <th scope="col">Tanggal</th>
                         <th scope="col">Kudapan Pagi</th>
                         <th scope="col">Keterangan</th>
                         <th scope="col">Aksi</th>
@@ -60,7 +90,6 @@
                     @foreach ($breakfasts as $breakfast)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
-                            <td>{{ $breakfast->tanggal }}</td>
                             <td>{{ $breakfast->kudapanpagi }}</td>
                             <td>{{ $breakfast->keterangan }}</td>
                             <td>
@@ -87,7 +116,6 @@
                 <thead>
                     <tr>
                         <th scope="col">No</th>
-                        <th scope="col">Tanggal</th>
                         <th scope="col">Outdoor</th>
                         <th scope="col">Circle Time</th>
                         <th scope="col">Doa Pembuka</th>
@@ -98,7 +126,6 @@
                     @foreach ($pembukas as $pembuka)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
-                            <td>{{ $pembuka->tanggal }}</td>
                             <td>{{ $pembuka->outdoor }}</td>
                             <td>{{ $pembuka->circletime }}</td>
                             <td>{{ $pembuka->doapembuka }}</td>
@@ -124,7 +151,6 @@
                 <thead>
                     <tr>
                         <th scope="col">No</th>
-                        <th scope="col">Tanggal</th>
                         <th scope="col">Indikator</th>
                         <th scope="col">Aksi</th>
                     </tr>
@@ -133,7 +159,6 @@
                     @foreach ($pembukaindikators as $pembukaindikator)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
-                            <td>{{ $pembukaindikator->tanggal }}</td>
                             <td>{{ $pembukaindikator->indikator }}</td>
                             <td>
                                 <form action="{{ route('indikator.destroy', $pembukaindikator->id) }}" method="POST">
@@ -159,7 +184,6 @@
                 <thead>
                     <tr>
                         <th scope="col">No</th>
-                        <th scope="col">Tanggal</th>
                         <th scope="col">Kegiatan Inti</th>
                         <th scope="col">Aksi</th>
                     </tr>
@@ -168,7 +192,6 @@
                     @foreach ($intis as $inti)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
-                            <td>{{ $inti->tanggal }}</td>
                             <td>{{ $inti->inti }}</td>
                             <td>
                                 <form action="{{ route('inti.destroy', $inti->id) }}" method="POST">
@@ -192,7 +215,6 @@
                 <thead>
                     <tr>
                         <th scope="col">No</th>
-                        <th scope="col">Tanggal</th>
                         <th scope="col">Indikator</th>
                         <th scope="col">Aksi</th>
                     </tr>
@@ -201,7 +223,6 @@
                     @foreach ($intiindikators as $intiindikator)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
-                            <td>{{ $intiindikator->tanggal }}</td>
                             <td>{{ $intiindikator->indikator }}</td>
                             <td>
                                 <form action="{{ route('pembuka.destroy', $intiindikator->id) }}" method="POST">
@@ -227,7 +248,6 @@
                 <thead>
                     <tr>
                         <th scope="col">No</th>
-                        <th scope="col">Tanggal</th>
                         <th scope="col">Doa</th>
                         <th scope="col">Buang Air Besar</th>
                         <th scope="col">Aksi</th>
@@ -237,7 +257,6 @@
                     @foreach ($penutups as $penutup)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
-                            <td>{{ $penutup->tanggal }}</td>
                             <td>{{ $penutup->doa }}</td>
                             <td>{{ $penutup->bab }}</td>
                             <td>
@@ -258,25 +277,23 @@
 
         <br>
 
-        <h5>Catatan</h5>
+        <h5>Catatan Guru</h5>
         <div class="table-responsive">
             <table class="table table-striped">
                 <thead>
                     <tr>
                         <th scope="col">No</th>
-                        <th scope="col">Tanggal</th>
                         <th scope="col">Catatan</th>
                         <th scope="col">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($catatans as $catatan)
+                    @foreach ($catatangurus as $catatanguru)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
-                            <td>{{ $catatan->tanggal }}</td>
-                            <td>{{ $catatan->catatan }}</td>
+                            <td>{{ $catatanguru->catatan }}</td>
                             <td>
-                                <form action="{{ route('catatanguru.destroy', $catatan->id) }}" method="POST">
+                                <form action="{{ route('catatanguru.destroy', $catatanguru->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
 
@@ -285,6 +302,26 @@
                                     </button>
                                 </form>
                             </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+
+        <h5>Catatan Orangtua</h5>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Catatan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($catatanorangtuas as $catatanorangtua)
+                        <tr>
+                            <td>{{ $loop->iteration }}</td>
+                            <td>{{ $catatanorangtua->catatan }}</td>
                         </tr>
                     @endforeach
                 </tbody>

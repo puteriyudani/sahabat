@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Breakfast;
 use App\Models\Catatanguru;
+use App\Models\Catatanorangtua;
 use App\Models\Indikator;
 use App\Models\Inti;
 use App\Models\Pembuka;
@@ -76,43 +77,57 @@ class KindergartenController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Siswa $siswa)
+    public function show(Request $request, Siswa $siswa)
     {
+        $tanggal = $request->input('tanggal');
+
         $arrivals = Indikator::where('kelas', 'kindergarten')
                             ->where('kategori', 'arrival')
                             ->where('siswa_id', $siswa->id)
+                            ->whereDate('tanggal', $tanggal)
                             ->get();
 
         $breakfasts = Breakfast::where('kelas', 'kindergarten')
                             ->where('siswa_id', $siswa->id)
+                            ->whereDate('tanggal', $tanggal)
                             ->get();
 
         $pembukas = Pembuka::where('kelas', 'kindergarten')
                             ->where('siswa_id', $siswa->id)
+                            ->whereDate('tanggal', $tanggal)
                             ->get();
 
         $pembukaindikators = Indikator::where('kelas', 'kindergarten')
                             ->where('kategori', 'pembuka')
                             ->where('siswa_id', $siswa->id)
+                            ->whereDate('tanggal', $tanggal)
                             ->get();
 
         $intis = Inti::where('kelas', 'kindergarten')
                             ->where('siswa_id', $siswa->id)
+                            ->whereDate('tanggal', $tanggal)
                             ->get();
         
         $intiindikators = Indikator::where('kelas', 'kindergarten')
                             ->where('kategori', 'inti')
                             ->where('siswa_id', $siswa->id)
+                            ->whereDate('tanggal', $tanggal)
                             ->get();
 
         $penutups = Penutup::where('kelas', 'kindergarten')
-                            ->where('siswa_id', $siswa->id)                    
+                            ->where('siswa_id', $siswa->id)  
+                            ->whereDate('tanggal', $tanggal)                  
                             ->get();
 
-        $catatans = Catatanguru::where('siswa_id', $siswa->id)                    
+        $catatangurus = Catatanguru::where('siswa_id', $siswa->id)                   
+                            ->whereDate('tanggal', $tanggal)
+                            ->get();
+
+        $catatanorangtuas = Catatanorangtua::where('siswa_id', $siswa->id)
+                            ->whereDate('tanggal', $tanggal)
                             ->get();
         
-        return view('kelola.kindergartenshow',compact('siswa', 'arrivals', 'breakfasts', 'pembukas', 'pembukaindikators', 'intis', 'intiindikators', 'penutups', 'catatans'));
+        return view('kelola.kindergartenshow', compact('tanggal', 'siswa', 'arrivals', 'breakfasts', 'pembukas', 'pembukaindikators', 'intis', 'intiindikators', 'penutups', 'catatangurus', 'catatanorangtuas'));
     }
 
     /**

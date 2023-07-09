@@ -76,8 +76,10 @@ class PlaygroupController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Siswa $siswa)
+    public function show(Request $request, Siswa $siswa)
     {
+        $tanggal = $request->input('tanggal');
+        
         $arrivals = Indikator::where('kelas', 'playgroup')
                             ->where('kategori', 'arrival')
                             ->where('siswa_id', $siswa->id)
@@ -112,7 +114,7 @@ class PlaygroupController extends Controller
         $catatans = Catatanguru::where('siswa_id', $siswa->id)                    
                             ->get();
         
-        return view('kelola.playgroupshow',compact('siswa', 'arrivals', 'breakfasts', 'pembukas', 'pembukaindikators', 'intis', 'intiindikators', 'penutups', 'catatans'));
+        return view('kelola.playgroupshow',compact('tanggal', 'siswa', 'arrivals', 'breakfasts', 'pembukas', 'pembukaindikators', 'intis', 'intiindikators', 'penutups', 'catatans'));
     }
 
     /**

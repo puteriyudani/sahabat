@@ -9,6 +9,39 @@
 
 @section('main')
     <div class="container mt-3">
+        <form action="{{ route('kelolababycamp.show', ['siswa' => $siswa]) }}" method="GET">
+            @csrf
+
+            <div class="container mt-3">
+                <div class="row">
+                    <div class="col-md-1 mt-1">
+                        <label for="tanggal" class="form-label">Tanggal</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="date" class="form-control" id="tanggal" name="tanggal"
+                            aria-describedby="tanggalHelp">
+                    </div>
+                    <div class="col-md-3"><button type="submit" class="btn btn-primary">Filter</button></div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <div class="container">
+        @if (Request::has('tanggal'))
+            <div class="row">
+                <div class="col-sm-1">
+                    <p>Tanggal</p>
+                </div>
+                <div class="col-sm-2">
+                    <p>: {{ $tanggal }}</p>
+                </div>
+            </div>
+        @endif
+    </div>
+
+    <div class="container mt-3">
         <h5>Breakfast</h5>
         <div class="table-responsive">
             <table class="table table-striped">
