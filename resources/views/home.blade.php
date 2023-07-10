@@ -7,11 +7,9 @@
             <h1>Garden School</h1>
             <p>d'happiest <span class="typed" data-typed-items="Islamic pre-school"></span></p>
             <div class="social-links">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="https://wa.me/6282268081212" class="twitter"><i class="bx bxl-whatsapp"></i></a>
                 <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
                 <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
             </div>
         </div>
     </section><!-- End Hero -->
@@ -26,9 +24,10 @@
 
                 <div class="section-title">
                     <h2>About</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-                        consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-                        fugiat sit in iste officiis commodi quidem hic quas.</p>
+                </div>
+
+                <div class="row">
+                    
                 </div>
 
                 <div class="row">
@@ -38,45 +37,77 @@
                     <div class="col-lg-8 pt-4 pt-lg-0 content">
                         <h3>Garden School</h3>
                         <p class="fst-italic">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore
-                            magna aliqua.
+                            Sahabat Daun Indonesia
                         </p>
                         <div class="row">
                             <div class="col-lg-6">
                                 <ul>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>1 May
-                                            1995</span></li>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>Tahun Berdiri:</strong> <span>7 Juli 2021</span></li>
                                     <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong>
                                         <span>www.example.com</span>
                                     </li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+123 456
-                                            7890</span></li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>New York,
-                                            USA</span></li>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>Kota:</strong> <span>Bengkalis, Riau</span></li>
                                 </ul>
                             </div>
                             <div class="col-lg-6">
                                 <ul>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>30</span></li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master</span>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong>
+                                        <span>gardenschoolindonesia@gmail.com</span>
                                     </li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>PhEmailone:</strong>
-                                        <span>email@example.com</span>
-                                    </li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong>
-                                        <span>Available</span>
-                                    </li>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>No WhatsApp:</strong> <span>+6282268081212</span></li>
                                 </ul>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6 pt-4 pt-lg-0 content">
+                        <h5>Visi</h5>
                         <p>
-                            Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci
-                            omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-                            Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque
-                            neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni
-                            laudantium dolores.
+                            Menjadi sekolah yang berkualitas dengan menggabungkan Budi Pekerti dan IPTEK sehingga menghasilkan manusia yang Berkarakter, Cerdas, Kreatif, Mandiri.
                         </p>
+
+                        <h5>Tujuan</h5>
+                        <ul>
+                            <li>
+                                <i class="bi bi-chevron-right"></i>
+                                <p>Memberi Layanan Perkembangan Anak Usia Dini Kepada Masyarakat Bengkalis</p>
+                            </li>
+                            <li>
+                                <i class="bi bi-chevron-right"></i>
+                                <p>Mitra Tumbuh Kembang anak bersama Orang Tua</p>
+                            </li>
+                            <li>
+                                <i class="bi bi-chevron-right"></i>
+                                <p>Memberikan Layanan PAUD Holistik Integratif</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0 content">
+                        <h5>Misi</h5>
+                        <ul>
+                            <li>
+                                <i class="bi bi-chevron-right"></i>
+                                <p>Menyiapkan generasi yang unggul di bidang Imtaq dan Iptek</p>
+                            </li>
+                            <li>
+                                <i class="bi bi-chevron-right"></i>
+                                <p>Membentuk karakter dengan pembiasaan 6 budi pekerti yang baik dan benar, jujur, dapat dipercaya, hemat dan kerja keras</p>
+                            </li>
+                            <li>
+                                <i class="bi bi-chevron-right"></i>
+                                <p>Membentuk sumber daya manusia yang aktif, kreatif, inovatif, dan sportif</p>
+                            </li>
+                            <li>
+                                <i class="bi bi-chevron-right"></i>
+                                <p>Membangun Citra sekolah sebagai Mitra terpercaya di masyarakat</p>
+                            </li>
+                            <li>
+                                <i class="bi bi-chevron-right"></i>
+                                <p>Memberikan jaminan pelayanan yang prima dalam berbagai hal untuk mendukung proses belajar dan bekerja yang harmonis dan selaras</p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
@@ -84,7 +115,7 @@
         </section><!-- End About Section -->
 
         <!-- ======= Facts Section ======= -->
-        <section id="facts" class="facts">
+        {{-- <section id="facts" class="facts">
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
@@ -135,7 +166,8 @@
                 </div>
 
             </div>
-        </section><!-- End Facts Section -->
+        </section> --}}
+        <!-- End Facts Section -->
 
         <!-- ======= Testimonials Section ======= -->
         <section id="services" class="testimonials section-bg">

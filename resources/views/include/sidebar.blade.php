@@ -53,7 +53,7 @@
                         <span class="hide-menu">Tahun</span>
                     </a>
                 </li>
-                <li class="nav-small-cap">
+                {{-- <li class="nav-small-cap">
                     <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
                     <span class="hide-menu">Kelas</span>
                 </li>
@@ -80,7 +80,7 @@
                         </span>
                         <span class="hide-menu">Baby Camp</span>
                     </a>
-                </li>
+                </li> --}}
                 <li class="nav-small-cap">
                     <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
                     <span class="hide-menu">Montessory</span>
