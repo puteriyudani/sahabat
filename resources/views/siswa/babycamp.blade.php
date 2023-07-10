@@ -37,7 +37,6 @@
                                 <th scope="col">Nama Ibu</th>
                                 <th scope="col">Alamat</th>
                                 <th scope="col">No Hp</th>
-                                <th scope="col">Akun Orangtua</th>
                                 <th scope="col">Aksi</th>
                             </tr>
                         </thead>
@@ -67,7 +66,6 @@
                                     @foreach ($ortus as $ortu)
                                         @if ($ortu->id == $siswa->orangtua_id)
                                             <td>{{ $ortu->nohp }}</td>
-                                            <td>{{ $ortu->name }}</td>
                                         @endif
                                     @endforeach
                                     <td>

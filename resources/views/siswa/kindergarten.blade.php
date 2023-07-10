@@ -64,7 +64,9 @@
                                     <td>{{ $siswa->nama_ibu }}</td>
                                     <td>{{ $siswa->alamat }}</td>
                                     @foreach ($ortus as $ortu)
-                                        <td>{{ $ortu->nohp }}</td>
+                                        @if ($ortu->id == $siswa->orangtua_id)
+                                            <td>{{ $ortu->nohp }}</td>
+                                        @endif
                                     @endforeach
                                     <td>
                                         <form action="{{ route('siswa.destroy', $siswa->id) }}" method="POST">
