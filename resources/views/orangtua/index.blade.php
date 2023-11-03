@@ -15,7 +15,16 @@
         <div class="body-wrapper">
             @include('include.header-admin')
             <div class="container-fluid">
-                <h5>Ini halaman orangtua</h5>
+                @foreach ($siswas as $siswa)
+                    <a href="{{ route('ortu.kindergarten', $siswa->id) }}">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{ asset('/storage/images/' . $siswa->image) }}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $siswa->nama }}</h5>
+                            </div>
+                        </div>
+                    </a>
+                @endforeach
             </div>
         </div>
     </div>

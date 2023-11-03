@@ -31,13 +31,17 @@
                         <tbody>
                             @foreach ($admins as $admin)
                                 <tr>
-                                    <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $admin->name }}</td>
-                                    <td>{{ $admin->nohp }}</td>
-                                    <td>
+                                    <td class="col-md-1">{{ $loop->iteration }}</td>
+                                    <td class="col-md-2">{{ $admin->name }}</td>
+                                    <td class="col-md-2">{{ $admin->nohp }}</td>
+                                    <td class="col-md-2">
                                         <form action="{{ route('destroyAkun', $admin->id) }}" method="POST">
-                                            <a href="{{ route('editAkun', $admin->id) }}" style="text-decoration: none;">
+                                            <a href="{{ route('editAkun', $admin->id) }}" class="me-2" style="text-decoration: none;">
                                                 edit
+                                            </a>
+
+                                            <a href="{{ route('editPassword', $admin->id) }}" style="text-decoration: none; color: green;">
+                                                ubah password
                                             </a>
             
                                             @csrf
@@ -68,13 +72,17 @@
                         <tbody>
                             @foreach ($gurus as $guru)
                                 <tr>
-                                    <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $guru->name }}</td>
-                                    <td>{{ $guru->nohp }}</td>
-                                    <td>
+                                    <td class="col-md-1">{{ $loop->iteration }}</td>
+                                    <td class="col-md-2">{{ $guru->name }}</td>
+                                    <td class="col-md-2">{{ $guru->nohp }}</td>
+                                    <td class="col-md-2">
                                         <form action="{{ route('destroyAkun', $guru->id) }}" method="POST">
-                                            <a href="{{ route('editAkun', $guru->id) }}" style="text-decoration: none;">
+                                            <a href="{{ route('editAkun', $guru->id) }}" class="me-2" style="text-decoration: none;">
                                                 edit
+                                            </a>
+
+                                            <a href="{{ route('editPassword', $guru->id) }}" style="text-decoration: none; color: green;">
+                                                ubah password
                                             </a>
             
                                             @csrf
@@ -105,13 +113,17 @@
                         <tbody>
                             @foreach ($ortus as $ortu)
                                 <tr>
-                                    <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $ortu->name }}</td>
-                                    <td>{{ $ortu->nohp }}</td>
-                                    <td>
+                                    <td class="col-md-1">{{ $loop->iteration }}</td>
+                                    <td class="col-md-2">{{ $ortu->name }}</td>
+                                    <td class="col-md-2">{{ $ortu->nohp }}</td>
+                                    <td class="col-md-2">
                                         <form action="{{ route('destroyAkun', $ortu->id) }}" method="POST">
-                                            <a href="{{ route('editAkun', $ortu->id) }}" style="text-decoration: none;">
+                                            <a href="{{ route('editAkun', $ortu->id) }}" class="me-2" style="text-decoration: none;">
                                                 edit
+                                            </a>
+
+                                            <a href="{{ route('editPassword', $ortu->id) }}" style="text-decoration: none; color: green;">
+                                                ubah password
                                             </a>
             
                                             @csrf

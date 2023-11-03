@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Siswa;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -11,7 +12,11 @@ class AdminController extends Controller
 {
     public function index()
     {
-        return view('admin');
+        $admins = User::where('level', '0')->count();
+        $gurus = User::where('level', '1')->count();
+        $ortus = User::where('level', '2')->count();
+        $siswas = Siswa::count();
+        return view('admin', compact('admins', 'gurus', 'ortus', 'siswas'));
     }
 
     public function showAkun()

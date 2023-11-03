@@ -65,42 +65,46 @@
         <div class="container mt-3">
             <h6>Kudapan Pagi</h6>
 
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="kudapanpagi" id="nasi" value="nasi">
-                <label class="form-check-label" for="nasi">
-                    Variasi Nasi
-                </label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="kudapanpagi" id="mie" value="mie">
-                <label class="form-check-label" for="mie">
-                    Variasi Mie
-                </label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="kudapanpagi" id="kue" value="kue">
-                <label class="form-check-label" for="kue">
-                    Variasi Kue / Lainnya
-                </label>
+            <div class="row mb-3">
+                <div class="form-check form-check-inline col-md-2">
+                    <input class="form-check-input" type="radio" name="kudapanpagi" id="nasi" value="nasi">
+                    <label class="form-check-label" for="nasi">
+                        Variasi Nasi
+                    </label>
+                </div>
+                <div class="form-check form-check-inline col-md-2">
+                    <input class="form-check-input" type="radio" name="kudapanpagi" id="mie" value="mie">
+                    <label class="form-check-label" for="mie">
+                        Variasi Mie
+                    </label>
+                </div>
+                <div class="form-check form-check-inline col-md-3">
+                    <input class="form-check-input" type="radio" name="kudapanpagi" id="kue" value="kue">
+                    <label class="form-check-label" for="kue">
+                        Variasi Kue / Lainnya
+                    </label>
+                </div>
             </div>
 
             <h6>Keterangan</h6>
 
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="keterangan" id="habis" value="habis">
-                <label class="form-check-label" for="habis">Habis</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="keterangan" id="bersisa" value="bersisa">
-                <label class="form-check-label" for="bersisa">Bersisa</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="keterangan" id="tambah" value="tambah">
-                <label class="form-check-label" for="tambah">Tambah</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="keterangan" id="tidakdimakan" value="tidakdimakan">
-                <label class="form-check-label" for="tidakdimakan">Tidak Dimakan</label>
+            <div class="row">
+                <div class="form-check form-check-inline col-md-2">
+                    <input class="form-check-input" type="radio" name="keterangan" id="habis" value="habis">
+                    <label class="form-check-label" for="habis">Habis</label>
+                </div>
+                <div class="form-check form-check-inline col-md-2">
+                    <input class="form-check-input" type="radio" name="keterangan" id="bersisa" value="bersisa">
+                    <label class="form-check-label" for="bersisa">Bersisa</label>
+                </div>
+                <div class="form-check form-check-inline col-md-2">
+                    <input class="form-check-input" type="radio" name="keterangan" id="tambah" value="tambah">
+                    <label class="form-check-label" for="tambah">Tambah</label>
+                </div>
+                <div class="form-check form-check-inline col-md-2">
+                    <input class="form-check-input" type="radio" name="keterangan" id="tidakdimakan" value="tidakdimakan">
+                    <label class="form-check-label" for="tidakdimakan">Tidak Dimakan</label>
+                </div>
             </div>
         </div>
 

@@ -44,7 +44,7 @@
                             @foreach ($siswas as $siswa)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td><img src="{{ asset('/storage/images/' . $siswa->image) }}"
+                                    <td><img src="{{ asset('storage/images/' . $siswa->image) }}"
                                         class="img-thumbnail" style="width:200px" /></td>
                                     @foreach ($tahuns as $tahun)
                                         @if ($tahun->id == $siswa->tahun_id)

@@ -20,7 +20,9 @@ class OrtuController extends Controller
 {
     public function index()
     {
-        return view('orangtua.index');
+        $ortu = Auth::user();
+        $siswas = $ortu->siswa()->get();
+        return view('orangtua.index', compact('siswas'));
     }
 
     public function siswa()

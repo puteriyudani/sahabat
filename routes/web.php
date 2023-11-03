@@ -13,6 +13,7 @@ use App\Http\Controllers\IntiController;
 use App\Http\Controllers\KelolaController;
 use App\Http\Controllers\KindergartenController;
 use App\Http\Controllers\OrtuController;
+use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\PdfController;
 use App\Http\Controllers\PembukaController;
 use App\Http\Controllers\PenutupController;
@@ -61,6 +62,8 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::get('akun/{user}', [AdminController::class, 'editAkun'])->name('editAkun');
     Route::put('akun/{user}', [AdminController::class, 'updateAkun'])->name('updateAkun');
     Route::delete('akun/{user}', [AdminController::class, 'destroyAkun'])->name('destroyAkun');
+    Route::get('password/{user}', [PasswordController::class, 'edit'])->name('editPassword');
+    Route::put('password/{user}', [PasswordController::class, 'update'])->name('updatePassword');
 
     // register
     Route::get('/register', [AuthController::class, 'register'])->name('register');
@@ -112,9 +115,9 @@ Route::middleware(['auth', 'user-access:guru'])->group(function () {
     Route::get('/babycamp-penutup', [BabycampController::class, 'penutup'])->name('babycamp.penutup');
     Route::get('/babycamp-catatan', [BabycampController::class, 'catatan'])->name('babycamp.catatan');
 
-    Route::post('/pembuka', [PembukaController::class, 'storebaby'])->name('pembuka.storebaby');
-    Route::post('/inti', [IntiController::class, 'storebaby'])->name('inti.storebaby');
-    Route::post('/penutup', [PenutupController::class, 'storebaby'])->name('penutup.storebaby');
+    Route::post('/pembukababy', [PembukaController::class, 'storebaby'])->name('pembuka.storebaby');
+    Route::post('/intibaby', [IntiController::class, 'storebaby'])->name('inti.storebaby');
+    Route::post('/penutupbaby', [PenutupController::class, 'storebaby'])->name('penutup.storebaby');
 
     Route::delete('/pembuka', [PembukaController::class, 'destroybaby'])->name('pembuka.destroybaby');
     Route::delete('/inti', [IntiController::class, 'destroybaby'])->name('inti.destroybaby');

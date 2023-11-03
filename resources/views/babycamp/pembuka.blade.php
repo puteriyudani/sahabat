@@ -26,6 +26,15 @@
     <form action="{{ route('pembuka.storebaby') }}" method="POST">
         @csrf
 
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <input type="hidden" class="form-control" id="kelas" name="kelas" aria-describedby="kelasHelp"
+                        value="babycamp" readonly>
+                </div>
+            </div>
+        </div>
+
         <div class="container mt-3">
             <div class="row">
                 <div class="col-md-1 mt-1">
@@ -41,9 +50,9 @@
                 @foreach ($siswas as $siswa)
                     <div class="col-md-2">
                         <div class="form-check">
-                            <input type="radio" class="btn-check" name="image" id="{{ $siswa->image }}"
-                                value="{{ $siswa->image }}" autocomplete="off">
-                            <label class="btn" for="{{ $siswa->image }}">
+                            <input type="radio" class="btn-check" name="siswa_id" id="{{ $siswa->id }}"
+                                value="{{ $siswa->id }}" autocomplete="off">
+                            <label class="btn" for="{{ $siswa->id }}">
                                 <img class="w-100 h-100" src="{{ asset('/storage/images/' . $siswa->image) }}"
                                     alt="..." width="150px" />
                             </label>
@@ -56,33 +65,37 @@
         <div class="container mt-3">
             <h6>Circle Time</h6>
 
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="circletime" id="dongeng" value="dongeng">
-                <label class="form-check-label" for="dongeng">Dongeng</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="circletime" id="berdiskusidanbernyanyi"
-                    value="berdiskusidanbernyanyi">
-                <label class="form-check-label" for="berdiskusidanbernyanyi">Berdiskusi & Bernyanyi</label>
+            <div class="row mb-3">
+                <div class="form-check form-check-inline col-md-2">
+                    <input class="form-check-input" type="radio" name="circletime" id="dongeng" value="dongeng">
+                    <label class="form-check-label" for="dongeng">Dongeng</label>
+                </div>
+                <div class="form-check form-check-inline col-md-3">
+                    <input class="form-check-input" type="radio" name="circletime" id="berdiskusidanbernyanyi"
+                        value="berdiskusidanbernyanyi">
+                    <label class="form-check-label" for="berdiskusidanbernyanyi">Berdiskusi & Bernyanyi</label>
+                </div>
             </div>
 
             <h6>Surah Pendek</h6>
 
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="surahpendek" id="alfatihah" value="alfatihah">
-                <label class="form-check-label" for="alfatihah">Al-Fatihah</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="surahpendek" id="alikhlas" value="alikhlas">
-                <label class="form-check-label" for="alikhlas">Al-Ikhlas</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="surahpendek" id="alfalaq" value="alfalaq">
-                <label class="form-check-label" for="alfalaq">Al-Falaq</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="surahpendek" id="annas" value="annas">
-                <label class="form-check-label" for="annas">An-Nas</label>
+            <div class="row">
+                <div class="form-check form-check-inline col-md-2">
+                    <input class="form-check-input" type="radio" name="surahpendek" id="alfatihah" value="alfatihah">
+                    <label class="form-check-label" for="alfatihah">Al-Fatihah</label>
+                </div>
+                <div class="form-check form-check-inline col-md-2">
+                    <input class="form-check-input" type="radio" name="surahpendek" id="alikhlas" value="alikhlas">
+                    <label class="form-check-label" for="alikhlas">Al-Ikhlas</label>
+                </div>
+                <div class="form-check form-check-inline col-md-2">
+                    <input class="form-check-input" type="radio" name="surahpendek" id="alfalaq" value="alfalaq">
+                    <label class="form-check-label" for="alfalaq">Al-Falaq</label>
+                </div>
+                <div class="form-check form-check-inline col-md-2">
+                    <input class="form-check-input" type="radio" name="surahpendek" id="annas" value="annas">
+                    <label class="form-check-label" for="annas">An-Nas</label>
+                </div>
             </div>
         </div>
 

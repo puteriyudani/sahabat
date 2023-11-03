@@ -65,43 +65,49 @@
         <div class="container mt-3">
             <h6>Doa</h6>
 
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="doa" id="keluarrumah" value="keluarrumah">
-                <label class="form-check-label" for="keluarrumah">Keluar Rumah</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="doa" id="naikkendaraan" value="naikkendaraan">
-                <label class="form-check-label" for="naikkendaraan">Naik Kendaraan</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="doa" id="orangtua" value="orangtua">
-                <label class="form-check-label" for="orangtua">Orang Tua</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="doa" id="selamat" value="selamat">
-                <label class="form-check-label" for="selamat">Selamat</label>
+            <div class="row mb-3">
+                <div class="form-check form-check-inline col-md-2">
+                    <input class="form-check-input" type="radio" name="doa" id="keluarrumah" value="keluarrumah">
+                    <label class="form-check-label" for="keluarrumah">Keluar Rumah</label>
+                </div>
+                <div class="form-check form-check-inline col-md-2">
+                    <input class="form-check-input" type="radio" name="doa" id="naikkendaraan" value="naikkendaraan">
+                    <label class="form-check-label" for="naikkendaraan">Naik Kendaraan</label>
+                </div>
+                <div class="form-check form-check-inline col-md-2">
+                    <input class="form-check-input" type="radio" name="doa" id="orangtua" value="orangtua">
+                    <label class="form-check-label" for="orangtua">Orang Tua</label>
+                </div>
+                <div class="form-check form-check-inline col-md-2">
+                    <input class="form-check-input" type="radio" name="doa" id="selamat" value="selamat">
+                    <label class="form-check-label" for="selamat">Selamat</label>
+                </div>
             </div>
 
             <h6>Snack</h6>
 
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="snack" id="buahbuahan" value="buahbuahan">
-                <label class="form-check-label" for="buahbuahan">Buah-buahan</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="snack" id="biskuit" value="biskuit">
-                <label class="form-check-label" for="biskuit">Biskuit</label>
+            <div class="row mb-3">
+                <div class="form-check form-check-inline col-md-2">
+                    <input class="form-check-input" type="radio" name="snack" id="buahbuahan" value="buahbuahan">
+                    <label class="form-check-label" for="buahbuahan">Buah-buahan</label>
+                </div>
+                <div class="form-check form-check-inline col-md-2">
+                    <input class="form-check-input" type="radio" name="snack" id="biskuit" value="biskuit">
+                    <label class="form-check-label" for="biskuit">Biskuit</label>
+                </div>
             </div>
 
             <h6>Buang Air Besar</h6>
 
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="bab" id="ya" value="ya">
-                <label class="form-check-label" for="ya">Ya</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="bab" id="tidak" value="tidak">
-                <label class="form-check-label" for="tidak">Tidak</label>
+            <div class="row">
+                <div class="form-check form-check-inline col-md-2">
+                    <input class="form-check-input" type="radio" name="bab" id="ya" value="ya">
+                    <label class="form-check-label" for="ya">Ya</label>
+                </div>
+                <div class="form-check form-check-inline col-md-2">
+                    <input class="form-check-input" type="radio" name="bab" id="tidak" value="tidak">
+                    <label class="form-check-label" for="tidak">Tidak</label>
+                </div>
             </div>
 
             <div class="row mt-4">

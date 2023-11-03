@@ -49,15 +49,19 @@
                     <tr>
                         <th scope="col">No</th>
                         <th scope="col">Indikator</th>
+                        <td class="col-md-2"></td>
+                        <td class="col-md-2"></td>
                         <th scope="col">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($arrivals as $arrival)
                         <tr>
-                            <td>{{ $loop->iteration }}</td>
-                            <td>{{ $arrival->indikator }}</td>
-                            <td>
+                            <td class="col-md-1">{{ $loop->iteration }}</td>
+                            <td class="col-md-2">{{ $arrival->indikator }}</td>
+                            <td class="col-md-2"></td>
+                            <td class="col-md-2"></td>
+                            <td class="col-md-2">
                                 <form action="{{ route('indikator.destroy', $arrival->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
@@ -83,16 +87,18 @@
                         <th scope="col">No</th>
                         <th scope="col">Kudapan Pagi</th>
                         <th scope="col">Keterangan</th>
+                        <td class="col-md-2"></td>
                         <th scope="col">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($breakfasts as $breakfast)
                         <tr>
-                            <td>{{ $loop->iteration }}</td>
-                            <td>{{ $breakfast->kudapanpagi }}</td>
-                            <td>{{ $breakfast->keterangan }}</td>
-                            <td>
+                            <td class="col-md-1">{{ $loop->iteration }}</td>
+                            <td class="col-md-2">{{ $breakfast->kudapanpagi }}</td>
+                            <td class="col-md-2">{{ $breakfast->keterangan }}</td>
+                            <td class="col-md-2"></td>
+                            <td class="col-md-2">
                                 <form action="{{ route('breakfast.destroy', $breakfast->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
@@ -125,11 +131,11 @@
                 <tbody>
                     @foreach ($pembukas as $pembuka)
                         <tr>
-                            <td>{{ $loop->iteration }}</td>
-                            <td>{{ $pembuka->outdoor }}</td>
-                            <td>{{ $pembuka->circletime }}</td>
-                            <td>{{ $pembuka->doapembuka }}</td>
-                            <td>
+                            <td class="col-md-1">{{ $loop->iteration }}</td>
+                            <td class="col-md-2">{{ $pembuka->outdoor }}</td>
+                            <td class="col-md-2">{{ $pembuka->circletime }}</td>
+                            <td class="col-md-2">{{ $pembuka->doapembuka }}</td>
+                            <td class="col-md-2">
                                 <form action="{{ route('pembuka.destroy', $pembuka->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
@@ -152,15 +158,19 @@
                     <tr>
                         <th scope="col">No</th>
                         <th scope="col">Indikator</th>
+                        <td class="col-md-2"></td>
+                        <td class="col-md-2"></td>
                         <th scope="col">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($pembukaindikators as $pembukaindikator)
                         <tr>
-                            <td>{{ $loop->iteration }}</td>
-                            <td>{{ $pembukaindikator->indikator }}</td>
-                            <td>
+                            <td class="col-md-1">{{ $loop->iteration }}</td>
+                            <td class="col-md-2">{{ $pembukaindikator->indikator }}</td>
+                            <td class="col-md-2"></td>
+                            <td class="col-md-2"></td>
+                            <td class="col-md-2">
                                 <form action="{{ route('indikator.destroy', $pembukaindikator->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
@@ -185,15 +195,19 @@
                     <tr>
                         <th scope="col">No</th>
                         <th scope="col">Kegiatan Inti</th>
+                        <td class="col-md-2"></td>
+                        <td class="col-md-2"></td>
                         <th scope="col">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($intis as $inti)
                         <tr>
-                            <td>{{ $loop->iteration }}</td>
-                            <td>{{ $inti->inti }}</td>
-                            <td>
+                            <td class="col-md-1">{{ $loop->iteration }}</td>
+                            <td class="col-md-2">{{ $inti->inti }}</td>
+                            <td class="col-md-2"></td>
+                            <td class="col-md-2"></td>
+                            <td class="col-md-2">
                                 <form action="{{ route('inti.destroy', $inti->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
@@ -216,15 +230,19 @@
                     <tr>
                         <th scope="col">No</th>
                         <th scope="col">Indikator</th>
+                        <td class="col-md-2"></td>
+                        <td class="col-md-2"></td>
                         <th scope="col">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($intiindikators as $intiindikator)
                         <tr>
-                            <td>{{ $loop->iteration }}</td>
-                            <td>{{ $intiindikator->indikator }}</td>
-                            <td>
+                            <td class="col-md-1">{{ $loop->iteration }}</td>
+                            <td class="col-md-2">{{ $intiindikator->indikator }}</td>
+                            <td class="col-md-2"></td>
+                            <td class="col-md-2"></td>
+                            <td class="col-md-2">
                                 <form action="{{ route('pembuka.destroy', $intiindikator->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
@@ -250,16 +268,18 @@
                         <th scope="col">No</th>
                         <th scope="col">Doa</th>
                         <th scope="col">Buang Air Besar</th>
+                        <td class="col-md-2"></td>
                         <th scope="col">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($penutups as $penutup)
                         <tr>
-                            <td>{{ $loop->iteration }}</td>
-                            <td>{{ $penutup->doa }}</td>
-                            <td>{{ $penutup->bab }}</td>
-                            <td>
+                            <td class="col-md-1">{{ $loop->iteration }}</td>
+                            <td class="col-md-2">{{ $penutup->doa }}</td>
+                            <td class="col-md-2">{{ $penutup->bab }}</td>
+                            <td class="col-md-2"></td>
+                            <td class="col-md-2">
                                 <form action="{{ route('penutup.destroy', $penutup->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
@@ -284,15 +304,17 @@
                     <tr>
                         <th scope="col">No</th>
                         <th scope="col">Catatan</th>
+                        <td class="col-md-2"></td>
                         <th scope="col">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($catatangurus as $catatanguru)
                         <tr>
-                            <td>{{ $loop->iteration }}</td>
-                            <td>{{ $catatanguru->catatan }}</td>
-                            <td>
+                            <td class="col-md-1">{{ $loop->iteration }}</td>
+                            <td class="col-md-4">{{ $catatanguru->catatan }}</td>
+                            <td class="col-md-2"></td>
+                            <td class="col-md-2">
                                 <form action="{{ route('catatanguru.destroy', $catatanguru->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
@@ -320,8 +342,10 @@
                 <tbody>
                     @foreach ($catatanorangtuas as $catatanorangtua)
                         <tr>
-                            <td>{{ $loop->iteration }}</td>
-                            <td>{{ $catatanorangtua->catatan }}</td>
+                            <td class="col-md-1">{{ $loop->iteration }}</td>
+                            <td class="col-md-4">{{ $catatanorangtua->catatan }}</td>
+                            <td class="col-md-2"></td>
+                            <td class="col-md-2"></td>
                         </tr>
                     @endforeach
                 </tbody>

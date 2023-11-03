@@ -14,7 +14,10 @@ class SiswaController extends Controller
      */
     public function index()
     {
-        return view('siswa.index');
+        $kindergartens = Siswa::where('kelompok', 'kindergarten')->count();
+        $playgroups = Siswa::where('kelompok', 'playgroup')->count();
+        $babycamps = Siswa::where('kelompok', 'babycamp')->count();
+        return view('siswa.index', compact('kindergartens','playgroups', 'babycamps'));
     }
 
     /**

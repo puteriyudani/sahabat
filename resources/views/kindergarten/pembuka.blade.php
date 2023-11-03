@@ -66,52 +66,58 @@
         <div class="container mt-3">
             <h6>Outdoor</h6>
 
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="outdoor" id="senampagi" value="senampagi">
-                <label class="form-check-label" for="senampagi">Senam Pagi</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="outdoor" id="apelbendera" value="apelbendera">
-                <label class="form-check-label" for="apelbendera">Apel Bendera</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="outdoor" id="lainlain" value="lainlain">
-                <label class="form-check-label" for="lainlain">Lain-lain</label>
+            <div class="row mb-3">
+                <div class="form-check form-check-inline col-md-2">
+                    <input class="form-check-input" type="radio" name="outdoor" id="senampagi" value="senampagi">
+                    <label class="form-check-label" for="senampagi">Senam Pagi</label>
+                </div>
+                <div class="form-check form-check-inline col-md-2">
+                    <input class="form-check-input" type="radio" name="outdoor" id="apelbendera" value="apelbendera">
+                    <label class="form-check-label" for="apelbendera">Apel Bendera</label>
+                </div>
+                <div class="form-check form-check-inline col-md-2">
+                    <input class="form-check-input" type="radio" name="outdoor" id="lainlain" value="lainlain">
+                    <label class="form-check-label" for="lainlain">Lain-lain</label>
+                </div>
             </div>
 
             <h6>Circle Time</h6>
 
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="circletime" id="dongeng" value="dongeng">
-                <label class="form-check-label" for="dongeng">Dongeng</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="circletime" id="sentra" value="sentra">
-                <label class="form-check-label" for="sentra">Sentra</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="circletime" id="berdiskusidanbernyanyi"
-                    value="berdiskusidanbernyanyi">
-                <label class="form-check-label" for="berdiskusidanbernyanyi">Berdiskusi & Bernyanyi</label>
+            <div class="row mb-3">
+                <div class="form-check form-check-inline col-md-2">
+                    <input class="form-check-input" type="radio" name="circletime" id="dongeng" value="dongeng">
+                    <label class="form-check-label" for="dongeng">Dongeng</label>
+                </div>
+                <div class="form-check form-check-inline col-md-2">
+                    <input class="form-check-input" type="radio" name="circletime" id="sentra" value="sentra">
+                    <label class="form-check-label" for="sentra">Sentra</label>
+                </div>
+                <div class="form-check form-check-inline col-md-3">
+                    <input class="form-check-input" type="radio" name="circletime" id="berdiskusidanbernyanyi"
+                        value="berdiskusidanbernyanyi">
+                    <label class="form-check-label" for="berdiskusidanbernyanyi">Berdiskusi & Bernyanyi</label>
+                </div>
             </div>
 
             <h6>Doa</h6>
 
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="doapembuka" id="kendaraan" value="kendaraan">
-                <label class="form-check-label" for="kendaraan">Naik Kendaraan</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="doapembuka" id="orangtua" value="orangtua">
-                <label class="form-check-label" for="orangtua">Orang Tua</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="doapembuka" id="selamat" value="selamat">
-                <label class="form-check-label" for="selamat">Selamat</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="doapembuka" id="anaksoleh" value="anaksoleh">
-                <label class="form-check-label" for="anaksoleh">Anak Sholeh</label>
+            <div class="row">
+                <div class="form-check form-check-inline col-md-2">
+                    <input class="form-check-input" type="radio" name="doapembuka" id="kendaraan" value="kendaraan">
+                    <label class="form-check-label" for="kendaraan">Naik Kendaraan</label>
+                </div>
+                <div class="form-check form-check-inline col-md-2">
+                    <input class="form-check-input" type="radio" name="doapembuka" id="orangtua" value="orangtua">
+                    <label class="form-check-label" for="orangtua">Orang Tua</label>
+                </div>
+                <div class="form-check form-check-inline col-md-2">
+                    <input class="form-check-input" type="radio" name="doapembuka" id="selamat" value="selamat">
+                    <label class="form-check-label" for="selamat">Selamat</label>
+                </div>
+                <div class="form-check form-check-inline col-md-2">
+                    <input class="form-check-input" type="radio" name="doapembuka" id="anaksoleh" value="anaksoleh">
+                    <label class="form-check-label" for="anaksoleh">Anak Sholeh</label>
+                </div>
             </div>
         </div>
 

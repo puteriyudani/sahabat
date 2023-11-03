@@ -26,6 +26,15 @@
     <form action="{{ route('inti.storebaby') }}" method="POST">
         @csrf
 
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <input type="hidden" class="form-control" id="kelas" name="kelas" aria-describedby="kelasHelp"
+                        value="babycamp" readonly>
+                </div>
+            </div>
+        </div>
+
         <div class="container mt-3">
             <div class="row">
                 <div class="col-md-1 mt-1">
@@ -41,9 +50,9 @@
                 @foreach ($siswas as $siswa)
                     <div class="col-md-2">
                         <div class="form-check">
-                            <input type="radio" class="btn-check" name="image" id="{{ $siswa->image }}"
-                                value="{{ $siswa->image }}" autocomplete="off">
-                            <label class="btn" for="{{ $siswa->image }}">
+                            <input type="radio" class="btn-check" name="siswa_id" id="{{ $siswa->id }}"
+                                value="{{ $siswa->id }}" autocomplete="off">
+                            <label class="btn" for="{{ $siswa->id }}">
                                 <img class="w-100 h-100" src="{{ asset('/storage/images/' . $siswa->image) }}"
                                     alt="..." width="150px" />
                             </label>

@@ -28,23 +28,18 @@
                 <div class="container-fluid">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title fw-semibold mb-4">Edit Data</h5>
+                            <h5 class="card-title fw-semibold mb-4">Ubah Password</h5>
                             <div class="card">
                                 <div class="card-body">
-                                    <form action="{{ route('updateAkun', $user->id) }}" method="POST">
+                                    <form action="{{ route('updatePassword', $user->id) }}" method="POST">
                                         @csrf
                                         @method('PUT')
                                         <div class="mb-3">
                                             <label for="name" class="form-label">Nama</label>
                                             <input type="text" class="form-control" id="name" name="name"
-                                                aria-describedby="nameHelp" value="{{ $user->name }}">
+                                                aria-describedby="nameHelp" value="{{ $user->name }}" readonly>
                                         </div>
                                         <div class="mb-3">
-                                            <label for="nohp" class="form-label">No Hp</label>
-                                            <input type="text" class="form-control" id="nohp" name="nohp"
-                                                aria-describedby="nohpHelp" value="{{ $user->nohp }}">
-                                        </div>
-                                        {{-- <div class="mb-3">
                                             <label for="old_password">Old Password</label>
                                             <input type="password" name="old_password" id="old_password"
                                                 class="form-control" required>
@@ -60,7 +55,7 @@
                                             <label for="new_password_confirmation">Confirmation New Password</label>
                                             <input type="password" name="new_password_confirmation" id="new_password_confirmation"
                                                 class="form-control" required>
-                                        </div> --}}
+                                        </div>
                                         <button type="submit" class="btn btn-primary">Submit</button>
                                     </form>
                                 </div>
