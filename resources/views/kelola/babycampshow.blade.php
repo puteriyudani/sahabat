@@ -63,10 +63,14 @@
                             <td>{{ $breakfast->keterangan }}</td>
                             <td>
                                 <form action="{{ route('breakfast.destroy', $breakfast->id) }}" method="POST">
+                                    <a href="{{ route('breakfast.edit', $breakfast->id) }}" style="text-decoration: none;">
+                                        <button class="btn btn-warning">edit</button>
+                                    </a>
+                                    
                                     @csrf
                                     @method('DELETE')
 
-                                    <button class="btn mb-1" type="submit" style="color: red">
+                                    <button class="btn btn-danger" type="submit">
                                         hapus
                                     </button>
                                 </form>
@@ -100,10 +104,14 @@
                             <td>{{ $pembukababy->surahpendek }}</td>
                             <td>
                                 <form action="{{ route('pembuka.destroybaby', $pembukababy->id) }}" method="POST">
+                                    <a href="" style="text-decoration: none;">
+                                        <button class="btn btn-warning">edit</button>
+                                    </a>
+                                    
                                     @csrf
                                     @method('DELETE')
 
-                                    <button class="btn mb-1" type="submit" style="color: red">
+                                    <button class="btn btn-danger" type="submit">
                                         hapus
                                     </button>
                                 </form>
@@ -139,10 +147,14 @@
                             <td>{{ $intibaby->keterangan }}</td>
                             <td>
                                 <form action="{{ route('inti.destroybaby', $intibaby->id) }}" method="POST">
+                                    <a href="" style="text-decoration: none;">
+                                        <button class="btn btn-warning">edit</button>
+                                    </a>
+                                    
                                     @csrf
                                     @method('DELETE')
 
-                                    <button class="btn mb-1" type="submit" style="color: red">
+                                    <button class="btn btn-danger" type="submit">
                                         hapus
                                     </button>
                                 </form>
@@ -182,10 +194,14 @@
                             <td>{{ $penutupbaby->minumsusu }}</td>
                             <td>
                                 <form action="{{ route('penutup.destroybaby', $penutupbaby->id) }}" method="POST">
+                                    <a href="" style="text-decoration: none;">
+                                        <button class="btn btn-warning">edit</button>
+                                    </a>
+                                    
                                     @csrf
                                     @method('DELETE')
 
-                                    <button class="btn mb-1" type="submit" style="color: red">
+                                    <button class="btn btn-danger" type="submit">
                                         hapus
                                     </button>
                                 </form>
@@ -217,10 +233,14 @@
                             <td>{{ $catatan->catatan }}</td>
                             <td>
                                 <form action="{{ route('catatanguru.destroy', $catatan->id) }}" method="POST">
+                                    <a href="{{ route('catatanguru.edit', $catatan->id) }}" style="text-decoration: none;">
+                                        <button class="btn btn-warning">edit</button>
+                                    </a>
+                                    
                                     @csrf
                                     @method('DELETE')
 
-                                    <button class="btn mb-1" type="submit" style="color: red">
+                                    <button class="btn btn-danger" type="submit">
                                         hapus
                                     </button>
                                 </form>
