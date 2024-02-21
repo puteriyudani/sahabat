@@ -127,25 +127,19 @@ Route::middleware(['auth', 'user-access:guru'])->group(function () {
     Route::resource('catatanguru', CatatanGuruController::class);
 
     // isi
-    Route::post('/breakfast', [BreakfastController::class, 'store'])->name('breakfast.store');
-    Route::post('/pembuka', [PembukaController::class, 'store'])->name('pembuka.store');
-    Route::post('/inti', [IntiController::class, 'store'])->name('inti.store');
-    Route::post('/penutup', [PenutupController::class, 'store'])->name('penutup.store');
-
-    Route::delete('/breakfast', [BreakfastController::class, 'destroy'])->name('breakfast.destroy');
-    Route::delete('/pembuka', [PembukaController::class, 'destroy'])->name('pembuka.destroy');
-    Route::delete('/inti', [IntiController::class, 'destroy'])->name('inti.destroy');
-    Route::delete('/penutup', [PenutupController::class, 'destroy'])->name('penutup.destroy');
+    Route::resource('breakfast', BreakfastController::class);
+    Route::resource('pembuka', PembukaController::class);
+    Route::resource('inti', IntiController::class);
+    Route::resource('penutup', PenutupController::class);
 
     // indikator
+    Route::resource('indikator', IndikatorController::class);
+
     Route::get('/kindergarten-indikator-pembuka', [IndikatorController::class, 'kindergartenpembuka'])->name('kindergarten.indikatorpembuka');
     Route::get('/kindergarten-indikator-inti', [IndikatorController::class, 'kindergarteninti'])->name('kindergarten.indikatorinti');
 
     Route::get('/playgroup-indikator-pembuka', [IndikatorController::class, 'playgrouppembuka'])->name('playgroup.indikatorpembuka');
     Route::get('/playgroup-indikator-inti', [IndikatorController::class, 'playgroupinti'])->name('playgroup.indikatorinti');
-
-    Route::post('/indikator', [IndikatorController::class, 'store'])->name('indikator.store');
-    Route::delete('/indikator', [IndikatorController::class, 'destroy'])->name('indikator.destroy');
 
     // kelola
     Route::resource('kelola', KelolaController::class);

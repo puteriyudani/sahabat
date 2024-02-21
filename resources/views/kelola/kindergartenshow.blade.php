@@ -63,10 +63,14 @@
                             <td class="col-md-2"></td>
                             <td class="col-md-2">
                                 <form action="{{ route('indikator.destroy', $arrival->id) }}" method="POST">
+                                    <a href="{{ route('indikator.edit', $arrival->id) }}" style="text-decoration: none;">
+                                        <button class="btn btn-warning">edit</button>
+                                    </a>
+
                                     @csrf
                                     @method('DELETE')
 
-                                    <button class="btn mb-1" type="submit" style="color: red">
+                                    <button class="btn btn-danger" type="submit">
                                         hapus
                                     </button>
                                 </form>
@@ -100,10 +104,14 @@
                             <td class="col-md-2"></td>
                             <td class="col-md-2">
                                 <form action="{{ route('breakfast.destroy', $breakfast->id) }}" method="POST">
+                                    <a href="{{ route('breakfast.edit', $breakfast->id) }}" style="text-decoration: none;">
+                                        <button class="btn btn-warning">edit</button>
+                                    </a>
+
                                     @csrf
                                     @method('DELETE')
 
-                                    <button class="btn mb-1" type="submit" style="color: red">
+                                    <button class="btn btn-danger" type="submit">
                                         hapus
                                     </button>
                                 </form>
@@ -137,10 +145,14 @@
                             <td class="col-md-2">{{ $pembuka->doapembuka }}</td>
                             <td class="col-md-2">
                                 <form action="{{ route('pembuka.destroy', $pembuka->id) }}" method="POST">
+                                    <a href="{{ route('pembuka.edit', $pembuka->id) }}" style="text-decoration: none;">
+                                        <button class="btn btn-warning">edit</button>
+                                    </a>
+
                                     @csrf
                                     @method('DELETE')
 
-                                    <button class="btn mb-1" type="submit" style="color: red">
+                                    <button class="btn btn-danger" type="submit">
                                         hapus
                                     </button>
                                 </form>
@@ -172,10 +184,14 @@
                             <td class="col-md-2"></td>
                             <td class="col-md-2">
                                 <form action="{{ route('indikator.destroy', $pembukaindikator->id) }}" method="POST">
+                                    <a href="{{ route('indikator.edit', $pembukaindikator->id) }}" style="text-decoration: none;">
+                                        <button class="btn btn-warning">edit</button>
+                                    </a>
+                                    
                                     @csrf
                                     @method('DELETE')
 
-                                    <button class="btn mb-1" type="submit" style="color: red">
+                                    <button class="btn btn-danger" type="submit">
                                         hapus
                                     </button>
                                 </form>
@@ -209,10 +225,14 @@
                             <td class="col-md-2"></td>
                             <td class="col-md-2">
                                 <form action="{{ route('inti.destroy', $inti->id) }}" method="POST">
+                                    <a href="{{ route('inti.edit', $inti->id) }}" style="text-decoration: none;">
+                                        <button class="btn btn-warning">edit</button>
+                                    </a>
+
                                     @csrf
                                     @method('DELETE')
 
-                                    <button class="btn mb-1" type="submit" style="color: red">
+                                    <button class="btn btn-danger" type="submit">
                                         hapus
                                     </button>
                                 </form>
@@ -243,11 +263,15 @@
                             <td class="col-md-2"></td>
                             <td class="col-md-2"></td>
                             <td class="col-md-2">
-                                <form action="{{ route('pembuka.destroy', $intiindikator->id) }}" method="POST">
+                                <form action="{{ route('indikator.destroy', $intiindikator->id) }}" method="POST">
+                                    <a href="{{ route('indikator.edit', $intiindikator->id) }}" style="text-decoration: none;">
+                                        <button class="btn btn-warning">edit</button>
+                                    </a>
+                                    
                                     @csrf
                                     @method('DELETE')
 
-                                    <button class="btn mb-1" type="submit" style="color: red">
+                                    <button class="btn btn-danger" type="submit">
                                         hapus
                                     </button>
                                 </form>
@@ -281,10 +305,14 @@
                             <td class="col-md-2"></td>
                             <td class="col-md-2">
                                 <form action="{{ route('penutup.destroy', $penutup->id) }}" method="POST">
+                                    <a href="{{ route('penutup.edit', $penutup->id) }}" style="text-decoration: none;">
+                                        <button class="btn btn-warning">edit</button>
+                                    </a>
+                                    
                                     @csrf
                                     @method('DELETE')
 
-                                    <button class="btn mb-1" type="submit" style="color: red">
+                                    <button class="btn btn-danger" type="submit">
                                         hapus
                                     </button>
                                 </form>
@@ -316,10 +344,14 @@
                             <td class="col-md-2"></td>
                             <td class="col-md-2">
                                 <form action="{{ route('catatanguru.destroy', $catatanguru->id) }}" method="POST">
+                                    <a href="{{ route('catatanguru.edit', $catatanguru->id) }}" style="text-decoration: none;">
+                                        <button class="btn btn-warning">edit</button>
+                                    </a>
+                                    
                                     @csrf
                                     @method('DELETE')
 
-                                    <button class="btn mb-1" type="submit" style="color: red">
+                                    <button class="btn btn-danger" type="submit">
                                         hapus
                                     </button>
                                 </form>
