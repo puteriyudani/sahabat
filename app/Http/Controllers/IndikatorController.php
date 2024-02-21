@@ -84,9 +84,19 @@ class IndikatorController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Indikator $indikator)
     {
-        //
+        $request->validate([
+            'tanggal' => 'required',
+            'siswa_id' => 'required',
+            'kategori' => 'required',
+            'kelas' => 'required',
+            'indikator' => 'required',
+        ]);
+    
+        $indikator->update($request->all());
+    
+        return redirect()->with('success','Indikator updated successfully');
     }
 
     /**
