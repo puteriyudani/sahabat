@@ -28,23 +28,54 @@
                                 <a href="https://www.youtube.com/@gardenschool2246" class="instagram" target="_blank"
                                     style="color: #FF0000"><i class="bx bxl-youtube"></i></a>
                             </div>
-                            <a href="https://wa.me/6282268081212" class="btn btn-info" role="button" target="_blank">Follow
-                                us</a>
+                            <a href="https://wa.me/6282268081212" class="btn btn-info" role="button" target="_blank">Follow us</a>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item item2">
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel"
+                data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel"
+                data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+
+        <section id="tombol" class="d-flex flex-column justify-content-center">
+            <div class="row tombol">
+            <div class="col">
+                <a href="/#about">
+                    <img src="{{ asset('assets') }}/img/buttonhugs.png" alt="...">
+                </a>
+            </div>
+            <div class="col">
+                <a href="/#services">
+                    <img src="{{ asset('assets') }}/img/buttonhugs.png" alt="...">
+                </a>
+            </div>
+            <div class="col">
+                <a href="/#hugsme">
+                    <img src="{{ asset('assets') }}/img/buttonhugs.png" alt="...">
+                </a>
+            </div>
+            <div class="col">
+                <a href="#support">
+                    <img src="{{ asset('assets') }}/img/buttonhugs.png" alt="...">
+                </a>
+            </div>
+            <div class="col">
+                <a href="/#gsshop">
+                    <img src="{{ asset('assets') }}/img/buttonhugs.png" alt="...">
+                </a>
+            </div>
+        </div>
+        </section>
     </section><!-- End Hero -->
 @endsection
 
@@ -75,13 +106,11 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <ul>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Tahun Berdiri:</strong> <span>7 Juli
-                                            2021</span></li>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>Tahun Berdiri:</strong> <span>7 Juli 2021</span></li>
                                     <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong>
                                         <span>www.example.com</span>
                                     </li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Alamat:</strong> <span>Gg. Cahaya, Desa
-                                            Senggoro, Kab.Bengkalis, Riau</span></li>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>Alamat:</strong> <span>Gg. Cahaya, Desa Senggoro, Kab.Bengkalis, Riau</span></li>
                                 </ul>
                             </div>
                             <div class="col-lg-6">
@@ -89,8 +118,7 @@
                                     <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong>
                                         <span>gardenschoolindonesia@gmail.com</span>
                                     </li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>No WhatsApp:</strong>
-                                        <span>+6282268081212</span></li>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>No WhatsApp:</strong> <span>+6282268081212</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -101,8 +129,7 @@
                     <div class="col-lg-6 pt-4 pt-lg-0 content">
                         <h5>Visi</h5>
                         <p>
-                            Menjadi sekolah yang berkualitas dengan menggabungkan Budi Pekerti dan IPTEK sehingga
-                            menghasilkan manusia yang Berkarakter, Cerdas, Kreatif, Mandiri.
+                            Menjadi sekolah yang berkualitas dengan menggabungkan Budi Pekerti dan IPTEK sehingga menghasilkan manusia yang Berkarakter, Cerdas, Kreatif, Mandiri.
                         </p>
 
                         <h5>Tujuan</h5>
@@ -130,8 +157,7 @@
                             </li>
                             <li>
                                 <i class="bi bi-chevron-right"></i>
-                                <p>Membentuk karakter dengan pembiasaan 6 budi pekerti yang baik dan benar, jujur, dapat
-                                    dipercaya, hemat dan kerja keras</p>
+                                <p>Membentuk karakter dengan pembiasaan 6 budi pekerti yang baik dan benar, jujur, dapat dipercaya, hemat dan kerja keras</p>
                             </li>
                             <li>
                                 <i class="bi bi-chevron-right"></i>
@@ -143,8 +169,7 @@
                             </li>
                             <li>
                                 <i class="bi bi-chevron-right"></i>
-                                <p>Memberikan jaminan pelayanan yang prima dalam berbagai hal untuk mendukung proses belajar
-                                    dan bekerja yang harmonis dan selaras</p>
+                                <p>Memberikan jaminan pelayanan yang prima dalam berbagai hal untuk mendukung proses belajar dan bekerja yang harmonis dan selaras</p>
                             </li>
                         </ul>
                     </div>
@@ -170,10 +195,7 @@
                                 @foreach ($youtubes as $youtube)
                                     <div class="swiper-slide">
                                         <div class="testimonial-item">
-                                            <iframe width="560" height="315" src="{{ $youtube->link }}"
-                                                title="YouTube video player" frameborder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                                allowfullscreen></iframe>
+                                            <iframe width="560" height="315" src="{{ $youtube->link }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                             <br>
                                             <h3>{{ $youtube->judul }}</h3>
                                             <p>{{ $youtube->keterangan }}</p>
@@ -194,8 +216,7 @@
                                 @foreach ($pdfs as $pdf)
                                     <div class="swiper-slide">
                                         <div class="testimonial-item">
-                                            <embed src="{{ asset('/storage/file/' . $pdf->file) }}" type="application/pdf"
-                                                width="500" height="300" />
+                                            <embed src="{{ asset('/storage/file/' . $pdf->file) }}" type="application/pdf" width="500" height="300" />
                                             <br>
                                             <h3>{{ $pdf->judul }}</h3>
                                             <p>{{ $pdf->keterangan }}</p>
