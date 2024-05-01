@@ -14,7 +14,6 @@
                 <div class="carousel-item active item1">
                     <div class="carousel-caption d-md-block">
                         <div class="container" data-aos="zoom-in" data-aos-delay="100">
-                            <h1>Garden School</h1>
                             <p>d'happiest <span class="typed" data-typed-items="Islamic pre-school"></span></p>
                             <div class="social-links">
                                 <a href="https://wa.me/6282268081212" class="twitter" target="_blank"
@@ -28,11 +27,13 @@
                                 <a href="https://www.youtube.com/@gardenschool2246" class="instagram" target="_blank"
                                     style="color: #FF0000"><i class="bx bxl-youtube"></i></a>
                             </div>
-                            <a href="https://wa.me/6282268081212" class="btn btn-info" role="button" target="_blank">Follow us</a>
+                            <a href="https://wa.me/6282268081212" class="btn btn-info" role="button" target="_blank">Join us</a>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item item2">
+                </div>
+                <div class="carousel-item item3">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carousel"
@@ -51,27 +52,27 @@
             <div class="row tombol">
             <div class="col">
                 <a href="/#about">
-                    <img src="{{ asset('assets') }}/img/buttonhugs.png" alt="...">
+                    <img src="{{ asset('assets') }}/img/buttonprofile.png" alt="...">
                 </a>
             </div>
             <div class="col">
                 <a href="/#services">
-                    <img src="{{ asset('assets') }}/img/buttonhugs.png" alt="...">
+                    <img src="{{ asset('assets') }}/img/buttonprogram.png" alt="...">
                 </a>
             </div>
-            <div class="col">
+            <div class="col hugsme">
                 <a href="/#hugsme">
                     <img src="{{ asset('assets') }}/img/buttonhugs.png" alt="...">
                 </a>
             </div>
             <div class="col">
                 <a href="#support">
-                    <img src="{{ asset('assets') }}/img/buttonhugs.png" alt="...">
+                    <img src="{{ asset('assets') }}/img/buttonsupport.png" alt="...">
                 </a>
             </div>
             <div class="col">
                 <a href="/#gsshop">
-                    <img src="{{ asset('assets') }}/img/buttonhugs.png" alt="...">
+                    <img src="{{ asset('assets') }}/img/buttonshop.png" alt="...">
                 </a>
             </div>
         </div>
@@ -179,59 +180,59 @@
         </section><!-- End About Section -->
 
         <!-- ======= Testimonials Section ======= -->
-        <section id="services" class="testimonials section-bg">
-            <div class="container" data-aos="fade-up">
+        <section id="services" class="testimonials section-bg">-->
+            <div class="container" data-aos="fade-up">-->
 
-                <div class="section-title">
-                    <h2>Montessory</h2>
-                </div>
+                <div class="section-title">-->
+                    <h2>Montessory</h2>-->
+                </div>-->
 
-                <div class="row">
-                    <div class="col-lg-6 text-center">
-                        <h3><a href="{{ route('montessory.youtube') }}" target="_blank">Youtube</a></h3>
-                        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                            <div class="swiper-wrapper">
+                <div class="row">-->
+                    <div class="col-lg-6 text-center">-->
+                        <h3><a href="{{ route('montessory.youtube') }}" target="_blank">Youtube</a></h3>-->
+                        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">-->
+                            <div class="swiper-wrapper">-->
 
-                                @foreach ($youtubes as $youtube)
-                                    <div class="swiper-slide">
-                                        <div class="testimonial-item">
-                                            <iframe width="560" height="315" src="{{ $youtube->link }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                            <br>
-                                            <h3>{{ $youtube->judul }}</h3>
-                                            <p>{{ $youtube->keterangan }}</p>
-                                        </div>
-                                    </div><!-- End testimonial item -->
-                                @endforeach
+                                @foreach ($youtubes as $youtube)-->
+                                    <div class="swiper-slide">-->
+                                        <div class="testimonial-item">-->
+                                            <iframe width="560" height="315" src="{{ $youtube->link }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>-->
+                                            <br>-->
+                                            <h3>{{ $youtube->judul }}</h3>-->
+                                            <p>{{ $youtube->keterangan }}</p>-->
+                                        </div>-->
+                                    </div>-->
+                                @endforeach-->
 
-                            </div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                    </div>
+                            </div>-->
+                            <div class="swiper-pagination"></div>-->
+                        </div>-->
+                    </div>-->
 
-                    <div class="col-lg-6 text-center">
-                        <h3><a href="{{ route('montessory.pdf') }}" target="_blank">PDF</a></h3>
-                        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                            <div class="swiper-wrapper">
+                    <div class="col-lg-6 text-center">-->
+                        <h3><a href="{{ route('montessory.pdf') }}" target="_blank">PDF</a></h3>-->
+                        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">-->
+                            <div class="swiper-wrapper">-->
 
-                                @foreach ($pdfs as $pdf)
-                                    <div class="swiper-slide">
-                                        <div class="testimonial-item">
-                                            <embed src="{{ asset('/storage/file/' . $pdf->file) }}" type="application/pdf" width="500" height="300" />
-                                            <br>
-                                            <h3>{{ $pdf->judul }}</h3>
-                                            <p>{{ $pdf->keterangan }}</p>
-                                        </div>
-                                    </div><!-- End testimonial item -->
-                                @endforeach
+                                @foreach ($pdfs as $pdf)-->
+                                    <div class="swiper-slide">-->
+                                        <div class="testimonial-item">-->
+                                            <embed src="{{ asset('/storage/file/' . $pdf->file) }}" type="application/pdf" width="500" height="300" />-->
+                                            <br>-->
+                                            <h3>{{ $pdf->judul }}</h3>-->
+                                            <p>{{ $pdf->keterangan }}</p>-->
+                                        </div>-->
+                                    </div>-->
+                                @endforeach-->
 
-                            </div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End Testimonials Section -->
+                            </div>-->
+                            <div class="swiper-pagination"></div>-->
+                        </div>-->
+                    </div>-->
+                </div>-->
+            </div>-->
+        </section>-->
+         End Testimonials Section -->
 
     </main><!-- End #main -->
 @endsection
