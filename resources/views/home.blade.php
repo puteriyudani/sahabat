@@ -180,59 +180,59 @@
         </section><!-- End About Section -->
 
         <!-- ======= Testimonials Section ======= -->
-        <section id="services" class="testimonials section-bg">-->
-            <div class="container" data-aos="fade-up">-->
+        <section id="services" class="testimonials section-bg">
+            <div class="container" data-aos="fade-up">
 
-                <div class="section-title">-->
-                    <h2>Montessory</h2>-->
-                </div>-->
+                <div class="section-title">
+                    <h2>Montessory</h2>
+                </div>
 
-                <div class="row">-->
-                    <div class="col-lg-6 text-center">-->
-                        <h3><a href="{{ route('montessory.youtube') }}" target="_blank">Youtube</a></h3>-->
-                        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">-->
-                            <div class="swiper-wrapper">-->
+                <div class="row">
+                    <div class="col-lg-6 text-center">
+                        <h3><a href="{{ route('montessory.youtube') }}" target="_blank">Youtube</a></h3>
+                        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                            <div class="swiper-wrapper">
 
-                                @foreach ($youtubes as $youtube)-->
-                                    <div class="swiper-slide">-->
-                                        <div class="testimonial-item">-->
-                                            <iframe width="560" height="315" src="{{ $youtube->link }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>-->
-                                            <br>-->
-                                            <h3>{{ $youtube->judul }}</h3>-->
-                                            <p>{{ $youtube->keterangan }}</p>-->
-                                        </div>-->
-                                    </div>-->
-                                @endforeach-->
+                                @foreach ($youtubes as $youtube)
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-item">
+                                            <iframe width="560" height="315" src="{{ $youtube->link }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                            <br>
+                                            <h3>{{ $youtube->judul }}</h3>
+                                            <p>{{ $youtube->keterangan }}</p>
+                                        </div>
+                                    </div>
+                                @endforeach
 
-                            </div>-->
-                            <div class="swiper-pagination"></div>-->
-                        </div>-->
-                    </div>-->
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
 
-                    <div class="col-lg-6 text-center">-->
-                        <h3><a href="{{ route('montessory.pdf') }}" target="_blank">PDF</a></h3>-->
-                        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">-->
-                            <div class="swiper-wrapper">-->
+                    <div class="col-lg-6 text-center">
+                        <h3><a href="{{ route('montessory.pdf') }}" target="_blank">PDF</a></h3>
+                        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                            <div class="swiper-wrapper">
 
-                                @foreach ($pdfs as $pdf)-->
-                                    <div class="swiper-slide">-->
-                                        <div class="testimonial-item">-->
-                                            <embed src="{{ asset('/storage/file/' . $pdf->file) }}" type="application/pdf" width="500" height="300" />-->
-                                            <br>-->
-                                            <h3>{{ $pdf->judul }}</h3>-->
-                                            <p>{{ $pdf->keterangan }}</p>-->
-                                        </div>-->
-                                    </div>-->
-                                @endforeach-->
+                                @foreach ($pdfs as $pdf)
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-item">
+                                            <embed src="{{ asset('/storage/file/' . $pdf->file) }}" type="application/pdf" width="500" height="300" />
+                                            <br>
+                                            <h3>{{ $pdf->judul }}</h3>
+                                            <p>{{ $pdf->keterangan }}</p>
+                                        </div>
+                                    </div>
+                                @endforeach
 
-                            </div>-->
-                            <div class="swiper-pagination"></div>-->
-                        </div>-->
-                    </div>-->
-                </div>-->
-            </div>-->
-        </section>-->
-         End Testimonials Section -->
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Testimonials Section -->
 
     </main><!-- End #main -->
 @endsection
