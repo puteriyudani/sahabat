@@ -9,13 +9,13 @@
             <li><a href="/#services" class="nav-link scrollto"><i class="bx bx-server"></i>
                     <span>Program</span></a>
             </li>
-            <li><a href="/#hugsme" class="nav-link scrollto"><img src="{{ asset('assets') }}/img/logo.svg" width="20px"></i>
+            <li><a href="#" onclick="showPopup() class="nav-link scrollto"><img src="{{ asset('assets') }}/img/logo.svg" width="20px"></i>
                     <span>Hugs Me</span></a>
             </li>
-            <li><a href="/#support" class="nav-link scrollto"><i class="bx bx-support"></i>
+            <li><a href="#" onclick="showPopup() class="nav-link scrollto"><i class="bx bx-support"></i>
                     <span>Support System</span></a>
             </li>
-            <li><a href="/#gsshop" class="nav-link scrollto"><i class="bx bx-cart"></i>
+            <li><a href="#" onclick="showPopup() class="nav-link scrollto"><i class="bx bx-cart"></i>
                     <span>GS Shop</span></a>
             </li>
             <li><a href="{{ route('login') }}" class="nav-link scrollto" target="_blank"><i class="bx bx-log-in"></i>
