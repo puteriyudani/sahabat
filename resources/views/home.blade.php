@@ -246,26 +246,5 @@
         <!--</section>-->
         <!-- End Testimonials Section -->
 
-        <!-- Konten popup -->
-        <div class="overlay" id="overlay"></div>
-        <div class="popup" id="popup">
-            <p>Halaman ini dalam proses pengembangan</p>
-            <a href="#" onclick="hidePopup()">Tutup</a>
-        </div>
-
-        <script>
-            // Fungsi untuk menampilkan popup
-            function showPopup() {
-                document.getElementById('popup').style.display = 'block';
-                document.getElementById('overlay').style.display = 'block';
-            }
-
-            // Fungsi untuk menyembunyikan popup
-            function hidePopup() {
-                document.getElementById('popup').style.display = 'none';
-                document.getElementById('overlay').style.display = 'none';
-            }
-        </script>
-
     </main><!-- End #main -->
 @endsection
