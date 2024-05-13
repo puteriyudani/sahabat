@@ -18,6 +18,10 @@ use Illuminate\Support\Facades\Auth;
 
 class OrtuController extends Controller
 {
+    public function test()
+    {
+        return view('orangtua.test');
+    }
     public function index()
     {
         $ortu = Auth::user();
@@ -27,7 +31,7 @@ class OrtuController extends Controller
 
     public function siswa()
     {
-        $ortu = Auth::user(); 
+        $ortu = Auth::user();
         $kindergarten = $ortu->siswa()->where('kelompok', 'kindergarten')->get();
         $playgroup = $ortu->siswa()->where('kelompok', 'playgroup')->get();
         $babycamp = $ortu->siswa()->where('kelompok', 'babycamp')->get();
@@ -66,7 +70,7 @@ class OrtuController extends Controller
                             ->where('siswa_id', $siswa->id)
                             ->whereDate('tanggal', $tanggal)
                             ->get();
-        
+
         $intiindikators = Indikator::where('kelas', 'kindergarten')
                             ->where('kategori', 'inti')
                             ->where('siswa_id', $siswa->id)
@@ -75,7 +79,7 @@ class OrtuController extends Controller
 
         $penutups = Penutup::where('kelas', 'kindergarten')
                             ->where('siswa_id', $siswa->id)
-                            ->whereDate('tanggal', $tanggal)                   
+                            ->whereDate('tanggal', $tanggal)
                             ->get();
 
         $catatangurus = Catatanguru::where('siswa_id', $siswa->id)
@@ -85,7 +89,7 @@ class OrtuController extends Controller
         $catatanorangtuas = Catatanorangtua::where('siswa_id', $siswa->id)
                             ->whereDate('tanggal', $tanggal)
                             ->get();
-        
+
         return view('orangtua.kindergarten', compact('tanggal', 'siswa', 'arrivals', 'breakfasts', 'pembukas', 'pembukaindikators', 'intis', 'intiindikators', 'penutups', 'tanggal', 'catatangurus', 'catatanorangtuas'));
     }
 
@@ -119,7 +123,7 @@ class OrtuController extends Controller
                             ->where('siswa_id', $siswa->id)
                             ->whereDate('tanggal', $tanggal)
                             ->get();
-        
+
         $intiindikators = Indikator::where('kelas', 'playgroup')
                             ->where('kategori', 'inti')
                             ->where('siswa_id', $siswa->id)
@@ -138,7 +142,7 @@ class OrtuController extends Controller
         $catatanorangtuas = Catatanorangtua::where('siswa_id', $siswa->id)
                             ->whereDate('tanggal', $tanggal)
                             ->get();
-        
+
         return view('orangtua.playgroup',compact('tanggal', 'siswa', 'arrivals', 'breakfasts', 'pembukas', 'pembukaindikators', 'intis', 'intiindikators', 'penutups', 'catatangurus', 'catatanorangtuas'));
     }
 
@@ -150,12 +154,12 @@ class OrtuController extends Controller
                             ->where('siswa_id', $siswa->id)
                             ->whereDate('tanggal', $tanggal)
                             ->get();
-        
+
         $pembukababys = Pembukababy::where('kelas', 'babycamp')
                             ->where('siswa_id', $siswa->id)
                             ->whereDate('tanggal', $tanggal)
                             ->get();
-        
+
         $intibabys = Intibaby::where('kelas', 'babycamp')
                             ->where('siswa_id', $siswa->id)
                             ->whereDate('tanggal', $tanggal)
@@ -173,7 +177,7 @@ class OrtuController extends Controller
         $catatanorangtuas = Catatanorangtua::where('siswa_id', $siswa->id)
                             ->whereDate('tanggal', $tanggal)
                             ->get();
-        
+
         return view('orangtua.babycamp',compact('tanggal', 'siswa', 'breakfasts', 'pembukababys', 'intibabys', 'penutupbabys', 'catatangurus', 'catatanorangtuas'));
     }
 }

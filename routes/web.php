@@ -49,9 +49,12 @@ Route::post('/login', [AuthController::class, 'loginPost'])->name('login');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // Route::group(['middleware' => 'guest'], function () {
-    
+
 // });
 
+// register
+Route::get('/register', [AuthController::class, 'register'])->name('register');
+Route::post('/register', [AuthController::class, 'registerPost'])->name('register');
 //admin
 Route::middleware(['auth', 'user-access:admin'])->group(function () {
     // home admin
@@ -65,9 +68,7 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::get('password/{user}', [PasswordController::class, 'edit'])->name('editPassword');
     Route::put('password/{user}', [PasswordController::class, 'update'])->name('updatePassword');
 
-    // register
-    Route::get('/register', [AuthController::class, 'register'])->name('register');
-    Route::post('/register', [AuthController::class, 'registerPost'])->name('register');
+
 
     // tahun
     Route::resource('tahun', TahunController::class);
@@ -165,4 +166,5 @@ Route::middleware(['auth', 'user-access:ortu'])->group(function () {
     Route::resource('catatanorangtua', CatatanOrangtuaController::class);
     Route::get('catatan-orangtua/create/{siswa}/{tanggal}', [CatatanOrangtuaController::class, 'create'])->name('catatanorangtua.create');
 
+    Route::get('/halaman-orangtua-test', [OrtuController::class, 'test'])->name('ortu.test');
 });
