@@ -45,7 +45,15 @@
                             <div class="blockquote-custom-icon shadow-sm">
                                 <h5>Morning Booster</h5>
                             </div>
-                            <img class="check" src="{{ asset('assets') }}/img/icon/check.png" alt="">
+
+                            <div class="row">
+                                <div class="col-1">
+                                    <img class="check" src="{{ asset('assets') }}/img/icon/check.png" alt="">
+                                </div>
+                                <div class="col">
+                                    <p>Senam pagi</p>
+                                </div>
+                            </div>
                             {{-- <footer class="blockquote-footer pt-4 mt-4 border-top">Someone famous in
                                 <cite title="Source Title">Source Title</cite>
                             </footer> --}}

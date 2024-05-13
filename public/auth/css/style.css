@@ -79,6 +79,10 @@
     padding: 3px 15px;
 }
 
+.bg-blue .check{
+    width: 20px;
+}
+
 @media (max-width: 640px) {
     .blockquote-custom {
         padding: 15px;
@@ -118,7 +122,7 @@
         padding: 1px;
     }
 
-    .bg-blue .check, .bg-blue .cross {
+    .bg-blue .check{
         width: 8px;
         margin-top: -20px;
     }
