@@ -31,7 +31,7 @@
                                     <p class="mb-0 mt-2">Notifikasi : <a>"Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit. Quod magni rerum inventore sequi. Cum eos sint,
                                             harum autem officia quia sunt pariatur incidunt optio quisquam voluptatem eius
-                                            nesciunt cumque tempora!</a>."</p>
+                                            nesciunt cumque tempora!."</a></p>
                                 </div>
                             </div>
 
@@ -324,13 +324,9 @@
                                     <p class="mb-0 mt-2">Notifikasi : <a>"Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit. Quod magni rerum inventore sequi. Cum eos sint,
                                             harum autem officia quia sunt pariatur incidunt optio quisquam voluptatem eius
-                                            nesciunt cumque tempora!</a>."</p>
+                                            nesciunt cumque tempora!."</a></p>
                                 </div>
                             </div>
-
-                            {{-- <footer class="blockquote-footer pt-4 mt-4 border-top">Someone famous in
-                                <cite title="Source Title">Source Title</cite>
-                            </footer> --}}
                         </blockquote>
                     </div>
                     <div class="col-4">
@@ -393,11 +389,91 @@
 
                             <div class="notifikasi">
                                 <p class="mb-0 mt-2">Notifikasi : <a>"Ananda mengikuti kegiatan pagi dengan penuh semangat
-                                        dan gembira</a>."</p>
+                                        dan gembira."</a></p>
                             </div>
-                            {{-- <footer class="blockquote-footer pt-4 mt-4 border-top">Someone famous in
-                                <cite title="Source Title">Source Title</cite>
-                            </footer> --}}
+                        </blockquote>
+
+                        <blockquote class="blockquote blockquote-custom shadow rounded mt-3 bg-orange">
+                            <div class="blockquote-custom-icon shadow-sm">
+                                <h5>Breakfast</h5>
+                            </div>
+
+                            <div class="menu">
+                                <p class="mb-2 mt-2">Menu : <a>Variasi nasi, sop ayam dan tempe goreng,</a></p>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-4">
+                                    <p>Karbohidrat</p>
+                                </div>
+                                <div class="col">
+                                    <div class="progress" role="progressbar" aria-label="Success example"
+                                        aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar bg-success" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-4">
+                                    <p>Protein</p>
+                                </div>
+                                <div class="col">
+                                    <div class="progress" role="progressbar" aria-label="Success example"
+                                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar bg-success" style="width: 40%"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-4">
+                                    <p>Lemak</p>
+                                </div>
+                                <div class="col">
+                                    <div class="progress" role="progressbar" aria-label="Success example"
+                                        aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar bg-success" style="width: 60%"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-4">
+                                    <p>Serat</p>
+                                </div>
+                                <div class="col">
+                                    <div class="progress" role="progressbar" aria-label="Success example"
+                                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar bg-success" style="width: 40%"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-4">
+                                    <p>Vit.Mineral</p>
+                                </div>
+                                <div class="col">
+                                    <div class="progress" role="progressbar" aria-label="Success example"
+                                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar bg-success" style="width: 40%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </blockquote>
+
+                        <blockquote class="blockquote blockquote-custom shadow rounded mt-3 bg-black">
+                            <div class="blockquote-custom-icon shadow-sm">
+                                <h5>Today Videos</h5>
+                            </div>
+
+                            <div class="youtube text-center mt-3">
+                                <iframe width="280" src="https://www.youtube.com/embed/HOYpAgWPTps?si=1bQCEeIkfL6KZATL"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
                         </blockquote>
                     </div>
                 </div>
