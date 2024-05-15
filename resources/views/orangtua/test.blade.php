@@ -15,6 +15,8 @@
         <div class="body-wrapper">
             @include('include.header-admin')
             <div class="container-fluid">
+                <p>*ini tampilan UI UX laporan</p>
+
                 <div class="row align-items-start">
                     <div class="col-8">
                         <blockquote class="blockquote blockquote-custom shadow rounded mt-3 bg-green">
@@ -28,10 +30,10 @@
                                 </div>
                                 <div class="col-9">
                                     <h2>Almost Happy</h2>
-                                    <p class="mb-0 mt-2">Notifikasi : <a>"Lorem ipsum dolor sit amet
+                                    <p class="mb-0 mt-2">Notifikasi : <a>Lorem ipsum dolor sit amet
                                             consectetur adipisicing elit. Quod magni rerum inventore sequi. Cum eos sint,
                                             harum autem officia quia sunt pariatur incidunt optio quisquam voluptatem eius
-                                            nesciunt cumque tempora!."</a></p>
+                                            nesciunt cumque tempora!.</a></p>
                                 </div>
                             </div>
 
@@ -321,10 +323,10 @@
                                 </div>
                             </div>
                             <div class="yellow-notif">
-                                <p class="mb-0 mt-2">Notifikasi : <a>"Lorem ipsum dolor sit amet
+                                <p class="mb-0 mt-2">Notifikasi : <a>Lorem ipsum dolor sit amet
                                         consectetur adipisicing elit. Quod magni rerum inventore sequi. Cum eos sint,
                                         harum autem officia quia sunt pariatur incidunt optio quisquam voluptatem eius
-                                        nesciunt cumque tempora!."</a></p>
+                                        nesciunt cumque tempora!.</a></p>
                             </div>
                         </blockquote>
 
@@ -346,7 +348,7 @@
                                             </div>
                                         </div>
                                         <div class="grey-notif">
-                                            <p class="mb-0">Notifikasi : <a>"Ananda sudah bisa mengenal huruf A"</a></p>
+                                            <p class="mb-0">Notifikasi : <a>Ananda sudah bisa mengenal huruf A</a></p>
                                         </div>
                                     </div>
 
@@ -361,7 +363,7 @@
                                             </div>
                                         </div>
                                         <div class="grey-notif">
-                                            <p class="mb-0">Notifikasi : <a>"Ananda sudah bisa mengenal huruf A"</a></p>
+                                            <p class="mb-0">Notifikasi : <a>Ananda sudah bisa mengenal huruf A</a></p>
                                         </div>
                                     </div>
 
@@ -376,7 +378,7 @@
                                             </div>
                                         </div>
                                         <div class="grey-notif">
-                                            <p class="mb-0">Notifikasi : <a>"Ananda sudah bisa mengenal huruf A"</a></p>
+                                            <p class="mb-0">Notifikasi : <a>Ananda sudah bisa mengenal huruf A</a></p>
                                         </div>
                                     </div>
                                 </blockquote>
@@ -398,9 +400,9 @@
                                             </div>
                                         </div>
                                         <div class="brown-notif">
-                                            <p class="mb-0">Notifikasi : <a>"Hari ini ananda belajar bermain congklak.
+                                            <p class="mb-0">Notifikasi : <a>Hari ini ananda belajar bermain congklak.
                                                     Bermain ini bermanfaat menstimulus logika dan perkembangan otak
-                                                    ananda."</a></p>
+                                                    ananda.</a></p>
                                         </div>
                                     </div>
                                 </blockquote>
@@ -466,8 +468,8 @@
                             </div>
 
                             <div class="notifikasi">
-                                <p class="mb-0 mt-2">Notifikasi : <a>"Ananda mengikuti kegiatan pagi dengan penuh semangat
-                                        dan gembira."</a></p>
+                                <p class="mb-0 mt-2">Notifikasi : <a>Ananda mengikuti kegiatan pagi dengan penuh semangat
+                                        dan gembira.</a></p>
                             </div>
                         </blockquote>
 
@@ -538,6 +540,53 @@
                                         <div class="progress-bar bg-success" style="width: 40%"></div>
                                     </div>
                                 </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <div class="sub">
+                                        <div class="row">
+                                            <div class="col-1">
+                                                <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="col d-flex align-items-center">
+                                                <p>Habis</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sub">
+                                        <div class="row">
+                                            <div class="col-1">
+                                                <img class="check" src="{{ asset('assets') }}/img/icon/check-none.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="col d-flex align-items-center">
+                                                <p>Bersisa</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sub">
+                                        <div class="row">
+                                            <div class="col-1">
+                                                <img class="check" src="{{ asset('assets') }}/img/icon/check-none.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="col d-flex align-items-center">
+                                                <p>Tdk Makan</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col persentase d-flex align-items-center">
+                                    <h1>100%</h1>
+                                </div>
+                            </div>
+
+
+                            <div class="catatan">
+                                <p class="mb-0 mt-2">Catatan : <a>Ananda tidak menyukai makanan yang terbuat dari tahu dan
+                                        teri.</a></p>
                             </div>
                         </blockquote>
 

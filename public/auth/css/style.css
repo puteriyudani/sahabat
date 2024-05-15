@@ -38,7 +38,6 @@
 }
 
 .bg-green a {
-    font-style: italic;
     text-decoration: none;
     font-weight: 200;
 }
@@ -128,7 +127,6 @@
 }
 
 .bg-yellow .yellow-notif a {
-    font-style: italic;
     text-decoration: none;
     font-weight: 200;
     font-size: 14px;
@@ -178,7 +176,6 @@
 }
 
 .bg-grey .grey-notif a {
-    font-style: italic;
     text-decoration: none;
     font-weight: 200;
     font-size: 14px;
@@ -228,7 +225,6 @@
 }
 
 .bg-brown .brown-notif a {
-    font-style: italic;
     text-decoration: none;
     font-weight: 200;
     font-size: 14px;
@@ -287,7 +283,6 @@
 }
 
 .bg-blue a {
-    font-style: italic;
     text-decoration: none;
     font-weight: 200;
 }
@@ -330,6 +325,45 @@
 
 .bg-orange .progress {
     margin-top: 5px;
+}
+
+.bg-orange .catatan p {
+    font-weight: 500;
+    font-size: 14px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.bg-orange a {
+    text-decoration: none;
+    font-weight: 200;
+}
+
+.bg-orange .sub .row {
+    background-color: white;
+    border-radius: 30px;
+    margin-left: 1px;
+    margin-bottom: 3px;
+}
+
+.bg-orange .sub p {
+    font-size: 14px;
+    margin-bottom: 8px;
+    margin-top: 6px;
+}
+
+.bg-orange .check, .bg-orange .cross{
+    width: 20px;
+    /* margin-top: -8px; */
+}
+
+.bg-orange .persentase h1 {
+    background-color: white;
+    border-radius: 30px;
+    padding: 30px 10px;
+    text-align: center;
+    width: 100%;
 }
 
 /* bg-black */
