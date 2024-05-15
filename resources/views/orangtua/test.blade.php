@@ -319,15 +319,93 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="yellow-notif">
-                                    <p class="mb-0 mt-2">Notifikasi : <a>"Lorem ipsum dolor sit amet
-                                            consectetur adipisicing elit. Quod magni rerum inventore sequi. Cum eos sint,
-                                            harum autem officia quia sunt pariatur incidunt optio quisquam voluptatem eius
-                                            nesciunt cumque tempora!."</a></p>
-                                </div>
+                            </div>
+                            <div class="yellow-notif">
+                                <p class="mb-0 mt-2">Notifikasi : <a>"Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. Quod magni rerum inventore sequi. Cum eos sint,
+                                        harum autem officia quia sunt pariatur incidunt optio quisquam voluptatem eius
+                                        nesciunt cumque tempora!."</a></p>
                             </div>
                         </blockquote>
+
+                        <div class="row">
+                            <div class="col">
+                                <blockquote class="blockquote blockquote-custom shadow rounded mt-3 bg-grey">
+                                    <div class="blockquote-custom-icon shadow-sm">
+                                        <h5>Pre School</h5>
+                                    </div>
+
+                                    <div class="sub">
+                                        <div class="row">
+                                            <div class="col-1">
+                                                <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="col">
+                                                <p>Huruf & Membaca</p>
+                                            </div>
+                                        </div>
+                                        <div class="grey-notif">
+                                            <p class="mb-0">Notifikasi : <a>"Ananda sudah bisa mengenal huruf A"</a></p>
+                                        </div>
+                                    </div>
+
+                                    <div class="sub mt-2">
+                                        <div class="row">
+                                            <div class="col-1">
+                                                <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="col">
+                                                <p>Angka & Berhitung</p>
+                                            </div>
+                                        </div>
+                                        <div class="grey-notif">
+                                            <p class="mb-0">Notifikasi : <a>"Ananda sudah bisa mengenal huruf A"</a></p>
+                                        </div>
+                                    </div>
+
+                                    <div class="sub mt-2">
+                                        <div class="row">
+                                            <div class="col-1">
+                                                <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="col">
+                                                <p>Pre Basic English</p>
+                                            </div>
+                                        </div>
+                                        <div class="grey-notif">
+                                            <p class="mb-0">Notifikasi : <a>"Ananda sudah bisa mengenal huruf A"</a></p>
+                                        </div>
+                                    </div>
+                                </blockquote>
+                            </div>
+                            <div class="col">
+                                <blockquote class="blockquote blockquote-custom shadow rounded mt-3 bg-brown">
+                                    <div class="blockquote-custom-icon shadow-sm">
+                                        <h5>Tematik</h5>
+                                    </div>
+
+                                    <div class="sub">
+                                        <div class="row">
+                                            <div class="col-1">
+                                                <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="col">
+                                                <p>Culture Paradise</p>
+                                            </div>
+                                        </div>
+                                        <div class="brown-notif">
+                                            <p class="mb-0">Notifikasi : <a>"Hari ini ananda belajar bermain congklak.
+                                                    Bermain ini bermanfaat menstimulus logika dan perkembangan otak
+                                                    ananda."</a></p>
+                                        </div>
+                                    </div>
+                                </blockquote>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-4">
                         <blockquote class="blockquote blockquote-custom shadow rounded mt-3 bg-blue">
@@ -470,9 +548,9 @@
 
                             <div class="youtube text-center mt-3">
                                 <iframe width="280" src="https://www.youtube.com/embed/HOYpAgWPTps?si=1bQCEeIkfL6KZATL"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             </div>
                         </blockquote>
                     </div>
