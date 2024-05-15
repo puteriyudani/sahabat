@@ -1,7 +1,7 @@
 .blockquote-custom {
     position: relative;
     font-size: 1.1rem;
-    padding: 45px;
+    padding: 30px;
 }
 
 .blockquote-custom-icon h5 {
@@ -156,15 +156,44 @@
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 30px;
     padding: 3px 15px;
+    font-weight: 700;
 }
 
-.bg-blue .check{
+.bg-blue .check, .bg-blue .cross{
     width: 20px;
+}
+
+.bg-blue .card {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+}
+
+.bg-blue .card p {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.bg-blue .card .sub p {
+    background-color: white;
+    font-weight: 400;
+}
+
+.bg-blue .notifikasi p {
+    font-weight: 500;
+    font-size: 16px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.bg-blue a {
+    font-style: italic;
+    text-decoration: none;
+    font-weight: 200;
 }
 
 @media (max-width: 640px) {
     .blockquote-custom {
-        padding: 15px;
+        padding: 10px;
     }
 
     .blockquote-custom-icon h5 {
@@ -201,7 +230,7 @@
         padding: 1px;
     }
 
-    .bg-blue .check{
+    .bg-blue .check, .bg-blue .cross{
         width: 8px;
         margin-top: -20px;
     }

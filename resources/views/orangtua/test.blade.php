@@ -164,7 +164,8 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-1">
-                                                        <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                        <img class="check"
+                                                            src="{{ asset('assets') }}/img/icon/check.png"
                                                             alt="">
                                                     </div>
                                                     <div class="col">
@@ -173,7 +174,8 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-1">
-                                                        <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                        <img class="check"
+                                                            src="{{ asset('assets') }}/img/icon/check.png"
                                                             alt="">
                                                     </div>
                                                     <div class="col">
@@ -182,7 +184,8 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-1">
-                                                        <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                        <img class="check"
+                                                            src="{{ asset('assets') }}/img/icon/check.png"
                                                             alt="">
                                                     </div>
                                                     <div class="col">
@@ -191,7 +194,8 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-1">
-                                                        <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                        <img class="check"
+                                                            src="{{ asset('assets') }}/img/icon/check.png"
                                                             alt="">
                                                     </div>
                                                     <div class="col">
@@ -209,7 +213,8 @@
                                                 <h4>Hafalan Doa:</h4>
                                                 <div class="row">
                                                     <div class="col-1">
-                                                        <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                        <img class="check"
+                                                            src="{{ asset('assets') }}/img/icon/check.png"
                                                             alt="">
                                                     </div>
                                                     <div class="col">
@@ -218,7 +223,8 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-1">
-                                                        <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                        <img class="check"
+                                                            src="{{ asset('assets') }}/img/icon/check.png"
                                                             alt="">
                                                     </div>
                                                     <div class="col">
@@ -227,7 +233,8 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-1">
-                                                        <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                        <img class="check"
+                                                            src="{{ asset('assets') }}/img/icon/check.png"
                                                             alt="">
                                                     </div>
                                                     <div class="col">
@@ -236,7 +243,8 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-1">
-                                                        <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                        <img class="check"
+                                                            src="{{ asset('assets') }}/img/icon/check.png"
                                                             alt="">
                                                     </div>
                                                     <div class="col">
@@ -245,7 +253,8 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-1">
-                                                        <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                        <img class="check"
+                                                            src="{{ asset('assets') }}/img/icon/check.png"
                                                             alt="">
                                                     </div>
                                                     <div class="col">
@@ -254,7 +263,8 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-1">
-                                                        <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                        <img class="check"
+                                                            src="{{ asset('assets') }}/img/icon/check.png"
                                                             alt="">
                                                     </div>
                                                     <div class="col">
@@ -263,7 +273,8 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-1">
-                                                        <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                        <img class="check"
+                                                            src="{{ asset('assets') }}/img/icon/check.png"
                                                             alt="">
                                                     </div>
                                                     <div class="col">
@@ -272,7 +283,8 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-1">
-                                                        <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                        <img class="check"
+                                                            src="{{ asset('assets') }}/img/icon/check.png"
                                                             alt="">
                                                     </div>
                                                     <div class="col">
@@ -281,7 +293,8 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-1">
-                                                        <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                        <img class="check"
+                                                            src="{{ asset('assets') }}/img/icon/check.png"
                                                             alt="">
                                                     </div>
                                                     <div class="col">
@@ -290,7 +303,8 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-1">
-                                                        <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                        <img class="check"
+                                                            src="{{ asset('assets') }}/img/icon/check.png"
                                                             alt="">
                                                     </div>
                                                     <div class="col">
@@ -308,9 +322,9 @@
 
                                 <div class="yellow-notif">
                                     <p class="mb-0 mt-2">Notifikasi : <a>"Lorem ipsum dolor sit amet
-                                        consectetur adipisicing elit. Quod magni rerum inventore sequi. Cum eos sint,
-                                        harum autem officia quia sunt pariatur incidunt optio quisquam voluptatem eius
-                                        nesciunt cumque tempora!</a>."</p>
+                                            consectetur adipisicing elit. Quod magni rerum inventore sequi. Cum eos sint,
+                                            harum autem officia quia sunt pariatur incidunt optio quisquam voluptatem eius
+                                            nesciunt cumque tempora!</a>."</p>
                                 </div>
                             </div>
 
@@ -332,6 +346,54 @@
                                 <div class="col">
                                     <p>Senam pagi</p>
                                 </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-1">
+                                    <img class="cross" src="{{ asset('assets') }}/img/icon/cross.png" alt="">
+                                </div>
+                                <div class="col">
+                                    <p>Apel Bendera</p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col card">
+                                    <p>Circle Time</p>
+                                    <div class="row sub">
+                                        <div class="col-1">
+                                            <img class="cross" src="{{ asset('assets') }}/img/icon/cross.png"
+                                                alt="">
+                                        </div>
+                                        <div class="col">
+                                            <p>Mendongeng</p>
+                                        </div>
+                                    </div>
+                                    <div class="row sub">
+                                        <div class="col-1">
+                                            <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                alt="">
+                                        </div>
+                                        <div class="col">
+                                            <p>Bernyanyi</p>
+                                        </div>
+                                    </div>
+                                    <div class="row sub">
+                                        <div class="col-1">
+                                            <img class="cross" src="{{ asset('assets') }}/img/icon/cross.png"
+                                                alt="">
+                                        </div>
+                                        <div class="col">
+                                            <p>Berdiskusi/Cerita</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="notifikasi">
+                                <p class="mb-0 mt-2">Notifikasi : <a>"Ananda mengikuti kegiatan pagi dengan penuh semangat
+                                        dan gembira</a>."</p>
                             </div>
                             {{-- <footer class="blockquote-footer pt-4 mt-4 border-top">Someone famous in
                                 <cite title="Source Title">Source Title</cite>
