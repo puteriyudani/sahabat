@@ -54,6 +54,85 @@
     right: 50px;
 }
 
+/* bg-yellow */
+.bg-yellow {
+    background-color: #ffee00;
+}
+
+.bg-yellow .blockquote-custom-icon {
+    background-color: #c7ba00;
+    width: 200px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -15px;
+    left: 50px;
+}
+
+.bg-yellow img {
+    width: 120px;
+}
+
+.bg-yellow h6 {
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.bg-yellow a {
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.bg-yellow .card {
+    background-color: #7AB2B2;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.bg-yellow p {
+    font-size: 10px;
+    background-color:white;
+    border-radius: 30px;
+    padding: 3px 15px;
+}
+
+.bg-yellow h4 {
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.bg-yellow .check, .bg-yellow .cross{
+    width: 20px;
+    margin-top: -13px;
+}
+
+.bg-yellow .status h3 {
+    background-color: #1d7533;
+    color: white;
+    font-size: 14px;
+    border-radius: 30px;
+    padding: 3px 15px;
+    text-align: center;
+}
+
+.bg-yellow .yellow-notif p {
+    font-weight: 500;
+    font-size: 16px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.bg-yellow .yellow-notif a {
+    font-style: italic;
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 16px;
+}
+
 /* bg-blue */
 .bg-blue {
     background-color: #7AB2B2;
