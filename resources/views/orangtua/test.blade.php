@@ -37,12 +37,12 @@
                                 </div>
                             </div>
 
-                            {{-- <footer class="blockquote-footer pt-4 mt-4 border-top">Someone famous in
+                            {{-- <footer class="blockquote-footer pt-4 border-top">Someone famous in
                                 <cite title="Source Title">Source Title</cite>
                             </footer> --}}
                         </blockquote>
 
-                        <blockquote class="blockquote blockquote-custom shadow rounded mt-4 bg-yellow">
+                        <blockquote class="blockquote blockquote-custom shadow rounded bg-yellow">
                             <div class="blockquote-custom-icon shadow-sm">
                                 <h5>Islamic Base Learning</h5>
                             </div>
@@ -382,6 +382,35 @@
                                         </div>
                                     </div>
                                 </blockquote>
+
+                                <blockquote class="blockquote blockquote-custom shadow rounded bg-darkgreen">
+                                    <div class="blockquote-custom-icon shadow-sm">
+                                        <h5>Poop and Pee</h5>
+                                    </div>
+
+                                    <div class="sub">
+                                        <div class="row">
+                                            <div class="col-1">
+                                                <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="col d-flex align-items-center">
+                                                <p>Buang Air Besar</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sub">
+                                        <div class="row">
+                                            <div class="col-1">
+                                                <img class="check-none" src="{{ asset('assets') }}/img/icon/check-none.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="col d-flex align-items-center">
+                                                <p>Buang Air Kecil</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </blockquote>
                             </div>
                             <div class="col">
                                 <blockquote class="blockquote blockquote-custom shadow rounded mt-3 bg-brown">
@@ -473,7 +502,7 @@
                             </div>
                         </blockquote>
 
-                        <blockquote class="blockquote blockquote-custom shadow rounded mt-3 bg-orange">
+                        <blockquote class="blockquote blockquote-custom shadow rounded bg-orange">
                             <div class="blockquote-custom-icon shadow-sm">
                                 <h5>Breakfast</h5>
                             </div>
@@ -558,7 +587,7 @@
                                     <div class="sub">
                                         <div class="row">
                                             <div class="col-1">
-                                                <img class="check" src="{{ asset('assets') }}/img/icon/check-none.png"
+                                                <img class="check-none" src="{{ asset('assets') }}/img/icon/check-none.png"
                                                     alt="">
                                             </div>
                                             <div class="col d-flex align-items-center">
@@ -569,7 +598,7 @@
                                     <div class="sub">
                                         <div class="row">
                                             <div class="col-1">
-                                                <img class="check" src="{{ asset('assets') }}/img/icon/check-none.png"
+                                                <img class="check-none" src="{{ asset('assets') }}/img/icon/check-none.png"
                                                     alt="">
                                             </div>
                                             <div class="col d-flex align-items-center">
@@ -583,14 +612,13 @@
                                 </div>
                             </div>
 
-
                             <div class="catatan">
                                 <p class="mb-0 mt-2">Catatan : <a>Ananda tidak menyukai makanan yang terbuat dari tahu dan
                                         teri.</a></p>
                             </div>
                         </blockquote>
 
-                        <blockquote class="blockquote blockquote-custom shadow rounded mt-3 bg-black">
+                        <blockquote class="blockquote blockquote-custom shadow rounded bg-black">
                             <div class="blockquote-custom-icon shadow-sm">
                                 <h5>Today Videos</h5>
                             </div>
@@ -600,6 +628,30 @@
                                     title="YouTube video player" frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                        </blockquote>
+                    </div>
+                </div>
+
+                <div class="row align-items-start">
+                    <div class="col-4"></div>
+                    <div class="col-8 recalling">
+                        <blockquote class="blockquote blockquote-custom shadow rounded mt-3 bg-mustard">
+                            <div class="blockquote-custom-icon shadow-sm">
+                                <h5>Re Calling</h5>
+                            </div>
+                            <div class="row">
+                                <div class="col-9">
+                                    <h2>I'm Perfect Happy</h2>
+                                    <p class="mb-0 mt-2">Notifikasi : <a>Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit. Quod magni rerum inventore sequi. Cum eos sint,
+                                            harum autem officia quia sunt pariatur incidunt optio quisquam voluptatem eius
+                                            nesciunt cumque tempora!.</a></p>
+                                </div>
+                                <div class="col-3 text-center">
+                                    <img src="{{ asset('assets') }}/img/face/happy.png" alt="">
+                                    <h1>100%</h1>
+                                </div>
                             </div>
                         </blockquote>
                     </div>
