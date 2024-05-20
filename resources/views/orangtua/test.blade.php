@@ -53,25 +53,25 @@
                                     <a>RUMAH CERDAS QURAN</a>
                                     <div class="card text-justify">
                                         <h4>Hafalan Hadist:</h4>
-                                        <div class="row">
+                                        <div class="row mobile-no-gutters yellow">
                                             <div class="col-1">
                                                 <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
                                                     alt="">
                                             </div>
                                             <div class="col">
-                                                <p>Larangan Marah</p>
+                                                <p>Lrgn Marah</p>
                                             </div>
                                         </div>
-                                        <div class="row">
+                                        <div class="row mobile-no-gutters yellow">
                                             <div class="col-1">
                                                 <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
                                                     alt="">
                                             </div>
                                             <div class="col">
-                                                <p>Mkn & Minum</p>
+                                                <p>Mkn & Mnm</p>
                                             </div>
                                         </div>
-                                        <div class="row">
+                                        <div class="row mobile-no-gutters yellow">
                                             <div class="col-1">
                                                 <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
                                                     alt="">
@@ -80,7 +80,7 @@
                                                 <p>Kasih Sayang</p>
                                             </div>
                                         </div>
-                                        <div class="row">
+                                        <div class="row mobile-no-gutters yellow">
                                             <div class="col-1">
                                                 <img class="cross" src="{{ asset('assets') }}/img/icon/cross.png"
                                                     alt="">
@@ -89,16 +89,16 @@
                                                 <p>Kebersihan</p>
                                             </div>
                                         </div>
-                                        <div class="row">
+                                        <div class="row mobile-no-gutters yellow">
                                             <div class="col-1">
                                                 <img class="cross" src="{{ asset('assets') }}/img/icon/cross.png"
                                                     alt="">
                                             </div>
                                             <div class="col">
-                                                <p>Menuntut Ilmu</p>
+                                                <p>Mntt Ilmu</p>
                                             </div>
                                         </div>
-                                        <div class="row">
+                                        <div class="row mobile-no-gutters yellow">
                                             <div class="col-1">
                                                 <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
                                                     alt="">
@@ -119,7 +119,7 @@
                                         <div class="col-6">
                                             <div class="card">
                                                 <h4>Hafalan Quran:</h4>
-                                                <div class="row">
+                                                <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
                                                         <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
                                                             alt="">
@@ -128,7 +128,7 @@
                                                         <p>Al-Fatihah</p>
                                                     </div>
                                                 </div>
-                                                <div class="row">
+                                                <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
                                                         <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
                                                             alt="">
@@ -137,7 +137,7 @@
                                                         <p>Al-Ikhlas</p>
                                                     </div>
                                                 </div>
-                                                <div class="row">
+                                                <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
                                                         <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
                                                             alt="">
@@ -146,7 +146,7 @@
                                                         <p>Al-Annas</p>
                                                     </div>
                                                 </div>
-                                                <div class="row">
+                                                <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
                                                         <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
                                                             alt="">
@@ -155,7 +155,7 @@
                                                         <p>Al-Falaq</p>
                                                     </div>
                                                 </div>
-                                                <div class="row">
+                                                <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
                                                         <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
                                                             alt="">
@@ -164,7 +164,7 @@
                                                         <p>Al-Lahab</p>
                                                     </div>
                                                 </div>
-                                                <div class="row">
+                                                <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
                                                         <img class="check"
                                                             src="{{ asset('assets') }}/img/icon/check.png"
@@ -174,7 +174,7 @@
                                                         <p>An-Nasr</p>
                                                     </div>
                                                 </div>
-                                                <div class="row">
+                                                <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
                                                         <img class="check"
                                                             src="{{ asset('assets') }}/img/icon/check.png"
@@ -184,7 +184,7 @@
                                                         <p>Al-Kafirun</p>
                                                     </div>
                                                 </div>
-                                                <div class="row">
+                                                <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
                                                         <img class="check"
                                                             src="{{ asset('assets') }}/img/icon/check.png"
@@ -194,7 +194,7 @@
                                                         <p>Al-Kautsar</p>
                                                     </div>
                                                 </div>
-                                                <div class="row">
+                                                <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
                                                         <img class="check"
                                                             src="{{ asset('assets') }}/img/icon/check.png"
@@ -213,7 +213,7 @@
                                         <div class="col-6">
                                             <div class="card">
                                                 <h4>Hafalan Doa:</h4>
-                                                <div class="row">
+                                                <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
                                                         <img class="check"
                                                             src="{{ asset('assets') }}/img/icon/check.png"
@@ -223,7 +223,7 @@
                                                         <p>Makan</p>
                                                     </div>
                                                 </div>
-                                                <div class="row">
+                                                <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
                                                         <img class="check"
                                                             src="{{ asset('assets') }}/img/icon/check.png"
@@ -233,7 +233,7 @@
                                                         <p>Pasca Makan</p>
                                                     </div>
                                                 </div>
-                                                <div class="row">
+                                                <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
                                                         <img class="check"
                                                             src="{{ asset('assets') }}/img/icon/check.png"
@@ -243,17 +243,17 @@
                                                         <p>Keluar Rumah</p>
                                                     </div>
                                                 </div>
-                                                <div class="row">
+                                                <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
                                                         <img class="check"
                                                             src="{{ asset('assets') }}/img/icon/check.png"
                                                             alt="">
                                                     </div>
                                                     <div class="col">
-                                                        <p>Naik Kendaraan</p>
+                                                        <p>Naik Kndran</p>
                                                     </div>
                                                 </div>
-                                                <div class="row">
+                                                <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
                                                         <img class="check"
                                                             src="{{ asset('assets') }}/img/icon/check.png"
@@ -263,7 +263,7 @@
                                                         <p>Kebaikan</p>
                                                     </div>
                                                 </div>
-                                                <div class="row">
+                                                <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
                                                         <img class="check"
                                                             src="{{ asset('assets') }}/img/icon/check.png"
@@ -273,7 +273,7 @@
                                                         <p>Orang Tua</p>
                                                     </div>
                                                 </div>
-                                                <div class="row">
+                                                <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
                                                         <img class="check"
                                                             src="{{ asset('assets') }}/img/icon/check.png"
@@ -283,7 +283,7 @@
                                                         <p>Masuk WC</p>
                                                     </div>
                                                 </div>
-                                                <div class="row">
+                                                <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
                                                         <img class="check"
                                                             src="{{ asset('assets') }}/img/icon/check.png"
@@ -293,7 +293,7 @@
                                                         <p>Masuk Masjid</p>
                                                     </div>
                                                 </div>
-                                                <div class="row">
+                                                <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
                                                         <img class="check"
                                                             src="{{ asset('assets') }}/img/icon/check.png"
@@ -303,7 +303,7 @@
                                                         <p>Belajar</p>
                                                     </div>
                                                 </div>
-                                                <div class="row">
+                                                <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
                                                         <img class="check"
                                                             src="{{ asset('assets') }}/img/icon/check.png"
@@ -330,15 +330,15 @@
                             </div>
                         </blockquote>
 
-                        <div class="row">
-                            <div class="col">
+                        <div class="row mobile-no-gutters pretem">
+                            <div class="col-6 grey">
                                 <blockquote class="blockquote blockquote-custom shadow rounded mt-3 bg-grey">
                                     <div class="blockquote-custom-icon shadow-sm">
                                         <h5>Pre School</h5>
                                     </div>
 
                                     <div class="sub">
-                                        <div class="row">
+                                        <div class="row mobile-no-gutters">
                                             <div class="col-1">
                                                 <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
                                                     alt="">
@@ -353,7 +353,7 @@
                                     </div>
 
                                     <div class="sub mt-2">
-                                        <div class="row">
+                                        <div class="row mobile-no-gutters">
                                             <div class="col-1">
                                                 <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
                                                     alt="">
@@ -368,7 +368,7 @@
                                     </div>
 
                                     <div class="sub mt-2">
-                                        <div class="row">
+                                        <div class="row mobile-no-gutters">
                                             <div class="col-1">
                                                 <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
                                                     alt="">
@@ -412,14 +412,14 @@
                                     </div>
                                 </blockquote>
                             </div>
-                            <div class="col">
+                            <div class="col-6 brown">
                                 <blockquote class="blockquote blockquote-custom shadow rounded mt-3 bg-brown">
                                     <div class="blockquote-custom-icon shadow-sm">
                                         <h5>Tematik</h5>
                                     </div>
 
                                     <div class="sub">
-                                        <div class="row">
+                                        <div class="row mobile-no-gutters">
                                             <div class="col-1">
                                                 <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
                                                     alt="">
@@ -444,7 +444,7 @@
                                 <h5>Morning Booster</h5>
                             </div>
 
-                            <div class="row">
+                            <div class="row mobile-no-gutters blue">
                                 <div class="col-1">
                                     <img class="check" src="{{ asset('assets') }}/img/icon/check.png" alt="">
                                 </div>
@@ -453,7 +453,7 @@
                                 </div>
                             </div>
 
-                            <div class="row">
+                            <div class="row mobile-no-gutters blue">
                                 <div class="col-1">
                                     <img class="cross" src="{{ asset('assets') }}/img/icon/cross.png" alt="">
                                 </div>
@@ -462,11 +462,11 @@
                                 </div>
                             </div>
 
-                            <div class="row">
+                            <div class="row mobile-no-gutters blue">
                                 <div class="col-1"></div>
                                 <div class="col card">
                                     <p>Circle Time</p>
-                                    <div class="row sub">
+                                    <div class="row sub mobile-no-gutters blue">
                                         <div class="col-1">
                                             <img class="cross" src="{{ asset('assets') }}/img/icon/cross.png"
                                                 alt="">
@@ -475,7 +475,7 @@
                                             <p>Mendongeng</p>
                                         </div>
                                     </div>
-                                    <div class="row sub">
+                                    <div class="row sub mobile-no-gutters blue">
                                         <div class="col-1">
                                             <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
                                                 alt="">
@@ -484,7 +484,7 @@
                                             <p>Bernyanyi</p>
                                         </div>
                                     </div>
-                                    <div class="row sub">
+                                    <div class="row sub mobile-no-gutters blue">
                                         <div class="col-1">
                                             <img class="cross" src="{{ asset('assets') }}/img/icon/cross.png"
                                                 alt="">
@@ -497,7 +497,7 @@
                             </div>
 
                             <div class="notifikasi">
-                                <p class="mb-0 mt-2">Notifikasi : <a>Ananda mengikuti kegiatan pagi dengan penuh semangat
+                                <p class="mb-0">Notifikasi : <a>Ananda mengikuti kegiatan pagi dengan penuh semangat
                                         dan gembira.</a></p>
                             </div>
                         </blockquote>
