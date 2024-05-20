@@ -104,6 +104,14 @@
     border-radius: 30px;
 }
 
+.bg-yellow .card.hadist .gap {
+    height: 52px;
+}
+
+.bg-yellow .card.quran .gap {
+    height: 20px;
+}
+
 .bg-yellow p {
     font-size: 10px;
     background-color: white;

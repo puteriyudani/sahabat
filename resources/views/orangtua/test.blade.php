@@ -51,7 +51,7 @@
                                     <img src="{{ asset('assets') }}/img/rcq.jpg" class="mt-2" alt="">
                                     <h6>Support By:</h6>
                                     <a>RUMAH CERDAS QURAN</a>
-                                    <div class="card text-justify">
+                                    <div class="card text-justify hadist">
                                         <h4>Hafalan Hadist:</h4>
                                         <div class="row mobile-no-gutters yellow">
                                             <div class="col-1">
@@ -108,6 +108,8 @@
                                             </div>
                                         </div>
 
+                                        <div class="gap"></div>
+
                                         <div class="status">
                                             <h3>Progress</h3>
                                         </div>
@@ -117,7 +119,7 @@
                                     <h2>Alquran, Hadist dan Doa</h2>
                                     <div class="row mobile-no-gutters quran-doa">
                                         <div class="col-6">
-                                            <div class="card">
+                                            <div class="card quran">
                                                 <h4>Hafalan Quran:</h4>
                                                 <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
@@ -205,13 +207,15 @@
                                                     </div>
                                                 </div>
 
+                                                <div class="gap"></div>
+
                                                 <div class="status">
                                                     <h3>Tuntas</h3>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-6">
-                                            <div class="card">
+                                            <div class="card doa">
                                                 <h4>Hafalan Doa:</h4>
                                                 <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
