@@ -1,3 +1,8 @@
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
 .blockquote-custom {
     position: relative;
     font-size: 1.1rem;
@@ -77,6 +82,11 @@
     width: 120px;
 }
 
+.bg-yellow h2 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
 .bg-yellow h6 {
     font-weight: 500;
     font-size: 14px;
@@ -86,6 +96,7 @@
 .bg-yellow a {
     text-decoration: none;
     font-size: 12px;
+    font-weight: 700
 }
 
 .bg-yellow .card {
@@ -96,7 +107,7 @@
 
 .bg-yellow p {
     font-size: 10px;
-    background-color:white;
+    background-color: white;
     border-radius: 30px;
     padding: 3px 15px;
 }
@@ -106,7 +117,8 @@
     font-size: 12px;
 }
 
-.bg-yellow .check, .bg-yellow .cross{
+.bg-yellow .check,
+.bg-yellow .cross {
     width: 20px;
     margin-top: -13px;
 }
@@ -118,6 +130,10 @@
     border-radius: 30px;
     padding: 3px 15px;
     text-align: center;
+}
+
+.bg-yellow .yellow-notif {
+    margin-top: -15px;
 }
 
 .bg-yellow .yellow-notif p {
@@ -165,7 +181,8 @@
     margin-top: 6px;
 }
 
-.bg-grey .check, .bg-grey .cross{
+.bg-grey .check,
+.bg-grey .cross {
     width: 20px;
     /* margin-top: -8px; */
 }
@@ -223,7 +240,8 @@
     margin-top: 6px;
 }
 
-.bg-darkgreen .check, .bg-darkgreen .check-none{
+.bg-darkgreen .check,
+.bg-darkgreen .check-none {
     width: 20px;
 }
 
@@ -257,7 +275,8 @@
     margin-top: 6px;
 }
 
-.bg-brown .check, .bg-brown .cross{
+.bg-brown .check,
+.bg-brown .cross {
     width: 20px;
     /* margin-top: -8px; */
 }
@@ -302,8 +321,10 @@
     font-weight: 700;
 }
 
-.bg-blue .check, .bg-blue .cross{
+.bg-blue .check,
+.bg-blue .cross {
     width: 20px;
+    margin-top: -8px;
 }
 
 .bg-blue .card {
@@ -400,7 +421,8 @@
     margin-top: 6px;
 }
 
-.bg-orange .check, .bg-orange .check-none{
+.bg-orange .check,
+.bg-orange .check-none {
     width: 20px;
     /* margin-top: -8px; */
 }
@@ -494,47 +516,163 @@
     font-weight: 200;
 }
 
-@media (max-width: 640px) {
+/* Mobile styles */
+@media (max-width: 767px) {
+    .row.mobile-no-gutters>[class^="col-"],
+    .row.mobile-no-gutters>[class*=" col-"],
+    .row.mobile-no-gutters>[class^="col"],
+    .row.mobile-no-gutters>[class*=" col"] {
+        padding-right: 3px;
+        padding-left: 3px;
+    }
+
+    .row.mobile-no-gutters.hadist>[class^="col-4"] {
+        padding-left: 10px;
+    }
+    .row.mobile-no-gutters.hadist>[class^="col-8"] {
+        padding-right: 20px;
+    }
+
+    .row.mobile-no-gutters.quran-doa {
+        margin-left: -3px;
+    }
+
     .blockquote-custom {
-        padding: 10px;
+        font-size: 1rem;
+        padding: 30px 10px 10px 10px;
     }
 
     .blockquote-custom-icon h5 {
-        font-size: 8px;
+        font-size: 12px;
     }
 
+    /* bg-green */
     .bg-green img {
-        width: 30px;
+        width: 50px;
     }
 
     .bg-green h1 {
-        font-size: 20px;
+        font-size: 30px;
     }
 
     .bg-green h2 {
-        font-size: 10px;
+        font-size: 18px;
     }
 
     .bg-green p {
-        font-size: 6px;
+        font-size: 8px;
+        padding: 5px 5px 0px 5px;
+        height: 75%;
     }
 
     .bg-green .blockquote-custom-icon {
-        width: 80px;
+        width: 100px;
+        top: -10px;
         right: 20px;
     }
 
-    .bg-blue .blockquote-custom-icon {
-        width: 80px;
+    /* bg-yellow */
+    .bg-yellow {
+        margin-top: 10px;
     }
 
-    .bg-blue p {
-        font-size: 6px;
+    .bg-yellow .blockquote-custom-icon {
+        width: 160px;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .bg-yellow img {
+        width: 50px;
+    }
+
+    .bg-yellow h2 {
+        font-size: 18px;
+    }
+
+    .bg-yellow h6 {
+        font-size: 8px;
+        margin-bottom: -18px;
+    }
+
+    .bg-yellow a {
+        font-size: 5px;
+    }
+
+    .bg-yellow .card {
+        padding: 0px;
+        border-radius: 5px;
+    }
+
+    .bg-yellow p {
+        font-size: 8px;
         padding: 1px;
     }
 
-    .bg-blue .check, .bg-blue .cross{
-        width: 8px;
-        margin-top: -20px;
+    .bg-yellow h4 {
+        font-size: 10px;
+    }
+
+    .bg-yellow .check,
+    .bg-yellow .cross {
+        width: 10px;
+        margin-top: -10px;
+    }
+
+    .bg-yellow .status h3 {
+        font-size: 8px;
+        padding: 2px 10px;
+    }
+
+    .bg-yellow .yellow-notif {
+        margin-top: -30px;
+    }
+
+    .bg-yellow .yellow-notif p {
+        font-size: 8px;
+        padding: 8px;
+        border-radius: 8px;
+    }
+
+    .bg-yellow .yellow-notif a {
+        font-size: 8px;
+    }
+
+    /* bg-blue */
+    .bg-blue .blockquote-custom-icon {
+        width: 100px;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .bg-blue p {
+        font-size: 8px;
+        padding: 1px;
+    }
+
+    .bg-blue .check,
+    .bg-blue .cross {
+        width: 10px;
+    }
+
+    .bg-blue .card {
+        border-radius: 20px;
+        padding: 0px;
+    }
+
+    .bg-blue .card p {
+        font-size: 8px;
+    }
+
+    .bg-blue .notifikasi p {
+        font-size: 8px;
+        padding: 8px;
+        border-radius: 8px;
+    }
+
+    .bg-blue a {
+        font-weight: 300;
     }
 }

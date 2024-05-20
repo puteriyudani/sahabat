@@ -17,7 +17,7 @@
             <div class="container-fluid">
                 <p>*ini tampilan UI UX laporan</p>
 
-                <div class="row align-items-start">
+                <div class="row align-items-start mobile-no-gutters">
                     <div class="col-8">
                         <blockquote class="blockquote blockquote-custom shadow rounded mt-3 bg-green">
                             <div class="blockquote-custom-icon shadow-sm">
@@ -46,7 +46,7 @@
                             <div class="blockquote-custom-icon shadow-sm">
                                 <h5>Islamic Base Learning</h5>
                             </div>
-                            <div class="row">
+                            <div class="row mobile-no-gutters hadist">
                                 <div class="col-4 text-center">
                                     <img src="{{ asset('assets') }}/img/rcq.jpg" class="mt-2" alt="">
                                     <h6>Support By:</h6>
@@ -115,8 +115,8 @@
                                 </div>
                                 <div class="col-8">
                                     <h2>Alquran, Hadist dan Doa</h2>
-                                    <div class="row">
-                                        <div class="col">
+                                    <div class="row mobile-no-gutters quran-doa">
+                                        <div class="col-6">
                                             <div class="card">
                                                 <h4>Hafalan Quran:</h4>
                                                 <div class="row">
@@ -210,7 +210,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col">
+                                        <div class="col-6">
                                             <div class="card">
                                                 <h4>Hafalan Doa:</h4>
                                                 <div class="row">
@@ -633,7 +633,7 @@
                     </div>
                 </div>
 
-                <div class="row align-items-start">
+                <div class="row align-items-start mobile-no-gutters">
                     <div class="col-4"></div>
                     <div class="col-8 recalling">
                         <blockquote class="blockquote blockquote-custom shadow rounded mt-3 bg-mustard">
