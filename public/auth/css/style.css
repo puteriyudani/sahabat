@@ -18,7 +18,7 @@
 
 /* bg-green */
 .bg-green {
-    background-color: #9DDE8B;
+    background-color: #C4DFB4;
 }
 
 .bg-green img {
@@ -49,7 +49,7 @@
 }
 
 .bg-green .blockquote-custom-icon {
-    background-color: #40A578;
+    background-color: #6FAC45;
     width: 150px;
     border-radius: 30px;
     display: flex;
@@ -62,12 +62,12 @@
 
 /* bg-yellow */
 .bg-yellow {
-    background-color: #ffee00;
+    background-color: #FFBD06;
     margin-top: 33px;
 }
 
 .bg-yellow .blockquote-custom-icon {
-    background-color: #c7ba00;
+    background-color: #C79302;
     width: 200px;
     border-radius: 30px;
     display: flex;
@@ -100,7 +100,7 @@
 }
 
 .bg-yellow .card {
-    background-color: #7AB2B2;
+    background-color: #5D99D7;
     padding: 20px;
     border-radius: 30px;
 }
@@ -124,7 +124,7 @@
 }
 
 .bg-yellow .status h3 {
-    background-color: #1d7533;
+    background-color: #528332;
     color: white;
     font-size: 14px;
     border-radius: 30px;
@@ -152,7 +152,7 @@
 
 /* bg-grey */
 .bg-grey {
-    background-color: #524C42;
+    background-color: #515151;
     margin-top: 33px;
 }
 
@@ -190,7 +190,7 @@
 .bg-grey .grey-notif p {
     font-weight: 500;
     font-size: 14px;
-    background-color: #FDE49E;
+    background-color: #FFF1CC;
     padding: 10px;
     border-radius: 10px;
 }
@@ -203,12 +203,12 @@
 
 /* bg-darkgreen */
 .bg-darkgreen {
-    background-color: #416D19;
+    background-color: #528236;
     margin-top: 33px;
 }
 
 .bg-darkgreen .blockquote-custom-icon {
-    background-color: #9BCF53;
+    background-color: #9DCA85;
     width: 200px;
     border-radius: 30px;
     display: flex;
@@ -247,11 +247,11 @@
 
 /* bg-brown */
 .bg-brown {
-    background-color: #481E14;
+    background-color: #833B0B;
 }
 
 .bg-brown .blockquote-custom-icon {
-    background-color: #9B3922;
+    background-color: #C19300;
     width: 200px;
     border-radius: 30px;
     display: flex;
@@ -284,7 +284,7 @@
 .bg-brown .brown-notif p {
     font-weight: 500;
     font-size: 14px;
-    background-color: #FDE49E;
+    background-color: #FFF1CC;
     padding: 10px;
     border-radius: 10px;
 }
@@ -297,11 +297,11 @@
 
 /* bg-blue */
 .bg-blue {
-    background-color: #7AB2B2;
+    background-color: #006FC0;
 }
 
 .bg-blue .blockquote-custom-icon {
-    background-color: #4D869C;
+    background-color: #041C5C;
     width: 160px;
     border-radius: 30px;
     display: flex;
@@ -356,12 +356,12 @@
 
 /* bg-orange */
 .bg-orange {
-    background-color: #FEB941;
+    background-color: #C55B11;
     margin-top: 33px;
 }
 
 .bg-orange .blockquote-custom-icon {
-    background-color: #DD761C;
+    background-color: #825F00;
     width: 140px;
     border-radius: 30px;
     display: flex;
@@ -465,11 +465,11 @@
 }
 
 .bg-mustard {
-    background-color: #C78C06;
+    background-color: #BE9000;
 }
 
 .bg-mustard .blockquote-custom-icon {
-    background-color: #e7be5f;
+    background-color: #A8D18D;
     width: 150px;
     border-radius: 30px;
     display: flex;
