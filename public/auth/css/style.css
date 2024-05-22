@@ -688,6 +688,7 @@
         font-size: 8px;
         padding: 8px;
         border-radius: 8px;
+        margin-left: 0px;
     }
 
     .bg-yellow .yellow-notif a {
