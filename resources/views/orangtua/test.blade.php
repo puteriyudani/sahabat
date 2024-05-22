@@ -639,7 +639,7 @@
 
                 <div class="row align-items-start mobile-no-gutters">
                     <div class="col-4"></div>
-                    {{-- <div class="col-8 recalling">
+                    <div class="col-8 recalling">
                         <blockquote class="blockquote blockquote-custom shadow rounded mt-3 bg-mustard">
                             <div class="blockquote-custom-icon shadow-sm">
                                 <h5>Re Calling</h5>
@@ -652,13 +652,13 @@
                                             harum autem officia quia sunt pariatur incidunt optio quisquam voluptatem eius
                                             nesciunt cumque tempora!.</a></p>
                                 </div>
-                                <div class="col-3 text-center">
+                                <div class="col-3 text-center emot">
                                     <img src="{{ asset('assets') }}/img/face/happy.png" alt="">
                                     <h1>100%</h1>
                                 </div>
                             </div>
                         </blockquote>
-                    </div> --}}
+                    </div>
                 </div>
             </div>
         </div>

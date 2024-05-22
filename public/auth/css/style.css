@@ -542,6 +542,7 @@
 
 /* Mobile styles */
 @media (max-width: 767px) {
+
     .row.mobile-no-gutters>[class^="col-"],
     .row.mobile-no-gutters>[class*=" col-"],
     .row.mobile-no-gutters>[class^="col"],
@@ -553,9 +554,11 @@
     .row.mobile-no-gutters.hadist>[class^="col-4"] {
         padding-left: 10px;
     }
+
     .row.mobile-no-gutters.hadist>[class^="col-8"] {
         padding-right: 20px;
     }
+
     .row.mobile-no-gutters.quran-doa {
         margin-left: -3px;
     }
@@ -563,6 +566,7 @@
     .row.mobile-no-gutters.pretem>[class^="col-6 grey"] {
         padding-left: 15px;
     }
+
     .row.mobile-no-gutters.pretem>[class^="col-6 brown"] {
         padding-right: 15px;
     }
@@ -570,9 +574,11 @@
     .row.mobile-no-gutters.orange>[class^="col-7"] {
         padding-left: 10px;
     }
+
     .row.mobile-no-gutters.orange>[class^="col-5"] {
         padding-right: 10px;
     }
+
     .row.mobile-no-gutters.blue {
         padding-left: 5px;
         padding-right: 5px;
@@ -598,6 +604,10 @@
 
     .blockquote-custom-icon h5 {
         font-size: 10px;
+    }
+
+    .pretem {
+        margin-top: -15px;
     }
 
     /* bg-green */
@@ -929,5 +939,43 @@
     .bg-black .youtube iframe {
         width: 100%;
         height: auto;
+    }
+
+    /* bg-mustard */
+    .recalling {
+        margin-top: -235px;
+    }
+
+    .bg-mustard .blockquote-custom-icon {
+        width: 100px;
+        top: -10px;
+        left: 20px;
+    }
+
+    .bg-mustard .blockquote-custom-icon h5 {
+        margin-top: 8px;
+        font-size: 10px;
+    }
+
+    .bg-mustard img {
+        width: 50px;
+    }
+
+    .bg-mustard h1 {
+        font-size: 25px;
+    }
+
+    .bg-mustard h2 {
+        font-size: 18px;
+    }
+
+    .bg-mustard p {
+        font-size: 8px;
+        padding: 5px 5px 0px 5px;
+        height: 75%;
+    }
+
+    .bg-mustard .emot {
+        margin-left: -20px;
     }
 }
