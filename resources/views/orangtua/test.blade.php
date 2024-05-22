@@ -393,23 +393,23 @@
                                     </div>
 
                                     <div class="sub">
-                                        <div class="row">
+                                        <div class="row mobile-no-gutters">
                                             <div class="col-1">
                                                 <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
                                                     alt="">
                                             </div>
-                                            <div class="col d-flex align-items-center">
+                                            <div class="col">
                                                 <p>Buang Air Besar</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="sub">
-                                        <div class="row">
+                                        <div class="row mobile-no-gutters">
                                             <div class="col-1">
                                                 <img class="check-none" src="{{ asset('assets') }}/img/icon/check-none.png"
                                                     alt="">
                                             </div>
-                                            <div class="col d-flex align-items-center">
+                                            <div class="col">
                                                 <p>Buang Air Kecil</p>
                                             </div>
                                         </div>
@@ -515,7 +515,7 @@
                                 <p class="mb-2 mt-2">Menu : <a>Variasi nasi, sop ayam dan tempe goreng,</a></p>
                             </div>
 
-                            <div class="row">
+                            <div class="row gizi">
                                 <div class="col-4">
                                     <p>Karbohidrat</p>
                                 </div>
@@ -527,7 +527,7 @@
                                 </div>
                             </div>
 
-                            <div class="row">
+                            <div class="row gizi">
                                 <div class="col-4">
                                     <p>Protein</p>
                                 </div>
@@ -539,7 +539,7 @@
                                 </div>
                             </div>
 
-                            <div class="row">
+                            <div class="row gizi">
                                 <div class="col-4">
                                     <p>Lemak</p>
                                 </div>
@@ -551,7 +551,7 @@
                                 </div>
                             </div>
 
-                            <div class="row">
+                            <div class="row gizi">
                                 <div class="col-4">
                                     <p>Serat</p>
                                 </div>
@@ -563,7 +563,7 @@
                                 </div>
                             </div>
 
-                            <div class="row">
+                            <div class="row gizi">
                                 <div class="col-4">
                                     <p>Vit.Mineral</p>
                                 </div>
@@ -575,43 +575,43 @@
                                 </div>
                             </div>
 
-                            <div class="row">
-                                <div class="col">
+                            <div class="row mobile-no-gutters orange">
+                                <div class="col-7">
                                     <div class="sub">
-                                        <div class="row">
+                                        <div class="row mobile-no-gutters">
                                             <div class="col-1">
                                                 <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
                                                     alt="">
                                             </div>
-                                            <div class="col d-flex align-items-center">
+                                            <div class="col">
                                                 <p>Habis</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="sub">
-                                        <div class="row">
+                                        <div class="row mobile-no-gutters">
                                             <div class="col-1">
                                                 <img class="check-none" src="{{ asset('assets') }}/img/icon/check-none.png"
                                                     alt="">
                                             </div>
-                                            <div class="col d-flex align-items-center">
+                                            <div class="col">
                                                 <p>Bersisa</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="sub">
-                                        <div class="row">
+                                        <div class="row mobile-no-gutters">
                                             <div class="col-1">
                                                 <img class="check-none" src="{{ asset('assets') }}/img/icon/check-none.png"
                                                     alt="">
                                             </div>
-                                            <div class="col d-flex align-items-center">
-                                                <p>Tdk Makan</p>
+                                            <div class="col">
+                                                <p>Tdk Mkn</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col persentase d-flex align-items-center">
+                                <div class="col-5 persentase d-flex align-items-center">
                                     <h1>100%</h1>
                                 </div>
                             </div>
@@ -627,7 +627,7 @@
                                 <h5>Today Videos</h5>
                             </div>
 
-                            <div class="youtube text-center mt-3">
+                            <div class="youtube text-center">
                                 <iframe width="280" src="https://www.youtube.com/embed/HOYpAgWPTps?si=1bQCEeIkfL6KZATL"
                                     title="YouTube video player" frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -639,7 +639,7 @@
 
                 <div class="row align-items-start mobile-no-gutters">
                     <div class="col-4"></div>
-                    <div class="col-8 recalling">
+                    {{-- <div class="col-8 recalling">
                         <blockquote class="blockquote blockquote-custom shadow rounded mt-3 bg-mustard">
                             <div class="blockquote-custom-icon shadow-sm">
                                 <h5>Re Calling</h5>
@@ -658,7 +658,7 @@
                                 </div>
                             </div>
                         </blockquote>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

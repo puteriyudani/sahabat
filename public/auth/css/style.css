@@ -237,8 +237,7 @@
 .bg-darkgreen .sub .row {
     background-color: white;
     border-radius: 30px;
-    margin-left: 1px;
-    margin-bottom: 3px;
+    margin: 3px 1px;
 }
 
 .bg-darkgreen .sub p {
@@ -438,9 +437,22 @@
 .bg-orange .persentase h1 {
     background-color: white;
     border-radius: 30px;
-    padding: 30px 10px;
+    padding: 35px 5px;
     text-align: center;
     width: 100%;
+    font-size: 32px;
+}
+
+.bg-orange .gizi {
+    margin-bottom: -10px;
+}
+
+.bg-orange .gizi p {
+    color: white;
+}
+
+.bg-orange .orange {
+    margin-top: 5px;
 }
 
 /* bg-black */
@@ -465,6 +477,10 @@
 
 .bg-black .blockquote-custom-icon h5 {
     color: red;
+}
+
+.bg-black .youtube {
+    margin-top: 20px;
 }
 
 /* bg-mustard */
@@ -551,6 +567,12 @@
         padding-right: 15px;
     }
 
+    .row.mobile-no-gutters.orange>[class^="col-7"] {
+        padding-left: 10px;
+    }
+    .row.mobile-no-gutters.orange>[class^="col-5"] {
+        padding-right: 10px;
+    }
     .row.mobile-no-gutters.blue {
         padding-left: 5px;
         padding-right: 5px;
@@ -712,6 +734,39 @@
         font-size: 8px;
     }
 
+    /* bg-darkgreen */
+    .bg-darkgreen {
+        margin-top: 10px;
+    }
+
+    .bg-darkgreen .blockquote-custom-icon {
+        width: 80px;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .bg-darkgreen .blockquote-custom-icon h5 {
+        font-size: 10px;
+    }
+
+    .bg-darkgreen .sub .row {
+        margin: 0px 0px 2px 0px;
+        border-radius: 20px;
+        height: 20px;
+    }
+
+    .bg-darkgreen .sub p {
+        font-size: 8px;
+        margin: 4px 0px 5px 8px;
+    }
+
+    .bg-darkgreen .check,
+    .bg-darkgreen .check-none {
+        width: 15px;
+        margin-top: -15px;
+    }
+
     /* bg-brown */
     .bg-brown .blockquote-custom-icon {
         width: 80px;
@@ -787,5 +842,91 @@
 
     .bg-blue a {
         font-weight: 300;
+    }
+
+    /* bg-orange */
+    .bg-orange {
+        margin-top: 10px;
+    }
+
+    .bg-orange .blockquote-custom-icon {
+        width: 80px;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .bg-orange .menu p,
+    .bg-orange .catatan p {
+        font-size: 8px;
+        padding: 8px;
+    }
+
+    .bg-orange .menu,
+    .bg-orange .catatan {
+        margin-top: -10px;
+    }
+
+    .bg-orange p {
+        font-size: 8px;
+    }
+
+    .bg-orange .sub .row {
+        margin: 0px 0px 2px 0px;
+        border-radius: 20px;
+        height: 20px;
+    }
+
+    .bg-orange .sub p {
+        font-size: 8px;
+        margin: 4px 0px 5px 10px;
+    }
+
+    .bg-orange .check,
+    .bg-orange .check-none {
+        width: 15px;
+        margin-top: -15px;
+    }
+
+    .bg-orange .persentase h1 {
+        padding: 23px 1px;
+        font-size: 16px;
+        border-radius: 10px;
+    }
+
+    .bg-orange .gizi {
+        margin-bottom: -15px;
+    }
+
+    .bg-orange .gizi .progress {
+        margin-top: 1px;
+        height: 10px;
+        width: 90%;
+        margin-left: 5px;
+    }
+
+    /* bg-black */
+    .bg-black {
+        margin-top: 10px;
+    }
+
+    .bg-black .blockquote-custom-icon {
+        width: 80px;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .bg-black .blockquote-custom-icon h5 {
+        font-size: 10px;
+    }
+
+    .bg-black .youtube {
+        margin-top: -20px;
+    }
+
+    .bg-black .youtube iframe {
+        width: 100%;
+        height: auto;
     }
 }
