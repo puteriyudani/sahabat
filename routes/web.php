@@ -10,6 +10,7 @@ use App\Http\Controllers\GuruController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IndikatorController;
 use App\Http\Controllers\IntiController;
+use App\Http\Controllers\IslamicController;
 use App\Http\Controllers\KelolaController;
 use App\Http\Controllers\KindergartenController;
 use App\Http\Controllers\MorningController;
@@ -90,11 +91,21 @@ Route::get('/teacher', [GuruController::class, 'index'])->name('teacher.index');
 
 Route::get('/teacher-kindergarten', [GuruController::class, 'kindergarten'])->name('teacher.kindergarten');
 
+// welcome mood
 Route::get('/teacher-kindergarten/welcome-mood', [WelcomeController::class, 'index'])->name('tkwelcome.index');
 Route::get('/teacher-kindergarten/welcome-mood/individu', [WelcomeController::class, 'individu'])->name('tkwelcome.individu');
 
+// morning booster
 Route::get('/teacher-kindergarten/morning-booster', [MorningController::class, 'index'])->name('tkmorning.index');
 Route::get('/teacher-kindergarten/morning-booster/individu', [MorningController::class, 'individu'])->name('tkmorning.individu');
+
+// breakfast
+Route::get('/teacher-kindergarten/breakfast', [BreakfastController::class, 'index'])->name('tkbreakfast.index');
+Route::get('/teacher-kindergarten/breakfast/individu', [BreakfastController::class, 'individu'])->name('tkbreakfast.individu');
+
+// islamic base learning
+Route::get('/teacher-kindergarten/islamic-base-learning', [IslamicController::class, 'index'])->name('tkislamic.index');
+Route::get('/teacher-kindergarten/islamic-base-learning/individu', [IslamicController::class, 'individu'])->name('tkislamic.individu');
 
 Route::get('/teacher-playgroup', [GuruController::class, 'playgroup'])->name('teacher.playgroup');
 Route::get('/teacher-babycamp', [GuruController::class, 'babycamp'])->name('teacher.babycamp');

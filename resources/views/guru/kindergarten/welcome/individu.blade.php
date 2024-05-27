@@ -32,7 +32,6 @@
                             <tr>
                                 <th scope="col">No</th>
                                 <th scope="col">Tanggal</th>
-                                <th scope="col">Nama</th>
                                 <th scope="col">Indikator %</th>
                                 <th scope="col">Keterangan</th>
                                 <th scope="col">Notifikasi</th>
@@ -43,7 +42,6 @@
                             <tr>
                                 <td>1</td>
                                 <td>27/05/2024</td>
-                                <td>Sasa</td>
                                 <td>90%</td>
                                 <td>Almost Happy</td>
                                 <td>alasan dari indikator</td>

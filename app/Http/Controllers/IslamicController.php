@@ -4,19 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class BreakfastController extends Controller
+class IslamicController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('guru.kindergarten.breakfast.index');
+        return view('guru.kindergarten.islamic.index');
     }
 
     public function individu()
     {
-        return view('guru.kindergarten.breakfast.individu');
+        return view('guru.kindergarten.islamic.individu');
     }
 
     /**

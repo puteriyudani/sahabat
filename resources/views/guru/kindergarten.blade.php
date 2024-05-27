@@ -48,7 +48,7 @@
                                     <div class="card">
                                         <img src="{{ asset('assets') }}/img/welcome/welcome.jpg" class="card-img-top" alt="...">
                                         <div class="card-body">
-                                            <a href="#" class="btn" style="background-color: #C55B11; color: white">Breakfast</a>
+                                            <a href="{{ route('tkbreakfast.index') }}" class="btn" style="background-color: #C55B11; color: white">Breakfast</a>
                                         </div>
                                     </div>
                                 </div>
@@ -58,7 +58,7 @@
                                     <div class="card">
                                         <img src="{{ asset('assets') }}/img/welcome/welcome.jpg" class="card-img-top" alt="...">
                                         <div class="card-body">
-                                            <a href="#" class="btn" style="background-color: #FFBD06; color: white">Islamic Base Learning</a>
+                                            <a href="{{ route('tkislamic.index') }}" class="btn" style="background-color: #FFBD06; color: white">Islamic Base Learning</a>
                                         </div>
                                     </div>
                                 </div>

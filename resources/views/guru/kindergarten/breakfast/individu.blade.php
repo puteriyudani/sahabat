@@ -1,7 +1,7 @@
 @extends('layouts.auth')
 
 @section('judul')
-    <title>Guru - Morning Booster</title>
+    <title>Guru - Breakfast</title>
     <style>
         .btn.btn-primary.disabled,
         .btn.btn-warning.disabled,
@@ -32,9 +32,11 @@
                             <tr>
                                 <th scope="col">No</th>
                                 <th scope="col">Tanggal</th>
-                                <th scope="col">Kegiatan</th>
-                                <th scope="col">Circle Time</th>
-                                <th scope="col">Notifikasi</th>
+                                <th scope="col">Menu</th>
+                                <th scope="col">Gizi</th>
+                                <th scope="col">Keterangan</th>
+                                <th scope="col">Indikator %</th>
+                                <th scope="col">Catatan</th>
                                 <th scope="col">Aksi</th>
                             </tr>
                         </thead>
@@ -42,9 +44,11 @@
                             <tr>
                                 <td>1</td>
                                 <td>27/05/2024</td>
-                                <td>Senam Pagi</td>
-                                <td>Bernyanyi</td>
-                                <td>notifikasi kegiatan anak</td>
+                                <td>Variasi nasi, sop ayam dan tempe goreng</td>
+                                <td>1</td>
+                                <td>Habis</td>
+                                <td>100%</td>
+                                <td>anak tidak suka makanan tahu</td>
                                 <td>
                                     <form action="#" method="POST">
                                         <a href="" style="text-decoration: none; color: #28a745"><i class="ti ti-pencil nav-small-cap-icon fs-4"></i></a>
