@@ -1,75 +1,31 @@
-@extends('layouts.guru')
+@extends('layouts.auth')
 
 @section('judul')
-    <title>Kelas - Baby Camp</title>
+    <title>Guru</title>
+    <style>
+        .btn.btn-primary.disabled,
+        .btn.btn-warning.disabled,
+        .btn.btn-success.disabled,
+        .btn.btn-danger.disabled {
+            pointer-events: none;
+            opacity: 1;
+        }
+    </style>
 @endsection
 
-<!-- Masthead2-->
-<header class="masthead2">
-    <div class="container">
-        <div class="masthead2-subheading">Kelas</div>
-        <div class="masthead2-heading text-uppercase">Baby Camp</div>
-    </div>
-</header>
+@section('content')
+    <!--  Body Wrapper -->
+    <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+        data-sidebar-position="fixed" data-header-position="fixed">
 
-@section('main')
-    <!-- Services-->
-    <section class="page-section" id="services">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-md-1"></div>
-                
-                <div class="col-md-2">
-                    <a href="{{ route('babycamp.breakfast') }}" style="text-decoration: none">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-sun fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Breakfast</h4>
-                    </a>
-                </div>
+        @include('include.guru.sidebar')
 
-                <div class="col-md-2">
-                    <a href="{{ route('babycamp.pembuka') }}" style="text-decoration: none">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-sun fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Kegiatan Pembuka</h4>
-                    </a>
-                </div>
-
-                <div class="col-md-2">
-                    <a href="{{ route('babycamp.inti') }}" style="text-decoration: none">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-sun fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Kegiatan Inti</h4>
-                    </a>
-                </div>
-
-                <div class="col-md-2">
-                    <a href="{{ route('babycamp.penutup') }}" style="text-decoration: none">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-sun fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Kegiatan Penutup</h4>
-                    </a>
-                </div>
-
-                <div class="col-md-2">
-                    <a href="{{ route('babycamp.catatan') }}" style="text-decoration: none">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-sun fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Catatan</h4>
-                    </a>
-                </div>
-
-                <div class="col-md-1"></div>
+        <!--  Main wrapper -->
+        <div class="body-wrapper">
+            @include('include.header-admin')
+            <div class="container-fluid">
+                <h5 class="mt-5">Babycamp</h5>
             </div>
-    </section>
+        </div>
+    </div>
 @endsection

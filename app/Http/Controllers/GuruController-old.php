@@ -6,9 +6,6 @@ use Illuminate\Http\Request;
 
 class GuruController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
         return view('guru');
@@ -27,5 +24,10 @@ class GuruController extends Controller
     public function babycamp()
     {
         return view('guru.babycamp');
+    }
+
+    public function kelola()
+    {
+        return view('guru.kelola');
     }
 }

@@ -1,81 +1,114 @@
-@extends('layouts.guru')
+@extends('layouts.auth')
 
 @section('judul')
-    <title>Kelas - Kindergarten</title>
+    <title>Guru - Kindergarten</title>
+    <style>
+        .btn.btn-primary.disabled,
+        .btn.btn-warning.disabled,
+        .btn.btn-success.disabled,
+        .btn.btn-danger.disabled {
+            pointer-events: none;
+            opacity: 1;
+        }
+    </style>
 @endsection
 
-<!-- Masthead2-->
-<header class="masthead2">
-    <div class="container">
-        <div class="masthead2-subheading">Kelas</div>
-        <div class="masthead2-heading text-uppercase">Kindergarten</div>
-    </div>
-</header>
+@section('content')
+    <!--  Body Wrapper -->
+    <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+        data-sidebar-position="fixed" data-header-position="fixed">
 
-@section('main')
-    <!-- Services-->
-    <section class="page-section" id="services">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-md-2">
-                    <a href="{{ route('kindergarten.arrival') }}" style="text-decoration: none">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-sun fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Arrival</h4>
-                    </a>
-                </div>
+        @include('include.guru.sidebar')
 
-                <div class="col-md-2">
-                    <a href="{{ route('kindergarten.breakfast') }}" style="text-decoration: none">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-sun fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Breakfast</h4>
-                    </a>
-                </div>
-
-                <div class="col-md-2">
-                    <a href="{{ route('kindergarten.pembuka') }}" style="text-decoration: none">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-sun fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Kegiatan Pembuka</h4>
-                    </a>
-                </div>
-
-                <div class="col-md-2">
-                    <a href="{{ route('kindergarten.inti') }}" style="text-decoration: none">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-sun fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Kegiatan Inti</h4>
-                    </a>
-                </div>
-
-                <div class="col-md-2">
-                    <a href="{{ route('kindergarten.penutup') }}" style="text-decoration: none">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-sun fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Kegiatan Penutup</h4>
-                    </a>
-                </div>
-
-                <div class="col-md-2">
-                    <a href="{{ route('kindergarten.catatan') }}" style="text-decoration: none">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-sun fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Catatan</h4>
-                    </a>
+        <!--  Main wrapper -->
+        <div class="body-wrapper">
+            @include('include.header-admin')
+            <div class="container-fluid">
+                <div class="container-fluid">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row text-center">
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img src="{{ asset('assets') }}/img/welcome/welcome.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <a href="{{ route('tkwelcome.index') }}" class="btn" style="background-color: #6FAC45; color: white">Welcome Mood</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img src="{{ asset('assets') }}/img/welcome/welcome.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <a href="#" class="btn" style="background-color: #006FC0; color: white">Morning Booster</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img src="{{ asset('assets') }}/img/welcome/welcome.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <a href="#" class="btn" style="background-color: #C55B11; color: white">Breakfast</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row text-center">
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img src="{{ asset('assets') }}/img/welcome/welcome.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <a href="#" class="btn" style="background-color: #FFBD06; color: white">Islamic Base Learning</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img src="{{ asset('assets') }}/img/welcome/welcome.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <a href="#" class="btn" style="background-color: #515151; color: white">Pre School</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img src="{{ asset('assets') }}/img/welcome/welcome.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <a href="#" class="btn" style="background-color: #833B0B; color: white">Tematik</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row text-center">
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img src="{{ asset('assets') }}/img/welcome/welcome.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <a href="#" class="btn" style="background-color: #528236; color: white">Poop & Pee</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img src="{{ asset('assets') }}/img/welcome/welcome.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <a href="#" class="btn" style="background-color: #000000; color: white">Today Videos</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img src="{{ asset('assets') }}/img/welcome/welcome.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <a href="#" class="btn" style="background-color: #BE9000; color: white">Re Calling</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-    </section>
+        </div>
+    </div>
 @endsection
