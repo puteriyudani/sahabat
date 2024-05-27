@@ -12,6 +12,7 @@ use App\Http\Controllers\IndikatorController;
 use App\Http\Controllers\IntiController;
 use App\Http\Controllers\KelolaController;
 use App\Http\Controllers\KindergartenController;
+use App\Http\Controllers\MorningController;
 use App\Http\Controllers\OrtuController;
 use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\PdfController;
@@ -91,6 +92,9 @@ Route::get('/teacher-kindergarten', [GuruController::class, 'kindergarten'])->na
 
 Route::get('/teacher-kindergarten/welcome-mood', [WelcomeController::class, 'index'])->name('tkwelcome.index');
 Route::get('/teacher-kindergarten/welcome-mood/individu', [WelcomeController::class, 'individu'])->name('tkwelcome.individu');
+
+Route::get('/teacher-kindergarten/morning-booster', [MorningController::class, 'index'])->name('tkmorning.index');
+Route::get('/teacher-kindergarten/morning-booster/individu', [MorningController::class, 'individu'])->name('tkmorning.individu');
 
 Route::get('/teacher-playgroup', [GuruController::class, 'playgroup'])->name('teacher.playgroup');
 Route::get('/teacher-babycamp', [GuruController::class, 'babycamp'])->name('teacher.babycamp');

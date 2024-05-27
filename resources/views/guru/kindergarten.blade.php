@@ -40,7 +40,7 @@
                                     <div class="card">
                                         <img src="{{ asset('assets') }}/img/welcome/welcome.jpg" class="card-img-top" alt="...">
                                         <div class="card-body">
-                                            <a href="#" class="btn" style="background-color: #006FC0; color: white">Morning Booster</a>
+                                            <a href="{{ route('tkmorning.index') }}" class="btn" style="background-color: #006FC0; color: white">Morning Booster</a>
                                         </div>
                                     </div>
                                 </div>
