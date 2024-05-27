@@ -660,6 +660,8 @@
                         </blockquote>
                     </div>
                 </div>
+
+                <button class="floating-button">Download</button>
             </div>
         </div>
     </div>
