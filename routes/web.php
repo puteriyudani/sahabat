@@ -20,8 +20,10 @@ use App\Http\Controllers\PdfController;
 use App\Http\Controllers\PembukaController;
 use App\Http\Controllers\PenutupController;
 use App\Http\Controllers\PlaygroupController;
+use App\Http\Controllers\PreschoolController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\TahunController;
+use App\Http\Controllers\TematikController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\YoutubeController;
 use App\Models\Catatanorangtua;
@@ -106,6 +108,14 @@ Route::get('/teacher-kindergarten/breakfast/individu', [BreakfastController::cla
 // islamic base learning
 Route::get('/teacher-kindergarten/islamic-base-learning', [IslamicController::class, 'index'])->name('tkislamic.index');
 Route::get('/teacher-kindergarten/islamic-base-learning/individu', [IslamicController::class, 'individu'])->name('tkislamic.individu');
+
+// pre school
+Route::get('/teacher-kindergarten/preschool', [PreschoolController::class, 'index'])->name('tkpreschool.index');
+Route::get('/teacher-kindergarten/preschool/individu', [PreschoolController::class, 'individu'])->name('tkpreschool.individu');
+
+// tematik
+Route::get('/teacher-kindergarten/tematik', [TematikController::class, 'index'])->name('tktematik.index');
+Route::get('/teacher-kindergarten/tematik/individu', [TematikController::class, 'individu'])->name('tktematik.individu');
 
 Route::get('/teacher-playgroup', [GuruController::class, 'playgroup'])->name('teacher.playgroup');
 Route::get('/teacher-babycamp', [GuruController::class, 'babycamp'])->name('teacher.babycamp');
