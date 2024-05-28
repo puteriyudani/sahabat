@@ -84,7 +84,7 @@
                                     <div class="card">
                                         <img src="{{ asset('assets') }}/img/welcome/welcome.jpg" class="card-img-top" alt="...">
                                         <div class="card-body">
-                                            <a target="_blank" href="#" class="btn" style="background-color: #528236; color: white">Poop & Pee</a>
+                                            <a target="_blank" href="{{ route('tkpooppee.index') }}" class="btn" style="background-color: #528236; color: white">Poop & Pee</a>
                                         </div>
                                     </div>
                                 </div>
