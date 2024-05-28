@@ -92,7 +92,7 @@
                                     <div class="card">
                                         <img src="{{ asset('assets') }}/img/welcome/welcome.jpg" class="card-img-top" alt="...">
                                         <div class="card-body">
-                                            <a target="_blank" href="#" class="btn" style="background-color: #000000; color: white">Today Videos</a>
+                                            <a target="_blank" href="{{ route('tkvideos.index') }}" class="btn" style="background-color: #000000; color: white">Today Videos</a>
                                         </div>
                                     </div>
                                 </div>

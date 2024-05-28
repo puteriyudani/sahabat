@@ -25,6 +25,7 @@ use App\Http\Controllers\PreschoolController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\TahunController;
 use App\Http\Controllers\TematikController;
+use App\Http\Controllers\VideosController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\YoutubeController;
 use App\Models\Catatanorangtua;
@@ -121,6 +122,10 @@ Route::get('/teacher-kindergarten/tematik/individu', [TematikController::class, 
 // poop & pee
 Route::get('/teacher-kindergarten/pooppee', [PoopPeeController::class, 'index'])->name('tkpooppee.index');
 Route::get('/teacher-kindergarten/pooppee/individu', [PoopPeeController::class, 'individu'])->name('tkpooppee.individu');
+
+// today videos
+Route::get('/teacher-kindergarten/today-videos', [VideosController::class, 'index'])->name('tkvideos.index');
+Route::get('/teacher-kindergarten/today-videos/individu', [VideosController::class, 'individu'])->name('tkvideos.individu');
 
 Route::get('/teacher-playgroup', [GuruController::class, 'playgroup'])->name('teacher.playgroup');
 Route::get('/teacher-babycamp', [GuruController::class, 'babycamp'])->name('teacher.babycamp');
