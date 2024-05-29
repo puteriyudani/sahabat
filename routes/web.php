@@ -22,6 +22,7 @@ use App\Http\Controllers\PenutupController;
 use App\Http\Controllers\PlaygroupController;
 use App\Http\Controllers\PoopPeeController;
 use App\Http\Controllers\PreschoolController;
+use App\Http\Controllers\RecallingController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\TahunController;
 use App\Http\Controllers\TematikController;
@@ -126,6 +127,10 @@ Route::get('/teacher-kindergarten/pooppee/individu', [PoopPeeController::class, 
 // today videos
 Route::get('/teacher-kindergarten/today-videos', [VideosController::class, 'index'])->name('tkvideos.index');
 Route::get('/teacher-kindergarten/today-videos/individu', [VideosController::class, 'individu'])->name('tkvideos.individu');
+
+// re calling
+Route::get('/teacher-kindergarten/recalling', [RecallingController::class, 'index'])->name('tkrecalling.index');
+Route::get('/teacher-kindergarten/recalling/individu', [RecallingController::class, 'individu'])->name('tkrecalling.individu');
 
 Route::get('/teacher-playgroup', [GuruController::class, 'playgroup'])->name('teacher.playgroup');
 Route::get('/teacher-babycamp', [GuruController::class, 'babycamp'])->name('teacher.babycamp');
