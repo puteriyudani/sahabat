@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('preschools', function (Blueprint $table) {
             $table->id();
+            $table->date('tanggal');
+            $table->integer('siswa_id');
+            $table->string('huruf');
+            $table->string('angka');
+            $table->string('english');
             $table->timestamps();
         });
     }

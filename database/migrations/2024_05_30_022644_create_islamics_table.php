@@ -13,6 +13,15 @@ return new class extends Migration
     {
         Schema::create('islamics', function (Blueprint $table) {
             $table->id();
+            $table->date('tanggal');
+            $table->integer('siswa_id');
+            $table->string('hadist');
+            $table->string('hadist_stat');
+            $table->string('quran');
+            $table->string('quran_stat');
+            $table->string('doa');
+            $table->string('doa_stat');
+            $table->string('notifikasi');
             $table->timestamps();
         });
     }

@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('breakfasts', function (Blueprint $table) {
             $table->id();
+            $table->date('tanggal');
+            $table->integer('siswa_id');
+            $table->string('menu');
+            $table->string('gizi');
+            $table->string('keterangan');
+            $table->string('indikator');
+            $table->string('catatan');
             $table->timestamps();
         });
     }

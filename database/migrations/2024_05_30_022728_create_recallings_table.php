@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('recallings', function (Blueprint $table) {
             $table->id();
+            $table->date('tanggal');
+            $table->integer('siswa_id');
+            $table->string('indikator');
+            $table->string('keterangan');
+            $table->string('notifikasi');
             $table->timestamps();
         });
     }

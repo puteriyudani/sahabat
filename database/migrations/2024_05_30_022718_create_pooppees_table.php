@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('pooppees', function (Blueprint $table) {
             $table->id();
+            $table->date('tanggal');
+            $table->integer('siswa_id');
+            $table->string('poop');
+            $table->string('pee');
             $table->timestamps();
         });
     }

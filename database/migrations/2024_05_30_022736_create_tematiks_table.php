@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('tematiks', function (Blueprint $table) {
             $table->id();
+            $table->date('tanggal');
+            $table->integer('siswa_id');
+            $table->string('culture');
             $table->timestamps();
         });
     }
