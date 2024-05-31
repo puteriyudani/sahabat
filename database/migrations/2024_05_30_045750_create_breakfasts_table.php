@@ -16,7 +16,6 @@ return new class extends Migration
             $table->date('tanggal');
             $table->bigInteger('siswa_id');
             $table->string('menu');
-            $table->string('gizi');
             $table->string('keterangan');
             $table->string('indikator');
             $table->string('catatan');
