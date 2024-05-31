@@ -24,7 +24,7 @@ class MorningController extends Controller
      */
     public function create()
     {
-        //
+        return view('guru.activity.morning.create');
     }
 
     /**

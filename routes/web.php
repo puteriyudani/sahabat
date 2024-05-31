@@ -104,6 +104,7 @@ Route::get('/teacher-kindergarten/welcome-mood/create', [WelcomeController::clas
 // morning booster
 Route::get('/teacher-kindergarten/morning-booster', [MorningController::class, 'index'])->name('tkmorning.index');
 Route::get('/teacher-kindergarten/morning-booster/individu', [MorningController::class, 'individu'])->name('tkmorning.individu');
+Route::get('/teacher-kindergarten/morning-booster/create', [MorningController::class, 'create'])->name('tkmorning.create');
 
 // breakfast
 Route::get('/teacher-kindergarten/breakfast', [BreakfastController::class, 'index'])->name('tkbreakfast.index');

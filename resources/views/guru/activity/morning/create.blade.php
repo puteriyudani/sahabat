@@ -44,38 +44,38 @@
                                             </div>
                                         </fieldset>
                                         <div class="mb-3">
-                                            <label for="keterangan" class="form-label">Keterangan</label>
-                                            <select id="keterangan" class="form-select hidden-select">
-                                                <option value="Happy">Happy</option>
-                                                <option value="Almost Happy">Almost Happy</option>
-                                                <option value="Neutral">Neutral</option>
-                                                <option value="Almost Sad">Almost Sad</option>
-                                                <option value="Sad">Sad</option>
-                                            </select>
-                                            <div class="custom-select-container" id="customSelectContainer">
-                                                <img src="{{ asset('auth') }}/images/face/happy.png" alt="Happy"
-                                                    data-value="Happy">
-                                                <img src="{{ asset('auth') }}/images/face/almost-happy.png"
-                                                    alt="Almost Happy" data-value="Almost Happy">
-                                                <img src="{{ asset('auth') }}/images/face/neutral.png" alt="Neutral"
-                                                    data-value="Neutral">
-                                                <img src="{{ asset('auth') }}/images/face/almost-sad.png" alt="Almost Sad"
-                                                    data-value="Almost Sad">
-                                                <img src="{{ asset('auth') }}/images/face/sad.png" alt="Sad"
-                                                    data-value="Sad">
+                                            <label for="kegiatan" class="form-label">Kegiatan</label>
+                                            <br>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="senampagi"
+                                                    value="Senam Pagi">
+                                                <label class="form-check-label" for="senampagi">Senam Pagi</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="apelbendera"
+                                                    value="Apel Bendera">
+                                                <label class="form-check-label" for="apelbendera">Apel Bendera</label>
                                             </div>
                                         </div>
-
-                                        <fieldset disabled>
-                                            <label for="indikator" class="form-label">Indikator %</label>
-                                            <select id="indikator" class="form-select">
-                                                <option value="100%">100%</option>
-                                                <option value="80%">80%</option>
-                                                <option value="60%">60%</option>
-                                                <option value="40%">40%</option>
-                                                <option value="20%">20%</option>
-                                            </select>
-                                        </fieldset>
+                                        <div class="mb-3">
+                                            <label for="circletime" class="form-label">Circle Time</label>
+                                            <br>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="mendongeng"
+                                                    value="Mendongeng">
+                                                <label class="form-check-label" for="mendongeng">Mendongeng</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="bernyanyi"
+                                                    value="Bernyanyi">
+                                                <label class="form-check-label" for="bernyanyi">Bernyanyi</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="berdiskusi"
+                                                    value="Berdiskusi/Cerita">
+                                                <label class="form-check-label" for="berdiskusi">Berdiskusi/Cerita</label>
+                                            </div>
+                                        </div>
                                         <div class="mb-3">
                                             <label for="notifikasi" class="form-label">Notifikasi</label>
                                             <textarea class="form-control" id="notifikasi" rows="5"></textarea>
