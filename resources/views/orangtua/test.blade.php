@@ -25,7 +25,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-3 text-center">
-                                    <img src="{{ asset('assets') }}/img/face/almost-happy.png" alt="">
+                                    <img src="{{ asset('auth') }}/images/face/almost-happy.png" alt="">
                                     <h1>90%</h1>
                                 </div>
                                 <div class="col-9">
@@ -48,14 +48,14 @@
                             </div>
                             <div class="row mobile-no-gutters hadist">
                                 <div class="col-4 text-center">
-                                    <img src="{{ asset('assets') }}/img/rcq.jpg" class="mt-2" alt="">
+                                    <img src="{{ asset('auth') }}/images/rcq.jpg" class="mt-2" alt="">
                                     <h6>Support By:</h6>
                                     <a>RUMAH CERDAS QURAN</a>
                                     <div class="card text-justify hadist">
                                         <h4>Hafalan Hadist:</h4>
                                         <div class="row mobile-no-gutters yellow">
                                             <div class="col-1">
-                                                <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                <img class="check" src="{{ asset('auth') }}/images/icon/check.png"
                                                     alt="">
                                             </div>
                                             <div class="col">
@@ -64,7 +64,7 @@
                                         </div>
                                         <div class="row mobile-no-gutters yellow">
                                             <div class="col-1">
-                                                <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                <img class="check" src="{{ asset('auth') }}/images/icon/check.png"
                                                     alt="">
                                             </div>
                                             <div class="col">
@@ -73,7 +73,7 @@
                                         </div>
                                         <div class="row mobile-no-gutters yellow">
                                             <div class="col-1">
-                                                <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                <img class="check" src="{{ asset('auth') }}/images/icon/check.png"
                                                     alt="">
                                             </div>
                                             <div class="col">
@@ -82,7 +82,7 @@
                                         </div>
                                         <div class="row mobile-no-gutters yellow">
                                             <div class="col-1">
-                                                <img class="cross" src="{{ asset('assets') }}/img/icon/cross.png"
+                                                <img class="cross" src="{{ asset('auth') }}/images/icon/cross.png"
                                                     alt="">
                                             </div>
                                             <div class="col">
@@ -91,7 +91,7 @@
                                         </div>
                                         <div class="row mobile-no-gutters yellow">
                                             <div class="col-1">
-                                                <img class="cross" src="{{ asset('assets') }}/img/icon/cross.png"
+                                                <img class="cross" src="{{ asset('auth') }}/images/icon/cross.png"
                                                     alt="">
                                             </div>
                                             <div class="col">
@@ -100,7 +100,7 @@
                                         </div>
                                         <div class="row mobile-no-gutters yellow">
                                             <div class="col-1">
-                                                <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                <img class="check" src="{{ asset('auth') }}/images/icon/check.png"
                                                     alt="">
                                             </div>
                                             <div class="col">
@@ -123,7 +123,7 @@
                                                 <h4>Hafalan Quran:</h4>
                                                 <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
-                                                        <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                        <img class="check" src="{{ asset('auth') }}/images/icon/check.png"
                                                             alt="">
                                                     </div>
                                                     <div class="col">
@@ -132,7 +132,7 @@
                                                 </div>
                                                 <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
-                                                        <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                        <img class="check" src="{{ asset('auth') }}/images/icon/check.png"
                                                             alt="">
                                                     </div>
                                                     <div class="col">
@@ -141,7 +141,7 @@
                                                 </div>
                                                 <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
-                                                        <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                        <img class="check" src="{{ asset('auth') }}/images/icon/check.png"
                                                             alt="">
                                                     </div>
                                                     <div class="col">
@@ -150,7 +150,7 @@
                                                 </div>
                                                 <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
-                                                        <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                        <img class="check" src="{{ asset('auth') }}/images/icon/check.png"
                                                             alt="">
                                                     </div>
                                                     <div class="col">
@@ -159,7 +159,7 @@
                                                 </div>
                                                 <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
-                                                        <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                        <img class="check" src="{{ asset('auth') }}/images/icon/check.png"
                                                             alt="">
                                                     </div>
                                                     <div class="col">
@@ -169,7 +169,7 @@
                                                 <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
                                                         <img class="check"
-                                                            src="{{ asset('assets') }}/img/icon/check.png"
+                                                            src="{{ asset('auth') }}/images/icon/check.png"
                                                             alt="">
                                                     </div>
                                                     <div class="col">
@@ -179,7 +179,7 @@
                                                 <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
                                                         <img class="check"
-                                                            src="{{ asset('assets') }}/img/icon/check.png"
+                                                            src="{{ asset('auth') }}/images/icon/check.png"
                                                             alt="">
                                                     </div>
                                                     <div class="col">
@@ -189,7 +189,7 @@
                                                 <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
                                                         <img class="check"
-                                                            src="{{ asset('assets') }}/img/icon/check.png"
+                                                            src="{{ asset('auth') }}/images/icon/check.png"
                                                             alt="">
                                                     </div>
                                                     <div class="col">
@@ -199,7 +199,7 @@
                                                 <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
                                                         <img class="check"
-                                                            src="{{ asset('assets') }}/img/icon/check.png"
+                                                            src="{{ asset('auth') }}/images/icon/check.png"
                                                             alt="">
                                                     </div>
                                                     <div class="col">
@@ -220,7 +220,7 @@
                                                 <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
                                                         <img class="check"
-                                                            src="{{ asset('assets') }}/img/icon/check.png"
+                                                            src="{{ asset('auth') }}/images/icon/check.png"
                                                             alt="">
                                                     </div>
                                                     <div class="col">
@@ -230,7 +230,7 @@
                                                 <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
                                                         <img class="check"
-                                                            src="{{ asset('assets') }}/img/icon/check.png"
+                                                            src="{{ asset('auth') }}/images/icon/check.png"
                                                             alt="">
                                                     </div>
                                                     <div class="col">
@@ -240,7 +240,7 @@
                                                 <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
                                                         <img class="check"
-                                                            src="{{ asset('assets') }}/img/icon/check.png"
+                                                            src="{{ asset('auth') }}/images/icon/check.png"
                                                             alt="">
                                                     </div>
                                                     <div class="col">
@@ -250,7 +250,7 @@
                                                 <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
                                                         <img class="check"
-                                                            src="{{ asset('assets') }}/img/icon/check.png"
+                                                            src="{{ asset('auth') }}/images/icon/check.png"
                                                             alt="">
                                                     </div>
                                                     <div class="col">
@@ -260,7 +260,7 @@
                                                 <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
                                                         <img class="check"
-                                                            src="{{ asset('assets') }}/img/icon/check.png"
+                                                            src="{{ asset('auth') }}/images/icon/check.png"
                                                             alt="">
                                                     </div>
                                                     <div class="col">
@@ -270,7 +270,7 @@
                                                 <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
                                                         <img class="check"
-                                                            src="{{ asset('assets') }}/img/icon/check.png"
+                                                            src="{{ asset('auth') }}/images/icon/check.png"
                                                             alt="">
                                                     </div>
                                                     <div class="col">
@@ -280,7 +280,7 @@
                                                 <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
                                                         <img class="check"
-                                                            src="{{ asset('assets') }}/img/icon/check.png"
+                                                            src="{{ asset('auth') }}/images/icon/check.png"
                                                             alt="">
                                                     </div>
                                                     <div class="col">
@@ -290,7 +290,7 @@
                                                 <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
                                                         <img class="check"
-                                                            src="{{ asset('assets') }}/img/icon/check.png"
+                                                            src="{{ asset('auth') }}/images/icon/check.png"
                                                             alt="">
                                                     </div>
                                                     <div class="col">
@@ -300,7 +300,7 @@
                                                 <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
                                                         <img class="check"
-                                                            src="{{ asset('assets') }}/img/icon/check.png"
+                                                            src="{{ asset('auth') }}/images/icon/check.png"
                                                             alt="">
                                                     </div>
                                                     <div class="col">
@@ -310,7 +310,7 @@
                                                 <div class="row mobile-no-gutters yellow">
                                                     <div class="col-1">
                                                         <img class="check"
-                                                            src="{{ asset('assets') }}/img/icon/check.png"
+                                                            src="{{ asset('auth') }}/images/icon/check.png"
                                                             alt="">
                                                     </div>
                                                     <div class="col">
@@ -344,7 +344,7 @@
                                     <div class="sub">
                                         <div class="row mobile-no-gutters">
                                             <div class="col-1">
-                                                <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                <img class="check" src="{{ asset('auth') }}/images/icon/check.png"
                                                     alt="">
                                             </div>
                                             <div class="col">
@@ -359,7 +359,7 @@
                                     <div class="sub mt-2">
                                         <div class="row mobile-no-gutters">
                                             <div class="col-1">
-                                                <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                <img class="check" src="{{ asset('auth') }}/images/icon/check.png"
                                                     alt="">
                                             </div>
                                             <div class="col">
@@ -374,7 +374,7 @@
                                     <div class="sub mt-2">
                                         <div class="row mobile-no-gutters">
                                             <div class="col-1">
-                                                <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                <img class="check" src="{{ asset('auth') }}/images/icon/check.png"
                                                     alt="">
                                             </div>
                                             <div class="col">
@@ -395,7 +395,7 @@
                                     <div class="sub">
                                         <div class="row mobile-no-gutters">
                                             <div class="col-1">
-                                                <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                <img class="check" src="{{ asset('auth') }}/images/icon/check.png"
                                                     alt="">
                                             </div>
                                             <div class="col">
@@ -406,7 +406,7 @@
                                     <div class="sub">
                                         <div class="row mobile-no-gutters">
                                             <div class="col-1">
-                                                <img class="check-none" src="{{ asset('assets') }}/img/icon/check-none.png"
+                                                <img class="check-none" src="{{ asset('auth') }}/images/icon/check-none.png"
                                                     alt="">
                                             </div>
                                             <div class="col">
@@ -425,7 +425,7 @@
                                     <div class="sub">
                                         <div class="row mobile-no-gutters">
                                             <div class="col-1">
-                                                <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                <img class="check" src="{{ asset('auth') }}/images/icon/check.png"
                                                     alt="">
                                             </div>
                                             <div class="col">
@@ -450,7 +450,7 @@
 
                             <div class="row mobile-no-gutters blue">
                                 <div class="col-1">
-                                    <img class="check" src="{{ asset('assets') }}/img/icon/check.png" alt="">
+                                    <img class="check" src="{{ asset('auth') }}/images/icon/check.png" alt="">
                                 </div>
                                 <div class="col">
                                     <p>Senam pagi</p>
@@ -459,7 +459,7 @@
 
                             <div class="row mobile-no-gutters blue">
                                 <div class="col-1">
-                                    <img class="cross" src="{{ asset('assets') }}/img/icon/cross.png" alt="">
+                                    <img class="cross" src="{{ asset('auth') }}/images/icon/cross.png" alt="">
                                 </div>
                                 <div class="col">
                                     <p>Apel Bendera</p>
@@ -472,7 +472,7 @@
                                     <p>Circle Time</p>
                                     <div class="row sub mobile-no-gutters blue">
                                         <div class="col-1">
-                                            <img class="cross" src="{{ asset('assets') }}/img/icon/cross.png"
+                                            <img class="cross" src="{{ asset('auth') }}/images/icon/cross.png"
                                                 alt="">
                                         </div>
                                         <div class="col">
@@ -481,7 +481,7 @@
                                     </div>
                                     <div class="row sub mobile-no-gutters blue">
                                         <div class="col-1">
-                                            <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                            <img class="check" src="{{ asset('auth') }}/images/icon/check.png"
                                                 alt="">
                                         </div>
                                         <div class="col">
@@ -490,7 +490,7 @@
                                     </div>
                                     <div class="row sub mobile-no-gutters blue">
                                         <div class="col-1">
-                                            <img class="cross" src="{{ asset('assets') }}/img/icon/cross.png"
+                                            <img class="cross" src="{{ asset('auth') }}/images/icon/cross.png"
                                                 alt="">
                                         </div>
                                         <div class="col">
@@ -580,7 +580,7 @@
                                     <div class="sub">
                                         <div class="row mobile-no-gutters">
                                             <div class="col-1">
-                                                <img class="check" src="{{ asset('assets') }}/img/icon/check.png"
+                                                <img class="check" src="{{ asset('auth') }}/images/icon/check.png"
                                                     alt="">
                                             </div>
                                             <div class="col">
@@ -591,7 +591,7 @@
                                     <div class="sub">
                                         <div class="row mobile-no-gutters">
                                             <div class="col-1">
-                                                <img class="check-none" src="{{ asset('assets') }}/img/icon/check-none.png"
+                                                <img class="check-none" src="{{ asset('auth') }}/images/icon/check-none.png"
                                                     alt="">
                                             </div>
                                             <div class="col">
@@ -602,7 +602,7 @@
                                     <div class="sub">
                                         <div class="row mobile-no-gutters">
                                             <div class="col-1">
-                                                <img class="check-none" src="{{ asset('assets') }}/img/icon/check-none.png"
+                                                <img class="check-none" src="{{ asset('auth') }}/images/icon/check-none.png"
                                                     alt="">
                                             </div>
                                             <div class="col">
@@ -653,7 +653,7 @@
                                             nesciunt cumque tempora!.</a></p>
                                 </div>
                                 <div class="col-3 text-center emot">
-                                    <img src="{{ asset('assets') }}/img/face/happy.png" alt="">
+                                    <img src="{{ asset('auth') }}/images/face/happy.png" alt="">
                                     <h1>100%</h1>
                                 </div>
                             </div>
