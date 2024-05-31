@@ -25,6 +25,7 @@
                         <span class="hide-menu">Dashboard</span>
                     </a>
                 </li>
+
                 <li class="nav-small-cap">
                     <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
                     <span class="hide-menu">GARDENCHOOL</span>
@@ -51,6 +52,27 @@
                             <i class="ti ti-car"></i>
                         </span>
                         <span class="hide-menu">Babycamp</span>
+                    </a>
+                </li>
+
+                <li class="nav-small-cap">
+                    <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                    <span class="hide-menu">GARDENCHOOL</span>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{{ route('video.index') }}" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-video"></i>
+                        </span>
+                        <span class="hide-menu">Video</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{{ route('menu.index') }}" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-bread"></i>
+                        </span>
+                        <span class="hide-menu">Breakfast Menu</span>
                     </a>
                 </li>
             </ul>

@@ -1,7 +1,7 @@
 @extends('layouts.auth')
 
 @section('judul')
-    <title>Guru - Create Morning Booster</title>
+    <title>Guru - Edit Morning Booster</title>
     <style>
         .btn.btn-primary.disabled,
         .btn.btn-warning.disabled,
@@ -27,7 +27,7 @@
                 <div class="container-fluid">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title fw-semibold mb-4">Create Morning Booster</h5>
+                            <h5 class="card-title fw-semibold mb-4">Edit Morning Booster</h5>
                             <div class="card">
                                 <div class="card-body">
                                     <form>

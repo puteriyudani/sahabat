@@ -1,7 +1,7 @@
 @extends('layouts.auth')
 
 @section('judul')
-    <title>Guru - Today Videos</title>
+    <title>Guru - Breakfast Menu</title>
     <style>
         .btn.btn-primary.disabled,
         .btn.btn-warning.disabled,
@@ -24,7 +24,7 @@
         <div class="body-wrapper">
             @include('include.header-admin')
             <div class="container-fluid">
-                <a href="#"><button type="button" class="btn btn-primary m-1 mb-3">Tambah</button></a>
+                <a href="{{ route('menu.create') }}"><button type="button" class="btn btn-primary m-1 mb-3">Tambah</button></a>
 
                 <div class="table-responsive">
                     <table class="table table-striped">
@@ -32,7 +32,12 @@
                             <tr>
                                 <th scope="col">No</th>
                                 <th scope="col">Tanggal</th>
-                                <th scope="col">Videos</th>
+                                <th scope="col">Menu</th>
+                                <th scope="col">Karbohidrat</th>
+                                <th scope="col">Protein</th>
+                                <th scope="col">Lemak</th>
+                                <th scope="col">Serat</th>
+                                <th scope="col">Vit/Mineral</th>
                                 <th scope="col">Aksi</th>
                             </tr>
                         </thead>
@@ -40,10 +45,12 @@
                             <tr>
                                 <td>1</td>
                                 <td>27/05/2024</td>
-                                <td><iframe width="280" src="https://www.youtube.com/embed/HOYpAgWPTps?si=1bQCEeIkfL6KZATL"
-                                    title="YouTube video player" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></td>
+                                <td>Variasi nasi, sop ayam dan tempe goreng</td>
+                                <td>10</td>
+                                <td>20</td>
+                                <td>30</td>
+                                <td>40</td>
+                                <td>50</td>
                                 <td>
                                     <form action="#" method="POST">
                                         <a href="" style="text-decoration: none; color: #28a745"><i class="ti ti-pencil nav-small-cap-icon fs-4"></i></a>

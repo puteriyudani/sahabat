@@ -4,14 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class VideosController extends Controller
+class MenuController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('guru.kelola.video.index');
+        return view('guru.kelola.menu.index');
     }
 
     /**
@@ -19,7 +19,7 @@ class VideosController extends Controller
      */
     public function create()
     {
-        return view('guru.kelola.video.create');
+        return view('guru.kelola.menu.create');
     }
 
     /**

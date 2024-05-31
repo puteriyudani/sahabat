@@ -1,7 +1,7 @@
 @extends('layouts.auth')
 
 @section('judul')
-    <title>Guru - Breakfast</title>
+    <title>Guru - Today Videos</title>
     <style>
         .btn.btn-primary.disabled,
         .btn.btn-warning.disabled,
@@ -24,7 +24,7 @@
         <div class="body-wrapper">
             @include('include.header-admin')
             <div class="container-fluid">
-                <a href="{{ route('tkbreakfast.create') }}"><button type="button" class="btn btn-primary m-1 mb-3">Tambah</button></a>
+                <a href="{{ route('video.create') }}"><button type="button" class="btn btn-primary m-1 mb-3">Tambah</button></a>
 
                 <div class="table-responsive">
                     <table class="table table-striped">
@@ -32,10 +32,7 @@
                             <tr>
                                 <th scope="col">No</th>
                                 <th scope="col">Tanggal</th>
-                                <th scope="col">Menu</th>
-                                <th scope="col">Keterangan</th>
-                                <th scope="col">Indikator %</th>
-                                <th scope="col">Catatan</th>
+                                <th scope="col">Videos</th>
                                 <th scope="col">Aksi</th>
                             </tr>
                         </thead>
@@ -43,10 +40,10 @@
                             <tr>
                                 <td>1</td>
                                 <td>27/05/2024</td>
-                                <td>Variasi nasi, sop ayam dan tempe goreng</td>
-                                <td>Habis</td>
-                                <td>100%</td>
-                                <td>anak tidak suka makanan tahu</td>
+                                <td><iframe width="280" src="https://www.youtube.com/embed/HOYpAgWPTps?si=1bQCEeIkfL6KZATL"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></td>
                                 <td>
                                     <form action="#" method="POST">
                                         <a href="" style="text-decoration: none; color: #28a745"><i class="ti ti-pencil nav-small-cap-icon fs-4"></i></a>

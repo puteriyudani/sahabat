@@ -13,6 +13,7 @@ use App\Http\Controllers\IntiController;
 use App\Http\Controllers\IslamicController;
 use App\Http\Controllers\KelolaController;
 use App\Http\Controllers\KindergartenController;
+use App\Http\Controllers\MenuController;
 use App\Http\Controllers\MorningController;
 use App\Http\Controllers\OrtuController;
 use App\Http\Controllers\PasswordController;
@@ -96,6 +97,14 @@ Route::get('/teacher', [GuruController::class, 'index'])->name('teacher.index');
 
 Route::get('/teacher-kindergarten', [GuruController::class, 'kindergarten'])->name('teacher.kindergarten');
 
+// kelola menu
+Route::get('/teacher/kelola-menu', [MenuController::class, 'index'])->name('menu.index');
+Route::get('/teacher/kelola-menu/create', [MenuController::class, 'create'])->name('menu.create');
+
+// kelola video
+Route::get('/teacher/kelola-video', [VideosController::class, 'index'])->name('video.index');
+Route::get('/teacher/kelola-video/create', [VideosController::class, 'create'])->name('video.create');
+
 // welcome mood
 Route::get('/teacher-kindergarten/welcome-mood', [WelcomeController::class, 'index'])->name('tkwelcome.index');
 Route::get('/teacher-kindergarten/welcome-mood/individu', [WelcomeController::class, 'individu'])->name('tkwelcome.individu');
@@ -109,6 +118,7 @@ Route::get('/teacher-kindergarten/morning-booster/create', [MorningController::c
 // breakfast
 Route::get('/teacher-kindergarten/breakfast', [BreakfastController::class, 'index'])->name('tkbreakfast.index');
 Route::get('/teacher-kindergarten/breakfast/individu', [BreakfastController::class, 'individu'])->name('tkbreakfast.individu');
+Route::get('/teacher-kindergarten/breakfast/create', [BreakfastController::class, 'create'])->name('tkbreakfast.create');
 
 // islamic base learning
 Route::get('/teacher-kindergarten/islamic-base-learning', [IslamicController::class, 'index'])->name('tkislamic.index');
@@ -125,10 +135,6 @@ Route::get('/teacher-kindergarten/tematik/individu', [TematikController::class, 
 // poop & pee
 Route::get('/teacher-kindergarten/pooppee', [PoopPeeController::class, 'index'])->name('tkpooppee.index');
 Route::get('/teacher-kindergarten/pooppee/individu', [PoopPeeController::class, 'individu'])->name('tkpooppee.individu');
-
-// today videos
-Route::get('/teacher-kindergarten/today-videos', [VideosController::class, 'index'])->name('tkvideos.index');
-Route::get('/teacher-kindergarten/today-videos/individu', [VideosController::class, 'individu'])->name('tkvideos.individu');
 
 // re calling
 Route::get('/teacher-kindergarten/recalling', [RecallingController::class, 'index'])->name('tkrecalling.index');
