@@ -1000,3 +1000,23 @@
     align-items: center;
     justify-content: center;
 }
+
+.custom-select-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.custom-select-container img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.2s;
+}
+.custom-select-container img:hover {
+    transform: scale(1.1);
+}
+.hidden-select {
+    display: none;
+}

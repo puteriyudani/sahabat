@@ -24,7 +24,7 @@ class WelcomeController extends Controller
      */
     public function create()
     {
-        //
+        return view('guru.activity.welcome.create');
     }
 
     /**

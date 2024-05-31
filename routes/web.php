@@ -99,6 +99,7 @@ Route::get('/teacher-kindergarten', [GuruController::class, 'kindergarten'])->na
 // welcome mood
 Route::get('/teacher-kindergarten/welcome-mood', [WelcomeController::class, 'index'])->name('tkwelcome.index');
 Route::get('/teacher-kindergarten/welcome-mood/individu', [WelcomeController::class, 'individu'])->name('tkwelcome.individu');
+Route::get('/teacher-kindergarten/welcome-mood/create', [WelcomeController::class, 'create'])->name('tkwelcome.create');
 
 // morning booster
 Route::get('/teacher-kindergarten/morning-booster', [MorningController::class, 'index'])->name('tkmorning.index');
@@ -135,74 +136,6 @@ Route::get('/teacher-kindergarten/recalling/individu', [RecallingController::cla
 Route::get('/teacher-playgroup', [GuruController::class, 'playgroup'])->name('teacher.playgroup');
 Route::get('/teacher-babycamp', [GuruController::class, 'babycamp'])->name('teacher.babycamp');
 
-
-// Route::middleware(['auth', 'user-access:guru'])->group(function () {
-//     // home guru
-//     Route::get('/halaman-guru', [GuruController::class, 'index'])->name('guru');
-//     Route::get('/kindergarten', [GuruController::class, 'kindergarten'])->name('kindergarten');
-//     Route::get('/playgroup', [GuruController::class, 'playgroup'])->name('playgroup');
-//     Route::get('/babycamp', [GuruController::class, 'babycamp'])->name('babycamp');
-//     Route::get('/kelola', [GuruController::class, 'kelola'])->name('kelola');
-
-//     // kindergarten
-//     Route::get('/kindergarten-arrival', [KindergartenController::class, 'arrival'])->name('kindergarten.arrival');
-//     Route::get('/kindergarten-breakfast', [KindergartenController::class, 'breakfast'])->name('kindergarten.breakfast');
-//     Route::get('/kindergarten-pembuka', [KindergartenController::class, 'pembuka'])->name('kindergarten.pembuka');
-//     Route::get('/kindergarten-inti', [KindergartenController::class, 'inti'])->name('kindergarten.inti');
-//     Route::get('/kindergarten-penutup', [KindergartenController::class, 'penutup'])->name('kindergarten.penutup');
-//     Route::get('/kindergarten-catatan', [KindergartenController::class, 'catatan'])->name('kindergarten.catatan');
-
-//     // playgroup
-//     Route::get('/playgroup-arrival', [PlaygroupController::class, 'arrival'])->name('playgroup.arrival');
-//     Route::get('/playgroup-breakfast', [PlaygroupController::class, 'breakfast'])->name('playgroup.breakfast');
-//     Route::get('/playgroup-pembuka', [PlaygroupController::class, 'pembuka'])->name('playgroup.pembuka');
-//     Route::get('/playgroup-inti', [PlaygroupController::class, 'inti'])->name('playgroup.inti');
-//     Route::get('/playgroup-penutup', [PlaygroupController::class, 'penutup'])->name('playgroup.penutup');
-//     Route::get('/playgroup-catatan', [PlaygroupController::class, 'catatan'])->name('playgroup.catatan');
-
-//     // babycamp
-//     Route::get('/babycamp-breakfast', [BabycampController::class, 'breakfast'])->name('babycamp.breakfast');
-//     Route::get('/babycamp-pembuka', [BabycampController::class, 'pembuka'])->name('babycamp.pembuka');
-//     Route::get('/babycamp-inti', [BabycampController::class, 'inti'])->name('babycamp.inti');
-//     Route::get('/babycamp-penutup', [BabycampController::class, 'penutup'])->name('babycamp.penutup');
-//     Route::get('/babycamp-catatan', [BabycampController::class, 'catatan'])->name('babycamp.catatan');
-
-//     Route::post('/pembukababy', [PembukaController::class, 'storebaby'])->name('pembuka.storebaby');
-//     Route::post('/intibaby', [IntiController::class, 'storebaby'])->name('inti.storebaby');
-//     Route::post('/penutupbaby', [PenutupController::class, 'storebaby'])->name('penutup.storebaby');
-
-//     Route::delete('/pembuka', [PembukaController::class, 'destroybaby'])->name('pembuka.destroybaby');
-//     Route::delete('/inti', [IntiController::class, 'destroybaby'])->name('inti.destroybaby');
-//     Route::delete('/penutup', [PenutupController::class, 'destroybaby'])->name('penutup.destroybaby');
-
-//     // catatan guru
-//     Route::resource('catatanguru', CatatanGuruController::class);
-
-//     // isi
-//     Route::resource('breakfast', BreakfastController::class);
-//     Route::resource('pembuka', PembukaController::class);
-//     Route::resource('inti', IntiController::class);
-//     Route::resource('penutup', PenutupController::class);
-
-//     // indikator
-//     Route::resource('indikator', IndikatorController::class);
-
-//     Route::get('/kindergarten-indikator-pembuka', [IndikatorController::class, 'kindergartenpembuka'])->name('kindergarten.indikatorpembuka');
-//     Route::get('/kindergarten-indikator-inti', [IndikatorController::class, 'kindergarteninti'])->name('kindergarten.indikatorinti');
-
-//     Route::get('/playgroup-indikator-pembuka', [IndikatorController::class, 'playgrouppembuka'])->name('playgroup.indikatorpembuka');
-//     Route::get('/playgroup-indikator-inti', [IndikatorController::class, 'playgroupinti'])->name('playgroup.indikatorinti');
-
-//     // kelola
-//     Route::resource('kelola', KelolaController::class);
-//     Route::get('kelolakindergarten/{siswa}', [KindergartenController::class, 'show'])->name('kelolakindergarten.show');
-//     Route::get('kelolaplaygroup/{siswa}', [PlaygroupController::class, 'show'])->name('kelolaplaygroup.show');
-//     Route::get('kelolababycamp/{siswa}', [BabycampController::class, 'show'])->name('kelolababycamp.show');
-
-//     Route::get('/kelola-kindergarten', [KelolaController::class, 'kindergarten'])->name('kelola.kindergarten');
-//     Route::get('/kelola-playgroup', [KelolaController::class, 'playgroup'])->name('kelola.playgroup');
-//     Route::get('/kelola-babycamp', [KelolaController::class, 'babycamp'])->name('kelola.babycamp');
-// });
 
 //ortu
 Route::middleware(['auth', 'user-access:ortu'])->group(function () {
