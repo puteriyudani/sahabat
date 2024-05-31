@@ -11,17 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('islamics', function (Blueprint $table) {
+        Schema::create('breakfasts', function (Blueprint $table) {
             $table->id();
             $table->date('tanggal');
-            $table->integer('siswa_id');
-            $table->string('hadist');
-            $table->string('hadist_stat');
-            $table->string('quran');
-            $table->string('quran_stat');
-            $table->string('doa');
-            $table->string('doa_stat');
-            $table->string('notifikasi');
+            $table->bigInteger('siswa_id');
+            $table->string('menu');
+            $table->string('gizi');
+            $table->string('keterangan');
+            $table->string('indikator');
+            $table->string('catatan');
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('islamics');
+        Schema::dropIfExists('breakfasts');
     }
 };

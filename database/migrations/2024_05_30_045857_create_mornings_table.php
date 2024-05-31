@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('mornings', function (Blueprint $table) {
             $table->id();
             $table->date('tanggal');
-            $table->integer('siswa_id');
+            $table->bigInteger('siswa_id');
             $table->string('kegiatan');
             $table->string('circletime');
             $table->string('notifikasi');

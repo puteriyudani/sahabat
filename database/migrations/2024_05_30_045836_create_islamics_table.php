@@ -11,12 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('recallings', function (Blueprint $table) {
+        Schema::create('islamics', function (Blueprint $table) {
             $table->id();
             $table->date('tanggal');
-            $table->integer('siswa_id');
-            $table->string('indikator');
-            $table->string('keterangan');
+            $table->bigInteger('siswa_id');
+            $table->string('hadist');
+            $table->string('hadist_stat');
+            $table->string('quran');
+            $table->string('quran_stat');
+            $table->string('doa');
+            $table->string('doa_stat');
             $table->string('notifikasi');
             $table->timestamps();
         });
@@ -27,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('recallings');
+        Schema::dropIfExists('islamics');
     }
 };

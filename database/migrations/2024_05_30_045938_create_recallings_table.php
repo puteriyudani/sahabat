@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('preschools', function (Blueprint $table) {
+        Schema::create('recallings', function (Blueprint $table) {
             $table->id();
             $table->date('tanggal');
-            $table->integer('siswa_id');
-            $table->string('huruf');
-            $table->string('angka');
-            $table->string('english');
+            $table->bigInteger('siswa_id');
+            $table->string('indikator');
+            $table->string('keterangan');
+            $table->string('notifikasi');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('preschools');
+        Schema::dropIfExists('recallings');
     }
 };
