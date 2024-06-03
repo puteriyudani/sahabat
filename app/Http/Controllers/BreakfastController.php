@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Siswa;
 use Illuminate\Http\Request;
 
 class BreakfastController extends Controller
@@ -11,7 +12,8 @@ class BreakfastController extends Controller
      */
     public function index()
     {
-        return view('guru.kindergarten.breakfast.index');
+        $siswas = Siswa::get();
+        return view('guru.kindergarten.breakfast.index', compact('siswas'));
     }
 
     public function individu()

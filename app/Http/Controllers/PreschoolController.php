@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Siswa;
 use Illuminate\Http\Request;
 
 class PreschoolController extends Controller
@@ -11,7 +12,8 @@ class PreschoolController extends Controller
      */
     public function index()
     {
-        return view('guru.kindergarten.preschool.index');
+        $siswas = Siswa::get();
+        return view('guru.kindergarten.preschool.index', compact('siswas'));
     }
 
     public function individu()

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Siswa;
 use Illuminate\Http\Request;
 
 class RecallingController extends Controller
@@ -11,7 +12,8 @@ class RecallingController extends Controller
      */
     public function index()
     {
-        return view('guru.kindergarten.recalling.index');
+        $siswas = Siswa::get();
+        return view('guru.kindergarten.recalling.index', compact('siswas'));
     }
 
     public function individu()

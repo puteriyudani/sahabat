@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Siswa;
 use Illuminate\Http\Request;
 
 class TematikController extends Controller
@@ -11,7 +12,8 @@ class TematikController extends Controller
      */
     public function index()
     {
-        return view('guru.kindergarten.tematik.index');
+        $siswas = Siswa::get();
+        return view('guru.kindergarten.tematik.index', compact('siswas'));
     }
 
     public function individu()

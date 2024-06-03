@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Siswa;
 use Illuminate\Http\Request;
 
 class PoopPeeController extends Controller
@@ -11,7 +12,8 @@ class PoopPeeController extends Controller
      */
     public function index()
     {
-        return view('guru.kindergarten.pooppee.index');
+        $siswas = Siswa::get();
+        return view('guru.kindergarten.pooppee.index', compact('siswas'));
     }
 
     public function individu()

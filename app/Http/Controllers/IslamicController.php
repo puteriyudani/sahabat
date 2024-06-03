@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Siswa;
 use Illuminate\Http\Request;
 
 class IslamicController extends Controller
@@ -11,7 +12,8 @@ class IslamicController extends Controller
      */
     public function index()
     {
-        return view('guru.kindergarten.islamic.index');
+        $siswas = Siswa::get();
+        return view('guru.kindergarten.islamic.index', compact('siswas'));
     }
 
     public function individu()
