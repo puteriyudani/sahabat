@@ -34,6 +34,7 @@
                                 <th scope="col">Tanggal</th>
                                 <th scope="col">Poop</th>
                                 <th scope="col">Pee</th>
+                                <th scope="col">Catatan</th>
                                 <th scope="col">Aksi</th>
                             </tr>
                         </thead>
@@ -43,6 +44,7 @@
                                 <td>27/05/2024</td>
                                 <td>Ya</td>
                                 <td>Ya</td>
+                                <td>catatan</td>
                                 <td>
                                     <form action="#" method="POST">
                                         <a href="" style="text-decoration: none; color: #28a745"><i class="ti ti-pencil nav-small-cap-icon fs-4"></i></a>
