@@ -32,7 +32,10 @@
                             <tr>
                                 <th scope="col">No</th>
                                 <th scope="col">Tanggal</th>
-                                <th scope="col">Culture Paradise</th>
+                                <th scope="col">Judul 1</th>
+                                <th scope="col">Judul 2</th>
+                                <th scope="col">Kegiatan 1</th>
+                                <th scope="col">Kegiatan 2</th>
                                 <th scope="col">Aksi</th>
                             </tr>
                         </thead>
@@ -40,6 +43,9 @@
                             <tr>
                                 <td>1</td>
                                 <td>27/05/2024</td>
+                                <td>Culture Paradise</td>
+                                <td>Culture Paradise</td>
+                                <td>Hari ini anak belajar bermain congklak</td>
                                 <td>Hari ini anak belajar bermain congklak</td>
                                 <td>
                                     <form action="#" method="POST">

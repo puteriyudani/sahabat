@@ -15,7 +15,10 @@ return new class extends Migration
             $table->id();
             $table->date('tanggal');
             $table->bigInteger('siswa_id');
-            $table->string('culture');
+            $table->string('judul1');
+            $table->string('judul2');
+            $table->string('kegiatan1');
+            $table->string('kegiatan2');
             $table->timestamps();
         });
     }
