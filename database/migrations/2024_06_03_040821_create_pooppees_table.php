@@ -17,6 +17,7 @@ return new class extends Migration
             $table->bigInteger('siswa_id');
             $table->string('poop');
             $table->string('pee');
+            $table->string('catatan');
             $table->timestamps();
         });
     }
