@@ -43,7 +43,7 @@
                                 <td>1</td>
                                 <td>27/05/2024</td>
                                 <td>Senam Pagi</td>
-                                <td>Bernyanyi</td>
+                                <td>Ice Breaking</td>
                                 <td>notifikasi kegiatan anak</td>
                                 <td>
                                     <form action="#" method="POST">

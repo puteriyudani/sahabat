@@ -47,13 +47,13 @@
                                             <label for="kegiatan" class="form-label">Kegiatan</label>
                                             <br>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="senampagi"
-                                                    value="Senam Pagi">
+                                                <input class="form-check-input" type="radio" name="kegiatan"
+                                                    id="senampagi">
                                                 <label class="form-check-label" for="senampagi">Senam Pagi</label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="apelbendera"
-                                                    value="Apel Bendera">
+                                                <input class="form-check-input" type="radio" name="kegiatan"
+                                                    id="apelbendera">
                                                 <label class="form-check-label" for="apelbendera">Apel Bendera</label>
                                             </div>
                                         </div>
@@ -61,14 +61,9 @@
                                             <label for="circletime" class="form-label">Circle Time</label>
                                             <br>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="mendongeng"
-                                                    value="Mendongeng">
-                                                <label class="form-check-label" for="mendongeng">Mendongeng</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="bernyanyi"
-                                                    value="Bernyanyi">
-                                                <label class="form-check-label" for="bernyanyi">Bernyanyi</label>
+                                                <input class="form-check-input" type="checkbox" id="icebreaking"
+                                                    value="Ice Breaking">
+                                                <label class="form-check-label" for="icebreaking">Ice Breaking</label>
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" id="berdiskusi"
