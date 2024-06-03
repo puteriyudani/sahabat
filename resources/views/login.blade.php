@@ -42,7 +42,6 @@
                                     <div class="d-flex align-items-center justify-content-center">
                                         <p class="fs-4 mb-0 fw-bold">Don't have an account?</p>
                                         <a class="text-primary fw-bold ms-2" href="{{ route('register') }}">Register</a>
-                                        <a class="text-primary fw-bold ms-2" href="{{ route('teacher.index') }}">Guru</a>
                                     </div>
                                 </form>
                             </div>

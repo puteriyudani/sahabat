@@ -25,37 +25,48 @@
             @include('include.header-admin')
             <div class="container-fluid">
                 <div class="container-fluid">
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title fw-semibold mb-4">Create Breakfast Menu</h5>
                             <div class="card">
                                 <div class="card-body">
-                                    <form action="{{ route('menu.store') }}" method="POST" enctype="multipart/form-data">
+                                    <form action="{{ route('menu.update', $menu->id) }}" method="POST" enctype="multipart/form-data">
                                         @csrf
+                                        @method('PUT')
 
                                         <div class="mb-3">
                                             <label for="menu" class="form-label">Menu</label>
-                                            <input type="text" class="form-control" id="menu" name="menu">
+                                            <input type="text" class="form-control" id="menu" name="menu" value="{{ $menu->menu }}">
                                         </div>
                                         <div class="mb-3">
                                             <label for="karbohidrat" class="form-label">Karbohidrat</label>
-                                            <input type="number" class="form-control" id="karbohidrat" name="karbohidrat">
+                                            <input type="number" class="form-control" id="karbohidrat" name="karbohidrat" value="{{ $menu->karbohidrat }}">
                                         </div>
                                         <div class="mb-3">
                                             <label for="protein" class="form-label">Protein</label>
-                                            <input type="number" class="form-control" id="protein" name="protein">
+                                            <input type="number" class="form-control" id="protein" name="protein" value="{{ $menu->protein }}">
                                         </div>
                                         <div class="mb-3">
                                             <label for="lemak" class="form-label">Lemak</label>
-                                            <input type="number" class="form-control" id="lemak" name="lemak">
+                                            <input type="number" class="form-control" id="lemak" name="lemak" value="{{ $menu->lemak }}">
                                         </div>
                                         <div class="mb-3">
                                             <label for="serat" class="form-label">Serat</label>
-                                            <input type="number" class="form-control" id="serat" name="serat">
+                                            <input type="number" class="form-control" id="serat" name="serat" value="{{ $menu->serat }}">
                                         </div>
                                         <div class="mb-3">
                                             <label for="vitmineral" class="form-label">Vit/Mineral</label>
-                                            <input type="number" class="form-control" id="vitmineral" name="vitmineral">
+                                            <input type="number" class="form-control" id="vitmineral" name="vitmineral" value="{{ $menu->vitmineral }}">
                                         </div>
                                         <button type="submit" class="btn btn-primary">Submit</button>
                                     </form>

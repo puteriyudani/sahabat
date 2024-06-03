@@ -25,21 +25,34 @@
             @include('include.header-admin')
             <div class="container-fluid">
                 <div class="container-fluid">
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title fw-semibold mb-4">Create Video Youtube</h5>
                             <div class="card">
                                 <div class="card-body">
-                                    <form action="{{ route('video.store') }}" method="POST" enctype="multipart/form-data">
+                                    <form action="{{ route('video.update', $video->id) }}" method="POST"
+                                        enctype="multipart/form-data">
                                         @csrf
+                                        @method('PUT')
 
                                         <div class="mb-3">
                                             <label for="tanggal" class="form-label">Tanggal</label>
-                                            <input type="date" class="form-control" id="tanggal" name="tanggal">
+                                            <input type="date" class="form-control" id="tanggal" name="tanggal"
+                                                value="{{ old('tanggal', $video->tanggal) }}">
                                         </div>
                                         <div class="mb-3">
                                             <label for="video" class="form-label">Link Video Youtube</label>
-                                            <textarea class="form-control" id="video" name="video" rows="5"></textarea>
+                                            <textarea class="form-control" id="video" name="video" rows="5">{{ old('video', $video->video) }}</textarea>
                                         </div>
                                         <button type="submit" class="btn btn-primary">Submit</button>
                                     </form>
@@ -55,7 +68,7 @@
         // JavaScript to set the date input value to today's date if it's not manually changed
         document.addEventListener('DOMContentLoaded', (event) => {
             const dateInput = document.getElementById('tanggal');
-            if (!dateInput.value) {
+            if (dateInput && !dateInput.value) {
                 const today = new Date().toISOString().substr(0, 10);
                 dateInput.value = today;
             }

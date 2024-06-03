@@ -24,14 +24,14 @@
         <div class="body-wrapper">
             @include('include.header-admin')
             <div class="container-fluid">
-                <a href="{{ route('menu.create') }}"><button type="button" class="btn btn-primary m-1 mb-3">Tambah</button></a>
+                <a href="{{ route('menu.create') }}"><button type="button"
+                        class="btn btn-primary m-1 mb-3">Tambah</button></a>
 
                 <div class="table-responsive">
                     <table class="table table-striped">
                         <thead>
                             <tr>
                                 <th scope="col">No</th>
-                                <th scope="col">Tanggal</th>
                                 <th scope="col">Menu</th>
                                 <th scope="col">Karbohidrat</th>
                                 <th scope="col">Protein</th>
@@ -42,28 +42,31 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>27/05/2024</td>
-                                <td>Variasi nasi, sop ayam dan tempe goreng</td>
-                                <td>10</td>
-                                <td>20</td>
-                                <td>30</td>
-                                <td>40</td>
-                                <td>50</td>
-                                <td>
-                                    <form action="#" method="POST">
-                                        <a href="" style="text-decoration: none; color: #28a745"><i class="ti ti-pencil nav-small-cap-icon fs-4"></i></a>
+                            @foreach ($menus as $menu)
+                                <tr>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $menu->menu }}</td>
+                                    <td>{{ $menu->karbohidrat }}</td>
+                                    <td>{{ $menu->protein }}</td>
+                                    <td>{{ $menu->lemak }}</td>
+                                    <td>{{ $menu->serat }}</td>
+                                    <td>{{ $menu->vitmineral }}</td>
+                                    <td>
+                                        <form action="{{ route('menu.destroy', $menu->id) }}" method="POST">
+                                            <a href="{{ route('menu.edit', $menu->id) }}"
+                                                style="text-decoration: none; color: #28a745"><i
+                                                    class="ti ti-pencil nav-small-cap-icon fs-4"></i></a>
 
-                                        @csrf
-                                        @method('DELETE')
+                                            @csrf
+                                            @method('DELETE')
 
-                                        <button class="btn mb-1" type="submit" style="color: red">
-                                            <i class="ti ti-trash nav-small-cap-icon fs-4"></i>
-                                        </button>
-                                    </form>
-                                </td>
-                            </tr>
+                                            <button class="btn mb-1" type="submit" style="color: red">
+                                                <i class="ti ti-trash nav-small-cap-icon fs-4"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

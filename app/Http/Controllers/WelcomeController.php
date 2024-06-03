@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Siswa;
 use Illuminate\Http\Request;
 
 class WelcomeController extends Controller
@@ -11,7 +12,8 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-        return view('guru.kindergarten.welcome.index');
+        $siswas = Siswa::get();
+        return view('guru.kindergarten.welcome.index', compact('siswas'));
     }
 
     public function individu()

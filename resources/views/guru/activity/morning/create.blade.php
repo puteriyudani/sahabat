@@ -33,7 +33,7 @@
                                     <form>
                                         <div class="mb-3">
                                             <label for="tanggal" class="form-label">Tanggal</label>
-                                            <input type="date" id="tanggal" name="tanggal">
+                                            <input type="date" class="form-control" id="tanggal" name="tanggal">
                                         </div>
                                         <fieldset disabled>
                                             <div class="mb-3">
@@ -78,7 +78,7 @@
                                         </div>
                                         <div class="mb-3">
                                             <label for="notifikasi" class="form-label">Notifikasi</label>
-                                            <textarea class="form-control" id="notifikasi" rows="5"></textarea>
+                                            <textarea class="form-control" id="notifikasi" name="notifikasi" rows="5"></textarea>
                                         </div>
                                         <button type="submit" class="btn btn-primary">Submit</button>
                                     </form>

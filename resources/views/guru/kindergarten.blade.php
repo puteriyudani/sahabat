@@ -30,51 +30,25 @@
                             <div class="row text-center">
                                 <div class="col-md-4">
                                     <div class="card">
-                                        <img src="{{ asset('assets') }}/img/welcome/welcome.jpg" class="card-img-top" alt="...">
+                                        <img src="{{ asset('auth') }}/images/activity/welcome.png" class="card-img-top" alt="...">
                                         <div class="card-body">
-                                            <a target="_blank" href="{{ route('tkwelcome.index') }}" class="btn" style="background-color: #6FAC45; color: white">Welcome Mood</a>
+                                            <a target="_blank" href="{{ route('tkwelcome.index') }}" class="btn" style="background-color: #E8B5A5; color: white">Welcome Mood</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="card">
-                                        <img src="{{ asset('assets') }}/img/welcome/welcome.jpg" class="card-img-top" alt="...">
+                                        <img src="{{ asset('auth') }}/images/activity/morning.png" class="card-img-top" alt="...">
                                         <div class="card-body">
-                                            <a target="_blank" href="{{ route('tkmorning.index') }}" class="btn" style="background-color: #006FC0; color: white">Morning Booster</a>
+                                            <a target="_blank" href="{{ route('tkmorning.index') }}" class="btn" style="background-color: #FFF27F; color: white">Morning Booster</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="card">
-                                        <img src="{{ asset('assets') }}/img/welcome/welcome.jpg" class="card-img-top" alt="...">
+                                        <img src="{{ asset('auth') }}/images/activity/breakfast.png" class="card-img-top" alt="...">
                                         <div class="card-body">
-                                            <a target="_blank" href="{{ route('tkbreakfast.index') }}" class="btn" style="background-color: #C55B11; color: white">Breakfast</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row text-center">
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <img src="{{ asset('assets') }}/img/welcome/welcome.jpg" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <a target="_blank" href="{{ route('tkislamic.index') }}" class="btn" style="background-color: #FFBD06; color: white">Islamic Base Learning</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <img src="{{ asset('assets') }}/img/welcome/welcome.jpg" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <a target="_blank" href="{{ route('tkpreschool.index') }}" class="btn" style="background-color: #515151; color: white">Pre School</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <img src="{{ asset('assets') }}/img/welcome/welcome.jpg" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <a target="_blank" href="{{ route('tktematik.index') }}" class="btn" style="background-color: #833B0B; color: white">Tematik</a>
+                                            <a target="_blank" href="{{ route('tkbreakfast.index') }}" class="btn" style="background-color: #EEC997; color: white">Breakfast</a>
                                         </div>
                                     </div>
                                 </div>
@@ -82,17 +56,43 @@
                             <div class="row text-center">
                                 <div class="col-md-4">
                                     <div class="card">
-                                        <img src="{{ asset('assets') }}/img/welcome/welcome.jpg" class="card-img-top" alt="...">
+                                        <img src="{{ asset('auth') }}/images/activity/islamic.png" class="card-img-top" alt="...">
                                         <div class="card-body">
-                                            <a target="_blank" href="{{ route('tkpooppee.index') }}" class="btn" style="background-color: #528236; color: white">Poop & Pee</a>
+                                            <a target="_blank" href="{{ route('tkislamic.index') }}" class="btn" style="background-color: #364F35; color: white">Islamic Base Learning</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="card">
-                                        <img src="{{ asset('assets') }}/img/welcome/welcome.jpg" class="card-img-top" alt="...">
+                                        <img src="{{ asset('auth') }}/images/activity/preschool.png" class="card-img-top" alt="...">
                                         <div class="card-body">
-                                            <a target="_blank" href="{{ route('tkrecalling.index') }}" class="btn" style="background-color: #BE9000; color: white">Re Calling</a>
+                                            <a target="_blank" href="{{ route('tkpreschool.index') }}" class="btn" style="background-color: #627FAB; color: white">Pre School</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img src="{{ asset('auth') }}/images/activity/tematik.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <a target="_blank" href="{{ route('tktematik.index') }}" class="btn" style="background-color: #C4ABD9; color: white">Tematik</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row text-center">
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img src="{{ asset('auth') }}/images/activity/pooppee.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <a target="_blank" href="{{ route('tkpooppee.index') }}" class="btn" style="background-color: #7D776E; color: white">Poop & Pee</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img src="{{ asset('auth') }}/images/activity/recalling.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <a target="_blank" href="{{ route('tkrecalling.index') }}" class="btn" style="background-color: #947252; color: white">Re Calling</a>
                                         </div>
                                     </div>
                                 </div>

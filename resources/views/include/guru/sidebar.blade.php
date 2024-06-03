@@ -57,7 +57,7 @@
 
                 <li class="nav-small-cap">
                     <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-                    <span class="hide-menu">GARDENCHOOL</span>
+                    <span class="hide-menu">KELOLA</span>
                 </li>
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="{{ route('video.index') }}" aria-expanded="false">

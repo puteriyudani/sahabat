@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Menu;
 use Illuminate\Http\Request;
 
 class MenuController extends Controller
@@ -11,7 +12,8 @@ class MenuController extends Controller
      */
     public function index()
     {
-        return view('guru.kelola.menu.index');
+        $menus = Menu::paginate(5);
+        return view('guru.kelola.menu.index', compact('menus'));
     }
 
     /**
@@ -27,7 +29,18 @@ class MenuController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'menu' => 'required',
+            'karbohidrat' => 'required',
+            'protein' => 'required',
+            'lemak' => 'required',
+            'serat' => 'required',
+            'vitmineral' => 'required',
+        ]);
+
+        Menu::create($request->all());
+
+        return redirect()->route('menu.index')->with('success', 'Menu created successfully.');
     }
 
     /**
@@ -41,24 +54,37 @@ class MenuController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Menu $menu)
     {
-        //
+        return view('guru.kelola.menu.edit', compact('menu'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Menu $menu)
     {
-        //
+        $request->validate([
+            'menu' => 'required',
+            'karbohidrat' => 'required',
+            'protein' => 'required',
+            'lemak' => 'required',
+            'serat' => 'required',
+            'vitmineral' => 'required',
+        ]);
+
+        $menu->update($request->all());
+
+        return redirect()->route('menu.index')->with('success','Menu updated successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Menu $menu)
     {
-        //
+        $menu->delete();
+
+        return back()->with('success','Menu deleted successfully');
     }
 }

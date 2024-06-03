@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Video;
 use Illuminate\Http\Request;
 
 class VideosController extends Controller
@@ -11,7 +12,8 @@ class VideosController extends Controller
      */
     public function index()
     {
-        return view('guru.kelola.video.index');
+        $videos = Video::paginate(5);
+        return view('guru.kelola.video.index', compact('videos'));
     }
 
     /**
@@ -27,7 +29,14 @@ class VideosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'tanggal' => 'required',
+            'video' => 'required',
+        ]);
+
+        Video::create($request->all());
+
+        return redirect()->route('video.index')->with('success', 'Video created successfully.');
     }
 
     /**
@@ -41,24 +50,33 @@ class VideosController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Video $video)
     {
-        //
+        return view('guru.kelola.video.edit', compact('video'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Video $video)
     {
-        //
+        $request->validate([
+            'tanggal' => 'required',
+            'video' => 'required',
+        ]);
+
+        $video->update($request->all());
+
+        return redirect()->route('video.index')->with('success','Video updated successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Video $video)
     {
-        //
+        $video->delete();
+
+        return back()->with('success','Video deleted successfully');
     }
 }
