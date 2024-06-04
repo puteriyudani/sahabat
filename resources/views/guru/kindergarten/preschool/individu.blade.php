@@ -24,7 +24,7 @@
         <div class="body-wrapper">
             @include('include.header-admin')
             <div class="container-fluid">
-                <a href="#"><button type="button" class="btn btn-primary m-1 mb-3">Tambah</button></a>
+                <a href="{{ route('tkpreschool.create') }}"><button type="button" class="btn btn-primary m-1 mb-3">Tambah</button></a>
 
                 <div class="table-responsive">
                     <table class="table table-striped">

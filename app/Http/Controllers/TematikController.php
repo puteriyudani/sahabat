@@ -26,7 +26,7 @@ class TematikController extends Controller
      */
     public function create()
     {
-        //
+        return view('guru.activity.tematik.create');
     }
 
     /**

@@ -26,7 +26,7 @@ class RecallingController extends Controller
      */
     public function create()
     {
-        //
+        return view('guru.activity.recalling.create');
     }
 
     /**

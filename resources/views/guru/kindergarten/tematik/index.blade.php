@@ -1,7 +1,7 @@
 @extends('layouts.auth')
 
 @section('judul')
-    <title>Guru - Poop & Pee</title>
+    <title>Guru - Tematik</title>
     <style>
         .btn.btn-primary.disabled,
         .btn.btn-warning.disabled,

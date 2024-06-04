@@ -109,22 +109,27 @@ Route::middleware(['auth', 'user-access:guru'])->group(function () {
     // islamic base learning
     Route::get('/teacher-kindergarten/islamic-base-learning', [IslamicController::class, 'index'])->name('tkislamic.index');
     Route::get('/teacher-kindergarten/islamic-base-learning/individu', [IslamicController::class, 'individu'])->name('tkislamic.individu');
+    Route::get('/teacher-kindergarten/islamic-base-learning/create', [IslamicController::class, 'create'])->name('tkislamic.create');
 
     // pre school
     Route::get('/teacher-kindergarten/preschool', [PreschoolController::class, 'index'])->name('tkpreschool.index');
     Route::get('/teacher-kindergarten/preschool/individu', [PreschoolController::class, 'individu'])->name('tkpreschool.individu');
+    Route::get('/teacher-kindergarten/preschool/create', [PreschoolController::class, 'create'])->name('tkpreschool.create');
 
     // tematik
     Route::get('/teacher-kindergarten/tematik', [TematikController::class, 'index'])->name('tktematik.index');
     Route::get('/teacher-kindergarten/tematik/individu', [TematikController::class, 'individu'])->name('tktematik.individu');
+    Route::get('/teacher-kindergarten/tematik/create', [TematikController::class, 'create'])->name('tktematik.create');
 
     // poop & pee
     Route::get('/teacher-kindergarten/pooppee', [PoopPeeController::class, 'index'])->name('tkpooppee.index');
     Route::get('/teacher-kindergarten/pooppee/individu', [PoopPeeController::class, 'individu'])->name('tkpooppee.individu');
+    Route::get('/teacher-kindergarten/pooppee/create', [PoopPeeController::class, 'create'])->name('tkpooppee.create');
 
     // re calling
     Route::get('/teacher-kindergarten/recalling', [RecallingController::class, 'index'])->name('tkrecalling.index');
     Route::get('/teacher-kindergarten/recalling/individu', [RecallingController::class, 'individu'])->name('tkrecalling.individu');
+    Route::get('/teacher-kindergarten/recalling/create', [RecallingController::class, 'create'])->name('tkrecalling.create');
 
     // PLAYGROUP
     Route::get('/teacher-playgroup', [GuruController::class, 'playgroup'])->name('teacher.playgroup');

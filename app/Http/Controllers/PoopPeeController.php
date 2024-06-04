@@ -26,7 +26,7 @@ class PoopPeeController extends Controller
      */
     public function create()
     {
-        //
+        return view('guru.activity.pooppee.create');
     }
 
     /**

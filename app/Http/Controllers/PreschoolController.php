@@ -26,7 +26,7 @@ class PreschoolController extends Controller
      */
     public function create()
     {
-        //
+        return view('guru.activity.preschool.create');
     }
 
     /**

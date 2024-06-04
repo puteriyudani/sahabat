@@ -26,7 +26,7 @@ class IslamicController extends Controller
      */
     public function create()
     {
-        //
+        return view('guru.activity.islamic.create');
     }
 
     /**
