@@ -10,6 +10,40 @@
             pointer-events: none;
             opacity: 1;
         }
+
+        .progress-bar {
+            width: 100%;
+        }
+
+        /* Pop-up styles */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup-content {
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .popup-content img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .popup-close {
+            cursor: pointer;
+        }
     </style>
 @endsection
 
@@ -66,16 +100,20 @@
                                             </div>
                                         </div>
 
-                                        <fieldset disabled>
-                                            <label for="indikator" class="form-label">Indikator %</label>
-                                            <select id="indikator" class="form-select">
-                                                <option value="100%">100%</option>
-                                                <option value="80%">80%</option>
-                                                <option value="60%">60%</option>
-                                                <option value="40%">40%</option>
-                                                <option value="20%">20%</option>
-                                            </select>
-                                        </fieldset>
+                                        <div class="mb-3">
+                                            <label for="progressBar" class="form-label" id="progressLabel">Progress: 0%</label>
+                                            <input type="range" class="progress-bar" id="progressBar" value="0"
+                                                min="0" max="100">
+                                        </div>
+
+                                        <div class="popup-overlay" id="popupOverlay">
+                                            <div class="popup-content">
+                                                <img src="{{ asset('auth') }}/gif/happy.gif" alt="Happy GIF" id="happyGif" class="popup-gif" style="display: none;">
+                                                <img src="{{ asset('auth') }}/gif/sad.gif" alt="Sad GIF" id="sadGif" class="popup-gif" style="display: none;">
+                                                <button class="popup-close btn btn-danger" id="popupClose">Close</button>
+                                            </div>
+                                        </div>
+
                                         <div class="mb-3">
                                             <label for="notifikasi" class="form-label">Notifikasi</label>
                                             <textarea class="form-control" id="notifikasi" name="notifikasi" rows="5"></textarea>
@@ -105,35 +143,29 @@
             const hiddenSelect = document.getElementById('keterangan');
             const customSelectContainer = document.getElementById('customSelectContainer');
             const images = customSelectContainer.querySelectorAll('img');
-            const indikatorElement = document.getElementById('indikator');
+            const progressBar = document.getElementById('progressBar');
+            const progressLabel = document.getElementById('progressLabel');
+            const popupOverlay = document.getElementById('popupOverlay');
+            const popupClose = document.getElementById('popupClose');
+            const happyGif = document.getElementById('happyGif');
+            const sadGif = document.getElementById('sadGif');
 
-            const updateIndikator = () => {
-                const keteranganValue = hiddenSelect.value;
-                let indikator = '';
+            const checkConditions = () => {
+                happyGif.style.display = 'none';
+                sadGif.style.display = 'none';
 
-                switch (keteranganValue) {
-                    case 'Happy':
-                        indikator = '100%';
-                        break;
-                    case 'Almost Happy':
-                        indikator = '80%';
-                        break;
-                    case 'Neutral':
-                        indikator = '60%';
-                        break;
-                    case 'Almost Sad':
-                        indikator = '40%';
-                        break;
-                    case 'Sad':
-                        indikator = '20%';
-                        break;
-                }
-
-                for (let i = 0; i < indikatorElement.options.length; i++) {
-                    if (indikatorElement.options[i].text === indikator) {
-                        indikatorElement.selectedIndex = i;
-                        break;
+                if (progressBar.value === '100') {
+                    if (hiddenSelect.value === 'Happy') {
+                        happyGif.style.display = 'block';
+                        popupOverlay.style.display = 'flex';
+                    } else if (hiddenSelect.value === 'Sad') {
+                        sadGif.style.display = 'block';
+                        popupOverlay.style.display = 'flex';
+                    } else {
+                        popupOverlay.style.display = 'none';
                     }
+                } else {
+                    popupOverlay.style.display = 'none';
                 }
             };
 
@@ -142,12 +174,22 @@
                     hiddenSelect.value = this.getAttribute('data-value');
                     images.forEach(img => img.style.border = 'none');
                     this.style.border = '2px solid blue';
-                    updateIndikator();
+                    checkConditions();
                 });
             });
 
-            // Initial trigger to set the indicator based on the default select value
-            updateIndikator();
+            progressBar.addEventListener('input', () => {
+                progressLabel.textContent = `Progress: ${progressBar.value}%`;
+                checkConditions();
+            });
+
+            popupClose.addEventListener('click', (event) => {
+                popupOverlay.style.display = 'none';
+                event.preventDefault();
+            });
+
+            // Initial trigger to set the indicator based on the default select value and progress bar value
+            checkConditions();
         });
     </script>
 @endsection
