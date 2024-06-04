@@ -1,7 +1,7 @@
 @extends('layouts.auth')
 
 @section('judul')
-    <title>Guru - Edit Poop & Pee</title>
+    <title>Guru - Edit Pre School</title>
     <style>
         .btn.btn-primary.disabled,
         .btn.btn-warning.disabled,
@@ -27,7 +27,7 @@
                 <div class="container-fluid">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title fw-semibold mb-4">Edit Poop & Pee</h5>
+                            <h5 class="card-title fw-semibold mb-4">Edit Pre School</h5>
                             <div class="card">
                                 <div class="card-body">
                                     <form>
@@ -73,56 +73,6 @@
                 const today = new Date().toISOString().substr(0, 10);
                 dateInput.value = today;
             }
-        });
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const hiddenSelect = document.getElementById('keterangan');
-            const customSelectContainer = document.getElementById('customSelectContainer');
-            const images = customSelectContainer.querySelectorAll('img');
-            const indikatorElement = document.getElementById('indikator');
-
-            const updateIndikator = () => {
-                const keteranganValue = hiddenSelect.value;
-                let indikator = '';
-
-                switch (keteranganValue) {
-                    case 'Happy':
-                        indikator = '100%';
-                        break;
-                    case 'Almost Happy':
-                        indikator = '80%';
-                        break;
-                    case 'Neutral':
-                        indikator = '60%';
-                        break;
-                    case 'Almost Sad':
-                        indikator = '40%';
-                        break;
-                    case 'Sad':
-                        indikator = '20%';
-                        break;
-                }
-
-                for (let i = 0; i < indikatorElement.options.length; i++) {
-                    if (indikatorElement.options[i].text === indikator) {
-                        indikatorElement.selectedIndex = i;
-                        break;
-                    }
-                }
-            };
-
-            images.forEach(image => {
-                image.addEventListener('click', function() {
-                    hiddenSelect.value = this.getAttribute('data-value');
-                    images.forEach(img => img.style.border = 'none');
-                    this.style.border = '2px solid blue';
-                    updateIndikator();
-                });
-            });
-
-            // Initial trigger to set the indicator based on the default select value
-            updateIndikator();
         });
     </script>
 @endsection
