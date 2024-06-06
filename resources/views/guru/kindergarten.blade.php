@@ -32,7 +32,7 @@
                                     <div class="card">
                                         <img src="{{ asset('auth') }}/images/activity/welcome.png" class="card-img-top" alt="...">
                                         <div class="card-body">
-                                            <a target="_blank" href="{{ route('tkwelcome.index') }}" class="btn" style="background-color: #E8B5A5; color: white">Welcome Mood</a>
+                                            <a target="_blank" href="{{ route('tkwelcome.siswa') }}" class="btn" style="background-color: #E8B5A5; color: white">Welcome Mood</a>
                                         </div>
                                     </div>
                                 </div>

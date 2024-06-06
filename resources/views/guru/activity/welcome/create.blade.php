@@ -72,14 +72,14 @@
                                         <fieldset disabled>
                                             <div class="mb-3">
                                                 <label for="siswa_id" class="form-label">Nama Siswa</label>
-                                                <select id="siswa_id" class="form-select">
-                                                    <option>Fatimah</option>
+                                                <select id="siswa_id" name="siswa_id" class="form-select">
+                                                    <option value="{{ $siswa->id }}">{{ $siswa->nama }}</option>
                                                 </select>
                                             </div>
                                         </fieldset>
                                         <div class="mb-3">
                                             <label for="keterangan" class="form-label">Keterangan</label>
-                                            <select id="keterangan" class="form-select hidden-select">
+                                            <select id="keterangan" name="keterangan" class="form-select hidden-select">
                                                 <option value="Happy">Happy</option>
                                                 <option value="Almost Happy">Almost Happy</option>
                                                 <option value="Neutral">Neutral</option>
@@ -101,8 +101,8 @@
                                         </div>
 
                                         <div class="mb-3">
-                                            <label for="progressBar" class="form-label" id="progressLabel">Progress: 0%</label>
-                                            <input type="range" class="progress-bar" id="progressBar" value="0"
+                                            <label for="indikator" class="form-label" id="progressLabel">Indikator: 0%</label>
+                                            <input type="range" class="progress-bar" id="indikator" name="indikator" value="0"
                                                 min="0" max="100">
                                         </div>
 

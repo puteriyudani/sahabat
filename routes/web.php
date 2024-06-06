@@ -9,6 +9,7 @@ use App\Http\Controllers\GuruController;
 use App\Http\Controllers\HadistController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IslamicController;
+use App\Http\Controllers\KindergartenController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\MorningController;
 use App\Http\Controllers\OrtuController;
@@ -87,6 +88,7 @@ Route::middleware(['auth', 'user-access:guru'])->group(function () {
 
     // KINDERGARTEN
     Route::get('/teacher-kindergarten', [GuruController::class, 'kindergarten'])->name('teacher.kindergarten');
+    Route::get('/teacher-kindergarten/welcome-mood', [KindergartenController::class, 'welcome'])->name('tkwelcome.siswa');
 
     // kelola menu
     Route::resource('menu', MenuController::class);
@@ -103,9 +105,8 @@ Route::middleware(['auth', 'user-access:guru'])->group(function () {
     Route::resource('quran', QuranController::class);
 
     // welcome mood
-    Route::get('/teacher-kindergarten/welcome-mood', [WelcomeController::class, 'index'])->name('tkwelcome.index');
-    Route::get('/teacher-kindergarten/welcome-mood/individu', [WelcomeController::class, 'individu'])->name('tkwelcome.individu');
-    Route::get('/teacher-kindergarten/welcome-mood/create', [WelcomeController::class, 'create'])->name('tkwelcome.create');
+    Route::get('/teacher-kindergarten/welcome-mood/index/{id}', [WelcomeController::class, 'kindergarten'])->name('tkwelcome.index');
+    Route::resource('welcome-mood', WelcomeController::class);
 
     // morning booster
     Route::get('/teacher-kindergarten/morning-booster', [MorningController::class, 'index'])->name('tkmorning.index');
