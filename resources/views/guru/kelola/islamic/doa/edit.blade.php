@@ -1,7 +1,7 @@
 @extends('layouts.auth')
 
 @section('judul')
-    <title>Guru - Edit Video Youtube</title>
+    <title>Guru - Edit Doa</title>
     <style>
         .btn.btn-primary.disabled,
         .btn.btn-warning.disabled,
@@ -37,22 +37,16 @@
                     @endif
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title fw-semibold mb-4">Edit Video Youtube</h5>
+                            <h5 class="card-title fw-semibold mb-4">Edit Doa</h5>
                             <div class="card">
                                 <div class="card-body">
-                                    <form action="{{ route('video.update', $video->id) }}" method="POST"
-                                        enctype="multipart/form-data">
+                                    <form action="{{ route('doa.update', $doa->id) }}" method="POST" enctype="multipart/form-data">
                                         @csrf
                                         @method('PUT')
 
                                         <div class="mb-3">
-                                            <label for="tanggal" class="form-label">Tanggal</label>
-                                            <input type="date" class="form-control" id="tanggal" name="tanggal"
-                                                value="{{ old('tanggal', $video->tanggal) }}">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="video" class="form-label">Link Video Youtube</label>
-                                            <textarea class="form-control" id="video" name="video" rows="5">{{ old('video', $video->video) }}</textarea>
+                                            <label for="doa" class="form-label">Doa</label>
+                                            <input type="text" class="form-control" id="doa" name="doa" value="{{ $doa->doa }}">
                                         </div>
                                         <button type="submit" class="btn btn-primary">Submit</button>
                                     </form>
@@ -64,14 +58,4 @@
             </div>
         </div>
     </div>
-    <script>
-        // JavaScript to set the date input value to today's date if it's not manually changed
-        document.addEventListener('DOMContentLoaded', (event) => {
-            const dateInput = document.getElementById('tanggal');
-            if (dateInput && !dateInput.value) {
-                const today = new Date().toISOString().substr(0, 10);
-                dateInput.value = today;
-            }
-        });
-    </script>
 @endsection

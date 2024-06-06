@@ -4,7 +4,9 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BreakfastController;
 use App\Http\Controllers\CatatanOrangtuaController;
+use App\Http\Controllers\DoaController;
 use App\Http\Controllers\GuruController;
+use App\Http\Controllers\HadistController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IslamicController;
 use App\Http\Controllers\MenuController;
@@ -14,6 +16,7 @@ use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\PdfController;
 use App\Http\Controllers\PoopPeeController;
 use App\Http\Controllers\PreschoolController;
+use App\Http\Controllers\QuranController;
 use App\Http\Controllers\RecallingController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\TahunController;
@@ -90,6 +93,14 @@ Route::middleware(['auth', 'user-access:guru'])->group(function () {
 
     // kelola video
     Route::resource('video', VideosController::class);
+
+    // kelola islamic
+    Route::get('/islamic', function () {
+        return view('guru.kelola.islamic.index');
+    })->name('tkislamic.kelola');
+    Route::resource('doa', DoaController::class);
+    Route::resource('hadist', HadistController::class);
+    Route::resource('quran', QuranController::class);
 
     // welcome mood
     Route::get('/teacher-kindergarten/welcome-mood', [WelcomeController::class, 'index'])->name('tkwelcome.index');

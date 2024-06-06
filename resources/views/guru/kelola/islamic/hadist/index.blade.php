@@ -1,7 +1,7 @@
 @extends('layouts.auth')
 
 @section('judul')
-    <title>Guru - Today Videos</title>
+    <title>Guru - Hadist</title>
     <style>
         .btn.btn-primary.disabled,
         .btn.btn-warning.disabled,
@@ -24,7 +24,7 @@
         <div class="body-wrapper">
             @include('include.header-admin')
             <div class="container-fluid">
-                <a href="{{ route('video.create') }}"><button type="button"
+                <a href="{{ route('hadist.create') }}"><button type="button"
                         class="btn btn-primary m-1 mb-3">Tambah</button></a>
 
                 <div class="table-responsive">
@@ -32,24 +32,19 @@
                         <thead>
                             <tr>
                                 <th scope="col">No</th>
-                                <th scope="col">Tanggal</th>
-                                <th scope="col">Videos</th>
+                                <th scope="col">Hadist</th>
                                 <th scope="col">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($videos as $video)
+                            @foreach ($hadists as $hadist)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $video->tanggal }}</td>
-                                    <td><iframe width="280"
-                                            src="{{ $video->video }}"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></td>
+                                    <td>{{ $hadist->hadist }}</td>
                                     <td>
-                                        <form action="{{ route('video.destroy', $video->id) }}" method="POST">
-                                            <a href="{{ route('video.edit', $video->id) }}" style="text-decoration: none; color: #28a745"><i
+                                        <form action="{{ route('hadist.destroy', $hadist->id) }}" method="POST">
+                                            <a href="{{ route('hadist.edit', $hadist->id) }}"
+                                                style="text-decoration: none; color: #28a745"><i
                                                     class="ti ti-pencil nav-small-cap-icon fs-4"></i></a>
 
                                             @csrf
@@ -66,7 +61,7 @@
                     </table>
                 </div>
 
-                {{ $videos->links() }}
+                {{ $hadists->links() }}
             </div>
         </div>
     </div>

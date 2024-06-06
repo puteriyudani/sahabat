@@ -75,6 +75,14 @@
                         <span class="hide-menu">Breakfast Menu</span>
                     </a>
                 </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{{ route('tkislamic.kelola') }}" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-moon"></i>
+                        </span>
+                        <span class="hide-menu">Islamic</span>
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- End Sidebar navigation -->

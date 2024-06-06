@@ -1,7 +1,7 @@
 @extends('layouts.auth')
 
 @section('judul')
-    <title>Guru - Create Breakfast Menu</title>
+    <title>Guru - Edit Breakfast Menu</title>
     <style>
         .btn.btn-primary.disabled,
         .btn.btn-warning.disabled,
@@ -37,7 +37,7 @@
                     @endif
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title fw-semibold mb-4">Create Breakfast Menu</h5>
+                            <h5 class="card-title fw-semibold mb-4">Edit Breakfast Menu</h5>
                             <div class="card">
                                 <div class="card-body">
                                     <form action="{{ route('menu.update', $menu->id) }}" method="POST" enctype="multipart/form-data">
