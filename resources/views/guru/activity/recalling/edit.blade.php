@@ -81,38 +81,26 @@
                                             <label for="keterangan" class="form-label">Keterangan</label>
                                             <select id="keterangan" class="form-select hidden-select">
                                                 <option value="Happy">Happy</option>
-                                                <option value="Almost Happy">Almost Happy</option>
-                                                <option value="Neutral">Neutral</option>
-                                                <option value="Almost Sad">Almost Sad</option>
                                                 <option value="Sad">Sad</option>
                                             </select>
                                             <div class="custom-select-container" id="customSelectContainer">
                                                 <img src="{{ asset('auth') }}/images/face/happy.png" alt="Happy"
                                                     data-value="Happy">
-                                                <img src="{{ asset('auth') }}/images/face/almost-happy.png"
-                                                    alt="Almost Happy" data-value="Almost Happy">
-                                                <img src="{{ asset('auth') }}/images/face/neutral.png" alt="Neutral"
-                                                    data-value="Neutral">
-                                                <img src="{{ asset('auth') }}/images/face/almost-sad.png" alt="Almost Sad"
-                                                    data-value="Almost Sad">
                                                 <img src="{{ asset('auth') }}/images/face/sad.png" alt="Sad"
                                                     data-value="Sad">
                                             </div>
                                         </div>
 
                                         <div class="mb-3">
-                                            <label for="progressBar" class="form-label" id="progressLabel">Progress:
-                                                0%</label>
+                                            <label for="progressBar" class="form-label" id="progressLabel">Progress: 0%</label>
                                             <input type="range" class="progress-bar" id="progressBar" value="0"
                                                 min="0" max="100">
                                         </div>
 
                                         <div class="popup-overlay" id="popupOverlay">
                                             <div class="popup-content">
-                                                <img src="{{ asset('auth') }}/gif/happy.gif" alt="Happy GIF" id="happyGif"
-                                                    class="popup-gif" style="display: none;">
-                                                <img src="{{ asset('auth') }}/gif/sad.gif" alt="Sad GIF" id="sadGif"
-                                                    class="popup-gif" style="display: none;">
+                                                <img src="{{ asset('auth') }}/gif/happy.gif" alt="Happy GIF" id="happyGif" class="popup-gif" style="display: none;">
+                                                <img src="{{ asset('auth') }}/gif/sad.gif" alt="Sad GIF" id="sadGif" class="popup-gif" style="display: none;">
                                                 <button class="popup-close btn btn-danger" id="popupClose">Close</button>
                                             </div>
                                         </div>
