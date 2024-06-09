@@ -46,7 +46,7 @@
                                         <input type="password" name="confirmpassword" id="confirmpassword" class="form-control"
                                             placeholder="***********">
                                     </div>
-                                    
+
                                     <div class="form-group mb-4">
                                         <select class="form-select" name="level" id="level"
                                             aria-label="Floating label select example">
