@@ -11,7 +11,7 @@ class AuthController extends Controller
 {
     public function register()
     {
-        return view('register');
+        return view('auth.register');
     }
 
     public function registerPost(Request $request)
@@ -37,7 +37,7 @@ class AuthController extends Controller
 
     public function login()
     {
-        return view('login');
+        return view('auth.login');
     }
 
     public function loginPost(Request $request)
@@ -52,8 +52,8 @@ class AuthController extends Controller
                 return redirect()->route('admin');
             } else if(Auth::user()->level == 'guru') {
                 return redirect()->route('teacher.index');
-            } else if(Auth::user()->level == 'ortu') {
-                return redirect()->route('ortu');
+            } else if(Auth::user()->level == 'keuangan') {
+                return redirect()->route('keuangan');
             } else {
                 return redirect()->route('register');
             }

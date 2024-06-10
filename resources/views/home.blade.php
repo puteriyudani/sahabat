@@ -1,251 +1,621 @@
-@extends('layouts.layout')
+@extends('layout.layout')
 
-@section('hero')
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex flex-column justify-content-center">
-        <div id="carousel" class="carousel slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true"
-                    aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active item1">
-                    <div class="carousel-caption d-md-block">
-                        <div class="container" data-aos="zoom-in" data-aos-delay="100">
-                            <p>d'happiest <span class="typed" data-typed-items="Islamic pre-school"></span></p>
-                            <div class="social-links">
-                                <a href="https://wa.me/6282268081212" class="twitter" target="_blank"
-                                    style="color: #25D366"><i class="bx bxl-whatsapp"></i></a>
-                                <a href="https://www.facebook.com/gardenschool.gardenschool" class="facebook"
-                                    target="_blank" style="color: #4267B2"><i class="bx bxl-facebook"></i></a>
-                                <a href="https://www.instagram.com/gardenschool_official/" class="instagram" target="_blank"
-                                    style="color: #C13584"><i class="bx bxl-instagram"></i></a>
-                                <a href="https://www.tiktok.com/@gardenschool2" class="instagram" target="_blank"
-                                    style="color: #000000"><i class="bx bxl-tiktok"></i></a>
-                                <a href="https://www.youtube.com/@gardenschool2246" class="instagram" target="_blank"
-                                    style="color: #FF0000"><i class="bx bxl-youtube"></i></a>
-                            </div>
-                            <a href="https://wa.me/6282268081212" class="btn btn-info" role="button" target="_blank">Join
-                                us</a>
-                        </div>
+@section('header')
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-3 col-lg-2">
+                    <div class="header__logo">
+                        <a href="/"><img src="{{ asset('assets') }}/img/logo.png" alt=""></a>
                     </div>
                 </div>
-                <div class="carousel-item item2">
+                <div class="col-xl-6 col-lg-7">
+                    <nav class="header__menu">
+                        <ul>
+                            <li class="active"><a href="/">Home</a></li>
+                            <li><a href="#">Store</a>
+                                <ul class="dropdown">
+                                    <li><a href="/product-details">Product Details</a></li>
+                                    <li><a href="#">Be Leaf</a></li>
+                                    <li><a href="#">Preloved</a></li>
+                                    <li><a href="#">General</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Komunitas</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
                 </div>
-                <div class="carousel-item item3">
-                </div>
-                <div class="carousel-item item4">
+                <div class="col-lg-3">
+                    <div class="header__right">
+                        <div class="header__right__auth">
+                            <a href="{{ route('login') }}" target="_blank">Login</a>
+                            <a href="{{ route('register') }}" target="_blank">Register</a>
+                        </div>
+                        <ul class="header__right__widget">
+                            <li><span class="icon_search search-switch"></span></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            <div class="canvas__open">
+                <i class="fa fa-bars"></i>
+            </div>
         </div>
-
-        <section id="tombol" class="d-flex flex-column justify-content-center">
-            <div class="row tombol">
-                <div class="col">
-                    <a href="/#about">
-                        <img src="{{ asset('assets') }}/img/buttonprofile.jpg" alt="...">
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="#" onclick="showPopup()">
-                        <img src="{{ asset('assets') }}/img/buttonprogram.jpg" alt="...">
-                    </a>
-                </div>
-                <div class="col hugsme">
-                    <a href="#" onclick="showPopup()">
-                        <img src="{{ asset('assets') }}/img/buttonhugs.png" alt="...">
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="#" onclick="showPopup()">
-                        <img src="{{ asset('assets') }}/img/buttonsupport.jpg" alt="...">
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="#" onclick="showPopup()">
-                        <img src="{{ asset('assets') }}/img/buttonshop.jpg" alt="...">
-                    </a>
-                </div>
-            </div>
-        </section>
-    </section><!-- End Hero -->
+    </header>
+    <!-- Header Section End -->
 @endsection
 
 @section('main')
-    <main id="main">
-
-        <!-- ======= About Section ======= -->
-        <section id="about" class="about">
-            <div class="container" data-aos="fade-up">
-
-                <div class="section-title">
-                    <h2>About</h2>
-                </div>
-
-                <div class="row">
-
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-4">
-                        <img src="{{ asset('assets') }}/img/gs.png" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-lg-8 pt-4 pt-lg-0 content">
-                        <h3>Garden School</h3>
-                        <p class="fst-italic">
-                            Sahabat Daun Indonesia
-                        </p>
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <ul>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Tahun Berdiri:</strong> <span>7 Juli
-                                            2021</span></li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong>
-                                        <span>www.example.com</span>
-                                    </li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Alamat:</strong> <span>Gg. Cahaya, Desa
-                                            Senggoro, Kab.Bengkalis, Riau</span></li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-6">
-                                <ul>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong>
-                                        <span>gardenschoolindonesia@gmail.com</span>
-                                    </li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>No WhatsApp:</strong>
-                                        <span>+6282268081212</span>
-                                    </li>
-                                </ul>
-                            </div>
+    <!-- Categories Section Begin -->
+    <section class="categories">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 p-0">
+                    <div class="categories__item categories__large__item set-bg"
+                        data-setbg="{{ asset('assets') }}/img/categories/category-1.jpg">
+                        <div class="categories__text">
+                            <h1>Women’s fashion</h1>
+                            <p>Sitamet, consectetur adipiscing elit, sed do eiusmod tempor incidid-unt labore
+                                edolore magna aliquapendisse ultrices gravida.</p>
+                            <a href="#">Shop now</a>
                         </div>
                     </div>
                 </div>
-
-                <div class="row">
-                    <div class="col-lg-6 pt-4 pt-lg-0 content">
-                        <h5>Visi</h5>
-                        <p>
-                            Menjadi sekolah yang berkualitas dengan menggabungkan Budi Pekerti dan IPTEK sehingga
-                            menghasilkan manusia yang Berkarakter, Cerdas, Kreatif, Mandiri.
-                        </p>
-
-                        <h5>Tujuan</h5>
-                        <ul>
-                            <li>
-                                <i class="bi bi-chevron-right"></i>
-                                <p>Memberi Layanan Perkembangan Anak Usia Dini Kepada Masyarakat Bengkalis</p>
-                            </li>
-                            <li>
-                                <i class="bi bi-chevron-right"></i>
-                                <p>Mitra Tumbuh Kembang anak bersama Orang Tua</p>
-                            </li>
-                            <li>
-                                <i class="bi bi-chevron-right"></i>
-                                <p>Memberikan Layanan PAUD Holistik Integratif</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6 pt-4 pt-lg-0 content">
-                        <h5>Misi</h5>
-                        <ul>
-                            <li>
-                                <i class="bi bi-chevron-right"></i>
-                                <p>Menyiapkan generasi yang unggul di bidang Imtaq dan Iptek</p>
-                            </li>
-                            <li>
-                                <i class="bi bi-chevron-right"></i>
-                                <p>Membentuk karakter dengan pembiasaan 6 budi pekerti yang baik dan benar, jujur, dapat
-                                    dipercaya, hemat dan kerja keras</p>
-                            </li>
-                            <li>
-                                <i class="bi bi-chevron-right"></i>
-                                <p>Membentuk sumber daya manusia yang aktif, kreatif, inovatif, dan sportif</p>
-                            </li>
-                            <li>
-                                <i class="bi bi-chevron-right"></i>
-                                <p>Membangun Citra sekolah sebagai Mitra terpercaya di masyarakat</p>
-                            </li>
-                            <li>
-                                <i class="bi bi-chevron-right"></i>
-                                <p>Memberikan jaminan pelayanan yang prima dalam berbagai hal untuk mendukung proses belajar
-                                    dan bekerja yang harmonis dan selaras</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </section><!-- End About Section -->
-
-        <!-- ======= Testimonials Section ======= -->
-        {{-- <section id="services" class="testimonials section-bg">
-            <div class="container" data-aos="fade-up">
-
-                <div class="section-title">
-                    <h2>Montessory</h2>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-6 text-center">
-                        <h3><a href="{{ route('montessory.youtube') }}" target="_blank">Youtube</a></h3>
-                        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                            <div class="swiper-wrapper">
-
-                                @foreach ($youtubes as $youtube)
-                                    <div class="swiper-slide">
-                                        <div class="testimonial-item">
-                                            <iframe width="560" height="315" src="{{ $youtube->link }}"
-                                                title="YouTube video player" frameborder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                                allowfullscreen></iframe>
-                                            <br>
-                                            <h3>{{ $youtube->judul }}</h3>
-                                            <p>{{ $youtube->keterangan }}</p>
-                                        </div>
-                                    </div>
-                                @endforeach
-
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 p-0">
+                            <div class="categories__item set-bg"
+                                data-setbg="{{ asset('assets') }}/img/categories/category-2.jpg">
+                                <div class="categories__text">
+                                    <h4>Men’s fashion</h4>
+                                    <p>358 items</p>
+                                    <a href="#">Shop now</a>
+                                </div>
                             </div>
-                            <div class="swiper-pagination"></div>
                         </div>
-                    </div>
-
-                    <div class="col-lg-6 text-center">
-                        <h3><a href="{{ route('montessory.pdf') }}" target="_blank">PDF</a></h3>
-                        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                            <div class="swiper-wrapper">
-
-                                @foreach ($pdfs as $pdf)
-                                    <div class="swiper-slide">
-                                        <div class="testimonial-item">
-                                            <embed src="{{ asset('/storage/file/' . $pdf->file) }}"
-                                                type="application/pdf" width="500" height="300" />
-                                            <br>
-                                            <h3>{{ $pdf->judul }}</h3>
-                                            <p>{{ $pdf->keterangan }}</p>
-                                        </div>
-                                    </div>
-                                @endforeach
-
+                        <div class="col-lg-6 col-md-6 col-sm-6 p-0">
+                            <div class="categories__item set-bg"
+                                data-setbg="{{ asset('assets') }}/img/categories/category-3.jpg">
+                                <div class="categories__text">
+                                    <h4>Kid’s fashion</h4>
+                                    <p>273 items</p>
+                                    <a href="#">Shop now</a>
+                                </div>
                             </div>
-                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 p-0">
+                            <div class="categories__item set-bg"
+                                data-setbg="{{ asset('assets') }}/img/categories/category-4.jpg">
+                                <div class="categories__text">
+                                    <h4>Cosmetics</h4>
+                                    <p>159 items</p>
+                                    <a href="#">Shop now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 p-0">
+                            <div class="categories__item set-bg"
+                                data-setbg="{{ asset('assets') }}/img/categories/category-5.jpg">
+                                <div class="categories__text">
+                                    <h4>Accessories</h4>
+                                    <p>792 items</p>
+                                    <a href="#">Shop now</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section> --}}
-        <!-- End Testimonials Section -->
+        </div>
+    </section>
+    <!-- Categories Section End -->
 
-    </main><!-- End #main -->
+    <!-- Product Section Begin -->
+    <section class="product spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4">
+                    <div class="section-title">
+                        <h4>New product</h4>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-8">
+                    <ul class="filter__controls">
+                        <li class="active" data-filter="*">All</li>
+                        <li data-filter=".women">Women’s</li>
+                        <li data-filter=".men">Men’s</li>
+                        <li data-filter=".kid">Kid’s</li>
+                        <li data-filter=".accessories">Accessories</li>
+                        <li data-filter=".cosmetic">Cosmetics</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row property__gallery">
+                <div class="col-lg-3 col-md-4 col-sm-6 mix women">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg" data-setbg="{{ asset('assets') }}/img/product/product-1.jpg">
+                            <div class="label new">New</div>
+                            <ul class="product__hover">
+                                <li><a href="{{ asset('assets') }}/img/product/product-1.jpg" class="image-popup"><span
+                                            class="arrow_expand"></span></a></li>
+                                <li><a href="#"><span class="icon_heart_alt"></span></a></li>
+                                <li><a href="#"><span class="icon_bag_alt"></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#">Buttons tweed blazer</a></h6>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product__price">$ 59.0</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mix men">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg" data-setbg="{{ asset('assets') }}/img/product/product-2.jpg">
+                            <ul class="product__hover">
+                                <li><a href="{{ asset('assets') }}/img/product/product-2.jpg" class="image-popup"><span
+                                            class="arrow_expand"></span></a></li>
+                                <li><a href="#"><span class="icon_heart_alt"></span></a></li>
+                                <li><a href="#"><span class="icon_bag_alt"></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#">Flowy striped skirt</a></h6>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product__price">$ 49.0</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mix accessories">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg"
+                            data-setbg="{{ asset('assets') }}/img/product/product-3.jpg">
+                            <div class="label stockout">out of stock</div>
+                            <ul class="product__hover">
+                                <li><a href="{{ asset('assets') }}/img/product/product-3.jpg" class="image-popup"><span
+                                            class="arrow_expand"></span></a></li>
+                                <li><a href="#"><span class="icon_heart_alt"></span></a></li>
+                                <li><a href="#"><span class="icon_bag_alt"></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#">Cotton T-Shirt</a></h6>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product__price">$ 59.0</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mix cosmetic">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg"
+                            data-setbg="{{ asset('assets') }}/img/product/product-4.jpg">
+                            <ul class="product__hover">
+                                <li><a href="{{ asset('assets') }}/img/product/product-4.jpg" class="image-popup"><span
+                                            class="arrow_expand"></span></a></li>
+                                <li><a href="#"><span class="icon_heart_alt"></span></a></li>
+                                <li><a href="#"><span class="icon_bag_alt"></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#">Slim striped pocket shirt</a></h6>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product__price">$ 59.0</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mix kid">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg"
+                            data-setbg="{{ asset('assets') }}/img/product/product-5.jpg">
+                            <ul class="product__hover">
+                                <li><a href="{{ asset('assets') }}/img/product/product-5.jpg" class="image-popup"><span
+                                            class="arrow_expand"></span></a></li>
+                                <li><a href="#"><span class="icon_heart_alt"></span></a></li>
+                                <li><a href="#"><span class="icon_bag_alt"></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#">Fit micro corduroy shirt</a></h6>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product__price">$ 59.0</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mix women men kid accessories cosmetic">
+                    <div class="product__item sale">
+                        <div class="product__item__pic set-bg"
+                            data-setbg="{{ asset('assets') }}/img/product/product-6.jpg">
+                            <div class="label sale">Sale</div>
+                            <ul class="product__hover">
+                                <li><a href="{{ asset('assets') }}/img/product/product-6.jpg" class="image-popup"><span
+                                            class="arrow_expand"></span></a></li>
+                                <li><a href="#"><span class="icon_heart_alt"></span></a></li>
+                                <li><a href="#"><span class="icon_bag_alt"></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#">Tropical Kimono</a></h6>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product__price">$ 49.0 <span>$ 59.0</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mix women men kid accessories cosmetic">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg"
+                            data-setbg="{{ asset('assets') }}/img/product/product-7.jpg">
+                            <ul class="product__hover">
+                                <li><a href="{{ asset('assets') }}/img/product/product-7.jpg" class="image-popup"><span
+                                            class="arrow_expand"></span></a></li>
+                                <li><a href="#"><span class="icon_heart_alt"></span></a></li>
+                                <li><a href="#"><span class="icon_bag_alt"></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#">Contrasting sunglasses</a></h6>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product__price">$ 59.0</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mix women men kid accessories cosmetic">
+                    <div class="product__item sale">
+                        <div class="product__item__pic set-bg"
+                            data-setbg="{{ asset('assets') }}/img/product/product-8.jpg">
+                            <div class="label">Sale</div>
+                            <ul class="product__hover">
+                                <li><a href="{{ asset('assets') }}/img/product/product-8.jpg" class="image-popup"><span
+                                            class="arrow_expand"></span></a></li>
+                                <li><a href="#"><span class="icon_heart_alt"></span></a></li>
+                                <li><a href="#"><span class="icon_bag_alt"></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#">Water resistant backpack</a></h6>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="product__price">$ 49.0 <span>$ 59.0</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Product Section End -->
+
+    <!-- Banner Section Begin -->
+    <section class="banner set-bg" data-setbg="{{ asset('assets') }}/img/banner/banner-1.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-7 col-lg-8 m-auto">
+                    <div class="banner__slider owl-carousel">
+                        <div class="banner__item">
+                            <div class="banner__text">
+                                <span>The Chloe Collection</span>
+                                <h1>The Project Jacket</h1>
+                                <a href="#">Shop now</a>
+                            </div>
+                        </div>
+                        <div class="banner__item">
+                            <div class="banner__text">
+                                <span>The Chloe Collection</span>
+                                <h1>The Project Jacket</h1>
+                                <a href="#">Shop now</a>
+                            </div>
+                        </div>
+                        <div class="banner__item">
+                            <div class="banner__text">
+                                <span>The Chloe Collection</span>
+                                <h1>The Project Jacket</h1>
+                                <a href="#">Shop now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner Section End -->
+
+    <!-- Trend Section Begin -->
+    <section class="trend spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="trend__content">
+                        <div class="section-title">
+                            <h4>Hot Trend</h4>
+                        </div>
+                        <div class="trend__item">
+                            <div class="trend__item__pic">
+                                <img src="{{ asset('assets') }}/img/trend/ht-1.jpg" alt="">
+                            </div>
+                            <div class="trend__item__text">
+                                <h6>Chain bucket bag</h6>
+                                <div class="rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="product__price">$ 59.0</div>
+                            </div>
+                        </div>
+                        <div class="trend__item">
+                            <div class="trend__item__pic">
+                                <img src="{{ asset('assets') }}/img/trend/ht-2.jpg" alt="">
+                            </div>
+                            <div class="trend__item__text">
+                                <h6>Pendant earrings</h6>
+                                <div class="rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="product__price">$ 59.0</div>
+                            </div>
+                        </div>
+                        <div class="trend__item">
+                            <div class="trend__item__pic">
+                                <img src="{{ asset('assets') }}/img/trend/ht-3.jpg" alt="">
+                            </div>
+                            <div class="trend__item__text">
+                                <h6>Cotton T-Shirt</h6>
+                                <div class="rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="product__price">$ 59.0</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="trend__content">
+                        <div class="section-title">
+                            <h4>Best seller</h4>
+                        </div>
+                        <div class="trend__item">
+                            <div class="trend__item__pic">
+                                <img src="{{ asset('assets') }}/img/trend/bs-1.jpg" alt="">
+                            </div>
+                            <div class="trend__item__text">
+                                <h6>Cotton T-Shirt</h6>
+                                <div class="rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="product__price">$ 59.0</div>
+                            </div>
+                        </div>
+                        <div class="trend__item">
+                            <div class="trend__item__pic">
+                                <img src="{{ asset('assets') }}/img/trend/bs-2.jpg" alt="">
+                            </div>
+                            <div class="trend__item__text">
+                                <h6>Zip-pockets pebbled tote <br />briefcase</h6>
+                                <div class="rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="product__price">$ 59.0</div>
+                            </div>
+                        </div>
+                        <div class="trend__item">
+                            <div class="trend__item__pic">
+                                <img src="{{ asset('assets') }}/img/trend/bs-3.jpg" alt="">
+                            </div>
+                            <div class="trend__item__text">
+                                <h6>Round leather bag</h6>
+                                <div class="rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="product__price">$ 59.0</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="trend__content">
+                        <div class="section-title">
+                            <h4>Feature</h4>
+                        </div>
+                        <div class="trend__item">
+                            <div class="trend__item__pic">
+                                <img src="{{ asset('assets') }}/img/trend/f-1.jpg" alt="">
+                            </div>
+                            <div class="trend__item__text">
+                                <h6>Bow wrap skirt</h6>
+                                <div class="rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="product__price">$ 59.0</div>
+                            </div>
+                        </div>
+                        <div class="trend__item">
+                            <div class="trend__item__pic">
+                                <img src="{{ asset('assets') }}/img/trend/f-2.jpg" alt="">
+                            </div>
+                            <div class="trend__item__text">
+                                <h6>Metallic earrings</h6>
+                                <div class="rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="product__price">$ 59.0</div>
+                            </div>
+                        </div>
+                        <div class="trend__item">
+                            <div class="trend__item__pic">
+                                <img src="{{ asset('assets') }}/img/trend/f-3.jpg" alt="">
+                            </div>
+                            <div class="trend__item__text">
+                                <h6>Flap cross-body bag</h6>
+                                <div class="rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="product__price">$ 59.0</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Trend Section End -->
+
+    <!-- Discount Section Begin -->
+    <section class="discount">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 p-0">
+                    <div class="discount__pic">
+                        <img src="{{ asset('assets') }}/img/discount.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 p-0">
+                    <div class="discount__text">
+                        <div class="discount__text__title">
+                            <span>Discount</span>
+                            <h2>Summer 2019</h2>
+                            <h5><span>Sale</span> 50%</h5>
+                        </div>
+                        <div class="discount__countdown" id="countdown-time">
+                            <div class="countdown__item">
+                                <span>22</span>
+                                <p>Days</p>
+                            </div>
+                            <div class="countdown__item">
+                                <span>18</span>
+                                <p>Hour</p>
+                            </div>
+                            <div class="countdown__item">
+                                <span>46</span>
+                                <p>Min</p>
+                            </div>
+                            <div class="countdown__item">
+                                <span>05</span>
+                                <p>Sec</p>
+                            </div>
+                        </div>
+                        <a href="#">Shop now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Discount Section End -->
+
+    <!-- Services Section Begin -->
+    <section class="services spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="services__item">
+                        <i class="fa fa-car"></i>
+                        <h6>Free Shipping</h6>
+                        <p>For all oder over $99</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="services__item">
+                        <i class="fa fa-money"></i>
+                        <h6>Money Back Guarantee</h6>
+                        <p>If good have Problems</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="services__item">
+                        <i class="fa fa-support"></i>
+                        <h6>Online Support 24/7</h6>
+                        <p>Dedicated support</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="services__item">
+                        <i class="fa fa-headphones"></i>
+                        <h6>Payment Secure</h6>
+                        <p>100% secure payment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section End -->
 @endsection
