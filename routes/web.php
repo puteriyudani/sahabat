@@ -9,6 +9,7 @@ use App\Http\Controllers\GuruController;
 use App\Http\Controllers\HadistController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IslamicController;
+use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\KindergartenController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\MorningController;
@@ -17,6 +18,7 @@ use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\PdfController;
 use App\Http\Controllers\PoopPeeController;
 use App\Http\Controllers\PreschoolController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\QuranController;
 use App\Http\Controllers\RecallingController;
 use App\Http\Controllers\SiswaController;
@@ -57,4 +59,10 @@ Route::post('/register', [AuthController::class, 'registerPost'])->name('registe
 Route::middleware(['auth', 'user-access:admin'])->group(function () {
     // home admin
     Route::get('/admin-greenbell', [AdminController::class, 'index'])->name('admin');
+
+    // kategori
+    Route::resource('kategori', KategoriController::class);
+
+    // product
+    Route::resource('product', ProductController::class);
 });
