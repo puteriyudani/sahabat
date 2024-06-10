@@ -1,7 +1,7 @@
 @extends('layout.admin')
 
 @section('title')
-    <title>Product - Green Bell</title>
+    <title>Kategori - Green Bell</title>
 @endsection
 
 @section('desktop-sidebar')
@@ -125,7 +125,7 @@
     <main class="h-full pb-16 overflow-y-auto">
         <div class="container grid px-6 mx-auto">
             <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
-                Create Product
+                Create Kategori
             </h2>
 
             @if (Session::has('success'))
@@ -136,14 +136,14 @@
 
             <!-- General elements -->
             <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
-                <form action="{{ route('product.store') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('kategori.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
 
                     <label class="block text-sm">
-                        <span class="text-gray-700 dark:text-gray-400">Nama Product</span>
+                        <span class="text-gray-700 dark:text-gray-400">Nama Kategori</span>
                         <input type="text" name="nama" id="nama"
                             class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
-                            placeholder="Nama Product" />
+                            placeholder="Nama Kategori" />
                     </label>
 
                     <label class="block mt-4 text-sm">

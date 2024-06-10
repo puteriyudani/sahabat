@@ -13,13 +13,26 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $beleafs = Product::paginate(10);
+        $beleaf = Product::join('kategoris', 'kategoris.nama', '=', 'products.kategori')
+            ->where('kategoris.menu', 'Be Leaf')
+            ->get();
 
-        $preloveds = Product::paginate(10);
+        $preloved = Product::join('kategoris', 'kategoris.nama', '=', 'products.kategori')
+            ->where('kategoris.menu', 'Pre Loved')
+            ->get();
 
-        $generals = Product::paginate(10);
+        $general = Product::join('kategoris', 'kategoris.nama', '=', 'products.kategori')
+            ->where('kategoris.menu', 'General')
+            ->get();
 
-        return view('product.index', compact('beleafs', 'preloveds', 'generals'));
+        // Menggabungkan semua data dalam satu array asosiatif
+        $data = [
+            'beleafs' => $beleaf,
+            'preloveds' => $preloved,
+            'generals' => $general,
+        ];
+
+        return view('product.index', $data);
     }
 
     /**
@@ -52,6 +65,7 @@ class ProductController extends Controller
         $kodeProduct = $kodeAwal . $nomorUrut;
 
         $request->validate([
+            'kategori' => 'required',
             'nama' => 'required',
             'detail' => 'required',
             'harga' => 'required',
@@ -78,24 +92,38 @@ class ProductController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Product $product)
     {
-        //
+        $kategoris = Kategori::get();
+        return view('product.edit', compact('product', 'kategoris'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Product $product)
     {
-        //
+        $request->validate([
+            'kategori' => 'required',
+            'nama' => 'required',
+            'detail' => 'required',
+            'harga' => 'required',
+            'kondisi' => 'required',
+            'stok' => 'required',
+        ]);
+
+        $product->update($request->all());
+
+        return redirect()->route('product.index')->with('success','Product updated successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Product $product)
     {
-        //
+        $product->delete();
+
+        return redirect()->route('product.index')->with('success','Product deleted successfully');
     }
 }

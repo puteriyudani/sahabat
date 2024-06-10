@@ -26,9 +26,4 @@ class Product extends Model
     {
         return $this->belongsTo(Kategori::class, 'id');
     }
-
-    public function scopeKategori($query, $kategoriId)
-    {
-        return $query->where('kategori', $kategoriId);
-    }
 }

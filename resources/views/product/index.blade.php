@@ -176,7 +176,7 @@
                                     <td class="px-4 py-3 text-sm">{{ $beleaf->stok }}</td>
                                     <td class="px-4 py-3">
                                         <div class="flex items-center space-x-4 text-sm">
-                                            <a href="{{ route('kategori.edit', $beleaf->id) }}">
+                                            <a href="{{ route('product.edit', $beleaf->id) }}">
                                                 <button
                                                     class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
                                                     aria-label="Edit">
@@ -188,7 +188,7 @@
                                                     </svg>
                                                 </button>
                                             </a>
-                                            <form action="{{ route('kategori.destroy', $beleaf->id) }}" method="POST">
+                                            <form action="{{ route('product.destroy', $beleaf->id) }}" method="POST">
                                                 @csrf
                                                 @method('DELETE')
 
@@ -211,8 +211,6 @@
                     </table>
                 </div>
             </div>
-
-
 
             <!-- Pre Loved -->
             <h4 class="mt-4 mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300">
@@ -246,7 +244,7 @@
                                     <td class="px-4 py-3 text-sm">{{ $preloved->stok }}</td>
                                     <td class="px-4 py-3">
                                         <div class="flex items-center space-x-4 text-sm">
-                                            <a href="{{ route('kategori.edit', $preloved->id) }}">
+                                            <a href="{{ route('product.edit', $preloved->id) }}">
                                                 <button
                                                     class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
                                                     aria-label="Edit">
@@ -258,7 +256,7 @@
                                                     </svg>
                                                 </button>
                                             </a>
-                                            <form action="{{ route('kategori.destroy', $preloved->id) }}" method="POST">
+                                            <form action="{{ route('product.destroy', $preloved->id) }}" method="POST">
                                                 @csrf
                                                 @method('DELETE')
 
@@ -316,7 +314,7 @@
                                     <td class="px-4 py-3 text-sm">{{ $general->stok }}</td>
                                     <td class="px-4 py-3">
                                         <div class="flex items-center space-x-4 text-sm">
-                                            <a href="{{ route('kategori.edit', $general->id) }}">
+                                            <a href="{{ route('product.edit', $general->id) }}">
                                                 <button
                                                     class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
                                                     aria-label="Edit">
@@ -328,7 +326,7 @@
                                                     </svg>
                                                 </button>
                                             </a>
-                                            <form action="{{ route('kategori.destroy', $general->id) }}" method="POST">
+                                            <form action="{{ route('product.destroy', $general->id) }}" method="POST">
                                                 @csrf
                                                 @method('DELETE')
 
