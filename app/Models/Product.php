@@ -27,7 +27,7 @@ class Product extends Model
         return $this->belongsTo(Kategori::class, 'id');
     }
 
-    public function productImage()
+    public function images()
     {
         return $this->hasMany(ProductImage::class, 'product_id');
     }

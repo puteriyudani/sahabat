@@ -1,5 +1,9 @@
 @extends('layout.layout')
 
+@section('title')
+    <title>Green Bell</title>
+@endsection
+
 @section('header')
     <!-- Header Section Begin -->
     <header class="header">
@@ -7,23 +11,16 @@
             <div class="row">
                 <div class="col-xl-3 col-lg-2">
                     <div class="header__logo">
-                        <a href="/"><img src="{{ asset('assets') }}/img/logo.png" alt=""></a>
+                        <a href="{{ route('home') }}"><img src="{{ asset('assets') }}/img/logo.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-7">
                     <nav class="header__menu">
                         <ul>
-                            <li class="active"><a href="/">Home</a></li>
-                            <li><a href="#">Store</a>
-                                <ul class="dropdown">
-                                    <li><a href="/product-details">Product Details</a></li>
-                                    <li><a href="#">Be Leaf</a></li>
-                                    <li><a href="#">Preloved</a></li>
-                                    <li><a href="#">General</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Komunitas</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li class="active"><a href="{{ route('home') }}">Home</a></li>
+                            <li><a href="#" id="store-link">Store</a></li>
+                            <li><a href="#" id="komunitas-link">Komunitas</a></li>
+                            <li><a href="#" id="contact-link">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -33,9 +30,9 @@
                             <a href="{{ route('login') }}" target="_blank">Login</a>
                             <a href="{{ route('register') }}" target="_blank">Register</a>
                         </div>
-                        <ul class="header__right__widget">
+                        {{-- <ul class="header__right__widget">
                             <li><span class="icon_search search-switch"></span></li>
-                        </ul>
+                        </ul> --}}
                     </div>
                 </div>
             </div>
@@ -116,217 +113,137 @@
     <section class="product spad">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-4">
+                <div class="col-lg-3 col-md-3">
                     <div class="section-title">
-                        <h4>New product</h4>
+                        <h4>All Products</h4>
                     </div>
                 </div>
-                <div class="col-lg-8 col-md-8">
+                <div class="col-lg-9 col-md-9">
                     <ul class="filter__controls">
                         <li class="active" data-filter="*">All</li>
-                        <li data-filter=".women">Women’s</li>
-                        <li data-filter=".men">Men’s</li>
-                        <li data-filter=".kid">Kid’s</li>
-                        <li data-filter=".accessories">Accessories</li>
-                        <li data-filter=".cosmetic">Cosmetics</li>
+                        <li data-filter=".BeLeaf">Be Leaf</li>
+                        <li data-filter=".PreLoved">Pre Loved</li>
+                        <li data-filter=".General">General</li>
                     </ul>
                 </div>
             </div>
             <div class="row property__gallery">
-                <div class="col-lg-3 col-md-4 col-sm-6 mix women">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="{{ asset('assets') }}/img/product/product-1.jpg">
-                            <div class="label new">New</div>
-                            <ul class="product__hover">
-                                <li><a href="{{ asset('assets') }}/img/product/product-1.jpg" class="image-popup"><span
-                                            class="arrow_expand"></span></a></li>
-                                <li><a href="#"><span class="icon_heart_alt"></span></a></li>
-                                <li><a href="#"><span class="icon_bag_alt"></span></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Buttons tweed blazer</a></h6>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
+                <!-- Be Leaf -->
+                @foreach ($beleafs as $beleaf)
+                    <div class="col-lg-3 col-md-4 col-sm-6 mix BeLeaf">
+                        <div class="product__item">
+                            @if ($beleaf->images->isNotEmpty())
+                                <div class="product__item__pic set-bg"
+                                    data-setbg="{{ asset('storage/images/' . $beleaf->images->first()->image) }}">
+                                    <div class="label new">{{ $beleaf->kondisi }}</div>
+                                    <ul class="product__hover">
+                                        <li><a href="https://wa.me/6282268081212"><span class="icon_headphones"></span></a></li>
+                                        <li>
+                                            <a href="{{ asset('storage/images/' . $beleaf->images->first()->image) }}"
+                                                class="image-popup">
+                                                <span class="arrow_expand"></span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            @else
+                                <div class="product__item__pic set-bg"
+                                    data-setbg="{{ asset('assets/img/product/product-1.jpg') }}">
+                                    <div class="label new">{{ $beleaf->kondisi }}</div>
+                                    <ul class="product__hover">
+                                        <li><a href="https://wa.me/6282268081212"><span class="icon_headphones"></span></a></li>
+                                        <li>
+                                            <a href="{{ asset('assets/img/product/product-1.jpg') }}" class="image-popup">
+                                                <span class="arrow_expand"></span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            @endif
+
+                            <div class="product__item__text">
+                                <h6><a href="#">{{ $beleaf->nama }}</a></h6>
+                                <div class="product__price">Rp. {{ number_format($beleaf->harga, 0, ',', '.') }}</div>
                             </div>
-                            <div class="product__price">$ 59.0</div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix men">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="{{ asset('assets') }}/img/product/product-2.jpg">
-                            <ul class="product__hover">
-                                <li><a href="{{ asset('assets') }}/img/product/product-2.jpg" class="image-popup"><span
-                                            class="arrow_expand"></span></a></li>
-                                <li><a href="#"><span class="icon_heart_alt"></span></a></li>
-                                <li><a href="#"><span class="icon_bag_alt"></span></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Flowy striped skirt</a></h6>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
+                @endforeach
+
+                <!-- Pre Loved -->
+                @foreach ($preloveds as $preloved)
+                    <div class="col-lg-3 col-md-4 col-sm-6 mix PreLoved">
+                        <div class="product__item">
+                            @if ($preloved->images->isNotEmpty())
+                                <div class="product__item__pic set-bg"
+                                    data-setbg="{{ asset('storage/images/' . $preloved->images->first()->image) }}">
+                                    <div class="label new">{{ $preloved->kondisi }}</div>
+                                    <ul class="product__hover">
+                                        <li><a href="https://wa.me/6282268081212"><span class="icon_headphones"></span></a></li>
+                                        <li>
+                                            <a href="{{ asset('storage/images/' . $preloved->images->first()->image) }}"
+                                                class="image-popup">
+                                                <span class="arrow_expand"></span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            @else
+                                <div class="product__item__pic set-bg"
+                                    data-setbg="{{ asset('assets/img/product/product-1.jpg') }}">
+                                    <div class="label new">{{ $preloved->kondisi }}</div>
+                                    <ul class="product__hover">
+                                        <li><a href="https://wa.me/6282268081212"><span class="icon_headphones"></span></a></li>
+                                        <li>
+                                            <a href="{{ asset('assets/img/product/product-1.jpg') }}" class="image-popup">
+                                                <span class="arrow_expand"></span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            @endif
+
+                            <div class="product__item__text">
+                                <h6><a href="#">{{ $preloved->nama }}</a></h6>
+                                <div class="product__price">Rp. {{ number_format($preloved->harga, 0, ',', '.') }}</div>
                             </div>
-                            <div class="product__price">$ 49.0</div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix accessories">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg"
-                            data-setbg="{{ asset('assets') }}/img/product/product-3.jpg">
-                            <div class="label stockout">out of stock</div>
-                            <ul class="product__hover">
-                                <li><a href="{{ asset('assets') }}/img/product/product-3.jpg" class="image-popup"><span
-                                            class="arrow_expand"></span></a></li>
-                                <li><a href="#"><span class="icon_heart_alt"></span></a></li>
-                                <li><a href="#"><span class="icon_bag_alt"></span></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Cotton T-Shirt</a></h6>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
+                @endforeach
+
+                <!-- General -->
+                @foreach ($generals as $general)
+                    <div class="col-lg-3 col-md-4 col-sm-6 mix General">
+                        <div class="product__item">
+                            @if ($general->images->isNotEmpty())
+                                <div class="product__item__pic set-bg"
+                                    data-setbg="{{ asset('storage/images/' . $general->images->first()->image) }}">
+                                    <div class="label new">{{ $general->kondisi }}</div>
+                                    <ul class="product__hover">
+                                        <li><a href="https://wa.me/6282268081212"><span class="icon_headphones"></span></a></li>
+                                        <li>
+                                            <a href="{{ asset('storage/images/' . $general->images->first()->image) }}"
+                                                class="image-popup">
+                                                <span class="arrow_expand"></span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            @else
+                                <div class="product__item__pic set-bg"
+                                    data-setbg="{{ asset('assets/img/product/product-1.jpg') }}">
+                                    <div class="label new">{{ $general->kondisi }}</div>
+                                    <ul class="product__hover">
+                                        <li><a href="https://wa.me/6282268081212"><span class="icon_headphones"></span></a></li>
+                                        <li>
+                                            <a href="{{ asset('assets/img/product/product-1.jpg') }}" class="image-popup">
+                                                <span class="arrow_expand"></span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            @endif
+
+                            <div class="product__item__text">
+                                <h6><a href="#">{{ $general->nama }}</a></h6>
+                                <div class="product__price">Rp. {{ number_format($general->harga, 0, ',', '.') }}</div>
                             </div>
-                            <div class="product__price">$ 59.0</div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix cosmetic">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg"
-                            data-setbg="{{ asset('assets') }}/img/product/product-4.jpg">
-                            <ul class="product__hover">
-                                <li><a href="{{ asset('assets') }}/img/product/product-4.jpg" class="image-popup"><span
-                                            class="arrow_expand"></span></a></li>
-                                <li><a href="#"><span class="icon_heart_alt"></span></a></li>
-                                <li><a href="#"><span class="icon_bag_alt"></span></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Slim striped pocket shirt</a></h6>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product__price">$ 59.0</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix kid">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg"
-                            data-setbg="{{ asset('assets') }}/img/product/product-5.jpg">
-                            <ul class="product__hover">
-                                <li><a href="{{ asset('assets') }}/img/product/product-5.jpg" class="image-popup"><span
-                                            class="arrow_expand"></span></a></li>
-                                <li><a href="#"><span class="icon_heart_alt"></span></a></li>
-                                <li><a href="#"><span class="icon_bag_alt"></span></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Fit micro corduroy shirt</a></h6>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product__price">$ 59.0</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix women men kid accessories cosmetic">
-                    <div class="product__item sale">
-                        <div class="product__item__pic set-bg"
-                            data-setbg="{{ asset('assets') }}/img/product/product-6.jpg">
-                            <div class="label sale">Sale</div>
-                            <ul class="product__hover">
-                                <li><a href="{{ asset('assets') }}/img/product/product-6.jpg" class="image-popup"><span
-                                            class="arrow_expand"></span></a></li>
-                                <li><a href="#"><span class="icon_heart_alt"></span></a></li>
-                                <li><a href="#"><span class="icon_bag_alt"></span></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Tropical Kimono</a></h6>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product__price">$ 49.0 <span>$ 59.0</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix women men kid accessories cosmetic">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg"
-                            data-setbg="{{ asset('assets') }}/img/product/product-7.jpg">
-                            <ul class="product__hover">
-                                <li><a href="{{ asset('assets') }}/img/product/product-7.jpg" class="image-popup"><span
-                                            class="arrow_expand"></span></a></li>
-                                <li><a href="#"><span class="icon_heart_alt"></span></a></li>
-                                <li><a href="#"><span class="icon_bag_alt"></span></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Contrasting sunglasses</a></h6>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product__price">$ 59.0</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix women men kid accessories cosmetic">
-                    <div class="product__item sale">
-                        <div class="product__item__pic set-bg"
-                            data-setbg="{{ asset('assets') }}/img/product/product-8.jpg">
-                            <div class="label">Sale</div>
-                            <ul class="product__hover">
-                                <li><a href="{{ asset('assets') }}/img/product/product-8.jpg" class="image-popup"><span
-                                            class="arrow_expand"></span></a></li>
-                                <li><a href="#"><span class="icon_heart_alt"></span></a></li>
-                                <li><a href="#"><span class="icon_bag_alt"></span></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Water resistant backpack</a></h6>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product__price">$ 49.0 <span>$ 59.0</span></div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -366,222 +283,6 @@
     </section>
     <!-- Banner Section End -->
 
-    <!-- Trend Section Begin -->
-    <section class="trend spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="trend__content">
-                        <div class="section-title">
-                            <h4>Hot Trend</h4>
-                        </div>
-                        <div class="trend__item">
-                            <div class="trend__item__pic">
-                                <img src="{{ asset('assets') }}/img/trend/ht-1.jpg" alt="">
-                            </div>
-                            <div class="trend__item__text">
-                                <h6>Chain bucket bag</h6>
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <div class="product__price">$ 59.0</div>
-                            </div>
-                        </div>
-                        <div class="trend__item">
-                            <div class="trend__item__pic">
-                                <img src="{{ asset('assets') }}/img/trend/ht-2.jpg" alt="">
-                            </div>
-                            <div class="trend__item__text">
-                                <h6>Pendant earrings</h6>
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <div class="product__price">$ 59.0</div>
-                            </div>
-                        </div>
-                        <div class="trend__item">
-                            <div class="trend__item__pic">
-                                <img src="{{ asset('assets') }}/img/trend/ht-3.jpg" alt="">
-                            </div>
-                            <div class="trend__item__text">
-                                <h6>Cotton T-Shirt</h6>
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <div class="product__price">$ 59.0</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="trend__content">
-                        <div class="section-title">
-                            <h4>Best seller</h4>
-                        </div>
-                        <div class="trend__item">
-                            <div class="trend__item__pic">
-                                <img src="{{ asset('assets') }}/img/trend/bs-1.jpg" alt="">
-                            </div>
-                            <div class="trend__item__text">
-                                <h6>Cotton T-Shirt</h6>
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <div class="product__price">$ 59.0</div>
-                            </div>
-                        </div>
-                        <div class="trend__item">
-                            <div class="trend__item__pic">
-                                <img src="{{ asset('assets') }}/img/trend/bs-2.jpg" alt="">
-                            </div>
-                            <div class="trend__item__text">
-                                <h6>Zip-pockets pebbled tote <br />briefcase</h6>
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <div class="product__price">$ 59.0</div>
-                            </div>
-                        </div>
-                        <div class="trend__item">
-                            <div class="trend__item__pic">
-                                <img src="{{ asset('assets') }}/img/trend/bs-3.jpg" alt="">
-                            </div>
-                            <div class="trend__item__text">
-                                <h6>Round leather bag</h6>
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <div class="product__price">$ 59.0</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="trend__content">
-                        <div class="section-title">
-                            <h4>Feature</h4>
-                        </div>
-                        <div class="trend__item">
-                            <div class="trend__item__pic">
-                                <img src="{{ asset('assets') }}/img/trend/f-1.jpg" alt="">
-                            </div>
-                            <div class="trend__item__text">
-                                <h6>Bow wrap skirt</h6>
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <div class="product__price">$ 59.0</div>
-                            </div>
-                        </div>
-                        <div class="trend__item">
-                            <div class="trend__item__pic">
-                                <img src="{{ asset('assets') }}/img/trend/f-2.jpg" alt="">
-                            </div>
-                            <div class="trend__item__text">
-                                <h6>Metallic earrings</h6>
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <div class="product__price">$ 59.0</div>
-                            </div>
-                        </div>
-                        <div class="trend__item">
-                            <div class="trend__item__pic">
-                                <img src="{{ asset('assets') }}/img/trend/f-3.jpg" alt="">
-                            </div>
-                            <div class="trend__item__text">
-                                <h6>Flap cross-body bag</h6>
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <div class="product__price">$ 59.0</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Trend Section End -->
-
-    <!-- Discount Section Begin -->
-    <section class="discount">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 p-0">
-                    <div class="discount__pic">
-                        <img src="{{ asset('assets') }}/img/discount.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-6 p-0">
-                    <div class="discount__text">
-                        <div class="discount__text__title">
-                            <span>Discount</span>
-                            <h2>Summer 2019</h2>
-                            <h5><span>Sale</span> 50%</h5>
-                        </div>
-                        <div class="discount__countdown" id="countdown-time">
-                            <div class="countdown__item">
-                                <span>22</span>
-                                <p>Days</p>
-                            </div>
-                            <div class="countdown__item">
-                                <span>18</span>
-                                <p>Hour</p>
-                            </div>
-                            <div class="countdown__item">
-                                <span>46</span>
-                                <p>Min</p>
-                            </div>
-                            <div class="countdown__item">
-                                <span>05</span>
-                                <p>Sec</p>
-                            </div>
-                        </div>
-                        <a href="#">Shop now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Discount Section End -->
-
     <!-- Services Section Begin -->
     <section class="services spad">
         <div class="container">
@@ -618,4 +319,19 @@
         </div>
     </section>
     <!-- Services Section End -->
+
+    <script>
+        document.getElementById('store-link').addEventListener('click', function(event) {
+            event.preventDefault(); // Mencegah tautan dari mengikuti URL
+            alert('Halaman sedang dalam pengembangan');
+        });
+        document.getElementById('komunitas-link').addEventListener('click', function(event) {
+            event.preventDefault(); // Mencegah tautan dari mengikuti URL
+            alert('Halaman sedang dalam pengembangan');
+        });
+        document.getElementById('contact-link').addEventListener('click', function(event) {
+            event.preventDefault(); // Mencegah tautan dari mengikuti URL
+            alert('Halaman sedang dalam pengembangan');
+        });
+    </script>
 @endsection
