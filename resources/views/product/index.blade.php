@@ -161,13 +161,13 @@
                                 <th class="px-4 py-3">Harga</th>
                                 <th class="px-4 py-3">Kondisi</th>
                                 <th class="px-4 py-3">Stok</th>
+                                <th class="px-4 py-3">Gambar</th>
                                 <th class="px-4 py-3">Actions</th>
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
                             @foreach ($beleafs as $beleaf)
                                 <tr class="text-gray-700 dark:text-gray-400">
-                                    <td class="px-4 py-3 text-sm">{{ $beleaf->id }}</td>
                                     <td class="px-4 py-3 text-sm">{{ $beleaf->kode }}</td>
                                     <td class="px-4 py-3 text-sm">{{ $beleaf->kategori }}</td>
                                     <td class="px-4 py-3 text-sm">{{ $beleaf->nama }}</td>
@@ -175,6 +175,22 @@
                                     <td class="px-4 py-3 text-sm">{{ $beleaf->harga }}</td>
                                     <td class="px-4 py-3 text-sm">{{ $beleaf->kondisi }}</td>
                                     <td class="px-4 py-3 text-sm">{{ $beleaf->stok }}</td>
+                                    <td class="px-4 py-3 text-sm">
+                                        <div class="flex items-center space-x-4 text-sm">
+                                            <a href="{{ route('product-image.index', $beleaf->id) }}">
+                                                <button
+                                                    class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
+                                                    aria-label="Image">
+                                                    <svg class="w-5 h-5" aria-hidden="true" fill="currentColor"
+                                                        viewBox="0 0 20 20">
+                                                        <path
+                                                            d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z">
+                                                        </path>
+                                                    </svg>
+                                                </button>
+                                            </a>
+                                        </div>
+                                    </td>
                                     <td class="px-4 py-3">
                                         <div class="flex items-center space-x-4 text-sm">
                                             <a href="{{ route('product.edit', $beleaf->id) }}">
@@ -230,13 +246,13 @@
                                 <th class="px-4 py-3">Harga</th>
                                 <th class="px-4 py-3">Kondisi</th>
                                 <th class="px-4 py-3">Stok</th>
+                                <th class="px-4 py-3">Gambar</th>
                                 <th class="px-4 py-3">Actions</th>
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
                             @foreach ($preloveds as $preloved)
                                 <tr class="text-gray-700 dark:text-gray-400">
-                                    <td class="px-4 py-3 text-sm">{{ $preloved->id }}</td>
                                     <td class="px-4 py-3 text-sm">{{ $preloved->kode }}</td>
                                     <td class="px-4 py-3 text-sm">{{ $preloved->kategori }}</td>
                                     <td class="px-4 py-3 text-sm">{{ $preloved->nama }}</td>
@@ -244,6 +260,22 @@
                                     <td class="px-4 py-3 text-sm">{{ $preloved->harga }}</td>
                                     <td class="px-4 py-3 text-sm">{{ $preloved->kondisi }}</td>
                                     <td class="px-4 py-3 text-sm">{{ $preloved->stok }}</td>
+                                    <td class="px-4 py-3 text-sm">
+                                        <div class="flex items-center space-x-4 text-sm">
+                                            <a href="{{ route('product-image.index', $preloved->id) }}">
+                                                <button
+                                                    class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
+                                                    aria-label="Image">
+                                                    <svg class="w-5 h-5" aria-hidden="true" fill="currentColor"
+                                                        viewBox="0 0 20 20">
+                                                        <path
+                                                            d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z">
+                                                        </path>
+                                                    </svg>
+                                                </button>
+                                            </a>
+                                        </div>
+                                    </td>
                                     <td class="px-4 py-3">
                                         <div class="flex items-center space-x-4 text-sm">
                                             <a href="{{ route('product.edit', $preloved->id) }}">
@@ -299,13 +331,13 @@
                                 <th class="px-4 py-3">Harga</th>
                                 <th class="px-4 py-3">Kondisi</th>
                                 <th class="px-4 py-3">Stok</th>
+                                <th class="px-4 py-3">Gambar</th>
                                 <th class="px-4 py-3">Actions</th>
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
                             @foreach ($generals as $general)
                                 <tr class="text-gray-700 dark:text-gray-400">
-                                    <td class="px-4 py-3 text-sm">{{ $general->id }}</td>
                                     <td class="px-4 py-3 text-sm">{{ $general->kode }}</td>
                                     <td class="px-4 py-3 text-sm">{{ $general->kategori }}</td>
                                     <td class="px-4 py-3 text-sm">{{ $general->nama }}</td>
@@ -313,6 +345,22 @@
                                     <td class="px-4 py-3 text-sm">{{ $general->harga }}</td>
                                     <td class="px-4 py-3 text-sm">{{ $general->kondisi }}</td>
                                     <td class="px-4 py-3 text-sm">{{ $general->stok }}</td>
+                                    <td class="px-4 py-3 text-sm">
+                                        <div class="flex items-center space-x-4 text-sm">
+                                            <a href="{{ route('product-image.index', $general->id) }}">
+                                                <button
+                                                    class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
+                                                    aria-label="Image">
+                                                    <svg class="w-5 h-5" aria-hidden="true" fill="currentColor"
+                                                        viewBox="0 0 20 20">
+                                                        <path
+                                                            d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z">
+                                                        </path>
+                                                    </svg>
+                                                </button>
+                                            </a>
+                                        </div>
+                                    </td>
                                     <td class="px-4 py-3">
                                         <div class="flex items-center space-x-4 text-sm">
                                             <a href="{{ route('product.edit', $general->id) }}">

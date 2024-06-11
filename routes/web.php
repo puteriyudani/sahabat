@@ -19,6 +19,7 @@ use App\Http\Controllers\PdfController;
 use App\Http\Controllers\PoopPeeController;
 use App\Http\Controllers\PreschoolController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProductImageController;
 use App\Http\Controllers\QuranController;
 use App\Http\Controllers\RecallingController;
 use App\Http\Controllers\SiswaController;
@@ -64,10 +65,9 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::resource('kategori', KategoriController::class);
 
     // product
-    Route::get('product', [ProductController::class, 'index'])->name('product.index');
-    Route::get('product/create', [ProductController::class, 'create'])->name('product.create');
-    Route::post('product', [ProductController::class, 'store'])->name('product.store');
-    Route::get('product/{product}/edit', [ProductController::class, 'edit'])->name('product.edit');
-    Route::put('product/{product}', [ProductController::class, 'update'])->name('product.update');
-    Route::delete('product/{product}', [ProductController::class, 'destroy'])->name('product.destroy');
+    Route::resource('product', ProductController::class);
+    Route::get('product/{product}/image', [ProductImageController::class, 'index'])->name('product-image.index');
+    Route::get('product/{product}/image/create', [ProductImageController::class, 'create'])->name('product-image.create');
+    Route::post('product/{product}/image', [ProductImageController::class, 'store'])->name('product-image.store');
+    Route::delete('product/image/{image}/delete', [ProductImageController::class, 'destroy'])->name('product-image.destroy');
 });
