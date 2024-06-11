@@ -15,14 +15,17 @@ class ProductController extends Controller
     {
         $beleaf = Product::join('kategoris', 'kategoris.nama', '=', 'products.kategori')
             ->where('kategoris.menu', 'Be Leaf')
+            ->select('products.*', 'kategoris.menu')
             ->get();
 
         $preloved = Product::join('kategoris', 'kategoris.nama', '=', 'products.kategori')
             ->where('kategoris.menu', 'Pre Loved')
+            ->select('products.*', 'kategoris.menu')
             ->get();
 
         $general = Product::join('kategoris', 'kategoris.nama', '=', 'products.kategori')
             ->where('kategoris.menu', 'General')
+            ->select('products.*', 'kategoris.menu')
             ->get();
 
         // Menggabungkan semua data dalam satu array asosiatif

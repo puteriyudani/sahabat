@@ -167,6 +167,7 @@
                         <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
                             @foreach ($beleafs as $beleaf)
                                 <tr class="text-gray-700 dark:text-gray-400">
+                                    <td class="px-4 py-3 text-sm">{{ $beleaf->id }}</td>
                                     <td class="px-4 py-3 text-sm">{{ $beleaf->kode }}</td>
                                     <td class="px-4 py-3 text-sm">{{ $beleaf->kategori }}</td>
                                     <td class="px-4 py-3 text-sm">{{ $beleaf->nama }}</td>
@@ -235,6 +236,7 @@
                         <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
                             @foreach ($preloveds as $preloved)
                                 <tr class="text-gray-700 dark:text-gray-400">
+                                    <td class="px-4 py-3 text-sm">{{ $preloved->id }}</td>
                                     <td class="px-4 py-3 text-sm">{{ $preloved->kode }}</td>
                                     <td class="px-4 py-3 text-sm">{{ $preloved->kategori }}</td>
                                     <td class="px-4 py-3 text-sm">{{ $preloved->nama }}</td>
@@ -280,8 +282,6 @@
                 </div>
             </div>
 
-
-
             <!-- General -->
             <h4 class="mt-4 mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300">
                 General
@@ -305,6 +305,7 @@
                         <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
                             @foreach ($generals as $general)
                                 <tr class="text-gray-700 dark:text-gray-400">
+                                    <td class="px-4 py-3 text-sm">{{ $general->id }}</td>
                                     <td class="px-4 py-3 text-sm">{{ $general->kode }}</td>
                                     <td class="px-4 py-3 text-sm">{{ $general->kategori }}</td>
                                     <td class="px-4 py-3 text-sm">{{ $general->nama }}</td>
@@ -349,8 +350,6 @@
                     </table>
                 </div>
             </div>
-
-
         </div>
     </main>
 @endsection
