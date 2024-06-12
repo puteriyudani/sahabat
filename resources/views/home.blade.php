@@ -147,12 +147,12 @@
                                 </div>
                             @else
                                 <div class="product__item__pic set-bg"
-                                    data-setbg="{{ asset('assets/img/product/product-1.jpg') }}">
+                                    data-setbg="{{ asset('assets/img/product/details/product-1.jpg') }}">
                                     <div class="label new">{{ $beleaf->kondisi }}</div>
                                     <ul class="product__hover">
                                         <li><a href="https://wa.me/6282268081212"><span class="icon_headphones"></span></a></li>
                                         <li>
-                                            <a href="{{ asset('assets/img/product/product-1.jpg') }}" class="image-popup">
+                                            <a href="{{ asset('assets/img/product/details/product-1.jpg') }}" class="image-popup">
                                                 <span class="arrow_expand"></span></a>
                                         </li>
                                     </ul>
@@ -186,12 +186,12 @@
                                 </div>
                             @else
                                 <div class="product__item__pic set-bg"
-                                    data-setbg="{{ asset('assets/img/product/product-1.jpg') }}">
+                                    data-setbg="{{ asset('assets/img/product/details/product-1.jpg') }}">
                                     <div class="label new">{{ $preloved->kondisi }}</div>
                                     <ul class="product__hover">
                                         <li><a href="https://wa.me/6282268081212"><span class="icon_headphones"></span></a></li>
                                         <li>
-                                            <a href="{{ asset('assets/img/product/product-1.jpg') }}" class="image-popup">
+                                            <a href="{{ asset('assets/img/product/details/product-1.jpg') }}" class="image-popup">
                                                 <span class="arrow_expand"></span></a>
                                         </li>
                                     </ul>
@@ -225,12 +225,12 @@
                                 </div>
                             @else
                                 <div class="product__item__pic set-bg"
-                                    data-setbg="{{ asset('assets/img/product/product-1.jpg') }}">
+                                    data-setbg="{{ asset('assets/img/product/details/product-1.jpg') }}">
                                     <div class="label new">{{ $general->kondisi }}</div>
                                     <ul class="product__hover">
                                         <li><a href="https://wa.me/6282268081212"><span class="icon_headphones"></span></a></li>
                                         <li>
-                                            <a href="{{ asset('assets/img/product/product-1.jpg') }}" class="image-popup">
+                                            <a href="{{ asset('assets/img/product/details/product-1.jpg') }}" class="image-popup">
                                                 <span class="arrow_expand"></span></a>
                                         </li>
                                     </ul>
