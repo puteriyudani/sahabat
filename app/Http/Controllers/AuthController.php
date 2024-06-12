@@ -22,15 +22,30 @@ class AuthController extends Controller
             'password' => 'required',
             'confirmpassword' => 'required|same:password',
             'level' => 'required',
+            'image.*' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048', // Validasi untuk file gambar
         ]);
 
-        $user = new User([
-            'name' => $request->name,
-            'nohp' => $request->nohp,
-            'password' => Hash::make($request->password),
-            'level' => $request->level,
-        ]);
-        $user->save();
+        $input = $request->all();
+
+        if ($request->hasFile('image')) {
+            $imageData = [];
+
+            foreach ($request->file('image') as $key => $file) {
+                $destinationPath = 'public/images';
+                $image_name = date('YmdHis') . '-' . $key . '.' . $file->getClientOriginalExtension();
+                $path = $file->storeAs($destinationPath, $image_name);
+
+                $imageData[] = $image_name;
+            }
+
+            // Simpan hanya satu nama file gambar ke dalam kolom 'image' di model User
+            $input['image'] = $imageData[0]; // Ambil hanya nama file pertama dari array
+        }
+
+        // Hash password sebelum disimpan
+        $input['password'] = Hash::make($input['password']);
+
+        User::create($input);
 
         return redirect()->route('login')->with('success', 'Registration success. Please login!');
     }
@@ -47,22 +62,26 @@ class AuthController extends Controller
             'password' => 'required',
         ]);
 
-        if(Auth::attempt(['nohp' => $request->nohp, 'password' => $request->password])) {
-            if(Auth::user()->level == 'admin') {
+        if (Auth::attempt(['nohp' => $request->nohp, 'password' => $request->password])) {
+            // Simpan nama pengguna dalam sesi
+            $request->session()->put('name', Auth::user()->name);
+
+            if (Auth::user()->level == 'admin') {
                 return redirect()->route('admin');
-            } else if(Auth::user()->level == 'guru') {
+            } else if (Auth::user()->level == 'guru') {
                 return redirect()->route('teacher.index');
-            } else if(Auth::user()->level == 'keuangan') {
+            } else if (Auth::user()->level == 'keuangan') {
                 return redirect()->route('keuangan');
             } else {
                 return redirect()->route('register');
             }
-        } else{
+        } else {
             return back()->withErrors([
                 'password' => 'Wrong nohp or password',
             ]);
         }
     }
+
 
     public function logout(Request $request)
     {

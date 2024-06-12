@@ -36,27 +36,36 @@
                             </div>
                         @endif
 
-                        <form action="{{ route('register.post') }}" method="POST">
+                        <form action="{{ route('register.post') }}" method="POST" enctype="multipart/form-data">
                             @csrf
 
                             <label class="block text-sm">
                                 <span class="text-gray-700 dark:text-gray-400">Name</span>
                                 <input type="text" name="name" id="name"
                                     class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
-                                    placeholder="Jane Doe" />
+                                    placeholder="Name" />
                             </label>
+                            @error('name')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                             <label class="block mt-4 text-sm">
                                 <span class="text-gray-700 dark:text-gray-400">No Hp</span>
                                 <input type="text" name="nohp" id="nohp"
                                     class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
-                                    placeholder="Jane Doe" />
+                                    placeholder="No Hp" />
                             </label>
+                            @error('nohp')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                             <label class="block mt-4 text-sm">
                                 <span class="text-gray-700 dark:text-gray-400">Password</span>
                                 <input type="password" name="password" id="password"
                                     class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
                                     placeholder="***************" />
                             </label>
+                            @error('password')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                             <label class="block mt-4 text-sm">
                                 <span class="text-gray-700 dark:text-gray-400">
                                     Confirm password
@@ -65,6 +74,9 @@
                                     class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
                                     placeholder="***************" />
                             </label>
+                            @error('confirmpassword')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
 
                             <label class="block mt-4 text-sm">
                                 <span class="text-gray-700 dark:text-gray-400">
@@ -74,10 +86,21 @@
                                     class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
                                     <option selected>- Pilih Level -</option>
                                     <option value="0">Admin</option>
-                                    <option value="1">Guru</option>
-                                    <option value="2">Keuangan</option>
                                 </select>
                             </label>
+                            @error('level')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+
+                            <label class="block mt-4 text-sm">
+                                <span class="text-gray-700 dark:text-gray-400">Foto Profil</span>
+                                <input name="image[]" id="image" type="file"
+                                    class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                                    placeholder="Foto Profil" multiple />
+                            </label>
+                            @error('image')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
 
                             <button type="submit"
                                 class="block w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">

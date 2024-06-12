@@ -22,6 +22,7 @@ class User extends Authenticatable
         'nohp',
         'password',
         'level',
+        'image',
     ];
     protected function level(): Attribute {
 
