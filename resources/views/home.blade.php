@@ -18,7 +18,7 @@
                     <nav class="header__menu">
                         <ul>
                             <li class="active"><a href="{{ route('home') }}">Home</a></li>
-                            <li><a href="#" id="store-link">Store</a></li>
+                            <li><a href="{{ route('store') }}">Store</a></li>
                             <li><a href="#" id="komunitas-link">Komunitas</a></li>
                             <li><a href="#" id="contact-link">Contact</a></li>
                         </ul>

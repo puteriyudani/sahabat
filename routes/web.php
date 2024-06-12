@@ -23,6 +23,7 @@ use App\Http\Controllers\ProductImageController;
 use App\Http\Controllers\QuranController;
 use App\Http\Controllers\RecallingController;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\StoreController;
 use App\Http\Controllers\TahunController;
 use App\Http\Controllers\TematikController;
 use App\Http\Controllers\VideosController;
@@ -42,6 +43,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/store', [StoreController::class, 'index'])->name('store');
 
 Auth::routes();
 
