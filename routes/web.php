@@ -45,6 +45,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/store', [StoreController::class, 'index'])->name('store');
 Route::get('/store/product-detail/{product}', [StoreController::class, 'productDetail'])->name('product-detail');
+Route::get('/store/beleaf', [StoreController::class, 'beleaf'])->name('store.beleaf');
+Route::get('/store/preloved', [StoreController::class, 'preloved'])->name('store.preloved');
+Route::get('/store/general', [StoreController::class, 'general'])->name('store.general');
 
 Auth::routes();
 

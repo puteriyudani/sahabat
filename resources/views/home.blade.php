@@ -137,7 +137,7 @@
                                     data-setbg="{{ asset('storage/images/' . $beleaf->images->first()->image) }}">
                                     <div class="label new">{{ $beleaf->kondisi }}</div>
                                     <ul class="product__hover">
-                                        <li><a href="https://wa.me/6282268081212"><span class="icon_headphones"></span></a></li>
+                                        <li><a href="https://wa.me/6282268081212" target="_blank"><span class="icon_headphones"></span></a></li>
                                         <li>
                                             <a href="{{ asset('storage/images/' . $beleaf->images->first()->image) }}"
                                                 class="image-popup">
@@ -150,7 +150,7 @@
                                     data-setbg="{{ asset('assets/img/product/details/product-1.jpg') }}">
                                     <div class="label new">{{ $beleaf->kondisi }}</div>
                                     <ul class="product__hover">
-                                        <li><a href="https://wa.me/6282268081212"><span class="icon_headphones"></span></a></li>
+                                        <li><a href="https://wa.me/6282268081212" target="_blank"><span class="icon_headphones"></span></a></li>
                                         <li>
                                             <a href="{{ asset('assets/img/product/details/product-1.jpg') }}" class="image-popup">
                                                 <span class="arrow_expand"></span></a>
@@ -176,7 +176,7 @@
                                     data-setbg="{{ asset('storage/images/' . $preloved->images->first()->image) }}">
                                     <div class="label new">{{ $preloved->kondisi }}</div>
                                     <ul class="product__hover">
-                                        <li><a href="https://wa.me/6282268081212"><span class="icon_headphones"></span></a></li>
+                                        <li><a href="https://wa.me/6282268081212" target="_blank"><span class="icon_headphones"></span></a></li>
                                         <li>
                                             <a href="{{ asset('storage/images/' . $preloved->images->first()->image) }}"
                                                 class="image-popup">
@@ -189,7 +189,7 @@
                                     data-setbg="{{ asset('assets/img/product/details/product-1.jpg') }}">
                                     <div class="label new">{{ $preloved->kondisi }}</div>
                                     <ul class="product__hover">
-                                        <li><a href="https://wa.me/6282268081212"><span class="icon_headphones"></span></a></li>
+                                        <li><a href="https://wa.me/6282268081212" target="_blank"><span class="icon_headphones"></span></a></li>
                                         <li>
                                             <a href="{{ asset('assets/img/product/details/product-1.jpg') }}" class="image-popup">
                                                 <span class="arrow_expand"></span></a>
@@ -215,7 +215,7 @@
                                     data-setbg="{{ asset('storage/images/' . $general->images->first()->image) }}">
                                     <div class="label new">{{ $general->kondisi }}</div>
                                     <ul class="product__hover">
-                                        <li><a href="https://wa.me/6282268081212"><span class="icon_headphones"></span></a></li>
+                                        <li><a href="https://wa.me/6282268081212" target="_blank"><span class="icon_headphones"></span></a></li>
                                         <li>
                                             <a href="{{ asset('storage/images/' . $general->images->first()->image) }}"
                                                 class="image-popup">
@@ -228,7 +228,7 @@
                                     data-setbg="{{ asset('assets/img/product/details/product-1.jpg') }}">
                                     <div class="label new">{{ $general->kondisi }}</div>
                                     <ul class="product__hover">
-                                        <li><a href="https://wa.me/6282268081212"><span class="icon_headphones"></span></a></li>
+                                        <li><a href="https://wa.me/6282268081212" target="_blank"><span class="icon_headphones"></span></a></li>
                                         <li>
                                             <a href="{{ asset('assets/img/product/details/product-1.jpg') }}" class="image-popup">
                                                 <span class="arrow_expand"></span></a>

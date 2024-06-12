@@ -53,6 +53,7 @@
                     <div class="breadcrumb__links">
                         <a href="{{ route('home') }}"><i class="fa fa-home"></i> Home</a>
                         <span>Store</span>
+                        <span>General</span>
                     </div>
                 </div>
             </div>
@@ -88,8 +89,23 @@
                 </div>
                 <div class="col-lg-9 col-md-9">
                     <div class="row">
+                        <div class="col-lg-3 col-md-3">
+                            <div class="section-title">
+                                <h4>General</h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-md-9">
+                            <ul class="filter__controls">
+                                <li class="active" data-filter="*">All</li>
+                                @foreach ($generals as $general)
+                                    <li data-filter=".{{ str_replace(' ', '', $general->nama) }}">{{ $general->nama }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row property__gallery">
                         @foreach ($products as $product)
-                            <div class="col-lg-4 col-md-6">
+                            <div class="col-lg-4 col-md-6 mix {{ str_replace(' ', '', $product->kategori) }}">
                                 <div class="product__item">
                                     @if ($product->images->isNotEmpty())
                                         <div class="product__item__pic set-bg"
