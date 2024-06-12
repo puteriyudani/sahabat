@@ -502,10 +502,6 @@
     <!-- Shop Section End -->
 
     <script>
-        document.getElementById('store-link').addEventListener('click', function(event) {
-            event.preventDefault(); // Mencegah tautan dari mengikuti URL
-            alert('Halaman sedang dalam pengembangan');
-        });
         document.getElementById('komunitas-link').addEventListener('click', function(event) {
             event.preventDefault(); // Mencegah tautan dari mengikuti URL
             alert('Halaman sedang dalam pengembangan');

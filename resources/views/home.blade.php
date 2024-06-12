@@ -160,7 +160,7 @@
                             @endif
 
                             <div class="product__item__text">
-                                <h6><a href="#">{{ $beleaf->nama }}</a></h6>
+                                <h6><a href="{{ route('product-detail', $beleaf->id) }}" target="_blank">{{ $beleaf->nama }}</a></h6>
                                 <div class="product__price">Rp. {{ number_format($beleaf->harga, 0, ',', '.') }}</div>
                             </div>
                         </div>
@@ -199,7 +199,7 @@
                             @endif
 
                             <div class="product__item__text">
-                                <h6><a href="#">{{ $preloved->nama }}</a></h6>
+                                <h6><a href="{{ route('product-detail', $preloved->id) }}" target="_blank">{{ $preloved->nama }}</a></h6>
                                 <div class="product__price">Rp. {{ number_format($preloved->harga, 0, ',', '.') }}</div>
                             </div>
                         </div>
@@ -238,7 +238,7 @@
                             @endif
 
                             <div class="product__item__text">
-                                <h6><a href="#">{{ $general->nama }}</a></h6>
+                                <h6><a href="{{ route('product-detail', $general->id) }}" target="_blank">{{ $general->nama }}</a></h6>
                                 <div class="product__price">Rp. {{ number_format($general->harga, 0, ',', '.') }}</div>
                             </div>
                         </div>
@@ -321,10 +321,6 @@
     <!-- Services Section End -->
 
     <script>
-        document.getElementById('store-link').addEventListener('click', function(event) {
-            event.preventDefault(); // Mencegah tautan dari mengikuti URL
-            alert('Halaman sedang dalam pengembangan');
-        });
         document.getElementById('komunitas-link').addEventListener('click', function(event) {
             event.preventDefault(); // Mencegah tautan dari mengikuti URL
             alert('Halaman sedang dalam pengembangan');
