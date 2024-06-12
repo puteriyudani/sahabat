@@ -35,7 +35,7 @@ class GaleryController extends Controller
             'judul' => 'required',
             'detail' => 'required',
             'tanggal' => 'required',
-            'link' => 'required',
+            'link' => 'nullable',
         ]);
 
         Galery::create($request->all());

@@ -1,7 +1,7 @@
 @extends('layout.layout')
 
 @section('title')
-    <title>Sahabat - Home</title>
+    <title>Sahabat - Galery</title>
 @endsection
 
 @section('header')
@@ -17,8 +17,8 @@
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="{{ route('home') }}" class="active">Home<br></a></li>
-                    <li><a href="{{ route('galery') }}">Galery</a></li>
+                    <li><a href="{{ route('home') }}">Home<br></a></li>
+                    <li><a href="{{ route('galery') }}" class="active">Galery</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="{{ route('login') }}" target="_blank">Login</a></li>
@@ -40,27 +40,61 @@
 @section('main')
     <main class="main">
 
-        <!-- Hero Section -->
-        <section id="hero" class="hero section">
-
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6 text-center" data-aos="fade-up" data-aos-delay="100">
-                        <h2><span>I'm </span><span class="underlight">Jenny Wilson</span> a Professional<span>
-                                Photographer from New York City</span></h2>
-                        <p>Blanditiis praesentium aliquam illum tempore incidunt debitis dolorem magni est deserunt sed
-                            qui libero. Qui voluptas amet.</p>
-                        <a href="{{ route('galery') }}" class="btn-get-started" target="_blank">Look Our Galery<br></a>
+        <!-- Page Title -->
+        <div class="page-title" data-aos="fade">
+            <div class="heading">
+                <div class="container">
+                    <div class="row d-flex justify-content-center text-center">
+                        <div class="col-lg-8">
+                            <h1>Gallery</h1>
+                            <p class="mb-0">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint
+                                voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores.
+                                Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-
-        </section><!-- /Hero Section -->
+            <nav class="breadcrumbs">
+                <div class="container">
+                    <ol>
+                        <li><a href="{{ route('home') }}">Home</a></li>
+                        <li class="current">Gallery</li>
+                    </ol>
+                </div>
+            </nav>
+        </div><!-- End Page Title -->
 
         <!-- Gallery Section -->
         <section id="gallery" class="gallery section">
 
             <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row gy-4 justify-content-center mb-5">
+                    <div class="col-1">
+                        <a href="{{ route('galery') }}">All</a>
+                    </div>
+                    <div class="col-1">
+                        <a href="{{ route('galery.gabut') }}">Gabut</a>
+                    </div>
+                    <div class="col-1">
+                        <a href="{{ route('galery.malming') }}">Malming</a>
+                    </div>
+                    <div class="col-1">
+                        <a href="{{ route('galery.cfncfd') }}">CFN/CFD</a>
+                    </div>
+                    <div class="col-1">
+                        <a href="{{ route('galery.acara') }}">Acara</a>
+                    </div>
+                    <div class="col-1">
+                        <a href="{{ route('galery.jalan') }}">Jalan-jalan</a>
+                    </div>
+                    <div class="col-1">
+                        <a href="{{ route('galery.liburan') }}">Liburan</a>
+                    </div>
+                    <div class="col-1">
+                        <a href="{{ route('galery.lainnya') }}">Lainnya</a>
+                    </div>
+                </div>
 
                 <div class="row gy-4 justify-content-center">
 
@@ -71,7 +105,7 @@
                                 <div class="gallery-links d-flex align-items-center justify-content-center">
                                     <a href="{{ asset('storage/images/' . $galery->images->first()->image) }}" title="{{ $galery->judul }}"
                                         class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                                    <a href="#" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                                    <a href="{{ route('galery-detail', $galery->id) }}" class="details-link"><i class="bi bi-link-45deg"></i></a>
                                 </div>
                             </div>
                         </div><!-- End Gallery Item -->

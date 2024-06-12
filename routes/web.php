@@ -23,6 +23,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/galery/galery-detail/{galery}', [HomeController::class, 'galeryDetail'])->name('galery-detail');
+Route::get('/galery-all', [HomeController::class, 'galery'])->name('galery');
+Route::get('/galery-gabut', [HomeController::class, 'gabut'])->name('galery.gabut');
+Route::get('/galery-malming', [HomeController::class, 'malming'])->name('galery.malming');
+Route::get('/galery-cfncfd', [HomeController::class, 'cfncfd'])->name('galery.cfncfd');
+Route::get('/galery-acara', [HomeController::class, 'acara'])->name('galery.acara');
+Route::get('/galery-jalan', [HomeController::class, 'jalan'])->name('galery.jalan');
+Route::get('/galery-liburan', [HomeController::class, 'liburan'])->name('galery.liburan');
+Route::get('/galery-lainnya', [HomeController::class, 'lainnya'])->name('galery.lainnya');
 
 Auth::routes();
 
