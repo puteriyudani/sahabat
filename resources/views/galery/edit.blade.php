@@ -9,7 +9,7 @@
     <aside class="z-20 hidden w-64 overflow-y-auto bg-white dark:bg-gray-800 md:block flex-shrink-0">
         <div class="py-4 text-gray-500 dark:text-gray-400">
             <a class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200">
-                Green Bell
+                Sahabat
             </a>
             <ul class="mt-6">
                 <li class="relative px-6 py-3">
@@ -30,26 +30,26 @@
                     <span class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
                         aria-hidden="true"></span>
                     <a class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
-                        href="{{ route('product.index') }}">
+                        href="{{ route('galery.index') }}">
                         <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round"
                             stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                             <path
-                                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z">
+                                d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z">
                             </path>
                         </svg>
-                        <span class="ml-4">Product</span>
+                        <span class="ml-4">Galery</span>
                     </a>
                 </li>
                 <li class="relative px-6 py-3">
                     <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                        href="{{ route('kategori.index') }}">
+                        href="{{ route('about.index') }}">
                         <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round"
                             stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                             <path
-                                d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z">
+                                d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z">
                             </path>
                         </svg>
-                        <span class="ml-4">Category</span>
+                        <span class="ml-4">About</span>
                     </a>
                 </li>
             </ul>
@@ -73,7 +73,7 @@
         @keydown.escape="closeSideMenu">
         <div class="py-4 text-gray-500 dark:text-gray-400">
             <a class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200">
-                Green Bell
+                Sahabat
             </a>
             <ul class="mt-6">
                 <li class="relative px-6 py-3">
@@ -94,26 +94,26 @@
                     <span class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
                         aria-hidden="true"></span>
                     <a class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
-                        href="{{ route('product.index') }}">
+                        href="{{ route('galery.index') }}">
                         <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round"
                             stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                             <path
-                                d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z">
+                                d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z">
                             </path>
                         </svg>
-                        <span class="ml-4">Product</span>
+                        <span class="ml-4">Galery</span>
                     </a>
                 </li>
                 <li class="relative px-6 py-3">
                     <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                        href="{{ route('kategori.index') }}">
+                        href="{{ route('about.index') }}">
                         <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round"
                             stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                             <path
-                                d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z">
+                                d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z">
                             </path>
                         </svg>
-                        <span class="ml-4">Category</span>
+                        <span class="ml-4">About</span>
                     </a>
                 </li>
             </ul>
@@ -136,7 +136,7 @@
 
             <!-- General elements -->
             <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
-                <form action="{{ route('product.update', $product->id) }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('galery.update', $galery->id) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
 
@@ -144,47 +144,58 @@
                         <span class="text-gray-700 dark:text-gray-400">Kategori</span>
                         <select name="kategori" id="kategori"
                             class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
-                            <option selected>{{ $product->kategori }}</option>
-                            @foreach ($kategoris as $kategori)
-                                <option value="{{ $kategori->nama }}">{{ $kategori->nama }}</option>
-                            @endforeach
+                            <option selected>{{ $galery->kategori }}</option>
+                            <option value="Gabut">Gabut</option>
+                            <option value="Malming">Malming</option>
+                            <option value="CFN/CFD">CFN/CFD</option>
+                            <option value="Acara">Acara</option>
+                            <option value="Jalan-jalan">Jalan-jalan</option>
+                            <option value="Liburan">Liburan</option>
+                            <option value="Lainnya">Lainnya</option>
                         </select>
                     </label>
+                    @error('kategori')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
 
                     <label class="block mt-4 text-sm">
-                        <span class="text-gray-700 dark:text-gray-400">Nama Product</span>
-                        <input type="text" name="nama" id="nama" value="{{ $product->nama }}"
+                        <span class="text-gray-700 dark:text-gray-400">Judul</span>
+                        <input type="text" name="judul" id="judul" value="{{ $galery->judul }}"
                             class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
-                            placeholder="Nama Product" />
+                            placeholder="Judul" />
                     </label>
+                    @error('judul')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
 
                     <label class="block mt-4 text-sm">
                         <span class="text-gray-700 dark:text-gray-400">Detail</span>
                         <textarea name="detail" id="detail"
                             class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-textarea focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
-                            rows="3" placeholder="Enter some long form content.">{{ $product->detail }}</textarea>
+                            rows="3" placeholder="Enter some long form content.">{{ $galery->detail }}</textarea>
                     </label>
+                    @error('detail')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
 
                     <label class="block mt-4 text-sm">
-                        <span class="text-gray-700 dark:text-gray-400">Harga (Rp.)</span>
-                        <input type="text" name="harga" id="harga" value="{{ $product->harga }}"
-                            class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
-                            placeholder="Harga" />
+                        <span class="text-gray-700 dark:text-gray-400">Tanggal</span>
+                        <input type="date" name="tanggal" id="tanggal" value="{{ $galery->tanggal }}"
+                            class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" />
                     </label>
+                    @error('tanggal')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
 
                     <label class="block mt-4 text-sm">
-                        <span class="text-gray-700 dark:text-gray-400">Kondisi</span>
-                        <input type="text" name="kondisi" id="kondisi" value="{{ $product->kondisi }}"
+                        <span class="text-gray-700 dark:text-gray-400">Link</span>
+                        <input type="text" name="link" id="link" {{ $galery->link }}
                             class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
-                            placeholder="Kondisi" />
+                            placeholder="Optional link" />
                     </label>
-
-                    <label class="block mt-4 text-sm">
-                        <span class="text-gray-700 dark:text-gray-400">Stok</span>
-                        <input type="number" name="stok" id="stok" value="{{ $product->stok }}"
-                            class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
-                            placeholder="Stok" />
-                    </label>
+                    @error('link')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
 
                     <div class="mt-4">
                         <button type="submit"

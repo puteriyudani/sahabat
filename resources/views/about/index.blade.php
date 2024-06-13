@@ -1,62 +1,10 @@
 @extends('layout.admin')
 
 @section('title')
-    <title>Admin</title>
+    <title>About - Admin</title>
     <style>
-        .relative {
-            display: flex;
-            align-items: center;
-        }
-
-        .relative img {
-            margin-right: 20px;
-            /* Jarak antara gambar dan link */
-        }
-
-        .relative .password,
-        .relative .profile {
-            margin-left: 10px;
-            /* Jarak antara tombol 'Profile' dan 'Password' */
-        }
-
-        .relative .password a {
-        padding: 0.5rem 1rem;
-        /* Padding untuk tombol */
-        background-color: #ffc107;
-        /* Warna background sesuai class btn-warning */
-        color: white;
-        /* Warna teks */
-        text-decoration: none;
-        /* Menghapus garis bawah pada link */
-        border-radius: 0.25rem;
-        /* Membulatkan sudut */
-        transition: background-color 0.3s ease;
-        /* Transisi untuk efek hover */
-        }
-
-        .relative .profile a {
-        padding: 0.5rem 1rem;
-        /* Padding untuk tombol */
-        background-color: #5cb85c;
-        /* Warna background sesuai class btn-warning */
-        color: white;
-        /* Warna teks */
-        text-decoration: none;
-        /* Menghapus garis bawah pada link */
-        border-radius: 0.25rem;
-        /* Membulatkan sudut */
-        transition: background-color 0.3s ease;
-        /* Transisi untuk efek hover */
-        }
-
-        .relative .password a:hover {
-        background-color: #e0a800;
-        /* Warna background saat di-hover */
-        }
-
-        .relative .profile a:hover {
-        background-color: #53a753;
-        /* Warna background saat di-hover */
+        .relative:hover form {
+            opacity: 1;
         }
     </style>
 @endsection
@@ -70,9 +18,7 @@
             </a>
             <ul class="mt-6">
                 <li class="relative px-6 py-3">
-                    <span class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
-                        aria-hidden="true"></span>
-                    <a class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
+                    <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                         href="{{ route('admin') }}">
                         <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round"
                             stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
@@ -98,7 +44,9 @@
                     </a>
                 </li>
                 <li class="relative px-6 py-3">
-                    <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                    <span class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
+                        aria-hidden="true"></span>
+                    <a class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
                         href="{{ route('about.index') }}">
                         <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round"
                             stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
@@ -134,9 +82,7 @@
             </a>
             <ul class="mt-6">
                 <li class="relative px-6 py-3">
-                    <span class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
-                        aria-hidden="true"></span>
-                    <a class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
+                    <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                         href="{{ route('admin') }}">
                         <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round"
                             stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
@@ -162,7 +108,9 @@
                     </a>
                 </li>
                 <li class="relative px-6 py-3">
-                    <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                    <span class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
+                        aria-hidden="true"></span>
+                    <a class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
                         href="{{ route('about.index') }}">
                         <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round"
                             stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
@@ -179,29 +127,51 @@
 @endsection
 
 @section('main')
-    <main class="h-full overflow-y-auto">
-        <div class="container px-6 mx-auto grid">
+    <main class="h-full pb-16 overflow-y-auto">
+        <div class="container grid px-6 mx-auto">
             <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
-                Welcome {{ session('name') }}
+                About
             </h2>
 
-            <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
-                <div class="relative flex items-center">
-                    <img class="object-cover w-24 h-24 rounded-full mr-4"
-                        src="{{ asset('storage/images/' . $user->image) }}" alt="Profile" loading="lazy" />
-
-                    <div class="flex flex-col">
-                        <div class="profile mb-4">
-                            <a target="_blank" href="{{ route('user.edit', $user->id) }}"
-                                class="btn btn-success">Profile</a>
-                        </div>
-                        <div class="password">
-                            <a target="_blank" href="{{ route('password.change') }}" class="btn btn-warning">Password</a>
-                        </div>
-                    </div>
+            <div class="flex flex-col flex-wrap mb-8 space-y-4 md:flex-row md:items-end md:space-x-4">
+                <div>
+                    <a href="{{ route('about.edit', $about->id) }}">
+                        <button
+                            class="flex items-center justify-between px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
+                            <span>Edit</span>
+                            <svg class="w-4 h-4 ml-2 -mr-1" fill="currentColor" aria-hidden="true" viewBox="0 0 20 20">
+                                <path
+                                    d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z"
+                                    clip-rule="evenodd" fill-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </a>
                 </div>
             </div>
 
+            <h4 class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300">
+                {{ $about->nama }}
+            </h4>
+
+            <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
+                <!-- Card -->
+                <div class="relative">
+                    <img class="object-cover w-full h-full" src="{{ asset('storage/images/' . $about->image) }}"
+                        alt="Image" loading="lazy" />
+                </div>
+            </div>
+
+            <div class="min-w-0 p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
+                <h4 class="mb-4 font-semibold text-gray-600 dark:text-gray-300">
+                    Revenue
+                </h4>
+                <p class="text-gray-600 dark:text-gray-400">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Fuga, cum commodi a omnis numquam quod? Totam exercitationem
+                    quos hic ipsam at qui cum numquam, sed amet ratione! Ratione,
+                    nihil dolorum.
+                </p>
+            </div>
         </div>
     </main>
 @endsection

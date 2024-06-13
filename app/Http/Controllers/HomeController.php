@@ -69,4 +69,9 @@ class HomeController extends Controller
         $lainnyas = Galery::where('kategori', 'Lainnya')->get();
         return view('page.lainnya', compact('lainnyas'));
     }
+
+    public function about()
+    {
+        return view('about');
+    }
 }

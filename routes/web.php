@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\GaleryController;
@@ -25,6 +26,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+// galery
 Route::get('/galery/galery-detail/{galery}', [HomeController::class, 'galeryDetail'])->name('galery-detail');
 Route::get('/galery-all', [HomeController::class, 'galery'])->name('galery');
 Route::get('/galery-gabut', [HomeController::class, 'gabut'])->name('galery.gabut');
@@ -34,6 +37,9 @@ Route::get('/galery-acara', [HomeController::class, 'acara'])->name('galery.acar
 Route::get('/galery-jalan', [HomeController::class, 'jalan'])->name('galery.jalan');
 Route::get('/galery-liburan', [HomeController::class, 'liburan'])->name('galery.liburan');
 Route::get('/galery-lainnya', [HomeController::class, 'lainnya'])->name('galery.lainnya');
+
+// about
+Route::get('/about', [HomeController::class, 'about'])->name('about');
 
 Auth::routes();
 
@@ -65,4 +71,7 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::get('galery/{galery}/image/create', [GaleryImageController::class, 'create'])->name('galery-image.create');
     Route::post('galery/{galery}/image', [GaleryImageController::class, 'store'])->name('galery-image.store');
     Route::delete('galery/image/{image}/delete', [GaleryImageController::class, 'destroy'])->name('galery-image.destroy');
+
+    // about
+    Route::resource('about', AboutController::class);
 });

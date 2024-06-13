@@ -69,10 +69,11 @@ class GaleryController extends Controller
             'judul' => 'required',
             'detail' => 'required',
             'tanggal' => 'required',
-            'link' => 'required',
+            'link' => 'nullable',
         ]);
 
-        $galery->update($request->all());
+        // Only update the fields that are fillable
+        $galery->update($request->only(['kategori', 'judul', 'detail', 'tanggal', 'link']));
 
         return redirect()->route('galery.index')->with('success', 'Galery updated successfully');
     }

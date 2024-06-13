@@ -71,7 +71,7 @@
                                 <div class="gallery-links d-flex align-items-center justify-content-center">
                                     <a href="{{ asset('storage/images/' . $galery->images->first()->image) }}" title="{{ $galery->judul }}"
                                         class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                                    <a href="#" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                                    <a target="_blank" href="{{ route('galery-detail', $galery->id) }}" class="details-link"><i class="bi bi-link-45deg"></i></a>
                                 </div>
                             </div>
                         </div><!-- End Gallery Item -->

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('judul');
             $table->string('detail');
             $table->date('tanggal');
-            $table->string('link');
+            $table->string('link')->nullable();
             $table->timestamps();
         });
     }
