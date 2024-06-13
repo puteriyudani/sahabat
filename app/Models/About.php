@@ -29,6 +29,6 @@ class About extends Model
         'twitter',
         'instagram',
         'facebook',
-        'linkedin',
+        'tiktok',
     ];
 }

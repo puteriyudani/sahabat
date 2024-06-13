@@ -27,7 +27,7 @@
                 <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
                 <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
                 <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="tiktok"><i class="bi bi-tiktok"></i></a>
             </div>
 
         </div>
@@ -110,11 +110,17 @@
                             <p class="py-3">
                                 {{ $about->tentang }}
                             </p>
+                            <div class="social-links">
+                                <a href="{{ $about->twitter }}" class="me-2" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                                <a href="{{ $about->facebook }}" class="me-2" target="_blank"><i class="bi bi-facebook"></i></a>
+                                <a href="{{ $about->instagram }}" class="me-2" target="_blank"><i class="bi bi-instagram"></i></a>
+                                <a href="{{ $about->tiktok }}" class="me-2" target="_blank"><i class="bi bi-tiktok"></i></a>
+                            </div>
                         </div>
                     </div>
                 @endforeach
 
-                <div class="row gy-4 mt-5 justify-content-center">
+                <div class="row gy-4 mt-4 justify-content-center">
                     {{ $abouts->links('vendor.pagination.custom') }}
                 </div>
 

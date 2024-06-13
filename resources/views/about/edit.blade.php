@@ -328,12 +328,12 @@
                     @enderror
 
                     <label class="block mt-4 text-sm">
-                        <span class="text-gray-700 dark:text-gray-400">Linkedin</span>
-                        <input type="text" name="linkedin" id="linkedin" value="{{ $about->linkedin }}"
+                        <span class="text-gray-700 dark:text-gray-400">Tiktok</span>
+                        <input type="text" name="tiktok" id="tiktok" value="{{ $about->tiktok }}"
                             class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
-                            placeholder="Linkedin" />
+                            placeholder="Tiktok" />
                     </label>
-                    @error('linkedin')
+                    @error('tiktok')
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
 

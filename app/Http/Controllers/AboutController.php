@@ -72,7 +72,7 @@ class AboutController extends Controller
             'twitter' => 'nullable',
             'instagram' => 'nullable',
             'facebook' => 'nullable',
-            'linkedin' => 'nullable',
+            'tiktok' => 'nullable',
             'image.*' => 'required|image|mimes:png,jpg,jpeg,webp', // Validasi untuk file gambar
         ]);
 
@@ -93,7 +93,7 @@ class AboutController extends Controller
             'twitter',
             'instagram',
             'facebook',
-            'linkedin'
+            'tiktok'
         ]);
 
         // Handle image upload if files are present

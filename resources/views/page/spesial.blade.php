@@ -27,7 +27,7 @@
                 <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
                 <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
                 <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="tiktok"><i class="bi bi-tiktok"></i></a>
             </div>
 
         </div>

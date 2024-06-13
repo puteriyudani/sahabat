@@ -29,7 +29,7 @@ return new class extends Migration
             $table->string('twitter')->nullable();
             $table->string('instagram')->nullable();
             $table->string('facebook')->nullable();
-            $table->string('linkedin')->nullable();
+            $table->string('tiktok')->nullable();
             $table->timestamps();
         });
     }
