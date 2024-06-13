@@ -1,64 +1,7 @@
 @extends('layout.admin')
 
 @section('title')
-    <title>Admin</title>
-    <style>
-        .relative {
-            display: flex;
-            align-items: center;
-        }
-
-        .relative img {
-            margin-right: 20px;
-            /* Jarak antara gambar dan link */
-        }
-
-        .relative .password,
-        .relative .profile {
-            margin-left: 10px;
-            /* Jarak antara tombol 'Profile' dan 'Password' */
-        }
-
-        .relative .password a {
-        padding: 0.5rem 1rem;
-        /* Padding untuk tombol */
-        background-color: #ffc107;
-        /* Warna background sesuai class btn-warning */
-        color: white;
-        /* Warna teks */
-        text-decoration: none;
-        /* Menghapus garis bawah pada link */
-        border-radius: 0.25rem;
-        /* Membulatkan sudut */
-        transition: background-color 0.3s ease;
-        /* Transisi untuk efek hover */
-        }
-
-        .relative .profile a {
-        padding: 0.5rem 1rem;
-        /* Padding untuk tombol */
-        background-color: #5cb85c;
-        /* Warna background sesuai class btn-warning */
-        color: white;
-        /* Warna teks */
-        text-decoration: none;
-        /* Menghapus garis bawah pada link */
-        border-radius: 0.25rem;
-        /* Membulatkan sudut */
-        transition: background-color 0.3s ease;
-        /* Transisi untuk efek hover */
-        }
-
-        .relative .password a:hover {
-        background-color: #e0a800;
-        /* Warna background saat di-hover */
-        }
-
-        .relative .profile a:hover {
-        background-color: #53a753;
-        /* Warna background saat di-hover */
-        }
-    </style>
+    <title>Admin - Change Password</title>
 @endsection
 
 @section('desktop-sidebar')
@@ -157,27 +100,55 @@
 @section('main')
     <main class="h-full overflow-y-auto">
         <div class="container px-6 mx-auto grid">
-            <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
-                Welcome {{ session('name') }}
-            </h2>
+            <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">Change Password</h2>
 
-            <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
-                <div class="relative flex items-center">
-                    <img class="object-cover w-24 h-24 rounded-full mr-4"
-                        src="{{ asset('storage/images/' . $user->image) }}" alt="Profile" loading="lazy" />
-
-                    <div class="flex flex-col">
-                        <div class="profile mb-4">
-                            <a target="_blank" href="{{ route('user.edit', $user->id) }}"
-                                class="btn btn-success">Profile</a>
-                        </div>
-                        <div class="password">
-                            <a target="_blank" href="{{ route('password.change') }}" class="btn btn-warning">Password</a>
-                        </div>
-                    </div>
+            @if (session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
                 </div>
-            </div>
+            @endif
 
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
+            <form action="{{ route('password.update') }}" method="POST">
+                @csrf
+
+                <label class="block mt-4 text-sm">
+                    <span class="text-gray-700 dark:text-gray-400">Current Password</span>
+                    <input type="password" name="current_password" id="current_password" required
+                        class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                        placeholder="Current Password" />
+                </label>
+
+                <label class="block mt-4 text-sm">
+                    <span class="text-gray-700 dark:text-gray-400">New Password</span>
+                    <input type="password" name="new_password" id="new_password" required
+                        class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                        placeholder="New Password" />
+                </label>
+
+                <label class="block mt-4 text-sm">
+                    <span class="text-gray-700 dark:text-gray-400">Confirm New Password</span>
+                    <input type="password" name="new_password_confirmation" id="new_password_confirmation" required
+                        class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                        placeholder="Confirm New Password" />
+                </label>
+
+                <div class="mt-4">
+                    <button type="submit"
+                        class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
+                        Submit
+                    </button>
+                </div>
+            </form>
         </div>
     </main>
 @endsection

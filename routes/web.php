@@ -9,6 +9,7 @@ use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProductImageController;
 use App\Http\Controllers\StoreController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -22,6 +23,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/galery/galery-detail/{galery}', [HomeController::class, 'galeryDetail'])->name('galery-detail');
 Route::get('/galery-all', [HomeController::class, 'galery'])->name('galery');
@@ -48,7 +50,14 @@ Route::post('/register', [AuthController::class, 'registerPost'])->name('registe
 //admin
 Route::middleware(['auth', 'user-access:admin'])->group(function () {
     // home admin
-    Route::get('/admin-sahabat', [AdminController::class, 'index'])->name('admin');
+    Route::get('/admin-sahabat', [AdminController::class, 'index'])->name('admin')->middleware('auth');
+
+    // change password
+    Route::get('/password/change', [UserController::class, 'showChangePasswordForm'])->name('password.change');
+    Route::post('/password/change', [UserController::class, 'changePassword'])->name('password.update');
+
+    // change profile
+    Route::resource('user', AdminController::class);
 
     // galery
     Route::resource('galery', GaleryController::class);

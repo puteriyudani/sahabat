@@ -2,63 +2,6 @@
 
 @section('title')
     <title>Admin</title>
-    <style>
-        .relative {
-            display: flex;
-            align-items: center;
-        }
-
-        .relative img {
-            margin-right: 20px;
-            /* Jarak antara gambar dan link */
-        }
-
-        .relative .password,
-        .relative .profile {
-            margin-left: 10px;
-            /* Jarak antara tombol 'Profile' dan 'Password' */
-        }
-
-        .relative .password a {
-        padding: 0.5rem 1rem;
-        /* Padding untuk tombol */
-        background-color: #ffc107;
-        /* Warna background sesuai class btn-warning */
-        color: white;
-        /* Warna teks */
-        text-decoration: none;
-        /* Menghapus garis bawah pada link */
-        border-radius: 0.25rem;
-        /* Membulatkan sudut */
-        transition: background-color 0.3s ease;
-        /* Transisi untuk efek hover */
-        }
-
-        .relative .profile a {
-        padding: 0.5rem 1rem;
-        /* Padding untuk tombol */
-        background-color: #5cb85c;
-        /* Warna background sesuai class btn-warning */
-        color: white;
-        /* Warna teks */
-        text-decoration: none;
-        /* Menghapus garis bawah pada link */
-        border-radius: 0.25rem;
-        /* Membulatkan sudut */
-        transition: background-color 0.3s ease;
-        /* Transisi untuk efek hover */
-        }
-
-        .relative .password a:hover {
-        background-color: #e0a800;
-        /* Warna background saat di-hover */
-        }
-
-        .relative .profile a:hover {
-        background-color: #53a753;
-        /* Warna background saat di-hover */
-        }
-    </style>
 @endsection
 
 @section('desktop-sidebar')
@@ -155,29 +98,69 @@
 @endsection
 
 @section('main')
-    <main class="h-full overflow-y-auto">
-        <div class="container px-6 mx-auto grid">
+    <main class="h-full pb-16 overflow-y-auto">
+        <div class="container grid px-6 mx-auto">
             <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
-                Welcome {{ session('name') }}
+                Edit Profile
             </h2>
 
-            <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
-                <div class="relative flex items-center">
-                    <img class="object-cover w-24 h-24 rounded-full mr-4"
-                        src="{{ asset('storage/images/' . $user->image) }}" alt="Profile" loading="lazy" />
-
-                    <div class="flex flex-col">
-                        <div class="profile mb-4">
-                            <a target="_blank" href="{{ route('user.edit', $user->id) }}"
-                                class="btn btn-success">Profile</a>
-                        </div>
-                        <div class="password">
-                            <a target="_blank" href="{{ route('password.change') }}" class="btn btn-warning">Password</a>
-                        </div>
-                    </div>
+            @if (Session::has('success'))
+                <div class="alert alert-success" role="alert">
+                    {{ Session::get('success') }}
                 </div>
-            </div>
+            @endif
 
+            <!-- General elements -->
+            <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
+                <form action="{{ route('user.update', $user->id) }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    @method('PUT')
+
+                    <label class="block mt-4 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Nama</span>
+                        <input type="text" name="name" id="name" value="{{ $user->name }}"
+                            class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                            placeholder="Nama" />
+                    </label>
+                    @error('name')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+
+                    <label class="block mt-4 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">No HP</span>
+                        <input type="text" name="nohp" id="nohp" value="{{ $user->nohp }}"
+                            class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                            placeholder="No HP" />
+                    </label>
+                    @error('nohp')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+
+                    <label class="block mt-4 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Foto</span>
+                        <input name="image[]" id="image" type="file"
+                            class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                            placeholder="Foto" />
+                        @if ($user->image)
+                            <div class="mt-2">
+                                <p class="text-sm text-gray-600">Current Image:</p>
+                                <img src="{{ asset('storage/images/' . $user->image) }}" alt="Current Image"
+                                    class="mt-2 max-w-xs" style="max-width: 200px">
+                            </div>
+                        @endif
+                    </label>
+                    @error('image')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+
+                    <div class="mt-4">
+                        <button type="submit"
+                            class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
     </main>
 @endsection
