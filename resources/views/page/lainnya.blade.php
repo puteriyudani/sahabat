@@ -20,7 +20,6 @@
                     <li><a href="{{ route('home') }}">Home<br></a></li>
                     <li><a href="{{ route('galery') }}" class="active">Galery</a></li>
                     <li><a href="{{ route('about') }}">About</a></li>
-                    <li><a href="#">Contact</a></li>
                     <li><a href="{{ route('login') }}" target="_blank">Login</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

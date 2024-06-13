@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
 use App\Models\Galery;
 use App\Models\GaleryImage;
 use App\Models\Kategori;
@@ -72,6 +73,7 @@ class HomeController extends Controller
 
     public function about()
     {
-        return view('about');
+        $abouts = About::paginate(1);
+        return view('about', compact('abouts'));
     }
 }
