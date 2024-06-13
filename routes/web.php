@@ -32,7 +32,7 @@ Route::get('/galery/galery-detail/{galery}', [HomeController::class, 'galeryDeta
 Route::get('/galery-all', [HomeController::class, 'galery'])->name('galery');
 Route::get('/galery-gabut', [HomeController::class, 'gabut'])->name('galery.gabut');
 Route::get('/galery-malming', [HomeController::class, 'malming'])->name('galery.malming');
-Route::get('/galery-cfncfd', [HomeController::class, 'cfncfd'])->name('galery.cfncfd');
+Route::get('/galery-spesial', [HomeController::class, 'spesial'])->name('galery.spesial');
 Route::get('/galery-acara', [HomeController::class, 'acara'])->name('galery.acara');
 Route::get('/galery-jalan', [HomeController::class, 'jalan'])->name('galery.jalan');
 Route::get('/galery-liburan', [HomeController::class, 'liburan'])->name('galery.liburan');

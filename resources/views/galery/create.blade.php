@@ -146,7 +146,7 @@
                             <option selected>- Pilih Kategori -</option>
                             <option value="Gabut">Gabut</option>
                             <option value="Malming">Malming</option>
-                            <option value="CFN/CFD">CFN/CFD</option>
+                            <option value="Spesial">Spesial</option>
                             <option value="Acara">Acara</option>
                             <option value="Jalan-jalan">Jalan-jalan</option>
                             <option value="Liburan">Liburan</option>

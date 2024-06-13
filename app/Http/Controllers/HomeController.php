@@ -39,10 +39,10 @@ class HomeController extends Controller
         return view('page.malming', compact('malmings'));
     }
 
-    public function cfncfd()
+    public function spesial()
     {
-        $cfncfds = Galery::where('kategori', 'CFN/CFD')->get();
-        return view('page.cfncfd', compact('cfncfds'));
+        $spesials = Galery::where('kategori', 'Spesial')->get();
+        return view('page.spesial', compact('spesials'));
     }
 
     public function acara()

@@ -10,9 +10,7 @@
 
             <a href="{{ route('home') }}" class="logo d-flex align-items-center me-auto me-xl-0">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
-                <!-- <img src="{{ asset('assets') }}/img/logo.png" alt=""> -->
-                <i class="bi bi-camera"></i>
-                <h1 class="sitename">Sahabat</h1>
+                <img src="{{ asset('assets') }}/img/logo.png" alt="">
             </a>
 
             <nav id="navmenu" class="navmenu">
@@ -77,7 +75,7 @@
                         <a href="{{ route('galery.malming') }}">Malming</a>
                     </div>
                     <div class="col-1">
-                        <a href="{{ route('galery.cfncfd') }}">CFN/CFD</a>
+                        <a href="{{ route('galery.spesial') }}">Spesial</a>
                     </div>
                     <div class="col-1">
                         <a href="{{ route('galery.acara') }}">Acara</a>

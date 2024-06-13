@@ -10,9 +10,7 @@
 
             <a href="{{ route('home') }}" class="logo d-flex align-items-center me-auto me-xl-0">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
-                <!-- <img src="{{ asset('assets') }}/img/logo.png" alt=""> -->
-                <i class="bi bi-camera"></i>
-                <h1 class="sitename">Sahabat</h1>
+                <img src="{{ asset('assets') }}/img/logo.png" alt="">
             </a>
 
             <nav id="navmenu" class="navmenu">
@@ -45,8 +43,8 @@
                 <div class="container">
                     <div class="row d-flex justify-content-center text-center">
                         <div class="col-lg-8">
-                            <h1>Gallery - CFN/CFD</h1>
-                            <p class="mb-0">Hunting jajanan di CFN/CFD.</p>
+                            <h1>Gallery - Spesial</h1>
+                            <p class="mb-0">Peristiwa Spesial/Penting.</p>
                         </div>
                     </div>
                 </div>
@@ -56,7 +54,7 @@
                     <ol>
                         <li><a href="{{ route('home') }}">Home</a></li>
                         <li><a href="{{ route('galery') }}">Galery</a></li>
-                        <li class="current">CFN/CFD</li>
+                        <li class="current">Spesial</li>
                     </ol>
                 </div>
             </nav>
@@ -78,7 +76,7 @@
                         <a href="{{ route('galery.malming') }}">Malming</a>
                     </div>
                     <div class="col-1">
-                        <a href="{{ route('galery.cfncfd') }}">CFN/CFD</a>
+                        <a href="{{ route('galery.spesial') }}">Spesial</a>
                     </div>
                     <div class="col-1">
                         <a href="{{ route('galery.acara') }}">Acara</a>
@@ -96,14 +94,14 @@
 
                 <div class="row gy-4 justify-content-center">
 
-                    @foreach ($cfncfds as $cfncfd)
+                    @foreach ($spesials as $spesial)
                         <div class="col-xl-3 col-lg-4 col-md-6">
                             <div class="gallery-item h-100">
-                                <img src="{{ asset('storage/images/' . $cfncfd->images->first()->image) }}" class="img-fluid" alt="">
+                                <img src="{{ asset('storage/images/' . $spesial->images->first()->image) }}" class="img-fluid" alt="">
                                 <div class="gallery-links d-flex align-items-center justify-content-center">
-                                    <a href="{{ asset('storage/images/' . $cfncfd->images->first()->image) }}" title="{{ $cfncfd->judul }}"
+                                    <a href="{{ asset('storage/images/' . $spesial->images->first()->image) }}" title="{{ $spesial->judul }}"
                                         class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                                    <a href="{{ route('galery-detail', $cfncfd->id) }}" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                                    <a href="{{ route('galery-detail', $spesial->id) }}" class="details-link"><i class="bi bi-link-45deg"></i></a>
                                 </div>
                             </div>
                         </div><!-- End Gallery Item -->
