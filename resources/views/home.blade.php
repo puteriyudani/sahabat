@@ -45,10 +45,9 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-6 text-center" data-aos="fade-up" data-aos-delay="100">
-                        <h2><span>I'm </span><span class="underlight">Jenny Wilson</span> a Professional<span>
-                                Photographer from New York City</span></h2>
-                        <p>Blanditiis praesentium aliquam illum tempore incidunt debitis dolorem magni est deserunt sed
-                            qui libero. Qui voluptas amet.</p>
+                        <h2><span>Dokumentasi </span><span class="underlight">Sahabat</span> besar sama<span>
+                                sukses bersama</span></h2>
+                        <p>Berisi beberapa foto dokumentasi selama berteman sejak MTsN.</p>
                         <a href="{{ route('galery') }}" class="btn-get-started" target="_blank">Look Our Galery<br></a>
                     </div>
                 </div>
