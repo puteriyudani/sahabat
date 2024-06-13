@@ -73,7 +73,7 @@ class AboutController extends Controller
             'instagram' => 'nullable',
             'facebook' => 'nullable',
             'tiktok' => 'nullable',
-            'image.*' => 'required|image|mimes:png,jpg,jpeg,webp', // Validasi untuk file gambar
+            'image.*' => 'required|image|mimes:png,jpg,jpeg,webp|max:2048', // Validasi untuk file gambar
         ]);
 
         // Prepare data to update
