@@ -27,7 +27,7 @@ class AdminController extends Controller
         $request->validate([
             'name' => 'required',
             'nohp' => 'required|unique:users,nohp,' . $user->id,
-            'image.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048', // Validasi untuk file gambar
+            'image.*' => 'required|image|mimes:png,jpg,jpeg,webp', // Validasi untuk file gambar
         ]);
 
         $input = $request->only(['name', 'nohp']); // Hanya ambil 'name' dan 'nohp' dari input

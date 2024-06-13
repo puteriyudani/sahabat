@@ -192,11 +192,11 @@
 
                     <div class="flex flex-col">
                         <div class="profile mb-4">
-                            <a target="_blank" href="{{ route('user.edit', $user->id) }}"
+                            <a href="{{ route('user.edit', $user->id) }}"
                                 class="btn btn-success">Profile</a>
                         </div>
                         <div class="password">
-                            <a target="_blank" href="{{ route('password.change') }}" class="btn btn-warning">Password</a>
+                            <a href="{{ route('password.change') }}" class="btn btn-warning">Password</a>
                         </div>
                     </div>
                 </div>

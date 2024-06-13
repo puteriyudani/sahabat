@@ -19,7 +19,7 @@
                 <ul>
                     <li><a href="{{ route('home') }}" class="active">Home<br></a></li>
                     <li><a href="{{ route('galery') }}">Galery</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="{{ route('about') }}">About</a></li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="{{ route('login') }}" target="_blank">Login</a></li>
                 </ul>

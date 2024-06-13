@@ -39,7 +39,7 @@ Route::get('/galery-liburan', [HomeController::class, 'liburan'])->name('galery.
 Route::get('/galery-lainnya', [HomeController::class, 'lainnya'])->name('galery.lainnya');
 
 // about
-Route::get('/about', [HomeController::class, 'about'])->name('about');
+Route::get('/tentang', [HomeController::class, 'about'])->name('about');
 
 Auth::routes();
 

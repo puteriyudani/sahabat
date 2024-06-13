@@ -133,33 +133,217 @@
                 About
             </h2>
 
-            <div class="flex flex-col flex-wrap mb-8 space-y-4 md:flex-row md:items-end md:space-x-4">
-                <div>
-                    <a href="{{ route('about.edit', $about->id) }}">
-                        <button
-                            class="flex items-center justify-between px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
-                            <span>Edit</span>
-                            <svg class="w-4 h-4 ml-2 -mr-1" fill="currentColor" aria-hidden="true" viewBox="0 0 20 20">
-                                <path
-                                    d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z"
-                                    clip-rule="evenodd" fill-rule="evenodd"></path>
-                            </svg>
+            @if (Session::has('success'))
+                <div class="alert alert-success" role="alert">
+                    {{ Session::get('success') }}
+                </div>
+            @endif
+
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
+            <!-- General elements -->
+            <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
+                <form action="{{ route('about.update', $about->id) }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    @method('PUT')
+
+                    <fieldset disabled>
+                        <div class="mb-3">
+                            <label for="siswa_id_display" class="form-label">User ID</label>
+                            <input type="text" name="user_id" id="user_id" value="{{ $about->user_id }}"
+                                class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                                placeholder="User ID" />
+                        </div>
+                    </fieldset>
+
+                    <input type="hidden" name="user_id" value="{{ $about->user_id }}">
+
+                    @error('user_id')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+
+                    <label class="block mt-4 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Foto</span>
+                        <input name="image[]" id="image" type="file"
+                            class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                            placeholder="Foto" />
+                        @if ($about->image)
+                            <div class="mt-2">
+                                <p class="text-sm text-gray-600">Current Image:</p>
+                                <img src="{{ asset('storage/images/' . $about->image) }}" alt="Current Image"
+                                    class="mt-2 max-w-xs" style="max-width: 200px">
+                            </div>
+                        @endif
+                    </label>
+                    @error('image')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+
+                    <label class="block mt-4 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Nama</span>
+                        <input type="text" name="nama" id="nama" value="{{ $about->nama }}"
+                            class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                            placeholder="Nama" />
+                    </label>
+                    @error('nama')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+
+                    <label class="block mt-4 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Pengantar</span>
+                        <input type="text" name="pengantar" id="pengantar" value="{{ $about->pengantar }}"
+                            class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                            placeholder="Pengantar" />
+                    </label>
+                    @error('pengantar')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+
+                    <label class="block mt-4 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Tanggal Lahir</span>
+                        <input type="text" name="tgl_lahir" id="tgl_lahir" value="{{ $about->tgl_lahir }}"
+                            class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                            placeholder="Tanggal Lahir" />
+                    </label>
+                    @error('tgl_lahir')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+
+                    <label class="block mt-4 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Tempat Lahir</span>
+                        <input type="text" name="tpt_lahir" id="tpt_lahir" value="{{ $about->tpt_lahir }}"
+                            class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                            placeholder="Tempat Lahir" />
+                    </label>
+                    @error('tpt_lahir')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+
+                    <label class="block mt-4 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Umur</span>
+                        <input type="text" name="umur" id="umur" value="{{ $about->umur }}"
+                            class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                            placeholder="Umur" />
+                    </label>
+                    @error('umur')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+
+                    <label class="block mt-4 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Pendidikan</span>
+                        <input type="text" name="pendidikan" id="pendidikan" value="{{ $about->pendidikan }}"
+                            class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                            placeholder="Pendidikan" />
+                    </label>
+                    @error('pendidikan')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+
+                    <label class="block mt-4 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">No HP</span>
+                        <input type="text" name="nohp" id="nohp" value="{{ $about->nohp }}"
+                            class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                            placeholder="No HP" />
+                    </label>
+                    @error('nohp')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+
+                    <label class="block mt-4 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Email</span>
+                        <input type="text" name="email" id="email" value="{{ $about->email }}"
+                            class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                            placeholder="Email" />
+                    </label>
+                    @error('email')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+
+                    <label class="block mt-4 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Kota</span>
+                        <input type="text" name="kota" id="kota" value="{{ $about->kota }}"
+                            class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                            placeholder="Kota" />
+                    </label>
+                    @error('kota')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+
+                    <label class="block mt-4 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Pekerjaan</span>
+                        <input type="text" name="pekerjaan" id="pekerjaan" value="{{ $about->pekerjaan }}"
+                            class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                            placeholder="Pekerjaan" />
+                    </label>
+                    @error('pekerjaan')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+
+                    <label class="block mt-4 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Tentang</span>
+                        <textarea name="tentang" id="tentang"
+                            class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-textarea focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
+                            rows="3" placeholder="Enter some long form content.">{{ $about->tentang }}</textarea>
+                    </label>
+                    @error('tentang')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+
+                    <label class="block mt-4 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Twitter</span>
+                        <input type="text" name="twitter" id="twitter" value="{{ $about->twitter }}"
+                            class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                            placeholder="Twitter" />
+                    </label>
+                    @error('twitter')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+
+                    <label class="block mt-4 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Instagram</span>
+                        <input type="text" name="instagram" id="instagram" value="{{ $about->instagram }}"
+                            class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                            placeholder="Instagram" />
+                    </label>
+                    @error('instagram')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+
+                    <label class="block mt-4 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Facebook</span>
+                        <input type="text" name="facebook" id="facebook" value="{{ $about->facebook }}"
+                            class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                            placeholder="Facebook" />
+                    </label>
+                    @error('facebook')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+
+                    <label class="block mt-4 text-sm">
+                        <span class="text-gray-700 dark:text-gray-400">Linkedin</span>
+                        <input type="text" name="linkedin" id="linkedin" value="{{ $about->linkedin }}"
+                            class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                            placeholder="Linkedin" />
+                    </label>
+                    @error('linkedin')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+
+                    <div class="mt-4">
+                        <button type="submit"
+                            class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
+                            Submit
                         </button>
-                    </a>
-                </div>
-            </div>
-
-            <h4 class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300">
-                {{ $about->nama }}
-            </h4>
-
-            <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
-                <!-- Card -->
-                <div class="relative">
-                    <img class="object-cover w-full h-full"
-                        src="{{ asset('storage/images/' . $about->image) }}" alt="Image"
-                        loading="lazy" />
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
     </main>
