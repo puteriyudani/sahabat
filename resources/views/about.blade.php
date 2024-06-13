@@ -1,7 +1,7 @@
 @extends('layout.layout')
 
 @section('title')
-    <title>Sahabat - Home</title>
+    <title>Sahabat - About</title>
 @endsection
 
 @section('header')
@@ -62,13 +62,12 @@
                 </div>
             </nav>
         </div><!-- End Page Title -->
+        <!-- About Section -->
+        <section id="about" class="about section">
 
-        @foreach ($abouts as $about)
-            <!-- About Section -->
-            <section id="about" class="about section">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-                <div class="container" data-aos="fade-up" data-aos-delay="100">
-
+                @foreach ($abouts as $about)
                     <div class="row gy-4 justify-content-center">
                         <div class="col-lg-4">
                             <img src="{{ asset('storage/images/' . $about->image) }}" class="img-fluid" alt="">
@@ -81,18 +80,34 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <ul>
-                                        <li><i class="bi bi-chevron-right"></i> <strong>Tgl Lahir:</strong> <span>{{ $about->tgl_lahir }}</span></li>
-                                        <li><i class="bi bi-chevron-right"></i> <strong>Umur:</strong> <span>{{ $about->umur }}</span></li>
-                                        <li><i class="bi bi-chevron-right"></i> <strong>No HP:</strong> <span>{{ $about->nohp }}</span></li>
-                                        <li><i class="bi bi-chevron-right"></i> <strong>Kota:</strong> <span>{{ $about->kota }}</span></li>
+                                        <li><i class="bi bi-chevron-right"></i> <strong>Tgl Lahir:</strong>
+                                            <span>{{ $about->tgl_lahir }}</span>
+                                        </li>
+                                        <li><i class="bi bi-chevron-right"></i> <strong>Umur:</strong>
+                                            <span>{{ $about->umur }}</span>
+                                        </li>
+                                        <li><i class="bi bi-chevron-right"></i> <strong>No HP:</strong>
+                                            <span>{{ $about->nohp }}</span>
+                                        </li>
+                                        <li><i class="bi bi-chevron-right"></i> <strong>Kota:</strong>
+                                            <span>{{ $about->kota }}</span>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="col-lg-6">
                                     <ul>
-                                        <li><i class="bi bi-chevron-right"></i> <strong>Tpt Lahir:</strong> <span>{{ $about->tpt_lahir }}</span></li>
-                                        <li><i class="bi bi-chevron-right"></i> <strong>Pendidikan:</strong> <span>{{ $about->pendidikan }}</span></li>
-                                        <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>{{ $about->email }}</span></li>
-                                        <li><i class="bi bi-chevron-right"></i> <strong>Pekerjaan:</strong> <span>{{ $about->pekerjaan }}</span></li>
+                                        <li><i class="bi bi-chevron-right"></i> <strong>Tpt Lahir:</strong>
+                                            <span>{{ $about->tpt_lahir }}</span>
+                                        </li>
+                                        <li><i class="bi bi-chevron-right"></i> <strong>Pendidikan:</strong>
+                                            <span>{{ $about->pendidikan }}</span>
+                                        </li>
+                                        <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong>
+                                            <span>{{ $about->email }}</span>
+                                        </li>
+                                        <li><i class="bi bi-chevron-right"></i> <strong>Pekerjaan:</strong>
+                                            <span>{{ $about->pekerjaan }}</span>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -101,12 +116,15 @@
                             </p>
                         </div>
                     </div>
+                @endforeach
 
+                <div class="row gy-4 mt-5 justify-content-center">
+                    {{ $abouts->links('vendor.pagination.custom') }}
                 </div>
 
-            </section>
-            <!-- /About Section -->
-        @endforeach
+            </div>
 
+        </section>
+        <!-- /About Section -->
     </main>
 @endsection

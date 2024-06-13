@@ -5,9 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\About;
 use App\Models\Galery;
 use App\Models\GaleryImage;
-use App\Models\Kategori;
-use App\Models\Product;
-use Illuminate\Http\Request;
+use Illuminate\Pagination\Paginator;
 
 class HomeController extends Controller
 {
@@ -73,6 +71,7 @@ class HomeController extends Controller
 
     public function about()
     {
+        Paginator::defaultView('vendor.pagination.custom');
         $abouts = About::paginate(1);
         return view('about', compact('abouts'));
     }

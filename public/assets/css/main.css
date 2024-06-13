@@ -10,6 +10,39 @@
 # Font & Color Variables
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
+/* Style untuk tombol pagination */
+.pagination .page-link {
+    color: #fff;
+    /* Warna teks putih */
+    background-color: #343a40;
+    /* Warna latar belakang gelap */
+    border: 1px solid #343a40;
+    /* Warna border gelap */
+    margin: 0 2px;
+    /* Spasi antar tombol */
+}
+
+.pagination .page-link:hover {
+    background-color: #23272b;
+    /* Warna latar belakang lebih gelap saat hover */
+    border-color: #23272b;
+    /* Warna border lebih gelap saat hover */
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #495057;
+    /* Warna latar belakang aktif */
+    border-color: #495057;
+    /* Warna border aktif */
+}
+
+.pagination .page-item.disabled .page-link {
+    background-color: #6c757d;
+    /* Warna latar belakang disabled */
+    border-color: #6c757d;
+    /* Warna border disabled */
+}
+
 /* Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -18,7 +51,7 @@
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
+:root {
   --background-color: #000000; /* Background color for the entire website, including individual sections */
   --default-color: #fafafa; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */

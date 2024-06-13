@@ -66,16 +66,25 @@
                     @foreach ($galerys as $galery)
                         <div class="col-xl-3 col-lg-4 col-md-6">
                             <div class="gallery-item h-100">
-                                <img src="{{ asset('storage/images/' . $galery->images->first()->image) }}" class="img-fluid" alt="">
+                                <img src="{{ asset('storage/images/' . $galery->images->first()->image) }}"
+                                    class="img-fluid" alt="">
                                 <div class="gallery-links d-flex align-items-center justify-content-center">
-                                    <a href="{{ asset('storage/images/' . $galery->images->first()->image) }}" title="{{ $galery->judul }}"
-                                        class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                                    <a target="_blank" href="{{ route('galery-detail', $galery->id) }}" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                                    <a href="{{ asset('storage/images/' . $galery->images->first()->image) }}"
+                                        title="{{ $galery->judul }}" class="glightbox preview-link"><i
+                                            class="bi bi-arrows-angle-expand"></i></a>
+                                    <a target="_blank" href="{{ route('galery-detail', $galery->id) }}"
+                                        class="details-link"><i class="bi bi-link-45deg"></i></a>
                                 </div>
                             </div>
                         </div><!-- End Gallery Item -->
                     @endforeach
 
+                </div>
+
+                <div class="container" data-aos="fade-up" data-aos-delay="100">
+                    <div class="row gy-4 mt-5 justify-content-center">
+                        {{ $galerys->links('vendor.pagination.custom') }}
+                    </div>
                 </div>
 
             </div>
