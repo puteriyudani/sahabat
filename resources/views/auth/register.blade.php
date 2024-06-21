@@ -16,6 +16,7 @@
 
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <script src="{{ asset('admin/js/init-alpine.js') }}"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>

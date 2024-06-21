@@ -121,7 +121,7 @@
                             <ul>
                                 <li><strong>Kategori</strong> {{ $galery->kategori }}</li>
                                 <li><strong>Tanggal</strong> {{ $galery->tanggal }}</li>
-                                <li><strong>Link Terkait</strong> <a href="{{ $galery->link }}">{{ $galery->link }}</a>
+                                <li><strong>Link Terkait</strong> <a href="{{ $galery->link }}" target="_blank">{{ $galery->link }}</a>
                                 </li>
                             </ul>
                         </div>
