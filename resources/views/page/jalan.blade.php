@@ -65,30 +65,64 @@
 
             <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
 
-                <div class="row gy-4 justify-content-center mb-5">
-                    <div class="col-1">
-                        <a href="{{ route('galery') }}">All</a>
+                <div class="container">
+                    <!-- Grid for desktop -->
+                    <div class="row gy-4 justify-content-center mb-5 d-none d-md-flex">
+                        <div class="col-1">
+                            <a href="{{ route('galery') }}">All</a>
+                        </div>
+                        <div class="col-1">
+                            <a href="{{ route('galery.gabut') }}">Gabut</a>
+                        </div>
+                        <div class="col-1">
+                            <a href="{{ route('galery.malming') }}">Malming</a>
+                        </div>
+                        <div class="col-1">
+                            <a href="{{ route('galery.spesial') }}">Spesial</a>
+                        </div>
+                        <div class="col-1">
+                            <a href="{{ route('galery.acara') }}">Acara</a>
+                        </div>
+                        <div class="col-1">
+                            <a href="{{ route('galery.jalan') }}">Jalan</a>
+                        </div>
+                        <div class="col-1">
+                            <a href="{{ route('galery.liburan') }}">Liburan</a>
+                        </div>
+                        <div class="col-1">
+                            <a href="{{ route('galery.lainnya') }}">Lainnya</a>
+                        </div>
                     </div>
-                    <div class="col-1">
-                        <a href="{{ route('galery.gabut') }}">Gabut</a>
-                    </div>
-                    <div class="col-1">
-                        <a href="{{ route('galery.malming') }}">Malming</a>
-                    </div>
-                    <div class="col-1">
-                        <a href="{{ route('galery.spesial') }}">Spesial</a>
-                    </div>
-                    <div class="col-1">
-                        <a href="{{ route('galery.acara') }}">Acara</a>
-                    </div>
-                    <div class="col-1">
-                        <a href="{{ route('galery.jalan') }}">Jalan-jalan</a>
-                    </div>
-                    <div class="col-1">
-                        <a href="{{ route('galery.liburan') }}">Liburan</a>
-                    </div>
-                    <div class="col-1">
-                        <a href="{{ route('galery.lainnya') }}">Lainnya</a>
+
+                    <!-- Grid for mobile -->
+                    <div class="d-block d-md-none mb-5">
+                        <div class="row gy-4 justify-content-center mb-5">
+                            <div class="col-6 col-sm-4 col-md-2">
+                                <a href="{{ route('galery') }}">All</a>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2">
+                                <a href="{{ route('galery.gabut') }}">Gabut</a>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2">
+                                <a href="{{ route('galery.malming') }}">Malming</a>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2">
+                                <a href="{{ route('galery.spesial') }}">Spesial</a>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2">
+                                <a href="{{ route('galery.acara') }}">Acara</a>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2">
+                                <a href="{{ route('galery.jalan') }}">Jalan</a>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2">
+                                <a href="{{ route('galery.liburan') }}">Liburan</a>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-2">
+                                <a href="{{ route('galery.lainnya') }}">Lainnya</a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
@@ -97,11 +131,14 @@
                     @foreach ($jalans as $jalan)
                         <div class="col-xl-3 col-lg-4 col-md-6">
                             <div class="gallery-item h-100">
-                                <img src="{{ asset('storage/images/' . $jalan->images->first()->image) }}" class="img-fluid" alt="">
+                                <img src="{{ asset('storage/images/' . $jalan->images->first()->image) }}"
+                                    class="img-fluid" alt="">
                                 <div class="gallery-links d-flex align-items-center justify-content-center">
-                                    <a href="{{ asset('storage/images/' . $jalan->images->first()->image) }}" title="{{ $jalan->judul }}"
-                                        class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                                    <a href="{{ route('galery-detail', $jalan->id) }}" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                                    <a href="{{ asset('storage/images/' . $jalan->images->first()->image) }}"
+                                        title="{{ $jalan->judul }}" class="glightbox preview-link"><i
+                                            class="bi bi-arrows-angle-expand"></i></a>
+                                    <a href="{{ route('galery-detail', $jalan->id) }}" class="details-link"><i
+                                            class="bi bi-link-45deg"></i></a>
                                 </div>
                             </div>
                         </div><!-- End Gallery Item -->
