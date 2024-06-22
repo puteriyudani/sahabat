@@ -23,7 +23,6 @@
     <script src="{{ asset('admin/js/init-alpine.js') }}"></script>
     <script src="{{ asset('admin/js/charts-lines.js') }}" defer></script>
     <script src="{{ asset('admin/js/charts-pie.js') }}" defer></script>
-    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
